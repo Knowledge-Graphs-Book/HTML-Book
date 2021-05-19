@@ -1,0 +1,161 @@
+@font-face {
+	font-family: Charis;
+	font-weight: normal;
+	font-style: normal;
+	src: url("../fonts/CharisSIL/CharisSIL-R.woff");
+}
+@font-face {
+	font-family: Charis;
+	font-style: italic;
+	font-weight: normal;
+	src: url("../fonts/CharisSIL/CharisSIL-I.woff");
+}
+@font-face {
+	font-family: Charis;
+	font-weight: bold;
+	font-style: normal;
+	src: url("../fonts/CharisSIL/CharisSIL-B.woff");
+}
+@font-face {
+	font-family: Charis;
+	font-weight: bold;
+	font-style: italic;
+	src: url("../fonts/CharisSIL/CharisSIL-BI.woff");
+}
+@font-face {
+	font-family: CooperHewitt;
+	font-weight: normal;
+	font-style: normal;
+	src: url("../fonts/CooperHewitt-WebFonts-public/CooperHewitt-Medium.woff");
+}
+@font-face {
+	font-family: CooperHewitt;
+	font-weight: 300;
+	font-style: normal;
+	src: url("../fonts/CooperHewitt-WebFonts-public/CooperHewitt-Light.woff");
+}
+@font-face {
+	font-family: CooperHewitt;
+	font-weight: 100 200;
+	font-style: normal;
+	src: url("../fonts/CooperHewitt-WebFonts-public/CooperHewitt-Thin.woff");
+}
+@font-face {
+	font-family: CooperHewitt;
+	font-weight: normal;
+	font-style: italic;
+	src: url("../fonts/CooperHewitt-WebFonts-public/CooperHewitt-MediumItalic.woff");
+}
+@font-face {
+	font-family: CooperHewitt;
+	font-weight: bold;
+	font-style: normal;
+	src: url("../fonts/CooperHewitt-WebFonts-public/CooperHewitt-Bold.woff");
+}
+@font-face {
+	font-family: CooperHewitt;
+	font-weight: bold;
+	font-style: italic;
+	src: url("../fonts/CooperHewitt-WebFonts-public/CooperHewitt-BoldItalic.woff");
+}
+@font-face {
+	font-family: Hasklig;
+	font-weight: 100 200;
+	font-style: italic;
+	src: url("../fonts/Hasklig/Hasklig-ExtraLightIt.otf");
+}
+@font-face {
+	font-family: Hasklig;
+	font-weight: 300;
+	font-style: italic;
+	src: url("../fonts/Hasklig/Hasklig-LightIt.otf");
+}
+@font-face {
+	font-family: Hasklig;
+	font-weight: 400;
+	font-style: italic;
+	src: url("../fonts/Hasklig/Hasklig-It.otf");
+}
+@font-face {
+	font-family: Hasklig;
+	font-weight: 500;
+	font-style: italic;
+	src: url("../fonts/Hasklig/Hasklig-MediumIt.otf");
+}
+@font-face {
+	font-family: Hasklig;
+	font-weight: 600;
+	font-style: italic;
+	src: url("../fonts/Hasklig/Hasklig-SemiboldIt.otf");
+}
+@font-face {
+	font-family: Hasklig;
+	font-weight: 700;
+	font-style: italic;
+	src: url("../fonts/Hasklig/Hasklig-BoldIt.otf");
+}
+@font-face {
+	font-family: Hasklig;
+	font-weight: 800 900;
+	font-style: italic;
+	src: url("../fonts/Hasklig/Hasklig-BlackIt.otf");
+}
+@font-face {
+	font-family: Hasklig;
+	font-weight: 100 200;
+	font-style: normal;
+	src: url("../fonts/Hasklig/Hasklig-ExtraLight.otf");
+}
+@font-face {
+	font-family: Hasklig;
+	font-weight: 300;
+	font-style: normal;
+	src: url("../fonts/Hasklig/Hasklig-Light.otf");
+}
+@font-face {
+	font-family: Hasklig;
+	font-weight: 400;
+	font-style: normal;
+	src: url("../fonts/Hasklig/Hasklig-Regular.otf");
+}
+@font-face {
+	font-family: Hasklig;
+	font-weight: 500;
+	font-style: normal;
+	src: url("../fonts/Hasklig/Hasklig-Medium.otf");
+}
+@font-face {
+	font-family: Hasklig;
+	font-weight: 600;
+	font-style: normal;
+	src: url("../fonts/Hasklig/Hasklig-Semibold.otf");
+}
+@font-face {
+	font-family: Hasklig;
+	font-weight: 700;
+	font-style: normal;
+	src: url("../fonts/Hasklig/Hasklig-Bold.otf");
+}
+@font-face {
+	font-family: Hasklig;
+	font-weight: 800 900;
+	font-style: normal;
+	src: url("../fonts/Hasklig/Hasklig-Black.otf");
+}
+@font-face {
+	font-family: Quattrocento;
+	font-weight: normal;
+	font-style: normal;
+	src: url("../fonts/Quattrocento-Regular.ttf");
+}
+@font-face {
+	font-family: Quattrocento;
+	font-weight: bold;
+	font-style: normal;
+	src: url("../fonts/Quattrocento-Bold.ttf");
+}
+@font-face {
+	font-family: cmss8;
+	src: url("../fonts/ufonts.com_cmss8.ttf");
+}
+
