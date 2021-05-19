@@ -19,8 +19,15 @@ body {
 	text-justify: inter-character;
 	padding-left: 3em;
 	border-left: solid 2px var(--m-and-c-blue);
+	margin-top: 1360px;
 }
 
+div.cover {
+	position: absolute;
+	top: 0px;
+	left: calc(50vw - 523px);
+	width: 1047px;
+}
 /**
  * 
  **/
