@@ -85,7 +85,7 @@ h2 {
 	color: var(--m-and-c-blue);
 	font-size: 190%;
 }
-h2#abstract, #theend {
+h2#abstract, #theend, #keywords {
 	font-weight: 100;
 	text-align: center;
 	margin: auto;
@@ -93,14 +93,20 @@ h2#abstract, #theend {
 	line-height: .1em;
 	padding-top: 3em;
 }
-h2#abstract span, #theend span {
+h2#abstract span, #theend span, #keywords span {
 	background: white;
 }
-h2#abstract span:before, #theend span:before {
+h2#abstract span:before, #theend span:before, #keywords span:before {
 	content: " ☙ ";
 }
-h2#abstract span:after, #theend span:after {
+h2#abstract span:after, #theend span:after, #keywords span:after {
 	content: " ❧ ";
+}
+.info {
+	color: black;
+}
+.info dl dt {
+	font-weight: bold;
 }
 h3 {
 	margin-top: 2.1em;
