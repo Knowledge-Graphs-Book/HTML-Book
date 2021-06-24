@@ -18,12 +18,12 @@
 			"def-evgp" => "2.7",
 			"def-cgp" => "2.8",
 			"def-evalcgp" => "2.9",
-			"def-anndom" => "24",
-			"def-ent" => "29",
-			"def-dvlg" => "36",
-			"def-gpf" => "37",
+			"def-anndom" => "3.10",
+			"def-ent" => "4.4",
+			"def-dvlg" => "5.1",
+			"def-gpf" => "5.2",
 			// Examples
-			"ex-dvlg" => "11",
+			"ex-dvlg" => "5.1",
 			// Figures
 			"fig-delg" => "2.1",
 			"fig-capital" => "2.2",
