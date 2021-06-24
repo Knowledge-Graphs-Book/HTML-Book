@@ -142,7 +142,8 @@ table caption {
 }
 table caption:before {
 	counter-increment: tables;
-	content: "Table " counter(tables) ": ";
+	color:  var(--m-and-c-blue);
+	content: "Table " counter(chapters) "." counter(tables) ": ";
 }
 section > figure {
 	width: 100%;
@@ -167,7 +168,8 @@ section > figure > figcaption {
 }
 figure > figcaption:before {
 	counter-increment: figures;
-	content: "Figure " counter(figures) ": ";
+	color:  var(--m-and-c-blue);
+	content: "Figure " counter(chapters) "." counter(figures) ": ";
 }
 figure > figure > figcaption:before {
 	counter-increment: subfigures;
@@ -206,7 +208,7 @@ img.inside {
 	vertical-align: middle;
 }
 .chapter {
-	counter-reset: sections subsections;
+	counter-reset: sections subsections figures tables definitions examples;
 }
 .chapter > h2:before {
 	position: relative;
@@ -592,7 +594,7 @@ dl.definition {
 	page-break-inside: avoid;
 }
 dl.definition dt:before {
-	content: "Definition " counter(definitions) " (";
+	content: "Definition " counter(chapters) "." counter(definitions) " (";
 	font-weight: bold;
 	font-style: normal;
 }
@@ -638,7 +640,7 @@ div.example em[id] {
 	text-indent: 0;
 }*/
 div.example p:first-child:before {
-	content: "Example " counter(examples) " — ";
+	content: "Example " counter(chapters) "." counter(examples) " — ";
 	font-weight: bold;
 	font-style: normal;
 }
@@ -813,4 +815,11 @@ div.example p:first-child:before {
 	border-radius: .5em;
 	color: var(--m-and-c-blue);
 	font-weight: 100;
+}
+
+.formal {
+	padding: .1em 1em .1em 1em;
+	margin-top: .5em;
+	margin-bottom:  .5em;
+	background-color:  var(--green-bg);
 }
