@@ -1,5 +1,5 @@
 	<section id="app">
-	<section id="sec-defs" class="appendix">
+	<section id="chap-defs" class="appendix">
 		<h2>Background</h2>
 		<p>We now discuss the broader historical context that has paved the way for the modern advent of knowledge graphs, as well as the definitions of the notion of “knowledge graph” that have been proposed both before and after the announcement of the Google Knowledge Graph&nbsp;<? echo $references->cite("GoogleKG"); ?>. We remark that the discussion presented here builds upon (but does not subsume) previous discussion by <? echo $references->citet("EhrlingerW16"); ?> and by <? echo $references->citet("Bergman19"); ?>, which we refer to for further details. Though our goal is to be comprehensive, the list of historical references should not be considered exhaustive.</p>
 
