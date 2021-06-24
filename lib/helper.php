@@ -189,7 +189,7 @@
 			"ssec-principles" => "9.1",
 			"ssec-fair" => "9.1.1",
 			"sssec-ld" => "9.1.2",
-			"ssec-access-protocols" => "9.2",
+			"ssec-access" => "9.2",
 			"sssec-dumps" => "9.2.1",
 			"sssec-node-lookups" => "9.2.2",
 			"sssec-edge-patterns" => "9.2.3",
