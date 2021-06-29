@@ -112,6 +112,7 @@ h3 {
 	margin-top: 2.1em;
 	color: var(--m-and-c-blue);
 	font-size: 150%;
+	font-variant: small-caps;
 }
 h4 {
 	margin-top: 1.7em;
@@ -235,9 +236,6 @@ img.inside {
 }
 .section {
 	counter-reset: subsections;
-}
-.section > h3 {
-	font-variant: small-caps;
 }
 .section > h3:before {
 	counter-increment: sections;
@@ -544,9 +542,6 @@ section#app {
 }
 .sectionapp {
 	counter-reset: subsections;
-}
-.sectionapp > h3 {
-	font-variant: small-caps;
 }
 .sectionapp > h3:before {
 	counter-increment: sections;
