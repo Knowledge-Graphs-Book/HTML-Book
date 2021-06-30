@@ -212,6 +212,25 @@
 		}
 		return $_result . ".";
 	}
+	function writeRefLabel($entry) {
+		$_reflabel = ""; $etal = "";
+		if($entry->hasField("editor")) {
+			$_thecreators = $entry->getRawEditors();
+		}
+		if($entry->hasField("author")) {
+			$_thecreators = $entry->getRawAuthors();
+		} 
+		if(count($_thecreators) == 0) {
+			return "ANONYMOUS, " . $entry->getYear();
+		}
+		if(count($_thecreators) == 2) {
+			return $entry->getLastName($_thecreators[0]) . " and " . $entry->getLastName($_thecreators[1]) . ", " . $entry->getYear();
+		}
+		if(count($_thecreators) > 2) {
+			$etal = " et al.";
+		}
+		return $entry->getLastName($_thecreators[0]) . $etal . ", " . $entry->getYear();
+	}
 
 ?>
 
@@ -219,9 +238,9 @@
 		<h2 id="bibliography">Bibliography</h2>
 		<ul class="reflist">
 <?php
-	foreach($references->referenced as $indexInRef => $entry) {
-		if($entry) {
-			echo "\t\t\t<li id=\"ref-" . $entry->getKey() . "\"><strong>[" . $indexInRef . "]</strong> ";
+	foreach($GLOBALS["bibrefs"] as $indexInRef => $reflabel) {
+		if($entry = $references->referenced[$indexInRef]) {
+			echo "\t\t\t<li id=\"ref-" . $entry->getKey() . "\">";//<strong>[" . $indexInRef . "]</strong> ";
 			if($entry->getType() == "article")
 				echo writeArticle($entry);
 			if($entry->getType() == "incollection")

@@ -56,6 +56,9 @@ class TheRefs {
 		$this->_bibDataBase->load($filename);
 
 		$this->_citeMap = array();
+
+
+
 	}
 
 	/**
@@ -72,14 +75,16 @@ class TheRefs {
             // If already referenced
             if(isset($this->_citeMap[$bibkey])) {
                 $indexInRef = $this->_citeMap[$bibkey];
+                $bibRefLabel = $GLOBALS["bibrefs"][$bibkey];
             }
             else {
                 $indexInRef = ++$this->_lastrefnum;
                 $this->_citeMap[$bibkey] = $indexInRef;
-                $this->referenced[$indexInRef] = $this->_bibDataBase->getEntryByKey($bibkey);
+                $this->referenced[$bibkey] = $this->_bibDataBase->getEntryByKey($bibkey);
+                $bibRefLabel = $GLOBALS["bibrefs"][$bibkey];
             }
             
-            $refResult .= $commaOrNot . "<a href=\"#ref-". $bibkey . "\">" . $indexInRef . "</a>";
+            $refResult .= $commaOrNot . "<a href=\"#ref-". $bibkey . "\">" . $bibRefLabel . "</a>";
             $commaOrNot = ", ";
         }
         return $refResult . "]";
@@ -94,7 +99,7 @@ class TheRefs {
      */
     function citet($cite) {
         $refResult = $this->cite($cite);
-        $auth = "";
+        /*$auth = "";
         $entry = $this->_bibDataBase->getEntryByKey($cite);
         if($entry->hasField("author")) {
             $auth = $entry->getCompactedAuthors();
@@ -102,7 +107,10 @@ class TheRefs {
         elseif($entry->hasField("editor")) {
             $auth = $entry->getCompactedEditors();
         }
-        return $auth . " " . $refResult;
+        return $auth . " " . $refResult;*/
+        $bibRefLabel = $GLOBALS["bibrefs"][$cite];
+        list($name, $year) = preg_split("/, /", $bibRefLabel);
+        return "<a href=\"#ref-". $cite . "\">" . $name . " [" . $year . "]</a>";
     }
 
     /**
@@ -113,7 +121,7 @@ class TheRefs {
      * @return HTML that must be input in the text body
      */
     function citeH($cite) {
-        $refResult = $this->cite($cite);
+        /*$refResult = $this->cite($cite);
         $auth = "";
         $entry = $this->_bibDataBase->getEntryByKey($cite);
         if($entry->hasField("author")) {
@@ -122,7 +130,8 @@ class TheRefs {
         elseif($entry->hasField("editor")) {
             $auth = $entry->getCompactedEditors();
         }
-        return $auth . " (" . $entry->getYear() . ") " . $refResult;
+        return $auth . " (" . $entry->getYear() . ") " . $refResult;*/
+        return $this->citet($cite);
     }
     /**
      * Write the year of the ref in the paper (assumes ref is already added)

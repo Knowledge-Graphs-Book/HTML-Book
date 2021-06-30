@@ -818,3 +818,6 @@ div.example p:first-child:before {
 	margin-bottom:  .5em;
 	background-color:  var(--green-bg);
 }
+#sec-references ul li {
+	text-indent: -2em;
+}
