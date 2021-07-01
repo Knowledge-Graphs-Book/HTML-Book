@@ -70,6 +70,6 @@
 				<li><a href="#app-post2012">A.3. “Knowledge Graphs”: 2012 Onwards</a></li>
 			</ol></li>
 			<li id="toc-filler">&nbsp;</li>
-			<li id="about"><a href="about">about this page</a></li>
+			<li id="about"><a href="#about">about this book</a></li>
 		</ol>
 	</nav>
