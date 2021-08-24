@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="css/style.css"/>
 	<link rel="stylesheet" href="css/prism.css"/>
 	<link rel="stylesheet" href="css/fonts.css"/>
+	<link rel="stylesheet" href="css/print.css" media="print"/>
 	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 	<script id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 	<script src="js/prism.js"></script>
