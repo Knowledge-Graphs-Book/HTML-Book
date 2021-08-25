@@ -105,7 +105,8 @@ h2#abstract span:after, #theend span:after, #keywords span:after {
 .info {
 	color: black;
 }
-.info dl dt {
+/*.info dl dt {*/
+dl dt {
 	font-weight: bold;
 }
 h3 {
