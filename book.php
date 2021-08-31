@@ -47,12 +47,12 @@
 			<li><span class="author"><a href="https://orcid.org/0000-0003-0036-6662">Eva Blomqvist</a></span> <span class="affiliation">Linköping University <span class="country">Sweden</span></span></li>
 			<li><span class="author"><a href="https://orcid.org/0000-0001-5726-4638">Michael Cochez</a></span> <span class="affiliation">Vrije Universiteit and Discovery Lab, Elsevier <span class="country">The Netherlands</span></span></li>
 			<li><span class="author"><a href="https://orcid.org/0000-0002-3385-987X">Claudia d’Amato</a></span> <span class="affiliation">University of Bari <span class="country">Italy</span></span></li>
-			<li><span class="author"><a href="https://orcid.org/0000-0002-2930-2059">Gerard de Melo</a></span> <span class="affiliation">Rutgers University <span class="country">USA</span></span></li>
+			<li><span class="author"><a href="https://orcid.org/0000-0002-2930-2059">Gerard de Melo</a></span> <span class="affiliation">HPI, University of Potsdam and Rutgers University <span class="country">USA</span></span></li>
 			<li><span class="author"><a href="https://orcid.org/0000-0002-4559-6544">Claudio Gutierrez</a></span> <span class="affiliation">IMFD, DCC, Universidad de Chile <span class="country">Chile</span></span></li>
 			<li><span class="author"><a href="https://orcid.org/0000-0002-6955-7718">Sabrina Kirrane</a></span> <span class="affiliation">WU Vienna <span class="country">Austria</span></span></li>
 			<li><span class="author"><a href="https://orcid.org/0000-0001-8907-5348">José Emilio Labra Gayo</a></span> <span class="affiliation">Universidad de Oviedo <span class="country">Spain</span></span></li>
 			<li><span class="author"><a href="https://orcid.org/0000-0003-3831-9706">Roberto Navigli</a></span> <span class="affiliation">Sapienza University of Rome <span class="country">Italy</span></span></li>
-			<li><span class="author"><a href="https://orcid.org/0000-0002-9804-4882">Sebastian Neumaier</a></span> <span class="affiliation">WU Vienna <span class="country">Austria</span></span></li>
+			<li><span class="author"><a href="https://orcid.org/0000-0002-9804-4882">Sebastian Neumaier</a></span> <span class="affiliation">St. Pölten University of Applied Sciences <span class="country">Austria</span></span></li>
 			<li><span class="author"><a href="https://orcid.org/0000-0001-7112-3516">Axel-Cyrille Ngonga Ngomo</a></span> <span class="affiliation">DICE, Universität Paderborn <span class="country">Germany</span></span></li>
 			<li><span class="author"><a href="https://orcid.org/0000-0001-5670-1146">Axel Polleres</a></span> <span class="affiliation">WU Vienna <span class="country">Austria</span></span></li>
 			<li><span class="author"><a href="https://orcid.org/0000-0002-4162-8334">Sabbir M. Rashid</a></span> <span class="affiliation">Tetherless World Constellation, Rensselaer Polytechnic Institute <span class="country">USA</span></span></li>
