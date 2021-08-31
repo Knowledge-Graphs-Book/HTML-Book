@@ -73,6 +73,8 @@
 			"fig-html" => "6.2",
 			"fig-rdbCrime" => "6.3",
 			"fig-direct" => "6.4",
+			"fig-bad" => "7.1",
+			"fig-badOnt" => "7.2",
 			"fig-identity" => "8.1",
 			"fig-ld" => "9.1",
 			"fig-access" => "9.2",
