@@ -219,7 +219,7 @@
 				<li>We denote by \(\psi(\mathcal{X})\) the element-wise application of a function \(\psi\) to the tensor \(\mathcal{X}\), such that \((\psi(\mathcal{X}))_{in_1\ldots i_n} = \psi(\mathcal{X}_{i_1\ldots i_n})\). Common choices for \(\psi\) include a sigmoid function (e.g., the logistic function \(\psi(x) = \frac{1}{1 + e^{-x}}\) or the hyperbolic tangent function \(\psi(x) = \mathrm{tanh}\,x = \frac{e^x - e^{-x}}{e^x + e^{-x}}\)), the rectifier (\(\psi(x) = \mathrm{max}(0,x)\)), softplus (\(\psi(x) = \mathrm{ln}(1 + e^x)\)), etc.</li>
 			</ul>
 
-			<p>We now define the operators used in Table~\ref{tab:kges}, where the first and most elemental operation we consider is that of matrix multiplication.</p>
+			<p>We now define the operators used in Table&nbsp;<? echo ref("tab:kges"); ?>, where the first and most elemental operation we consider is that of matrix multiplication.</p>
 
 			<dl class="definition" id="def-matrix-multiplication">
 				<dt>Matrix multiplication</dt>
