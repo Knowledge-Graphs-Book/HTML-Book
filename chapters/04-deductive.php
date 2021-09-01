@@ -106,7 +106,7 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td>Subproperty</td>
+					<td>Sub-property</td>
 					<td><? echo gedge("\\(p\\)","subp.&nbsp;of","\\(q\\)"); ?></td>
 					<td><? echo giedge("\\(x\\)","\\(p\\)","\\(y\\)"); ?> implies <? echo giedge("\\(x\\)","\\(q\\)","\\(y\\)"); ?></td>
 					<td><? echo gedge("venue","subp.&nbsp;of","location"); ?></td>
@@ -213,7 +213,7 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td>Subclass</td>
+					<td>Sub-class</td>
 					<td><? echo gedge("\\(c\\)","subc.&nbsp;of","\\(d\\)"); ?></td>
 					<td><? echo giedge("\\(x\\)","type","\\(c\\)"); ?> implies <? echo giedge("\\(x\\)","type","\\(d\\)"); ?></td>
 					<td><? echo gedge("City","subc.&nbsp;of","Place"); ?></td>
@@ -314,7 +314,7 @@
 		
 		<h4 id="sec-ontSemantics" class="subsection">Entailment</h4>
 		<p>The conditions listed in the previous tables give rise to <em>entailments</em>, where, for example, in reference to the <span class="sc">Symmetric</span> feature of Table&nbsp;<? echo ref("tab:ontProp"); ?>, the definition <? echo gedge("nearby","type","Symmetric"); ?> and edge <? echo gedge("Santiago","nearby","Santiago&nbsp;Airport"); ?> entail the edge <? echo gedge("Santiago&nbsp;Airport","nearby","Santiago"); ?> according to the condition given for that feature. We now describe how these conditions lead to entailments.</p>
-		<p>We say that one graph <em>entails</em> another if and only if any model of the former graph is also a model of the latter graph. Intuitively this means that the latter graph says nothing new over the former graph and thus holds as a logical consequence of the former graph. For example, consider the graph <? echo gedge("Santiago","type","City"); ?><? echo esource(); ?><span class="edge">subc.&nbsp;of</span><? echo etipr(); ?><span class="gnode">Place</span> and the graph <? echo gedge("Santiago","type","Place"); ?>. All models of the latter must have that <? echo giedge("Santiago","type","Place"); ?>, but so must all models of the former, which must have <? echo giedge("Santiago","type","City"); ?><? echo isource(); ?><span class="iedge">subc.&nbsp;of</span><? echo itipr(); ?><span class="ginode">Place</span> and further must satisfy the condition for <span class="sc">Subclass</span>, which requires that <? echo giedge("Santiago","type","Place"); ?> also hold. Hence we conclude that any model of the former graph must be a model of the latter graph, or, in other words, the former graph entails the latter graph.</p>
+		<p>We say that one graph <em>entails</em> another if and only if any model of the former graph is also a model of the latter graph. Intuitively this means that the latter graph says nothing new over the former graph and thus holds as a logical consequence of the former graph. For example, consider the graph <? echo gedge("Santiago","type","City"); ?><? echo esource(); ?><span class="edge">subc.&nbsp;of</span><? echo etipr(); ?><span class="gnode">Place</span> and the graph <? echo gedge("Santiago","type","Place"); ?>. All models of the latter must have that <? echo giedge("Santiago","type","Place"); ?>, but so must all models of the former, which must have <? echo giedge("Santiago","type","City"); ?><? echo isource(); ?><span class="iedge">subc.&nbsp;of</span><? echo itipr(); ?><span class="ginode">Place</span> and further must satisfy the condition for <span class="sc">Sub-class</span>, which requires that <? echo giedge("Santiago","type","Place"); ?> also hold. Hence we conclude that any model of the former graph must be a model of the latter graph, or, in other words, the former graph entails the latter graph.</p>
 
 		<div class="formal">
 			<p>We now formally define entailment under semantic conditions.</p>
@@ -351,25 +351,25 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td>Subclass (I)</td>
+					<td>Sub-class (I)</td>
 					<td><? echo sedge("?x","type",NULL,"?c","gvar"); ?><? echo esource(); ?><span class="edge">subc.&nbsp;of</span><? echo etipr(); ?><span class="gvar">?d</span></td>
 					<td>\(\Rightarrow\)</td>
 					<td><? echo sedge("?x","type",NULL,"?d","gvar"); ?></td>
 				</tr>
 				<tr>
-					<td>Subclass (II)</td>
+					<td>Sub-class (II)</td>
 					<td><? echo sedge("?d","subc.&nbsp;of",NULL,"?d","gvar"); ?><? echo esource(); ?><span class="edge">subc.&nbsp;of</span><? echo etipr(); ?><span class="gvar">?e</span></td>
 					<td>\(\Rightarrow\)</td>
 					<td><? echo sedge("?d","subc.&nbsp;of",NULL,"?e","gvar"); ?></td>
 				</tr>
 				<tr>
-					<td>Subproperty (I)</td>
-					<td><img class="inside" src="images/tab-rulesRdfs-subprop.svg" alt="subproprety (I) body" /></td>
+					<td>Sub-property (I)</td>
+					<td><img class="inside" src="images/tab-rulesRdfs-subprop.svg" alt="sub-proprety (I) body" /></td>
 					<td>\(\Rightarrow\)</td>
 					<td><? echo sedge("?x","?q",NULL,"?y","gvar"); ?></td>
 				</tr>
 				<tr>
-					<td>Subproperty (II)</td>
+					<td>Sub-property (II)</td>
 					<td><? echo sedge("?p","subp.&nbsp;of",NULL,"?q","gvar"); ?><? echo esource(); ?><span class="edge">subp.&nbsp;of</span><? echo etipr(); ?><span class="gvar">?r</span></td>
 					<td>\(\Rightarrow\)</td>
 					<td><? echo sedge("?p","subp.&nbsp;of",NULL,"?r","gvar"); ?></td>
