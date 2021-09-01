@@ -18,8 +18,7 @@
 			<li><a href="#chap-deductive">4. Deductive Knowledge</a>
 			<ol>
 				<li><a href="#ssec-ontologies">4.1. Ontologies</a></li>
-				<li><a href="#sec-ontSemantics">4.2. Semantics and Entailment</a></li>
-				<li><a href="#ssec-reasoning">4.3. Reasoning</a></li>
+				<li><a href="#ssec-reasoning">4.2. Reasoning</a></li>
 			</ol></li>
 			<li><a href="#chap-inductive">5. Inductive Knowledge</a>
 			<ol>
@@ -53,7 +52,7 @@
 			<li><a href="#chap-publish">9. Publication</a>
 			<ol>
 				<li><a href="#ssec-principles">9.1. Best Practices</a></li>
-				<li><a href="#ssec-access-protocols">9.2. Access Protocols</a></li>
+				<li><a href="#ssec-access">9.2. Access Protocols</a></li>
 				<li><a href="#ssec-UsageControl">9.3. Usage Control</a></li>
 			</ol></li>
 			<li><a href="#chap-kgs">10. Knowledge Graphs in Practice</a>
@@ -69,6 +68,7 @@
 				<li><a href="#app-pre2012">A.2. “Knowledge Graphs”: Pre 2012</a></li>
 				<li><a href="#app-post2012">A.3. “Knowledge Graphs”: 2012 Onwards</a></li>
 			</ol></li>
+			<li><a href="#sec-bio">Author’s Biography</a></li>
 			<li id="toc-filler">&nbsp;</li>
 			<li id="about"><a href="#about">about this book</a></li>
 		</ol>
