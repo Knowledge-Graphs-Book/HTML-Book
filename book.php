@@ -81,7 +81,7 @@
 			<h2>Access options</h2>
 			<dl>
 				<dt>HTML version:</dt>
-				<dd>You are currently reading the free HTML version of the book, the most recent of which is available at <a href="http://kg-book.org/">http://kg-book.org/</a></dd>
+				<dd>You are currently reading the free HTML version of the book, the most recent of which is available at <a href="https://kg-book.org/">https://kg-book.org/</a></dd>
 				<dt>PDF Version:</dt>
 				<dd>You can download or buy the book from <a href="http://www.morganclaypool.com/">Morgan &amp; Claypool</a>. Academic and Corporate licences are available.</dd>
 				<dt>Hard copy:</dt>

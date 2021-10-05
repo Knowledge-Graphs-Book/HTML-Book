@@ -29,7 +29,7 @@
 		<p>A standardised data model based on directed edge-labelled graphs is the Resource Description Framework (RDF)&nbsp;<? echo $references->cite("rdf11"); ?>, which has been recommended by the W3C. The RDF model defines different types of nodes, including <em>Internationalized Resource Identifiers</em> (IRIs)&nbsp;<? echo $references->cite("rfc3987"); ?> which allow for global identification of entities on the Web; <em>literals</em>, which allow for representing strings (with or without language tags) and other datatype values (integers, dates, etc.); and <em>blank nodes</em>, which are anonymous nodes that are not assigned an identifier (for example, rather than create internal identifiers like <code>EID15</code>, <code>EID16</code>, in RDF, we have the option to use blank nodes). We will discuss these different types of nodes further in Section&nbsp;<? echo ref("sec:identity"); ?> when we speak about issues relating to identity.</p>
 
 		<div class="formal">
-			<p>We formally define a directed edge-labelled graph.</p>
+			<p>We now formally define a directed edge-labelled graph, where we denote by \(\con\) a countably infinite set of constants.</p>
 
 			<dl class="definition" id="def-delg">
 				<dt>Directed edge-labelled graph</dt>
@@ -94,7 +94,7 @@
 		<p>Property graphs are prominently used in graph databases, such as Neo4j&nbsp;<? echo $references->cite("Miller13,AnglesABHRV17"); ?>. Property graphs can be converted to/from directed edge-labelled graphs&nbsp;<? echo $references->cite("HernandezHK15,AnglesTT19"); ?> (per, e.g., Figure&nbsp;<? echo ref("fig:pg"); ?>). In summary, directed edge-labelled graphs offer a more minimal model, while property graphs offer a more flexible one. Often the choice of model will be secondary to other practical factors, such as the implementations available for different models, etc.</p>
 
 		<div class="formal">
-			<p>We define a property graph more formally.</p>
+			<p>We formally define a property graph.</p>
 
 			<dl class="definition" id="def-pg">
 				<dt>Property graph</dt>
@@ -115,7 +115,7 @@
 				</ul>
 			</div>
 
-			<p>Definition&nbsp;<? echo ref("def:pg"); ?> does not require that the sets \(V\), \(E\), \(L\), \(P\) or \(U\) be (pairwise) disjoint: we allow, for example, that values are also nodes. Unlike some previous definitions&nbsp;<? echo $references->cite("AnglesABHRV17"); ?>, here we allow a node or edge to have several values for a given property. In practice, systems like Neo4j&nbsp;<? echo $references->cite("Miller13"); ?> may rather support this by allowing a single array (i.e., list) of values.</p>
+			<p>Unlike previous definitions&nbsp;<? echo $references->cite("AnglesABHRV17"); ?>, we allow a node or edge to have several values for a given property. In practice, systems like Neo4j&nbsp;<? echo $references->cite("Miller13"); ?> may rather support this by allowing a single array (i.e., list) of values.</p>
 		</div>
 
 		<h4 id="subsub-graphdataset" class="subsection">Graph dataset</h4>
@@ -133,7 +133,7 @@
 
 			<dl class="definition" id="def-gd">
 				<dt>Graph dataset</dt>
-				<dd>A <em>named graph</em> is a pair \((n,G)\) where \(G\) is a data graph, and \(n \in \con\) is a graph name. A <em>graph dataset</em> is a pair \(D = (G_D,N)\) where \(G_D\) is a data graph called the <em>default graph</em> and \(N\) is either the empty set, or a set of named graphs \(\{ (n_1,G_1), \ldots (n_k,G_k) \}\) (\(k &gt; 0\)) such that \(n_i = n_j\) if and only if \(i = j\) (for all \(1 \leq i \leq k\), \(1 \leq j \leq k\)).</dd>
+				<dd>A <em>named graph</em> is a pair \((n,G)\) where \(G\) is a data graph, and \(n \in \con\) is a graph name. A <em>graph dataset</em> is a pair \(D = (G_D,N)\) where \(G_D\) is a data graph called the <em>default graph</em> and \(N\) is either the empty set, or a set of named graphs \(\{ (n_1,G_1), \ldots (n_k,G_k) \}\) (\(k &gt; 0\)) such that if \(i \neq j\) then  \(n_i \neq n_j\) (for all \(1 \leq i \leq k\), \(1 \leq j \leq k\)).</dd>
 			</dl>
 
 			<div class="example">
@@ -150,7 +150,7 @@
 
 		<section id="ssec-querying" class="section">
 		<h3>Querying</h3>
-		<p>A number of practical languages have been proposed for querying graphs&nbsp;<? echo $references->cite("AnglesABHRV17"); ?>, including the SPARQL query language for RDF graphs&nbsp;<? echo $references->cite("sparql11"); ?>; and Cypher&nbsp;<? echo $references->cite("FrancisGGLLMPRS18"); ?>, Gremlin&nbsp;<? echo $references->cite("Rodriguez15"); ?>, and G-CORE&nbsp;<? echo $references->cite("AnglesABBFGLPPS18"); ?> for querying property graphs.<? echo footnote("The popularity of these languages is investigated by ". $references->citet("seifer19") ."."); ?> Underlying these query languages are some common primitives, including (basic) graph patterns, relational operators, path expressions, and more besides&nbsp;<? echo $references->cite("AnglesABHRV17"); ?>. We now describe these core features for querying graphs in turn, starting with basic graph patterns.</p>
+		<p>A number of languages have been proposed for querying graphs&nbsp;<? echo $references->cite("AnglesABHRV17"); ?>, including the SPARQL query language for RDF graphs&nbsp;<? echo $references->cite("sparql11"); ?>; and Cypher&nbsp;<? echo $references->cite("FrancisGGLLMPRS18"); ?>, Gremlin&nbsp;<? echo $references->cite("Rodriguez15"); ?>, and G-CORE&nbsp;<? echo $references->cite("AnglesABBFGLPPS18"); ?> for querying property graphs. We refer to <? echo $references->citet("seifer19"); ?> for an investigation of the popularity of these languages. Underlying these query languages are some common primitives, including (basic) graph patterns, relational operators, path expressions, and more besides&nbsp;<? echo $references->cite("AnglesABHRV17"); ?>. We now describe these core features for querying graphs in turn, starting with basic graph patterns.</p>
 
 		<h4 id="sssec-graphpatterns" class="subsection">Basic graph patterns</h4>
 		<p>At the core of every structured query language for graphs lie <em>basic graph patterns</em>&nbsp;<? echo $references->cite("ConsensM90,AnglesABHRV17"); ?>, which follow the same model as the data graph being queried (see Section&nbsp;<? echo ref("ssec:graphModels"); ?>), additionally allowing variables as terms.<? echo footnote("The terms of a directed edge-labelled graph are its nodes and edge-labels. The terms of a property graph are its ids, labels, properties, and values (as used on either edges or nodes)."); ?> Terms in basic graph patterns are thus divided into constants, such as <span class="gnode">Arica</span> or <span class="gelab">venue</span>, and variables, which we prefix with question marks, such as <span class="gvar">?event</span> or <span class="gelab" style="color: black">?rel</span>. A basic graph pattern is then evaluated against the data graph by generating mappings from the variables of the graph pattern to constants in the data graph such that the image of the graph pattern under the mapping (replacing variables with the assigned constants) is contained within the data graph.</p>
@@ -206,15 +206,15 @@
 
 			<dl class="definition" id="def-delgp">
 				<dt>Basic directed edge-labelled graph pattern</dt>
-				<dd>We define a <em>basic directed edge-labelled graph pattern</em> as a tuple \(Q = (V',E',L')\), where \(V' \subseteq \term\) is a set of node terms, \(L' \subseteq \term\) is a set of edge terms, and \(E' \subseteq V' \times L' \times V'\) is a set of edges (triple patterns).</dd>
+				<dd>We define a <em>basic directed edge-labelled graph pattern</em> as a tuple \(Q = (V,E,L)\), where \(V \subseteq \term\) is a set of node terms, \(L \subseteq \term\) is a set of edge terms, and \(E \subseteq V \times L \times V\) is a set of edges (triple patterns).</dd>
 			</dl>
 
 			<div class="example">
 				<p>Returning to the example of Figure&nbsp;<? echo ref("fig:gp"); ?>:</p>
 				<ul>
-					<li>the set \(V'\) contains the constant <code>Food Festival</code> and variables <code>?event</code>, <code>?ven1</code> and <code>?ven2</code>;</li>
-					<li>the set \(E'\) contains four edges, including \((\)<code>?event</code>, <code>type</code>, <code>Food Festival</code>\()\);</li>
-					<li>the set \(L'\) contains the constants <code>type</code> and <code>venue</code>.</li>
+					<li>the set \(V\) contains the constant <code>Food Festival</code> and variables <code>?event</code>, <code>?ven1</code> and <code>?ven2</code>;</li>
+					<li>the set \(E\) contains four edges, including \((\)<code>?event</code>, <code>type</code>, <code>Food Festival</code>\()\);</li>
+					<li>the set \(L\) contains the constants <code>type</code> and <code>venue</code>.</li>
 				</ul>
 			</div>
 
@@ -222,7 +222,7 @@
 
 			<dl class="definition" id="def-pgp">
 				<dt>Basic property graph pattern</dt>
-				<dd>We define a <em>basic property graph pattern</em> as a tuple \(Q = (V',E',L',P',U',e',l',p')\), where \(V' \subseteq \term\) is a set of node id terms, \(E' \subseteq \term\) is a set of edge id terms, \(L' \subseteq \term\) is a set of label terms, \(P' \subseteq \term\) is a set of property terms, \(U' \subseteq \term\) is a set of value terms, \(e' : E' \rightarrow V' \times V'\) maps an edge id term to a pair of node id terms, \(l' : V' \cup E' \rightarrow 2^{L'}\) maps a node or edge id term to a set of label terms, and \(p' : V' \cup E' \rightarrow 2^{P' \times U'}\) maps a node or edge id term to a set of pairs of property–value terms.</dd>
+				<dd>We define a <em>basic property graph pattern</em> as a tuple \(Q = (V,E,L,P,U,e,l,p)\), where \(V \subseteq \term\) is a set of node id terms, \(E \subseteq \term\) is a set of edge id terms, \(L \subseteq \term\) is a set of label terms, \(P \subseteq \term\) is a set of property terms, \(U \subseteq \term\) is a set of value terms, \(e : E \rightarrow V \times V\) maps an edge id term to a pair of node id terms, \(l : V \cup E \rightarrow 2^{L}\) maps a node or edge id term to a set of label terms, and \(p : V \cup E \rightarrow 2^{P \times U}\) maps a node or edge id term to a set of pairs of property–value terms.</dd>
 			</dl>
 
 			<p>Towards defining the results of evaluating a basic graph pattern over a data graph (following the same model), we first define a partial mapping \(\mu : \var \rightarrow \con\) from variables to constants, whose <em>domain</em> (the set of variables for which it is defined) is denoted by \(\dom(\mu)\). Given a basic graph pattern \(Q\), let \(\var(Q)\) denote the set of all variables appearing in (some recursively nested element of) \(Q\). We further denote by \(\mu(Q)\) the image of \(Q\) under \(\mu\), meaning that any variable \(v \in \var(Q) \cap \dom(\mu)\) is replaced in \(Q\) by \(\mu(v)\). Observe that when \(\var(Q) \subseteq \dom(\mu)\), then \(\mu(Q)\) is a data graph (in the corresponding model of \(Q\)).</p>
@@ -319,7 +319,7 @@
 		</figure>
 
 		<div class="formal">
-			<p>We now more formally define complex graph patterns.</p>
+			<p>We now formally define complex graph patterns.</p>
 
 			<dl class="definition" id="def-cgp">
 				<dt>Complex graph pattern</dt>
@@ -327,20 +327,20 @@
 					<ul>
 						<li>If \(Q\) is a basic graph pattern, then \(Q\) is a <em>complex graph pattern</em>.</li>
 						<li>If \(Q\) is a complex graph pattern, and \(\mathcal{V} \subseteq \var(Q)\), then \(\pi_\mathcal{V}(Q)\) is a <em>complex graph pattern</em>.</li>
-						<li>If \(Q\) is a complex graph pattern, and \(R\) is a selection condition with boolean and equality connectives (\(\wedge\), \(\vee\), \(\neg\), \(=\)) , then \(\sigma_R(Q)\) is a <em>complex graph pattern</em>.</li>
-						<li>If both \(Q_1\) and \(Q_2\) are complex graph patterns, then \(Q_1 \Join Q_2\), \(Q_1 \cup Q_2\) and \(Q_1 - Q_2\) are also <em>complex graph patterns</em>.</li>
+						<li>If \(Q\) is a complex graph pattern, and \(R\) is a selection condition with Boolean and equality connectives (\(\wedge\), \(\vee\), \(\neg\), \(=\)) , then \(\sigma_R(Q)\) is a <em>complex graph pattern</em>.</li>
+						<li>If both \(Q_1\) and \(Q_2\) are complex graph patterns, then \(Q_1 \Join Q_2\), \(Q_1 \cup Q_2\), \(Q_1 - Q_2\) and \(Q_1 \rhd Q_2\) are also <em>complex graph patterns</em>.</li>
 					</ul>
 				</dd>
 			</dl>
 
-			<p>We now define the evaluation of complex graph patterns. Given a mapping \(\mu\), for a set of variables \(\mathcal{V} \subseteq \var\) let \(\mu[\mathcal{V}]\) denote the mapping \(\mu'\) such that \(\dom(\mu') = \dom(\mu) \cap \mathcal{V}\) and \(\mu(v) = \mu'(v)\) for all \(v \in \dom(\mu')\) (in other words, \(\mu[\mathcal{V}]\) projects the variables \(\mathcal{V}\) from \(\mu\)). Letting \(R\) denote a boolean selection condition and \(\mu\) a mapping, we denote by \(R \models \mu\) that \(\mu\) satisfies the boolean condition. Finally, we define two mappings \(\mu_1\) and \(\mu_2\) to be <em>compatible</em>, denoted \(\mu_1 \sim \mu_2\), if and only if \(\mu_1(v) = \mu_2(v)\) for all \(v \in \dom(\mu_1) \cap \dom(\mu_2)\) (i.e., they map all common variables to the same constant). We are now ready to provide the definition.</p>
+			<p>We now define the evaluation of complex graph patterns. Given a mapping \(\mu\), for a set of variables \(\mathcal{V} \subseteq \var\) let \(\mu[\mathcal{V}]\) denote the mapping \(\mu'\) such that \(\dom(\mu') = \dom(\mu) \cap \mathcal{V}\) and \(\mu'(v) = \mu(v)\) for all \(v \in \dom(\mu')\) (in other words, \(\mu[\mathcal{V}]\) projects the variables \(\mathcal{V}\) from \(\mu\)). Letting \(R\) denote a Boolean selection condition and \(\mu\) a mapping, we denote by \(\mu \models R\) that \(\mu\) satisfies the Boolean condition. Finally, we define two mappings \(\mu_1\) and \(\mu_2\) to be <em>compatible</em>, denoted \(\mu_1 \sim \mu_2\), if and only if \(\mu_1(v) = \mu_2(v)\) for all \(v \in \dom(\mu_1) \cap \dom(\mu_2)\) (i.e., they map common variables to the same constant). We are now ready to provide the definition.</p>
 
 			<dl class="definition" id="def-evalcgp">
 				<dt>Complex graph pattern evaluation</dt>
 				<dd>Given a complex graph pattern \(Q\), if \(Q\) is a basic graph pattern, then \(Q(G)\) is defined per Definition&nbsp;<? echo ref("def:evgp"); ?>. Otherwise, \(Q(G)\) is defined as follows:
 				\begin{align*}
 				 \pi_\mathcal{V}(Q)(G) = & \,\{ \mu[\mathcal{V}] \mid \mu \in Q(G) \} \\
-				 \sigma_R(Q)(G) = & \, \{ \mu \mid \mu \in Q(G)\text{ and }R \models \mu\}\\
+				 \sigma_R(Q)(G) = & \, \{ \mu \mid \mu \in Q(G)\text{ and }\mu \models R\}\\
 				 Q_1 \Join Q_2(G) = & \,\{ \mu_1 \cup \mu_2 \mid \mu_1 \in Q_2(G), \mu_2 \in Q_1(G)\text{ and }\mu_1 \sim \mu_2 \} \\
 				 Q_1 \cup Q_2(G) = & \,\{ \mu \mid \mu \in Q_1(G)\text{ or } \mu \in Q_2(G) \} \\
 				 Q_1 - Q_2(G) = & \,\{ \mu \mid \mu \in Q_1(G)\text{ and } \mu \notin Q_2(G) \} \\
@@ -354,7 +354,7 @@
 			 Q_1 <? echo LeftJoin(false); ?> Q_2(G) = & \,(Q_1(G) \Join Q_2(G)) \cup (Q_1(G) \rhd Q_2(G))
 			\end{align*}
 			</p>
-			<p>We call these operators <em>syntactic</em> as they do not add expressivity.</p>
+			<p>We call such operators <em>syntactic</em> as they do not add expressivity.</p>
 
 			<div class="example">
 				<p>Figure&nbsp;<? echo ref("fig:cgp"); ?> illustrates a complex graph pattern and its evaluation.</p>
@@ -478,7 +478,7 @@
 			<dt>Faceted browsing:</dt>
 			<dd>Users start by specifying a simple search, such as a keyword search, a type of node like <code>Food Festival</code>, or possibly other kinds of search. They are then presented with a set of matching results, and a set of facets, which are typically attributes (e.g., <code>venue</code>) and values (e.g., <code>Santa Lucía</code>) present in the current results set. Selecting a value for a facet restricts the current results set to include only results with the indicated value; this selection process can be applied iteratively to restrict results per multiple facets. Often the faceted criteria are translated into and evaluated as graph queries. Though relatively intuitive for users, such systems typically support acyclic queries that generate lists of results (analogous to graph queries that project a single variable), and rarely support more expressive queries. Examples of faceted browsing systems for graphs include VisiNav&nbsp;<? echo $references->cite("Harth10"); ?>, Broccoli&nbsp;<? echo $references->cite("BastB13"); ?>, SemFacet&nbsp;<? echo $references->cite("ArenasGKMZ16"); ?>, GraFa&nbsp;<? echo $references->cite("Moreno-VegaH18"); ?>, etc.</dd>
 			<dt>Query building:</dt>
-			<dd>Users are provided with a form or graphical interface that can be used to specify a graph query without needing to understand the syntax of a specific query language. Such query builders allow for incrementally adding nodes or edges to the query, assisted by features such as auto-completion, previewing intermediate results, and graph navigation. Query builders typically allow for expressing queries equivalent to (cyclic) basic graph patterns, but may not support more expressive features of query language as described herein. Graph query builder systems include Smeagol&nbsp;<? echo $references->cite("ClemmerD11"); ?>, QueryVOWL&nbsp;<? echo $references->cite("HaagLSE15a"); ?>, VIIQ&nbsp;<? echo $references->cite("JayaramGL15"); ?>, Sparklis&nbsp;<? echo $references->cite("Ferre17"); ?>, RDF Explorer&nbsp;<? echo $references->cite("VargasAHL19"); ?>, and more besides.</dd>
+			<dd>Users are provided with a form or graphical interface that can be used to specify a graph query without needing to understand the syntax of a specific query language. Such query builders allow for incrementally adding nodes or edges to the query, assisted by features such as auto-completion, previewing intermediate results, and graph navigation. Query builders typically allow for expressing queries equivalent to (cyclic) basic graph patterns, but may not support more expressive features of query languages as described herein. Graph query builder systems include Smeagol&nbsp;<? echo $references->cite("ClemmerD11"); ?>, QueryVOWL&nbsp;<? echo $references->cite("HaagLSE15a"); ?>, VIIQ&nbsp;<? echo $references->cite("JayaramGL15"); ?>, Sparklis&nbsp;<? echo $references->cite("Ferre17"); ?>, RDF Explorer&nbsp;<? echo $references->cite("VargasAHL19"); ?>, and more besides.</dd>
 			<dt>Query-by-example:</dt>
 			<dd>Users provide examples of positive and sometimes negative answers to their queries. For example, they may provide as positive examples the nodes <span class="gnode">Arica</span>, <span class="gnode">Santiago</span>, <span class="gnode">Viña del Mar</span>, and as negative examples the nodes <span class="gnode">Chile</span>, <span class="gnode">Lima</span>, where the system will then “reverse engineer” a query that returns positive examples but not negative examples (in this case, the query proposed may return nodes of type <code>City</code> whose <code>country</code> is <code>Chile</code>). Query-by-example systems typically support basic graph patterns, and may not support more expressive querying features. They are useful in cases where users have examples of what they are looking for, but are not necessarily sure of the query they need to retrieve similar examples. Query-by-example systems for graphs include GQBE&nbsp;<? echo $references->cite("JayaramKLYE15"); ?> and SPARQLByE&nbsp;<? echo $references->cite("DiazAB16"); ?>.</dd>
 			<dt>Question answering:</dt>
