@@ -68,7 +68,7 @@
 				<li><a href="#app-pre2012">A.2. “Knowledge Graphs”: Pre 2012</a></li>
 				<li><a href="#app-post2012">A.3. “Knowledge Graphs”: 2012 Onwards</a></li>
 			</ol></li>
-			<li><a href="#sec-bio">Author’s Biography</a></li>
+			<li><a href="#sec-bio">Authors’ Biography</a></li>
 			<li id="toc-filler">&nbsp;</li>
 			<li id="about"><a href="#about">about this book</a></li>
 		</ol>
