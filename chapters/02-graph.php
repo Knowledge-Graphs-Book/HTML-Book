@@ -339,12 +339,12 @@
 				<dt>Complex graph pattern evaluation</dt>
 				<dd>Given a complex graph pattern \(Q\), if \(Q\) is a basic graph pattern, then \(Q(G)\) is defined per Definition&nbsp;<? echo ref("def:evgp"); ?>. Otherwise, \(Q(G)\) is defined as follows:
 				\begin{align*}
-				 \pi_\mathcal{V}(Q)(G) = & \,\{ \mu[\mathcal{V}] \mid \mu \in Q(G) \} \\
-				 \sigma_R(Q)(G) = & \, \{ \mu \mid \mu \in Q(G)\text{ and }\mu \models R\}\\
-				 Q_1 \Join Q_2(G) = & \,\{ \mu_1 \cup \mu_2 \mid \mu_1 \in Q_2(G), \mu_2 \in Q_1(G)\text{ and }\mu_1 \sim \mu_2 \} \\
-				 Q_1 \cup Q_2(G) = & \,\{ \mu \mid \mu \in Q_1(G)\text{ or } \mu \in Q_2(G) \} \\
-				 Q_1 - Q_2(G) = & \,\{ \mu \mid \mu \in Q_1(G)\text{ and } \mu \notin Q_2(G) \} \\
-				 Q_1 \rhd Q_2(G) = & \,\{ \mu \mid \mu \in Q_1(G)\text{ and }\nexists \mu_2 \in Q_2(G)\text{ such that }\mu \sim \mu_2 \}
+					\pi_\mathcal{V}(Q)(G) = & \,\{ \mu[\mathcal{V}] \mid \mu \in Q(G) \} \\
+					\sigma_R(Q)(G) = & \, \{ \mu \mid \mu \in Q(G)\text{ and }\mu \models R\}\\
+					Q_1 \Join Q_2(G) = & \,\{ \mu_1 \cup \mu_2 \mid \mu_1 \in Q_2(G), \mu_2 \in Q_1(G)\text{ and }\mu_1 \sim \mu_2 \} \\
+					Q_1 \cup Q_2(G) = & \,\{ \mu \mid \mu \in Q_1(G)\text{ or } \mu \in Q_2(G) \} \\
+					Q_1 - Q_2(G) = & \,\{ \mu \mid \mu \in Q_1(G)\text{ and } \mu \notin Q_2(G) \} \\
+					Q_1 \rhd Q_2(G) = & \,\{ \mu \mid \mu \in Q_1(G)\text{ and }\nexists \mu_2 \in Q_2(G)\text{ such that }\mu \sim \mu_2 \}
 				\end{align*}</dd>
 			</dl>
 

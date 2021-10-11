@@ -8,16 +8,20 @@
 <head>
 	<title>Knowledge Graphs</title>
 	<meta charset="UTF-8"/>
+	
+<!--	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>-->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
 	<link rel="stylesheet" href="css/style.css"/>
 	<link rel="stylesheet" href="css/prism.css"/>
 	<link rel="stylesheet" href="css/fonts.css"/>
 	<link rel="stylesheet" href="css/print.css" media="print"/>
-	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-	<script id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 	<script src="js/prism.js"></script>
 </head>
 <body>
-	<div style="display:none" id="tex-macros">
+	<!--<div style="display:none" id="tex-macros">
 		\(
 \newcommand{\coloneqq}{\mathrel{\vcenter{:}}=}
 \newcommand{\con}{\mathbf{Con}}
@@ -38,7 +42,45 @@
 \newcommand{\T}[1]{#1^{\rm T}}
 \newcommand{\D}[1]{#1^{\rm D}}
 		\)
-	</div>
+	</div>-->
+	<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '\\(', right: '\\)', display: false},
+              {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+			  {left: "\\begin{align*}", right: "\\end{align*}", display: true},
+			  {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+			  {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+			  {left: "\\begin{CD}", right: "\\end{CD}", display: true},
+			  {left: '\\[', right: '\\]', display: true}
+          ],
+          macros: {
+          	"\\coloneqq": "\\mathrel{\\vcenter{:}}=",
+			"\\con": "\\mathbf{Con}",
+			"\\var": "\\mathbf{Var}",
+			"\\term": "\\mathbf{Term}",
+			"\\dom": "\\mathbf{dom}",
+			"\\datatype": "\\Delta_{#1}",
+			"\\datatypeL": "\\datatype{\\texttt{#1}}",
+			"\\gelab": "{\\color{blue}\\textsf{#1}}",
+			"\\arc": "\\xrightarrow{#1}#2",
+			"\\qualified": "\\arc{#1}{#2}\\{#3,#4\\}",
+			"\\qualifiedcard": "\\arc{#1}{#2}~#3",
+			"\\qualifiedL": "\\qualified{\\gelab{#1}}{#2}{#3}{#4}",
+			"\\qualifiedcardL": "\\qualifiedcard{\\gelab{#1}}{#2}{#3}",
+			"\\semantics": "[#1]^{#2,#3,#4}",
+			"\\inp": "#1^I",
+			"\\inpdom": "\\inp{\\Delta}",
+			"\\T": "#1^{\\rm T}",
+			"\\D": "#1^{\\rm D}"
+          }
+        });
+    });
+	</script>
 	<div class="cover"><img alt="mock cover" src="images/mock-cover.jpg"/></div>
 	<header>
 		<h1 id="title"><span class="big-letter">K</span>nowledge <span class="big-letter">G</span>raphs</h1>

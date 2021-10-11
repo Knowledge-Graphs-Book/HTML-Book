@@ -647,8 +647,8 @@ div.example p:first-child:before {
 /*****************/
 
 #tab-gnn tr td:first-child {
-	margin-left: 4em;
-	padding-left: 4em;
+	margin-left: 3em;
+	padding-left: 3em;
 }
 #tab-gnn td {
 	text-align: left;

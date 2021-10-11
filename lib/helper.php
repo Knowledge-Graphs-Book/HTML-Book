@@ -920,7 +920,8 @@
 	function LeftJoin($ensuremath = true) {
 		$_openmath = $ensuremath ? "\\(" : "";
 		$_closemath = $ensuremath ? "\\)" : "";
-		return $_openmath ."\\mathbin{\\rule[0ex]{0.3em}{.5pt}\\llap{\\rule[1ex]{0.3em}{.5pt}}\\mkern-6mu\\Join}". $_closemath;
+		//return $_openmath ."\\mathbin{\\rule[0ex]{0.3em}{.5pt}\\llap{\\rule[1ex]{0.3em}{.5pt}}\\mkern-6mu\\Join}". $_closemath;
+		return $_openmath ."\\mathbin{\\rule[0ex]{0.3em}{.5pt}\\mathllap{\\rule[1ex]{0.3em}{.5pt}}\\mkern-6mu\\Join}". $_closemath;
 	}
 	
 ?>

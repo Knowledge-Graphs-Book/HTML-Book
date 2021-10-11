@@ -3,20 +3,16 @@
 <head>
 	<title>Knowledge Graphs</title>
 	<meta charset="UTF-8"/>
-	
-<!--	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-	<script id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>-->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
-	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
-	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
 	<link rel="stylesheet" href="css/style.css"/>
 	<link rel="stylesheet" href="css/prism.css"/>
 	<link rel="stylesheet" href="css/fonts.css"/>
 	<link rel="stylesheet" href="css/print.css" media="print"/>
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 	<script src="js/prism.js"></script>
 </head>
 <body>
-	<!--<div style="display:none" id="tex-macros">
+	<div style="display:none" id="tex-macros">
 		\(
 \newcommand{\coloneqq}{\mathrel{\vcenter{:}}=}
 \newcommand{\con}{\mathbf{Con}}
@@ -37,45 +33,7 @@
 \newcommand{\T}[1]{#1^{\rm T}}
 \newcommand{\D}[1]{#1^{\rm D}}
 		\)
-	</div>-->
-	<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        renderMathInElement(document.body, {
-          // customised options
-          // • auto-render specific keys, e.g.:
-          delimiters: [
-              {left: '$$', right: '$$', display: true},
-              {left: '\\(', right: '\\)', display: false},
-              {left: "\\begin{equation}", right: "\\end{equation}", display: true},
-			  {left: "\\begin{align*}", right: "\\end{align*}", display: true},
-			  {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
-			  {left: "\\begin{gather}", right: "\\end{gather}", display: true},
-			  {left: "\\begin{CD}", right: "\\end{CD}", display: true},
-			  {left: '\\[', right: '\\]', display: true}
-          ],
-          macros: {
-          	"\\coloneqq": "\\mathrel{\\vcenter{:}}=",
-			"\\con": "\\mathbf{Con}",
-			"\\var": "\\mathbf{Var}",
-			"\\term": "\\mathbf{Term}",
-			"\\dom": "\\mathbf{dom}",
-			"\\datatype": "\\Delta_{#1}",
-			"\\datatypeL": "\\datatype{\\texttt{#1}}",
-			"\\gelab": "{\\color{blue}\\textsf{#1}}",
-			"\\arc": "\\xrightarrow{#1}#2",
-			"\\qualified": "\\arc{#1}{#2}\\{#3,#4\\}",
-			"\\qualifiedcard": "\\arc{#1}{#2}~#3",
-			"\\qualifiedL": "\\qualified{\\gelab{#1}}{#2}{#3}{#4}",
-			"\\qualifiedcardL": "\\qualifiedcard{\\gelab{#1}}{#2}{#3}",
-			"\\semantics": "[#1]^{#2,#3,#4}",
-			"\\inp": "#1^I",
-			"\\inpdom": "\\inp{\\Delta}",
-			"\\T": "#1^{\\rm T}",
-			"\\D": "#1^{\\rm D}"
-          }
-        });
-    });
-	</script>
+	</div>
 	<div class="cover"><img alt="mock cover" src="images/mock-cover.jpg"/></div>
 	<header>
 		<h1 id="title"><span class="big-letter">K</span>nowledge <span class="big-letter">G</span>raphs</h1>
@@ -529,7 +487,7 @@
 		</div>
 
 		<h4 id="sssec-complexpatterns" class="subsection">Complex graph patterns</h4>
-		<p>A (basic) graph pattern transforms an input graph into a table of results (as shown in Figure&nbsp;<a href="#fig-gp">2.5</a>). We may then consider using the relational algebra to combine and/or transform such tables, thus forming more complex queries from one or more graph patterns. Recall that the relational algebra consists of unary operators that accept one input table, and binary operators that accept two input tables. Unary operators include projection (\(\pi\)) to output a subset of columns, selection (\(\sigma\)) to output a subset of rows matching a given condition, and renaming of columns (\(\rho\)). Binary operators include union (\(\cup\)) to merge the rows of two tables into one table, difference (\(-\)) to remove the rows from the first table present in the second table, and joins (\(\Join\)) to extend the rows of one table with rows from the other table that satisfy a join condition. Selection and join conditions typically include equalities (\(=\)), inequalities (\(\leq\)), negation (\(\neg\)), disjunction (\(\vee\)), etc. From these operators, we can further define other (syntactic) operators, such as intersection (\(\cap\)) to output rows in both tables, anti-join (\(\rhd\), aka <em>minus</em>) to output rows from the first table for which there are no join-compatible rows in the second table, left-join (\(\mathbin{\rule[0ex]{0.3em}{.5pt}\mathllap{\rule[1ex]{0.3em}{.5pt}}\mkern-6mu\Join}\)), aka <em>optional</em>) to perform a join but keeping rows from the first table without a compatible row in the second table, etc.</p>
+		<p>A (basic) graph pattern transforms an input graph into a table of results (as shown in Figure&nbsp;<a href="#fig-gp">2.5</a>). We may then consider using the relational algebra to combine and/or transform such tables, thus forming more complex queries from one or more graph patterns. Recall that the relational algebra consists of unary operators that accept one input table, and binary operators that accept two input tables. Unary operators include projection (\(\pi\)) to output a subset of columns, selection (\(\sigma\)) to output a subset of rows matching a given condition, and renaming of columns (\(\rho\)). Binary operators include union (\(\cup\)) to merge the rows of two tables into one table, difference (\(-\)) to remove the rows from the first table present in the second table, and joins (\(\Join\)) to extend the rows of one table with rows from the other table that satisfy a join condition. Selection and join conditions typically include equalities (\(=\)), inequalities (\(\leq\)), negation (\(\neg\)), disjunction (\(\vee\)), etc. From these operators, we can further define other (syntactic) operators, such as intersection (\(\cap\)) to output rows in both tables, anti-join (\(\rhd\), aka <em>minus</em>) to output rows from the first table for which there are no join-compatible rows in the second table, left-join (\(\mathbin{\rule[0ex]{0.3em}{.5pt}\llap{\rule[1ex]{0.3em}{.5pt}}\mkern-6mu\Join}\)), aka <em>optional</em>) to perform a join but keeping rows from the first table without a compatible row in the second table, etc.</p>
 		<p>Basic graph patterns can then be expressed in a subset of relational algebra (namely \(\pi\), \(\sigma\), \(\rho\), \(\Join\)). Assuming, for example, a single ternary relation \(G(s,p,o)\) representing a graph – i.e., a table \(G\) with three columns \(s\), \(p\), \(o\) – the query of Figure&nbsp;<a href="#fig-gp">2.5</a> can be expressed in relational algebra as:</p>
 		
 		<p class="mathblock">\(\pi_{ev,vn_1,vn_2}(\sigma_{p=\texttt{type} \wedge o=\texttt{Food Festival} \wedge p_1=p_2=\texttt{venue}}(\rho_{s/ev}(G \bowtie \rho_{p/p_1,o/vn_1}(G) \bowtie \rho_{p/p_2,o/vn_2}(G))))\)</p>
@@ -601,7 +559,7 @@
 			<img class="inlined" src="images/fig-cgp3.svg" alt="Complex graph pattern 3"/>
 			<img class="inlined" src="images/fig-cgp4.svg" alt="Complex graph pattern 4"/>
 			<img class="inlined" src="images/fig-cgp5.svg" alt="Complex graph pattern 5"/>
-			<div><div style="display:inline;">\(Q := ((((Q_1 \cup Q_2) \rhd Q_3)\) \(\mathbin{\rule[0ex]{0.3em}{.5pt}\mathllap{\rule[1ex]{0.3em}{.5pt}}\mkern-6mu\Join}\) \(Q_4 )\) \(\mathbin{\rule[0ex]{0.3em}{.5pt}\mathllap{\rule[1ex]{0.3em}{.5pt}}\mkern-6mu\Join}\) \(Q_5),\qquad Q(G) =\) <table class="condensedTable" style="position:relative;top:.6em;display:inline-block;vertical-align:middle;"><thead><tr><th>?event</th><th>?start</th><th>?name</th></tr></thead><tbody><tr><td><code>EID16</code></td><td></td><td><code>Food Truck</code></td></tr></tbody></table></div></div>
+			<div><div style="display:inline;">\(Q := ((((Q_1 \cup Q_2) \rhd Q_3)\) \(\mathbin{\rule[0ex]{0.3em}{.5pt}\llap{\rule[1ex]{0.3em}{.5pt}}\mkern-6mu\Join}\) \(Q_4 )\) \(\mathbin{\rule[0ex]{0.3em}{.5pt}\llap{\rule[1ex]{0.3em}{.5pt}}\mkern-6mu\Join}\) \(Q_5),\qquad Q(G) =\) <table class="condensedTable" style="position:relative;top:.6em;display:inline-block;vertical-align:middle;"><thead><tr><th>?event</th><th>?start</th><th>?name</th></tr></thead><tbody><tr><td><code>EID16</code></td><td></td><td><code>Food Truck</code></td></tr></tbody></table></div></div>
 			<figcaption>Complex graph pattern (\(Q\)) with mappings generated (\(Q(G)\)) over the graph of Figure&nbsp;<a href="#fig-delg">2.1</a> (\(G\))</figcaption>
 		</figure>
 
@@ -626,19 +584,19 @@
 				<dt>Complex graph pattern evaluation</dt>
 				<dd>Given a complex graph pattern \(Q\), if \(Q\) is a basic graph pattern, then \(Q(G)\) is defined per Definition&nbsp;<a href="#def-evgp">2.7</a>. Otherwise, \(Q(G)\) is defined as follows:
 				\begin{align*}
-					\pi_\mathcal{V}(Q)(G) = & \,\{ \mu[\mathcal{V}] \mid \mu \in Q(G) \} \\
-					\sigma_R(Q)(G) = & \, \{ \mu \mid \mu \in Q(G)\text{ and }\mu \models R\}\\
-					Q_1 \Join Q_2(G) = & \,\{ \mu_1 \cup \mu_2 \mid \mu_1 \in Q_2(G), \mu_2 \in Q_1(G)\text{ and }\mu_1 \sim \mu_2 \} \\
-					Q_1 \cup Q_2(G) = & \,\{ \mu \mid \mu \in Q_1(G)\text{ or } \mu \in Q_2(G) \} \\
-					Q_1 - Q_2(G) = & \,\{ \mu \mid \mu \in Q_1(G)\text{ and } \mu \notin Q_2(G) \} \\
-					Q_1 \rhd Q_2(G) = & \,\{ \mu \mid \mu \in Q_1(G)\text{ and }\nexists \mu_2 \in Q_2(G)\text{ such that }\mu \sim \mu_2 \}
+				 \pi_\mathcal{V}(Q)(G) = & \,\{ \mu[\mathcal{V}] \mid \mu \in Q(G) \} \\
+				 \sigma_R(Q)(G) = & \, \{ \mu \mid \mu \in Q(G)\text{ and }\mu \models R\}\\
+				 Q_1 \Join Q_2(G) = & \,\{ \mu_1 \cup \mu_2 \mid \mu_1 \in Q_2(G), \mu_2 \in Q_1(G)\text{ and }\mu_1 \sim \mu_2 \} \\
+				 Q_1 \cup Q_2(G) = & \,\{ \mu \mid \mu \in Q_1(G)\text{ or } \mu \in Q_2(G) \} \\
+				 Q_1 - Q_2(G) = & \,\{ \mu \mid \mu \in Q_1(G)\text{ and } \mu \notin Q_2(G) \} \\
+				 Q_1 \rhd Q_2(G) = & \,\{ \mu \mid \mu \in Q_1(G)\text{ and }\nexists \mu_2 \in Q_2(G)\text{ such that }\mu \sim \mu_2 \}
 				\end{align*}</dd>
 			</dl>
 
-			<p>Based on these operators, we can define some additional syntactic operators, such as the <em>left-join</em> \(\mathbin{\rule[0ex]{0.3em}{.5pt}\mathllap{\rule[1ex]{0.3em}{.5pt}}\mkern-6mu\Join}\), aka <em>optional</em>):</p>
+			<p>Based on these operators, we can define some additional syntactic operators, such as the <em>left-join</em> \(\mathbin{\rule[0ex]{0.3em}{.5pt}\llap{\rule[1ex]{0.3em}{.5pt}}\mkern-6mu\Join}\), aka <em>optional</em>):</p>
 			<p>
 			\begin{align*}
-			 Q_1 \mathbin{\rule[0ex]{0.3em}{.5pt}\mathllap{\rule[1ex]{0.3em}{.5pt}}\mkern-6mu\Join} Q_2(G) = & \,(Q_1(G) \Join Q_2(G)) \cup (Q_1(G) \rhd Q_2(G))
+			 Q_1 \mathbin{\rule[0ex]{0.3em}{.5pt}\llap{\rule[1ex]{0.3em}{.5pt}}\mkern-6mu\Join} Q_2(G) = & \,(Q_1(G) \Join Q_2(G)) \cup (Q_1(G) \rhd Q_2(G))
 			\end{align*}
 			</p>
 			<p>We call such operators <em>syntactic</em> as they do not add expressivity.</p>
@@ -3397,15 +3355,15 @@
 			<li id="ref-LiuT08">Kun Liu and Evimaria Terzi. 2008. Towards identity anonymization on graphs. In <em>Proceedings of the ACM SIGMOD International Conference on Management of Data, SIGMOD 2008, Vancouver, BC, Canada, June 10-12, 2008</em>, Jason Tsong-Li Wang (Ed.). ACM Press, 93–106.</li>
 			<li id="ref-LiuSDK18">Yike Liu, Tara Safavi, Abhilash Dighe, and Danai Koutra. 2018. <a href="https://doi.org/10.1145/3186727">Graph Summarization Methods and Applications: A Survey</a>. <em>ACM Computing Surveys</em> 51(3), 62:1–62:x34.</li>
 			<li id="ref-lloyd2012foundations">John W. Lloyd. 1984. <em>Foundations of logic programming</em>. Springer.</li>
-			<li id="ref-LockardDSE18">Colin Lockard, Xin Luna Dong, Prashant Shiralkar, and Arash Einolghozati. 2018. <a href="https://doi.org/10.14778/3231751.3231758">CERES: Distantly Supervised Relation Extraction from the Semi-Structured Web</a>. <em>Proceedings of the VLDB Endowment</em> 11(10), 1084–1096.</li>
+			<li id="ref-LockardDSE18">Colin Lockard, Xin Luna Dong, Prashant Shiralkar, and Arash Einolghozati. 2018. CERES: Distantly Supervised Relation Extraction from the Semi-Structured Web. <em>Proceedings of the VLDB Endowment</em> 11(10), 1084–1096.</li>
 			<li id="ref-canon">Dave Longley and Manu Sporny. 2019. <em><a href="http://json-ld.github.io/normalization/spec/">RDF Dataset Normalization, A Standard RDF Dataset Normalization Algorithm</a></em>. W3C Community Group Draft Report. February 27, 2019.</li>
 			<li id="ref-LowGKBGH12">Yucheng Low, Joseph Gonzalez, Aapo Kyrola, Danny Bickson, Carlos Guestrin, and Joseph M. Hellerstein. 2012. <a href="http://vldb.org/pvldb/vol5/p716_yuchenglow_vldb2012.pdf">Distributed GraphLab: A Framework for Machine Learning in the Cloud</a>. <em>Proceedings of the VLDB Endowment</em> 5(8), 716–727.</li>
-			<li id="ref-LuBLCG13">Chunliang Lu, Lidong Bing, Wai Lam, Ki Chan, and Yuan Gu. 2013. <a href="http://www.ijcla.bahripublications.com/2013-2/IJCLA-2013-2-pp-135-150-Web.pdf">Web Entity Detection for Semi-structured Text Data Records with Unlabeled Data</a>. <em>International Journal of Computational Linguistics and Applications</em> 4(2), 135–150.</li>
+			<li id="ref-LuBLCG13">Chunliang Lu, Lidong Bing, Wai Lam, Ki Chan, and Yuan Gu. 2013. Web Entity Detection for Semi-structured Text Data Records with Unlabeled Data. <em>International Journal of Computational Linguistics and Applications</em> 4(2), 135–150.</li>
 			<li id="ref-LuLS16">Chun Lu, Philippe Laublet, and Milan Stankovic. 2016. <a href="https://doi.org/10.1007/978-3-319-49004-5_27">Travel Attractions Recommendation with Knowledge Graphs</a>. In <em>Knowledge Engineering and Knowledge Management - 20th International Conference, EKAW 2016, Bologna, Italy, November 19-23, 2016, Proceedings</em>, Eva Blomqvist, Paolo Ciancarini, Francesco Poggi, and Fabio Vitali (Eds.). Lecture Notes in Computer Science, vol.&nbsp;10024. Springer, 416–431.</li>
 			<li id="ref-LukasiewiczMS13">Thomas Lukasiewicz, Maria Vanina Martinez, and Gerardo I. Simari. 2013. <a href="http://ceur-ws.org/Vol-1014/paper_6.pdf">Complexity of Inconsistency-Tolerant Query Answering in Datalog+/-</a>. In <em>Informal Proceedings of the 26th International Workshop on Description Logics, Ulm, Germany, July 23 - 26, 2013</em>, Thomas Eiter, Birte Glimm, Yevgeny Kazakov, and Markus Krötzsch (Eds.). CEUR Workshop Proceedings, vol.&nbsp;1014. Sun SITE Central Europe (CEUR), 791–803.</li>
 			<li id="ref-LuoHLN15">Gang Luo, Xiaojiang Huang, Chin-Yew Lin, and Zaiqing Nie. 2015. <a href="https://www.aclweb.org/anthology/volumes/D15-1/">Joint Entity Recognition and Disambiguation</a>. In <em>Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing, EMNLP 2015, Lisbon, Portugal, September 17-21, 2015</em>, Lluís Màrquez, Chris Callison-Burch, Jian Su, Daniele Pighin, and Yuval Marton (Eds.). The Association for Computational Linguistics, 879–888.</li>
 			<li id="ref-MachadoR90">Ricardo José Machado and Armando Freitas da Rocha. 1990. The Combinatorial Neural Network: A Connectionist Model for Knowledge Based Systems. In <em>Uncertainty in Knowledge Bases, 3rd International Conference on Information Processing and Management of Uncertainty in Knowledge-Based Systems, IPMU '90, Paris, France, July 2-6, 1990, Proceedings</em>, Bernadette Bouchon-Meunier, Ronald R. Yager, and Lotfi A. Zadeh (Eds.). Lecture Notes in Computer Science, vol.&nbsp;521. Springer, 578–587.</li>
-			<li id="ref-MadhavanKKGRH08">Jayant Madhavan, David Ko, Lucja Kot, Vignesh Ganapathy, Alex Rasmussen, and Alon Y. Halevy. 2008. <a href="https://doi.org/10.14778/1454159.1454163">Google's Deep Web crawl</a>. <em>Proceedings of the VLDB Endowment</em> 1(2), 1241–1252.</li>
+			<li id="ref-MadhavanKKGRH08">Jayant Madhavan, David Ko, Lucja Kot, Vignesh Ganapathy, Alex Rasmussen, and Alon Y. Halevy. 2008. Google's Deep Web crawl. <em>Proceedings of the VLDB Endowment</em> 1(2), 1241–1252.</li>
 			<li id="ref-MahdisoltaniBS15">Farzaneh Mahdisoltani, Joanna Biega, and Fabian M. Suchanek. 2015. <a href="http://cidrdb.org/cidr2015/Papers/CIDR15_Paper1.pdf">YAGO3: A Knowledge Base from Multilingual Wikipedias</a>. In <em>CIDR 2015, Seventh Biennial Conference on Innovative Data Systems Research, Asilomar, CA, USA, January 4-7, 2015, Online Proceedings</em>. www.cidrdb.org. 11 pages.</li>
 			<li id="ref-MaillotB18">Pierre Maillot and Carlos Bobed. 2018. <a href="https://doi.org/10.1145/3167132.3167342">Measuring structural similarity between RDF graphs</a>. In <em>Proceedings of the 33rd Annual ACM Symposium on Applied Computing, SAC 2018, Pau, France, April 09-13, 2018</em>, Hisham M. Haddad, Roger L. Wainwright, and Richard Chbeir (Eds.). ACM Press, 1960–1967.</li>
 			<li id="ref-MalewiczABDHLC10">Grzegorz Malewicz, Matthew H. Austern, Aart J. C. Bik, James C. Dehnert, Ilan Horn, Naty Leiser, and Grzegorz Czajkowski. 2010. <a href="https://doi.org/10.1145/1807167.1807184">Pregel: a system for large-scale graph processing</a>. In <em>Proceedings of the ACM SIGMOD International Conference on Management of Data, SIGMOD 2010, Indianapolis, Indiana, USA, June 6-10, 2010</em>, Ahmed K. Elmagarmid and Divyakant Agrawal (Eds.). ACM Press, 135–146.</li>
