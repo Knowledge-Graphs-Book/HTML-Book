@@ -292,7 +292,7 @@
 			<p>In a convolution \(\mathbf{X} * \mathbf{Y}\), the matrix \(\mathbf{X}\) is often called the “kernel” (or “filter”). Often several kernels are used in order to apply multiple convolutions. Given a tensor \(\mathcal{X} \in \mathbb{R}^{c,a,b}\) (representing \(c\) \((a,b)\)-kernels) and a matrix \(\mathbf{Y} \in \mathbb{R}^{e,f}\), we denote by \(\mathcal{X} * \mathbf{Y} \in \mathbb{R}^{c,(a + e - 1),(b + f - 1)}\) the result of the convolutions of the \(c\) first-mode slices of \(\mathcal{X}\) over \(\mathbf{Y}\) such that \((\mathcal{X} * \mathbf{Y})^{[i:\cdot:\cdot]} = \mathcal{X}^{[i:\cdot:\cdot]} * \mathbf{Y}\) for \(1 \leq i \leq c\), yielding a tensor of results for \(c\) convolutions.</p>
 		</div>
 
-		<div class="formal">
+		<div class="formal-table">
 			<table id="tab-kges" class="condensedTable">
 				<caption>Details for selected knowledge graph embeddings, including the plausibility scoring function \(\phi(\varepsilon(s),\rho(p),\varepsilon(o))\) for edge <? echo gedge("\(s\)","\(p\)","\(o\)"); ?>, and other conditions</caption>
 				<thead>

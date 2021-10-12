@@ -111,7 +111,7 @@
 					<li>the set \(U\) contains <code>–33.45</code>, <code>–70.66</code>, <code>LATAM</code>, <code>–18.48</code>, and <code>–70.33</code>;</li>
 					<li>the mapping \(e\) gives, for example, \(e(\)<code>LA380</code>\() = (\)<code>Santiago</code>, <code>Arica</code>\()\);</li>
 					<li>the mapping \(l\) gives, for example, \(l(\)<code>Santiago</code>\() =\{ \)<code>Capital City</code>\(\}\) and \(l(\)<code>LA380</code>\() =\{ \)<code>flight</code>\(\}\);</li>
-					<li>the mapping \(p\) gives, for example, \(p(\)<code>LA380</code>\() =\{ (\)<code>company</code>, <code>LATAM</code>\() \}\) and \(p(\)<code>Santiago</code>\() =\{ (\)<code>lat</code>, <code>–33.45</code>\(), (\)<code>long</code>, <code>–70.66</code>\() \}\).</li>
+					<li>the mapping \(p\) gives, for example, \(p(\)<code>LA380</code>\() =\{ (\)<code>company</code>, <code>LATAM</code>\() \}\) and \(p(\)<code>Santiago</code>\()\) \(=\{ (\)<code>lat</code>, <code>–33.45</code>\(), (\)<code>long</code>, <code>–70.66</code>\() \}\).</li>
 				</ul>
 			</div>
 

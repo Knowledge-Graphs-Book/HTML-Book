@@ -8,7 +8,6 @@
 <head>
 	<title>Knowledge Graphs</title>
 	<meta charset="UTF-8"/>
-	
 <!--	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 	<script id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>-->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
@@ -19,6 +18,8 @@
 	<link rel="stylesheet" href="css/fonts.css"/>
 	<link rel="stylesheet" href="css/print.css" media="print"/>
 	<script src="js/prism.js"></script>
+	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>-->
+	<script src="https://saswatpadhi.github.io/prismjs-bibtex/prism-bibtex.min.js"></script>
 </head>
 <body>
 	<!--<div style="display:none" id="tex-macros">
@@ -110,6 +111,19 @@
 			<blockquote class="quote">
 				 Aidan Hogan, Eva Blomqvist, Michael Cochez, Claudia d’Amato, Gerard de Melo, Claudio Gutierrez, Sabrina Kirrane, José Emilio Labra Gayo, Roberto Navigli, Sebastian Neumaier, Axel-Cyrille Ngonga Ngomo, Axel Polleres, Sabbir M. Rashid, Anisa Rula, Lukas Schmelzeisen, Juan Sequeda, Steffen Staab, Antoine Zimmermann (2021) <em>Knowledge Graphs</em>, Synthesis Lectures on the Semantic Web: Theory and Technology, No. 22, 1-233, DOI: 10.2200/S01125ED1V01Y202109DSK022, Morgan &amp; Claypool
 			</blockquote>
+			<p>BibTeX entry of this book:</p>
+			<pre><code class="language-bib">@book{kg-book,
+  author = {Hogan, Aidan and Blomqvist, Eva and Cochez, Michael and d'Amato, Claudia and de Melo, Gerard and Guti\'errez, Claudio and Kirrane, Sabrina and Labra Gayo, Jos\'e Emilio and Navigli, Roberto and Neumaier, Sebastian and Ngonga Ngomo, Axel-Cyrille and Polleres, Axel and Rashid, Sabbir M. and Rula, Anisa and Schmelzeisen, Lukas and Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
+  doi = {10.2200/S01125ED1V01Y202109DSK022},
+  isbn = {9781636392363},
+  language = {English},
+  number = {22},
+  publisher = {Morgan \& Claypool},
+  series = {Synthesis Lectures on the Semantic Web: Theory and Technology},
+  title = {{K}nowledge {G}raphs},
+  url = {https://kgbook.org/},
+  year = {2021}
+}</code></pre>
 			<dl>
 				<dt>ISBN paperback:</dt>
 				<dd>9781636392356</dd>
@@ -123,7 +137,7 @@
 			<h2>Access options</h2>
 			<dl>
 				<dt>HTML version:</dt>
-				<dd>You are currently reading the free HTML version of the book, the most recent of which is available at <a href="https://kg-book.org/">https://kg-book.org/</a></dd>
+				<dd>You are currently reading the free HTML version of the book, the most recent of which is available at <a href="https://kgbook.org/">https://kgbook.org/</a></dd>
 				<dt>PDF Version:</dt>
 				<dd>You can download or buy the book from <a href="http://www.morganclaypool.com/">Morgan &amp; Claypool</a>. Academic and Corporate licences are available.</dd>
 				<dt>Hard copy:</dt>

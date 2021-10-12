@@ -29,13 +29,13 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td>Subclass</td>
+					<td>Sub-class</td>
 					<td><? echo gedge("\\(c\\)","subc.&nbsp;of","\\(d\\)"); ?></td>
 					<td><? echo gedge("\\(x\\)","type","\\(c\\)"); ?> implies <? echo gedge("\\(x\\)","type","\\(d\\)"); ?></td>
 					<td><? echo gedge("City","subc.&nbsp;of","Place"); ?></td>
 				</tr>
 				<tr>
-					<td>Subproperty</td>
+					<td>Sub-property</td>
 					<td><? echo gedge("\\(p\\)","subp.&nbsp;of","\\(q\\)"); ?></td>
 					<td><? echo gedge("\\(x\\)","\\(p\\)","\\(y\\)"); ?> implies <? echo gedge("\\(x\\)","\\(q\\)","\\(y\\)"); ?></td>
 					<td><? echo gedge("venue","subp.&nbsp;of","location"); ?></td>

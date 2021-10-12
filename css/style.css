@@ -124,6 +124,7 @@ h4 {
 	color: var(--m-and-c-blue);
 }
 table {
+	font-size: 98%;
 	border-collapse: collapse;
 	margin: auto;
 	align-content: center;
@@ -213,15 +214,17 @@ img.inside {
 	counter-reset: sections subsections figures tables definitions examples;
 }
 .chapter > h2:before {
-	position: relative;
+	position: absolute;
+	display: block;
+	width: 100%;
 	font-weight: 100;
-	left: 5em;
 	bottom: 2em;
 	text-align: center;
 	counter-increment: chapters;
 	content: "Chapter " counter(chapters);
 }
 .chapter > h2 {
+	position: relative;
 	margin-top: 7em;
 	margin-left: -5em;
 	font-weight: bold;
@@ -819,6 +822,13 @@ div.example p:first-child:before {
 	margin-top: .5em;
 	margin-bottom:  .5em;
 	background-color:  var(--green-bg);
+}
+.formal-table {
+	font-size: 90%;
+	border: 1px solid blue;
+}
+.formal-table .subtabhead {
+	background-color: #F5FFFF;
 }
 #sec-references ul li {
 	text-indent: -2em;
