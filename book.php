@@ -113,7 +113,12 @@
 			</blockquote>
 			<p>BibTeX entry of this book:</p>
 			<pre><code class="language-bib">@book{kg-book,
-  author = {Hogan, Aidan and Blomqvist, Eva and Cochez, Michael and d'Amato, Claudia and de Melo, Gerard and Guti\'errez, Claudio and Kirrane, Sabrina and Labra Gayo, Jos\'e Emilio and Navigli, Roberto and Neumaier, Sebastian and Ngonga Ngomo, Axel-Cyrille and Polleres, Axel and Rashid, Sabbir M. and Rula, Anisa and Schmelzeisen, Lukas and Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
+  author = {Hogan, Aidan and Blomqvist, Eva and Cochez, Michael and
+d'Amato, Claudia and de Melo, Gerard and Guti\'errez, Claudio and
+Kirrane, Sabrina and Labra Gayo, Jos\'e Emilio and Navigli, Roberto and
+Neumaier, Sebastian and Ngonga Ngomo, Axel-Cyrille and Polleres, Axel and
+Rashid, Sabbir M. and Rula, Anisa and Schmelzeisen, Lukas and
+Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
   doi = {10.2200/S01125ED1V01Y202109DSK022},
   isbn = {9781636392363},
   language = {English},
