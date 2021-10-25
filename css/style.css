@@ -28,6 +28,19 @@ div.cover {
 	left: calc(50vw - 523px);
 	width: 1047px;
 }
+.cover p {
+	font-family: sans-serif;
+	color: white;
+	width: 1047px;
+	text-align: center;
+	margin: auto;
+	z-index: 10;
+}
+.cover p a {
+	font-style: inherit;
+	font: inherit;
+	color: inherit;
+}
 /**
  * 
  **/
@@ -830,6 +843,33 @@ div.example p:first-child:before {
 .formal-table .subtabhead {
 	background-color: #F5FFFF;
 }
-#sec-references ul li {
+#sec-references ul li p {
 	text-indent: -2em;
+}
+ul.reflist li {
+	position: relative;
+}
+ul.reflist li p {
+	margin: 0;
+	padding: 0;
+}
+ul.reflist li pre {
+	display: none;
+}
+ul.reflist li:hover p {
+	color: darkred;
+}
+ul.reflist li:hover pre {
+	display: block;
+	position: absolute;
+	left: 42em;
+	top: 1em;
+	max-width: 45em;
+	opacity:85%;
+	z-index: 1;
+	transition: all 500ms ease-in-out;
+}
+ul.reflist li:hover pre:hover {
+	left: 6em;
+	width: 45em;	
 }

@@ -240,7 +240,7 @@
 <?php
 	foreach($GLOBALS["bibrefs"] as $indexInRef => $reflabel) {
 		if($entry = $references->referenced[$indexInRef]) {
-			echo "\t\t\t<li id=\"ref-" . $entry->getKey() . "\">";//<strong>[" . $indexInRef . "]</strong> ";
+			echo "\t\t\t<li id=\"ref-" . $entry->getKey() . "\">\n\t\t\t\t<p>";//<strong>[" . $indexInRef . "]</strong> ";
 			if($entry->getType() == "article")
 				echo writeArticle($entry);
 			if($entry->getType() == "incollection")
@@ -257,7 +257,9 @@
 				echo writePhdThesis($entry);
 			if($entry->getType() == "techreport")
 				echo writeTechReport($entry);
-			echo "</li>\n";
+			echo "</p>\n\t\t\t\t<pre><code class=\"language-bib\">";
+			echo $entry->getText();
+			echo "</code></pre>\n\t\t\t</li>\n";
 		}
 		else {
 			echo "\t\t\t<li class=\"ref-NONE\"><strong>[" . $indexInRef . "]</strong> NO REFERENCE</li>\n";
