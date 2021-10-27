@@ -741,6 +741,7 @@ div.example p:first-child:before {
 	transition: left 300ms ease-in-out;
 	color: grey;
 	background-color: white;
+	z-index: 1010;
 }
 #toc div {
 	border-left: 1px dashed lightgrey;
