@@ -259,6 +259,13 @@
 				echo writeTechReport($entry);
 			echo "</p>\n\t\t\t\t<pre><code class=\"language-bib\">";
 			echo $entry->getText();
+			if($entry->hasField("crossref")) {
+				$book = $entry->getField("crossref");
+				if($bookentry = $references->getEntry($book)) {
+					echo "\n\n";
+					echo $bookentry->getText();
+				}
+			}
 			echo "</code></pre>\n\t\t\t</li>\n";
 		}
 		else {

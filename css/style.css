@@ -865,12 +865,12 @@ ul.reflist li:hover pre {
 	position: absolute;
 	left: 42em;
 	top: 1em;
-	max-width: 45em;
+	width: 45em;
 	opacity:85%;
 	z-index: 1;
 	transition: all 500ms ease-in-out;
 }
 ul.reflist li:hover pre:hover {
-	left: 6em;
-	width: 45em;	
+	left: 3em;
+	width: calc(50vw + 17em);
 }

@@ -57,9 +57,18 @@ class TheRefs {
 
 		$this->_citeMap = array();
 
-
-
 	}
+
+    /**
+     * Gets the entry from the bib file using its bibkey
+     *
+     * @access public
+     * @param string $bibkey the BibTeX key of the entry in the file
+     * @return the database entry
+     */
+    function getEntry($bibkey) {
+        return $this->_bibDataBase->getEntryByKey($bibkey);
+    }
 
 	/**
      * Adds an entry to the references if not yet added, then write the ref in the paper
@@ -133,6 +142,7 @@ class TheRefs {
         return $auth . " (" . $entry->getYear() . ") " . $refResult;*/
         return $this->citet($cite);
     }
+
     /**
      * Write the year of the ref in the paper (assumes ref is already added)
      *
