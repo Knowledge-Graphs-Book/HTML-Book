@@ -1983,7 +1983,7 @@ class BibEntry {
   function getConstants() {
     $result='';
     foreach ($this->constants as $k=>$v) {
-      $result.='@string{'.$k.'="'.$v."\"}\n";
+      $result.='@STRING{'.$k.' = {'.$v."}}\n";
     }
     return $result;
   }
