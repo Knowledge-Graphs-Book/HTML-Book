@@ -53,37 +53,37 @@
               {left: '$$', right: '$$', display: true},
               {left: '\\(', right: '\\)', display: false},
               {left: "\\begin{equation}", right: "\\end{equation}", display: true},
-			  {left: "\\begin{align*}", right: "\\end{align*}", display: true},
-			  {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
-			  {left: "\\begin{gather}", right: "\\end{gather}", display: true},
-			  {left: "\\begin{CD}", right: "\\end{CD}", display: true},
-			  {left: '\\[', right: '\\]', display: true}
-          ],
+						  {left: "\\begin{align*}", right: "\\end{align*}", display: true},
+						  {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+						  {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+						  {left: "\\begin{CD}", right: "\\end{CD}", display: true},
+						  {left: '\\[', right: '\\]', display: true}
+			    ],
           macros: {
           	"\\coloneqq": "\\mathrel{\\vcenter{:}}=",
-			"\\con": "\\mathbf{Con}",
-			"\\var": "\\mathbf{Var}",
-			"\\term": "\\mathbf{Term}",
-			"\\dom": "\\mathbf{dom}",
-			"\\datatype": "\\Delta_{#1}",
-			"\\datatypeL": "\\datatype{\\texttt{#1}}",
-			"\\gelab": "{\\color{blue}\\textsf{#1}}",
-			"\\arc": "\\xrightarrow{#1}#2",
-			"\\qualified": "\\arc{#1}{#2}\\{#3,#4\\}",
-			"\\qualifiedcard": "\\arc{#1}{#2}~#3",
-			"\\qualifiedL": "\\qualified{\\gelab{#1}}{#2}{#3}{#4}",
-			"\\qualifiedcardL": "\\qualifiedcard{\\gelab{#1}}{#2}{#3}",
-			"\\semantics": "[#1]^{#2,#3,#4}",
-			"\\inp": "#1^I",
-			"\\inpdom": "\\inp{\\Delta}",
-			"\\T": "#1^{\\rm T}",
-			"\\D": "#1^{\\rm D}"
+						"\\con": "\\mathbf{Con}",
+						"\\var": "\\mathbf{Var}",
+						"\\term": "\\mathbf{Term}",
+						"\\dom": "\\mathbf{dom}",
+						"\\datatype": "\\Delta_{#1}",
+						"\\datatypeL": "\\datatype{\\texttt{#1}}",
+						"\\gelab": "{\\color{blue}\\textsf{#1}}",
+						"\\arc": "\\xrightarrow{#1}#2",
+						"\\qualified": "\\arc{#1}{#2}\\{#3,#4\\}",
+						"\\qualifiedcard": "\\arc{#1}{#2}~#3",
+						"\\qualifiedL": "\\qualified{\\gelab{#1}}{#2}{#3}{#4}",
+						"\\qualifiedcardL": "\\qualifiedcard{\\gelab{#1}}{#2}{#3}",
+						"\\semantics": "[#1]^{#2,#3,#4}",
+						"\\inp": "#1^I",
+						"\\inpdom": "\\inp{\\Delta}",
+						"\\T": "#1^{\\rm T}",
+						"\\D": "#1^{\\rm D}"
           }
         });
     });
 	</script>
 	<div class="cover">
-		<img alt="mock cover" src="images/mock-cover.png"/>
+		<img alt="mock cover" src="images/mock-cover.jpg"/>
 		<p style="position:absolute;top:300px;font-size:109px;text-shadow:5px 5px 5px black;font-weight:bold;">KNOWLEDGE<br/>GRAPHS</p>
 		<p style="position:absolute;top:700px;font-size:29px;text-shadow:3px 3px 3px black;"><a href="#bio-hogan">Aidan Hogan</a> | <a href="#bio-blomqvist">Eva Blomqvist</a> | <a href="#bio-cochez">Michael Cochez</a><br/><a href="#bio-damato">Claudia d’Amato</a> | <a href="#bio-demelo">Gerard de Melo</a> | <a href="#bio-gutierrez">Claudio Gutierrez</a><br/><a href="#bio-kirrane">Sabrina Kirrane</a> | <a href="#bio-labragayo">José Emilio Labra Gayo</a> | <a href="#bio-navigli">Roberto Navigli</a><br/><a href="#bio-neumaier">Sebastian Neumaier</a> | <a href="#bio-ngongangomo">Axel-Cyrille Ngonga Ngomo</a><br/><a href="#bio-polleres">Axel Polleres</a> | <a href="#bio-rashid">Sabbir M. Rashid</a> | <a href="#bio-rula">Anisa Rula</a><br/><a href="#bio-schmelzeisen">Lukas Schmelzeisen</a> | <a href="#bio-sequeda">Juan Sequeda</a><br/><a href="#bio-staab">Steffen Staab</a> | <a href="#bio-zimmermann">Antoine Zimmermann</a></p>
 	</div>
@@ -150,7 +150,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 				<dt>PDF Version:</dt>
 				<dd>You can download or buy the book from <a href="http://www.morganclaypool.com/">Morgan &amp; Claypool</a>. Academic and Corporate licences are available.</dd>
 				<dt>Hard copy:</dt>
-				<dd>You can order from from <a href="http://www.morganclaypool.com/">Morgan &amp; Claypool</a> or <a href="https://www.amazon.com/">Amazon</a>.</dd>
+				<dd>You can order from <a href="http://www.morganclaypool.com/">Morgan &amp; Claypool</a> or <a href="https://www.amazon.com/">Amazon</a>.</dd>
 			</dl>
 		</div>
 		<p><em>SYNTHESIS LECTURES ON ON THE SEMANTIC WEB #22</em></p>
@@ -177,7 +177,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 	include("chapters/09-publication.php");
 	include("chapters/10-kg.php");
 	include("chapters/11-conclude.php");
-$references->cite("peirce,frege,ritchens,milgram,Brachman,woods,sowa,sowa2,BrachmanS85,Schmidt-SchaussS91,berners-lee01,NavigliPonzetto:12,bollacker2007platform,suchanek2007yago,Kummel73,rada1986gradualness,Bakker,stokman1988structuring,james,Hoede95,Popping03,zhang,NurdiatiH08,rappaport1988dynamic,SrikanthJ89,de1990hybrid,MachadoR90,DiengGTC92,ShimonyDS97,JrS99,Jiang02,HelmsB05,KasneciSIRW08,ElbassuoniRSSW09,CourseyM09,PechsiriP10,CorbyF10,ciampaglia2015computational,MarchiM74,nickel,SeufertEBKBW16,BuchananF78,GuarinoOS9,rdf11sem,CormanFRS19a,BrachmanL85,sylvester");
+$references->cite("peirce,frege,richens58,milgram,Brachman,woods,sowa,sowa2,BrachmanS85,Schmidt-SchaussS91,berners-lee01,NavigliPonzetto:12,bollacker2007platform,suchanek2007yago,Kummel73,rada1986gradualness,Bakker,stokman1988structuring,james,Hoede95,Popping03,zhang,NurdiatiH08,rappaport1988dynamic,SrikanthJ89,de1990hybrid,MachadoR90,DiengGTC92,ShimonyDS97,JrS99,Jiang02,HelmsB05,KasneciSIRW08,ElbassuoniRSSW09,CourseyM09,PechsiriP10,CorbyF10,ciampaglia2015computational,MarchiM74,nickel,SeufertEBKBW16,BuchananF78,GuarinoOS9,rdf11sem,CormanFRS19a,BrachmanL85,sylvester");
 	include("chapters/references.php");
 	include("appendices/history.php");
 	include("bio.php");

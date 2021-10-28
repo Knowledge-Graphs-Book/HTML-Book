@@ -676,7 +676,7 @@
 			"ReutterSV15" => "Reutter et al., 2015",
 			"RiedelYM10" => "Riedel et al., 2010",
 			"ristoski2016rdf2vec" => "Ristoski and Paulheim, 2016",
-			"richens58" => "Ritchens, 1958",
+			"richens58" => "Richens, 1958",
 			"Rizzo2017" => "Rizzo et al., 2017",
 			"RizzoFd20" => "Rizzo et al., 2020",
 			"RizzodF21" => "Rizzo et al., 2021",
