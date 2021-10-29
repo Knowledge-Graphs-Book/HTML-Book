@@ -490,6 +490,7 @@
 			"HoganZUPD12" => "Hogan et al., 2012b",
 			"HoganAMP14" => "Hogan et al., 2014",
 			"HoganRS20" => "Hogan et al., 2020",
+			"HoganBCdMGKGNNN21" => "Hogan et al., 2021",
 			"HorrocksP04" => "Horrocks and Patel-Schneider, 2004",
 			"swrl" => "Horrocks et al., 2004",
 			"Hu0YWZ18" => "Hu et al., 2018",

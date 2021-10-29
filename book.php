@@ -113,7 +113,7 @@
 			<h2>About the book</h2>
 			<p>The book is published by <a href="http://www.morganclaypool.com/">Morgan &amp; Claypool</a> in the series <a href="http://www.morganclaypool.com/toc/wbe.1/7/1">Synthesis Lectures on the Semantic Web: Theory and Technology</a> edited by <a href="http://info.slis.indiana.edu/~dingying/">Ying Ding</a> and Paul Groth. Please, cite the book as:</p>
 			<blockquote class="quote">
-				 Aidan Hogan, Eva Blomqvist, Michael Cochez, Claudia d’Amato, Gerard de Melo, Claudio Gutierrez, Sabrina Kirrane, José Emilio Labra Gayo, Roberto Navigli, Sebastian Neumaier, Axel-Cyrille Ngonga Ngomo, Axel Polleres, Sabbir M. Rashid, Anisa Rula, Lukas Schmelzeisen, Juan Sequeda, Steffen Staab, Antoine Zimmermann (2021) <em>Knowledge Graphs</em>, Synthesis Lectures on the Semantic Web: Theory and Technology, No. 22, 1-233, DOI: 10.2200/S01125ED1V01Y202109DSK022, Morgan &amp; Claypool
+				 Aidan Hogan, Eva Blomqvist, Michael Cochez, Claudia d’Amato, Gerard de Melo, Claudio Gutierrez, Sabrina Kirrane, José Emilio Labra Gayo, Roberto Navigli, Sebastian Neumaier, Axel-Cyrille Ngonga Ngomo, Axel Polleres, Sabbir M. Rashid, Anisa Rula, Lukas Schmelzeisen, Juan Sequeda, Steffen Staab, Antoine Zimmermann (2021) <em>Knowledge Graphs</em>, Synthesis Lectures on Data, Semantics, and Knowledge, No. 22, 1-233, DOI: 10.2200/S01125ED1V01Y202109DSK022, Morgan &amp; Claypool
 			</blockquote>
 			<p>BibTeX entry of this book:</p>
 			<pre><code class="language-bib">@book{kg-book,
@@ -128,7 +128,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
   language = {English},
   number = {22},
   publisher = {Morgan \& Claypool},
-  series = {Synthesis Lectures on the Semantic Web: Theory and Technology},
+  series = {Synthesis Lectures on Data, Semantics, and Knowledge},
   title = {{K}nowledge {G}raphs},
   url = {https://kgbook.org/},
   year = {2021}
@@ -153,12 +153,12 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 				<dd>You can order from <a href="http://www.morganclaypool.com/">Morgan &amp; Claypool</a> or <a href="https://www.amazon.com/">Amazon</a>.</dd>
 			</dl>
 		</div>
-		<p><em>SYNTHESIS LECTURES ON ON THE SEMANTIC WEB #22</em></p>
+		<p><em>SYNTHESIS LECTURES ON ON DATA, SEMANTICS, AND KNOWLEDGE #22</em></p>
 	</header>
 	<h2 id="abstract"><span>Abstract</span></h2>
-	<p>This book provides a comprehensive and accessible introduction to knowledge graphs, which have recently garnered notable attention from both industry and academia. Knowledge graphs are founded on the principle of applying a graph-based abstraction to data, and are now broadly deployed in scenarios that require integrating and extracting value from multiple, diverse sources of data at large scale.</p>
-	<p>The book is divided into ten chapters. The first chapter provides a general introduction to the area, defines the concept of a “knowledge graph”, and provides a high-level overview of how knowledge graphs are currently being used. The second chapter presents and contrasts popular graph models that are commonly used to represent data as graphs, and the languages by which they can be queried. The third chapter describes how the resulting data graph can be enhanced with notions of schema, identity and context. The fourth chapter discusses how ontologies and rules can be used to encode knowledge, and how they enable deductive forms of reasoning. The fifth chapter delves into how inductive techniques – based on statistics, graph analytics, machine learning, etc. – can be used to encode and extract knowledge. The sixth chapter is dedicated to techniques for the creation and enrichment of knowledge graphs from legacy sources of data. The seventh chapter enumerates a variety of quality measures that can be used to assess a knowledge graph in terms of its fitness for use in a variety of applications. The eighth chapter presents key methods for the refinement of knowledge graphs, with the goal of improving their completeness and correctness. The ninth chapter provides a survey of the open and enterprise knowledge graphs that have emerged in recent years, along with the industries within which, and the applications for which, they have been most widely adopted. The tenth chapter wraps up the book with discussion of the current limitations and future directions along which knowledge graphs are likely to evolve. An appendix further covers knowledge graphs from an historical perspective, establishing their significance in the broader context of the academic study of data and knowledge, as well as surveying prior definitions of “knowledge graphs” from the literature.</p>
-	<p>The book is aimed at students, researchers and practitioners who wish to learn more about knowledge graphs, and how they facilitate extracting value from diverse data at large-scale. To make the book accessible for newcomers, running examples and graphical notation are used throughout. Formal definitions and extensive references are also provided for those who opt to delve more deeply into specific topics.</p>
+	<p>This book provides a comprehensive and accessible introduction to knowledge graphs, which have recently garnered notable attention from both industry and academia.</p>
+	<p>Knowledge graphs are founded on the principle of applying a graph-based abstraction to data, and are now broadly deployed in scenarios that require integrating and extracting value from multiple, diverse sources of data at large scale. The book defines knowledge graphs and provides a high-level overview of how they are used. It presents and contrasts popular graph models that are commonly used to represent data as graphs, and the languages by which they can be queried before describing how the resulting data graph can be enhanced with notions of schema, identity, and context. The book discusses how ontologies and rules can be used to encode knowledge as well as how inductive techniques — based on statistics, graph analytics, machine learning, etc. — can be used to encode and extract knowledge. It covers techniques for the creation, enrichment, assessment, and refinement of knowledge graphs and surveys recent open and enterprise knowledge graphs and the industries or applications within which they have been most widely adopted. The book closes by discussing the current limitations and future directions along which knowledge graphs are likely to evolve.</p>
+	<p>This book is aimed at students, researchers, and practitioners who wish to learn more about knowledge graphs and how they facilitate extracting value from diverse data at large scale. To make the book accessible for newcomers, running examples and graphical notation are used throughout. Formal definitions and extensive references are also provided for those who opt to delve more deeply into specific topics.</p>
 	<h2 id="keywords"><span>Keywords</span></h2>
 	<p>knowledge graphs, artificial intelligence, semantic web, machine learning</p>
 
