@@ -285,7 +285,7 @@
 			</dl>
 
 			<p>Intuitively speaking, the convolution operator overlays \(\mathbf{X}\) in every possible way over \(\mathbf{Y}\) such that at least one pair of elements \((\mathbf{X})_{ij},(\mathbf{Y})_{lk}\) overlaps, summing the products of pairs of overlapping elements to generate an element of the result. Elements of \(\mathbf{X}\) extending beyond \(\mathbf{Y}\) are ignored (equivalently we can consider \(\mathbf{Y}\) to be “zero-padded” outside its borders).</p>
-			<div lcass="example">
+			<div class="example">
 				<p>Given \(\mathbf{X} \in \mathbb{R}^{3,3}\) and \(\mathbf{Y} \in \mathbb{R}^{4,5}\), then \(\mathbf{X} * \mathbf{Y} \in \mathbb{R}^{6,7}\), where, for example, \((\mathbf{X} * \mathbf{Y})_{11} = (\mathbf{X})_{33}(\mathbf{Y})_{11}\) (with the bottom right corner of \(\mathbf{X}\) overlapping the top left corner of \(\mathbf{Y}\)), while \((\mathbf{X} * \mathbf{Y})_{34} = (\mathbf{X})_{11}(\mathbf{Y})_{12} + \)\( (\mathbf{X})_{12}(\mathbf{Y})_{13} + \)\( (\mathbf{X})_{13}(\mathbf{Y})_{14} + \)\( (\mathbf{X})_{21}(\mathbf{Y})_{22} + \)\( (\mathbf{X})_{22}(\mathbf{Y})_{23} + \)\( (\mathbf{X})_{23}(\mathbf{Y})_{24} + \)\( (\mathbf{X})_{31}(\mathbf{Y})_{32} + \)\( (\mathbf{X})_{32}(\mathbf{Y})_{33} + \)\( (\mathbf{X})_{33}(\mathbf{Y})_{34}\) (with \((\mathbf{X})_{22}\) – the centre of \(\mathbf{X}\) – overlapping \((\mathbf{Y})_{23}\)).<? echo footnote("Models applying convolutions may differ regarding how edge cases are handled, or on the “stride” of the convolution applied, where, for example, a stride of 3 for \\((\\mathbf{X} * \\mathbf{Y})\\) would see the kernel \\(\\mathbf{X}\\) centred only on elements \\((\\mathbf{Y})_{ij}\\) such that \\(i\\,\\mathrm{mod}\\,3 = 0\\) and \\(j\\,\\mathrm{mod}\\,3 = 0\\), reducing the number of output elements by a factor of 9. We do not consider such details here."); ?></p>
 			</div>
 
@@ -298,7 +298,7 @@
 				<thead>
 					<tr>
 						<th><strong>Model</strong></th>
-						<th>\(\phi(\varepsilon(s),\rho(p),\varepsilon(o))\)}</th>
+						<th>\(\phi(\varepsilon(s),\rho(p),\varepsilon(o))\)</th>
 						<th><strong>Conditions</strong> (for all \(x \in V\), \(y \in L\))</th>
 					</tr>
 				</thead>
@@ -328,7 +328,7 @@
 					</tr>
 					<tr>
 						<td>RotatE</td>
-						<td>\(- \|\mathbf{e}_s \odot \mathbf{r}_p - \mathbf{e}_o\|_2\)}</td>
+						<td>\(- \|\mathbf{e}_s \odot \mathbf{r}_p - \mathbf{e}_o\|_2\)</td>
 						<td>\(\mathbf{e}_x \in \mathbb{C}^{d}\), \(\mathbf{r}_y \in \mathbb{C}^{d}\), \(\|\mathbf{r}_y\|_2 = 1\)</td>
 					</tr>
 					<tr>

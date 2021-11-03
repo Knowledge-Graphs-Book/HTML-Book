@@ -20,6 +20,16 @@
 	<script src="js/prism.js"></script>
 	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>-->
 	<script src="https://saswatpadhi.github.io/prismjs-bibtex/prism-bibtex.min.js"></script>
+	<style>
+		.gnode .katex,
+		.ginode .katex {
+			font-size: 90%;
+			padding: 0 .2em 0 .2em;
+		}
+		.katex {
+			font-size: 99%;
+		}
+	</style>
 </head>
 <body>
 	<!--<div style="display:none" id="tex-macros">
@@ -92,7 +102,7 @@
 		<ul class="authorlist">
 			<li><span class="author"><a href="https://orcid.org/0000-0001-9482-1982">Aidan Hogan</a></span> <span class="affiliation">IMFD, DCC, Universidad de Chile <span class="country">Chile</span></span></li>
 			<li><span class="author"><a href="https://orcid.org/0000-0003-0036-6662">Eva Blomqvist</a></span> <span class="affiliation">Linköping University <span class="country">Sweden</span></span></li>
-			<li><span class="author"><a href="https://orcid.org/0000-0001-5726-4638">Michael Cochez</a></span> <span class="affiliation">Vrije Universiteit and Discovery Lab, Elsevier <span class="country">The Netherlands</span></span></li>
+			<li><span class="author"><a href="https://orcid.org/0000-0001-5726-4638">Michael Cochez</a></span> <span class="affiliation">Vrije Universiteit Amsterdam and Discovery Lab, Elsevier <span class="country">The Netherlands</span></span></li>
 			<li><span class="author"><a href="https://orcid.org/0000-0002-3385-987X">Claudia d’Amato</a></span> <span class="affiliation">University of Bari <span class="country">Italy</span></span></li>
 			<li><span class="author"><a href="https://orcid.org/0000-0002-2930-2059">Gerard de Melo</a></span> <span class="affiliation">HPI, University of Potsdam and Rutgers University <span class="country">USA</span></span></li>
 			<li><span class="author"><a href="https://orcid.org/0000-0002-4559-6544">Claudio Gutierrez</a></span> <span class="affiliation">IMFD, DCC, Universidad de Chile <span class="country">Chile</span></span></li>
@@ -111,9 +121,9 @@
 		</ul>
 		<div id="about" class="info">
 			<h2>About the book</h2>
-			<p>The book is published by <a href="http://www.morganclaypool.com/">Morgan &amp; Claypool</a> in the series <a href="http://www.morganclaypool.com/toc/wbe.1/7/1">Synthesis Lectures on the Semantic Web: Theory and Technology</a> edited by <a href="http://info.slis.indiana.edu/~dingying/">Ying Ding</a> and Paul Groth. Please, cite the book as:</p>
+			<p>The book is published by <a href="http://www.morganclaypool.com/">Morgan &amp; Claypool</a> in the series <a href="http://www.morganclaypool.com/toc/wbe.1/7/1">Synthesis Lectures on the Data, Semantics, and Knowledge</a> edited by <a href="http://info.slis.indiana.edu/~dingying/">Ying Ding</a> and Paul Groth. Please, cite the book as:</p>
 			<blockquote class="quote">
-				 Aidan Hogan, Eva Blomqvist, Michael Cochez, Claudia d’Amato, Gerard de Melo, Claudio Gutierrez, Sabrina Kirrane, José Emilio Labra Gayo, Roberto Navigli, Sebastian Neumaier, Axel-Cyrille Ngonga Ngomo, Axel Polleres, Sabbir M. Rashid, Anisa Rula, Lukas Schmelzeisen, Juan Sequeda, Steffen Staab, Antoine Zimmermann (2021) <em>Knowledge Graphs</em>, Synthesis Lectures on Data, Semantics, and Knowledge, No. 22, 1-233, DOI: 10.2200/S01125ED1V01Y202109DSK022, Morgan &amp; Claypool
+				 Aidan Hogan, Eva Blomqvist, Michael Cochez, Claudia d’Amato, Gerard de Melo, Claudio Gutierrez, Sabrina Kirrane, José Emilio Labra Gayo, Roberto Navigli, Sebastian Neumaier, Axel-Cyrille Ngonga Ngomo, Axel Polleres, Sabbir M. Rashid, Anisa Rula, Lukas Schmelzeisen, Juan Sequeda, Steffen Staab, Antoine Zimmermann (2021) <em>Knowledge Graphs</em>, Synthesis Lectures on Data, Semantics, and Knowledge, No. 22, 1–237, DOI: 10.2200/S01125ED1V01Y202109DSK022, Morgan &amp; Claypool
 			</blockquote>
 			<p>BibTeX entry of this book:</p>
 			<pre><code class="language-bib">@book{kg-book,
@@ -127,6 +137,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
   isbn = {9781636392363},
   language = {English},
   number = {22},
+  numpages = {237},
   publisher = {Morgan \& Claypool},
   series = {Synthesis Lectures on Data, Semantics, and Knowledge},
   title = {{K}nowledge {G}raphs},
@@ -160,7 +171,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 	<p>Knowledge graphs are founded on the principle of applying a graph-based abstraction to data, and are now broadly deployed in scenarios that require integrating and extracting value from multiple, diverse sources of data at large scale. The book defines knowledge graphs and provides a high-level overview of how they are used. It presents and contrasts popular graph models that are commonly used to represent data as graphs, and the languages by which they can be queried before describing how the resulting data graph can be enhanced with notions of schema, identity, and context. The book discusses how ontologies and rules can be used to encode knowledge as well as how inductive techniques — based on statistics, graph analytics, machine learning, etc. — can be used to encode and extract knowledge. It covers techniques for the creation, enrichment, assessment, and refinement of knowledge graphs and surveys recent open and enterprise knowledge graphs and the industries or applications within which they have been most widely adopted. The book closes by discussing the current limitations and future directions along which knowledge graphs are likely to evolve.</p>
 	<p>This book is aimed at students, researchers, and practitioners who wish to learn more about knowledge graphs and how they facilitate extracting value from diverse data at large scale. To make the book accessible for newcomers, running examples and graphical notation are used throughout. Formal definitions and extensive references are also provided for those who opt to delve more deeply into specific topics.</p>
 	<h2 id="keywords"><span>Keywords</span></h2>
-	<p>knowledge graphs, artificial intelligence, semantic web, machine learning</p>
+	<p>knowledge graphs, graph databases, knowledge graph embeddings, graph neural networks, ontologies, knowledge graph refinement, knowledge graph quality, knowledge bases, artificial intelligence, semantic web, machine learning</p>
 
 <?php
 	include("toc.php");

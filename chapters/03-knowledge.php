@@ -123,8 +123,8 @@
 					<tr>
 						<td></td>
 						<td> \( | \) </td>
-						<td>\(\qualified{p}{\phi}{min}{max}\)</td>
-						<td>between \(min\) and \(max\) outward edges (inclusive) with label \(p\) to nodes satisfying shape \(\phi\)</td>
+						<td>\(\qualified{p}{\phi}{min}{max}\)&nbsp;</td>
+						<td>between \(min\) and \(max\) outward edges (inclusive) with label \(p\)<br/> to nodes satisfying shape \(\phi\)</td>
 					</tr>
 				</table>
 				where \(min \in \mathbb{N}_{(0)}\), \(max \in \mathbb{N}_{(0)} \cup \{ * \}\), with “\(*\)” indicating unbounded.</dd>
@@ -229,7 +229,7 @@
 
 			<dl class="definition" id="def-shape-target">
 				<dt>Shapes target</dt>
-				<dd>Given a directed edge-labelled graph \(G = (V,E,L)\) and a shapes schema \(\Sigma = (\Phi,S,\lambda)\), a <em>shapes target</em> \(T \subseteq V \times S\) is a set of pairs of nodes and shape labelsfrom \(G\) and \(\Sigma\), respectively.</dd>
+				<dd>Given a directed edge-labelled graph \(G = (V,E,L)\) and a shapes schema \(\Sigma = (\Phi,S,\lambda)\), a <em>shapes target</em> \(T \subseteq V \times S\) is a set of pairs of nodes and shape labels from \(G\) and \(\Sigma\), respectively.</dd>
 			</dl>
 
 			<p>The nodes that a shape targets can be selected a manual selection, based on the type(s) of the nodes, based on the results of a graph query, etc.&nbsp;<? echo $references->cite("Corman2018b,Labra-Gayo2019"); ?>.</p>
@@ -279,30 +279,31 @@
 				</dd>
 			</dl>
 
-			<p>A quotient graph can “merge” multiple nodes into one node, keeping the edges of its constituent nodes. For an input graph \(G = (V,E,L)\), there is an exponential number of possible quotient graphs based on partitions of the input nodes. On one extreme, the input graph is a quotient graph of itself (turning nodes like <span class="gnode">u</span> into singleton nodes like <span class="gnode">{u}</span>). On the other extreme, a single node <span class="gnode">\(V\)</span>, with all input nodes, and loops \((V,l,V)\) for each edge-label \(l\) used in the set of input edges \(E\), is also a quotient graph. Quotient graphs typically fall somewhere in between, where the partition \(\mathcal{V}\) of \(V\) is often defined in terms of an <em>equivalence relation</em> \(\sim\) on the set \(V\) such that \(\mathcal{V} \coloneqq {\sim}/V\); i.e., \(\mathcal{V}\) is defined as the <em>quotient set</em> of \(V\) with respect to \(\sim\); for example, we might define an equivalence relation on nodes such that \(u \sim v\) if and only if they have the same set of defined types, where \({\sim}/V\) is then a partition whose parts contain all nodes with the same types. Another way to induce a quotient graph is to define the partition in a way that preserves some of the topology (i.e., connectivity) of the input graph. One way to formally define this idea is through <em>simulation</em> and <em>bisimulation</em>.</p>
+			<p>A quotient graph can “merge” multiple nodes into one node, keeping the edges of its constituent nodes. For an input graph \(G = (V,E,L)\), there is an exponential number of possible quotient graphs based on partitions of the input nodes. On one extreme, the input graph is a quotient graph of itself (turning nodes like <span class="gnode">u</span> into singleton nodes like <span class="gnode">\(\{\)u\(\}\)</span>). On the other extreme, a single node <span class="gnode">\(V\)</span>, with all input nodes, and loops \((V,l,V)\) for each edge-label \(l\) used in the set of input edges \(E\), is also a quotient graph. Quotient graphs typically fall somewhere in between, where the partition \(\mathcal{V}\) of \(V\) is often defined in terms of an <em>equivalence relation</em> \(\sim\) on the set \(V\) such that \(\mathcal{V} \coloneqq {\sim}/V\); i.e., \(\mathcal{V}\) is defined as the <em>quotient set</em> of \(V\) with respect to \(\sim\); for example, we might define an equivalence relation on nodes such that \(u \sim v\) if and only if they have the same set of defined types, where \({\sim}/V\) is then a partition whose parts contain all nodes with the same types. Another way to induce a quotient graph is to define the partition in a way that preserves some of the topology (i.e., connectivity) of the input graph. One way to formally define this idea is through <em>simulation</em> and <em>bisimulation</em>.</p>
 
-		<dl class="definition" id="def-sim">
-			<dt>Simulation</dt>
-			<dd>Given two directed edge-labelled graph \(G = (V,E,L)\) and \(G' = (V',E',L')\), let \(R \subseteq V \times V'\) be a relation between the nodes of \(G\) and \(G'\), respectively. We call \(R\) a <em>simulation</em> on \(G\) and \(G'\) if, for all \((v,v') \in R\), the following holds:
-			<ul>
-				<li>if \((v,p,w) \in E\) then there exists \(w'\) such that \((v',p,w') \in E'\) and \((w,w') \in R\).</li>
-			</ul>
-			If a simulation exists on \(G\) and \(G'\), we say that \(G'\) <em>simulates</em> \(G\), denoted \(G \rightsquigarrow G'\).</dd>
-		</dl>
+			<dl class="definition" id="def-sim">
+				<dt>Simulation</dt>
+				<dd>Given two directed edge-labelled graph \(G = (V,E,L)\) and \(G' = (V',E',L')\), let \(R \subseteq V \times V'\) be a relation between the nodes of \(G\) and \(G'\), respectively. We call \(R\) a <em>simulation</em> on \(G\) and \(G'\) if, for all \((v,v') \in R\), the following holds:
+				<ul>
+					<li>if \((v,p,w) \in E\) then there exists \(w'\) such that \((v',p,w') \in E'\) and \((w,w') \in R\).</li>
+				</ul>
+				If a simulation exists on \(G\) and \(G'\), we say that \(G'\) <em>simulates</em> \(G\), denoted \(G \rightsquigarrow G'\).</dd>
+			</dl>
 
-		<dl class="definition" id="def-bisim">
-			<dt>Bisimulation</dt>
-			<dd>If \(R\) is a simulation on \(G\) and \(G'\), we call it a <em>bisimulation</em> if, for all \((v,v') \in R\), the following condition holds:
-			<ul>
-				<li>if \((v'p,w') \in E'\) then there exists \(w\) such that \((v,p,w) \in E\) and \((w,w') \in R\).</li>
-			</ul>
-			If a bisimulation exists on \(G\) and \(G'\), we call them <em>bisimilar</em>, denoted \(G \approx G'\).</dd>
-		</dl>
+			<dl class="definition" id="def-bisim">
+				<dt>Bisimulation</dt>
+				<dd>If \(R\) is a simulation on \(G\) and \(G'\), we call it a <em>bisimulation</em> if, for all \((v,v') \in R\), the following condition holds:
+				<ul>
+					<li>if \((v'p,w') \in E'\) then there exists \(w\) such that \((v,p,w) \in E\) and \((w,w') \in R\).</li>
+				</ul>
+				If a bisimulation exists on \(G\) and \(G'\), we call them <em>bisimilar</em>, denoted \(G \approx G'\).</dd>
+			</dl>
 
-		<p>Bisimulation (\(\approx\)) is then an equivalence relation on graphs. By defining the (bi)simulation relation \(R\) in terms of set membership \(\in\), every quotient graph simulates its input graph, but does not necessarily bisimulate its input graph. This gives rise to the notion of <em>bisimilar quotient graphs</em>.</p>
+			<p>Bisimulation (\(\approx\)) is then an equivalence relation on graphs. By defining the (bi)simulation relation \(R\) in terms of set membership \(\in\), every quotient graph simulates its input graph, but does not necessarily bisimulate its input graph. This gives rise to the notion of <em>bisimilar quotient graphs</em>.</p>
 
-		<div class="example">
-			<p>Figures&nbsp;<? echo ref("fig:emergentSchema"); ?> and&nbsp;<? echo ref("fig:emergentSchema2"); ?> exemplify quotient graphs for the graph of Figure&nbsp;<? echo ref("fig:delg"); ?>. Figure&nbsp;<? echo ref("fig:emergentSchema"); ?> simulates but is not bisimilar to the data graph. Figure&nbsp;<? echo ref("fig:emergentSchema2"); ?> is bisimilar to the data graph. Often the goal will be to compute the most concise quotient graph that satisfies a given condition; for example, the nodes without outgoing edges in Figure&nbsp;<? echo ref("fig:emergentSchema2"); ?> could be merged while preserving bisimilarity.</p>
+			<div class="example">
+				<p>Figures&nbsp;<? echo ref("fig:emergentSchema"); ?> and&nbsp;<? echo ref("fig:emergentSchema2"); ?> exemplify quotient graphs for the graph of Figure&nbsp;<? echo ref("fig:delg"); ?>. Figure&nbsp;<? echo ref("fig:emergentSchema"); ?> simulates but is not bisimilar to the data graph. Figure&nbsp;<? echo ref("fig:emergentSchema2"); ?> is bisimilar to the data graph. Often the goal will be to compute the most concise quotient graph that satisfies a given condition; for example, the nodes without outgoing edges in Figure&nbsp;<? echo ref("fig:emergentSchema2"); ?> could be merged while preserving bisimilarity.</p>
+			</div>
 		</div>
 		</section>
 

@@ -482,7 +482,7 @@
 					<li><code>Place</code><sup>\(I\)</sup> \(\coloneqq \{ ⚓,\,🏔 \}\);</li>
 					<li><code>nearby</code> \(\coloneqq \{ (⚓,\,🛪) \}\).</li>
 				</ul>
-				<p>Now \(I\) is a model of \(\mathsf{K}\). Note that although \(\mathsf{K}\) does not imply that <code>sells(Arica,coffee)</code> while \(I\) indicates that \(🛪\) does indeed sell \(☕\), \(I\) is still a model of \(\mathsf{K}\) since \(\mathsf{K}\) is not assumed to be a complete description, per the OWA.</p>
+				<p>Now \(I\) is a model of \(\mathsf{K}\). Note that although \(\mathsf{K}\) does not imply that <code>sells(AricaAirport,coffee)</code> while \(I\) indicates that \(🛪\) does indeed sell \(☕\), \(I\) is still a model of \(\mathsf{K}\) since \(\mathsf{K}\) is not assumed to be a complete description, per the OWA.</p>
 			</div>
 			
 			<p>Finally, the notion of a model gives rise to the notion of entailment, which tells us which knowledge bases hold as a logical consequence of which others.</p>

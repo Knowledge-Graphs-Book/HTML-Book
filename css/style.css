@@ -1,5 +1,6 @@
 :root {
-	--m-and-c-blue : #006AB1;
+	--m-and-c-blue: #006AB1;
+	--darker-blue: #004A91;
 	--green-bg: #C9ECE0;
 }
 
@@ -133,7 +134,14 @@ h4 {
 	color: var(--m-and-c-blue);
 	font-size: 120%;
 }
-.paragraph {
+h5.subsubsection {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+.paragraph, h5 {
+	font-weight: 900;
+	font-size: 100%;
+	font-style: normal;
 	color: var(--m-and-c-blue);
 }
 table {
@@ -142,6 +150,9 @@ table {
 	margin: auto;
 	align-content: center;
 	justify-content: center;
+}
+dl.definition dd table tr td {
+	vertical-align: top;
 }
 thead th {
 	border-bottom: 2px solid black;
@@ -219,8 +230,8 @@ figure dl dd img.inlined:first-child, figure dl dd img.inlined {
 	vertical-align: middle;
 }
 img.inside {
-	transform: scale(1.3);
-	margin: 1em;
+	transform: scale(1.1);
+	margin: .5em;
 	vertical-align: middle;
 }
 .chapter {
@@ -388,8 +399,8 @@ a {
 	font-size: 80%;
 	text-align: center;
 	border: 1.5px solid #808080;
-	border-radius: .8em;
-	padding: .25em;
+	border-radius: .55em;
+	padding: .2em .3em .15em .3em;
 	margin: 0;
 	display: inline-block;
 	background: linear-gradient(#FCFCFC, #DADADA);
@@ -399,9 +410,9 @@ a {
 	display: inline-block;
 	font-family: "cmss8", sans-serif;
 	font-size: 80%;
-	border: 1.5px dashed #000;
-	border-radius: 1em;
-	padding: .2em;
+	border: 2px dashed #000;
+	border-radius: .7em;
+	padding: .2em .3em .15em .3em;
 	margin: 0;
 	background: linear-gradient(#FDFFFD, #DBFFDB);
 }
@@ -412,14 +423,14 @@ a {
 	font-size: 80%;
 	border: 1.5px dotted #004;
 	color: #004;
-	border-radius: 1em;
+	border-radius: .7em;
 	padding: .2em;
 	margin: 0;
 	background: linear-gradient(#EEFFFF, #C2E1E1);
 }
 .iedge {
 	font-style: normal;
-	color: #520;
+	color: black;/*#520;*/
 	display: inline-block;
 	font-family: "cmss8", sans-serif;
 	font-size: 80%;
@@ -802,7 +813,7 @@ div.example p:first-child:before {
 	background-color: white;
 	padding-bottom: calc(100vh - 4 * 14em);
 }
-#toc > ol > li#about {
+#toc > ol > li#aboutlink {
 	border: none;
 }
 #toc > ol > li:not(#toc-filler,#about):hover {
@@ -843,6 +854,9 @@ div.example p:first-child:before {
 }
 .formal-table .subtabhead {
 	background-color: #F5FFFF;
+}
+.formal-table tbody tr:nth-child(odd) {
+	background-color: #FFFFF5;	
 }
 #sec-references ul li p {
 	text-indent: -2em;
