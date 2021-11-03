@@ -15,6 +15,16 @@
 	<script src="js/prism.js"></script>
 	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>-->
 	<script src="https://saswatpadhi.github.io/prismjs-bibtex/prism-bibtex.min.js"></script>
+	<style>
+		.gnode .katex,
+		.ginode .katex {
+			font-size: 90%;
+			padding: 0 .2em 0 .2em;
+		}
+		.katex {
+			font-size: 99%;
+		}
+	</style>
 </head>
 <body>
 	<!--<div style="display:none" id="tex-macros">
@@ -87,7 +97,7 @@
 		<ul class="authorlist">
 			<li><span class="author"><a href="https://orcid.org/0000-0001-9482-1982">Aidan Hogan</a></span> <span class="affiliation">IMFD, DCC, Universidad de Chile <span class="country">Chile</span></span></li>
 			<li><span class="author"><a href="https://orcid.org/0000-0003-0036-6662">Eva Blomqvist</a></span> <span class="affiliation">Linköping University <span class="country">Sweden</span></span></li>
-			<li><span class="author"><a href="https://orcid.org/0000-0001-5726-4638">Michael Cochez</a></span> <span class="affiliation">Vrije Universiteit and Discovery Lab, Elsevier <span class="country">The Netherlands</span></span></li>
+			<li><span class="author"><a href="https://orcid.org/0000-0001-5726-4638">Michael Cochez</a></span> <span class="affiliation">Vrije Universiteit Amsterdam and Discovery Lab, Elsevier <span class="country">The Netherlands</span></span></li>
 			<li><span class="author"><a href="https://orcid.org/0000-0002-3385-987X">Claudia d’Amato</a></span> <span class="affiliation">University of Bari <span class="country">Italy</span></span></li>
 			<li><span class="author"><a href="https://orcid.org/0000-0002-2930-2059">Gerard de Melo</a></span> <span class="affiliation">HPI, University of Potsdam and Rutgers University <span class="country">USA</span></span></li>
 			<li><span class="author"><a href="https://orcid.org/0000-0002-4559-6544">Claudio Gutierrez</a></span> <span class="affiliation">IMFD, DCC, Universidad de Chile <span class="country">Chile</span></span></li>
@@ -106,9 +116,9 @@
 		</ul>
 		<div id="about" class="info">
 			<h2>About the book</h2>
-			<p>The book is published by <a href="http://www.morganclaypool.com/">Morgan &amp; Claypool</a> in the series <a href="http://www.morganclaypool.com/toc/wbe.1/7/1">Synthesis Lectures on the Semantic Web: Theory and Technology</a> edited by <a href="http://info.slis.indiana.edu/~dingying/">Ying Ding</a> and Paul Groth. Please, cite the book as:</p>
+			<p>The book is published by <a href="http://www.morganclaypool.com/">Morgan &amp; Claypool</a> in the series <a href="http://www.morganclaypool.com/toc/wbe.1/7/1">Synthesis Lectures on the Data, Semantics, and Knowledge</a> edited by <a href="http://info.slis.indiana.edu/~dingying/">Ying Ding</a> and Paul Groth. Please, cite the book as:</p>
 			<blockquote class="quote">
-				 Aidan Hogan, Eva Blomqvist, Michael Cochez, Claudia d’Amato, Gerard de Melo, Claudio Gutierrez, Sabrina Kirrane, José Emilio Labra Gayo, Roberto Navigli, Sebastian Neumaier, Axel-Cyrille Ngonga Ngomo, Axel Polleres, Sabbir M. Rashid, Anisa Rula, Lukas Schmelzeisen, Juan Sequeda, Steffen Staab, Antoine Zimmermann (2021) <em>Knowledge Graphs</em>, Synthesis Lectures on Data, Semantics, and Knowledge, No. 22, 1-233, DOI: 10.2200/S01125ED1V01Y202109DSK022, Morgan &amp; Claypool
+				 Aidan Hogan, Eva Blomqvist, Michael Cochez, Claudia d’Amato, Gerard de Melo, Claudio Gutierrez, Sabrina Kirrane, José Emilio Labra Gayo, Roberto Navigli, Sebastian Neumaier, Axel-Cyrille Ngonga Ngomo, Axel Polleres, Sabbir M. Rashid, Anisa Rula, Lukas Schmelzeisen, Juan Sequeda, Steffen Staab, Antoine Zimmermann (2021) <em>Knowledge Graphs</em>, Synthesis Lectures on Data, Semantics, and Knowledge, No. 22, 1–237, DOI: 10.2200/S01125ED1V01Y202109DSK022, Morgan &amp; Claypool
 			</blockquote>
 			<p>BibTeX entry of this book:</p>
 			<pre><code class="language-bib">@book{kg-book,
@@ -122,6 +132,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
   isbn = {9781636392363},
   language = {English},
   number = {22},
+  numpages = {237},
   publisher = {Morgan \& Claypool},
   series = {Synthesis Lectures on Data, Semantics, and Knowledge},
   title = {{K}nowledge {G}raphs},
@@ -155,7 +166,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 	<p>Knowledge graphs are founded on the principle of applying a graph-based abstraction to data, and are now broadly deployed in scenarios that require integrating and extracting value from multiple, diverse sources of data at large scale. The book defines knowledge graphs and provides a high-level overview of how they are used. It presents and contrasts popular graph models that are commonly used to represent data as graphs, and the languages by which they can be queried before describing how the resulting data graph can be enhanced with notions of schema, identity, and context. The book discusses how ontologies and rules can be used to encode knowledge as well as how inductive techniques — based on statistics, graph analytics, machine learning, etc. — can be used to encode and extract knowledge. It covers techniques for the creation, enrichment, assessment, and refinement of knowledge graphs and surveys recent open and enterprise knowledge graphs and the industries or applications within which they have been most widely adopted. The book closes by discussing the current limitations and future directions along which knowledge graphs are likely to evolve.</p>
 	<p>This book is aimed at students, researchers, and practitioners who wish to learn more about knowledge graphs and how they facilitate extracting value from diverse data at large scale. To make the book accessible for newcomers, running examples and graphical notation are used throughout. Formal definitions and extensive references are also provided for those who opt to delve more deeply into specific topics.</p>
 	<h2 id="keywords"><span>Keywords</span></h2>
-	<p>knowledge graphs, artificial intelligence, semantic web, machine learning</p>
+	<p>knowledge graphs, graph databases, knowledge graph embeddings, graph neural networks, ontologies, knowledge graph refinement, knowledge graph quality, knowledge bases, artificial intelligence, semantic web, machine learning</p>
 
 	<nav id="toc">
 		<div><p>Table of ▼ Contents</p></div>
@@ -229,7 +240,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 			</ol></li>
 			<li><a href="#sec-bio">Authors’ Biography</a></li>
 			<li id="toc-filler">&nbsp;</li>
-			<li id="about"><a href="#about">about this book</a></li>
+			<li id="aboutlink"><a href="#about">about this book</a></li>
 		</ol>
 	</nav>
 	<section id="sec-preface" class="prechapter">
@@ -321,7 +332,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 
 		<p>where <span class="sf underline">name</span> and <span class="sf underline">start</span> together form the primary key of the table in order to uniquely identify recurring events. But as they start to populate the data, they encounter various issues: events may have multiple names (e.g., in different languages), events may have multiple venues, they may not yet know the start and end date-times for future events, events may have multiple types, and so forth. Incrementally addressing these modelling issues as the data become more diverse, they generate internal identifiers for events and adapt their relational schema until they have:</p>
 
-		<p class="mathblock" id="al-schema"><span class="sf">EventName</span>(<span class="sf underline">id</span>,<span class="sf underline">name</span>), <span class="sf">EventStart</span>(<span class="sf underline">id</span>,<span class="sf">start</span>), <span class="sf">EventEnd</span>(<span class="sf underline">id</span>,<span class="sf">end</span>), <span class="sf">EventVenue</span>(<span class="sf underline">id</span>,<span class="sf underline">venue</span>), <span class="sf">EventType</span>(<span class="sf underline">id</span>,<span class="sf underline">type</span>)<span style="float: right;">(1)</span></p>
+		<p class="mathblock" id="al-schema"><span class="sf">EventName</span>(<span class="sf underline">id</span>,<span class="sf underline">name</span>), <span class="sf">EventStart</span>(<span class="sf underline">id</span>,<span class="sf">start</span>), <span class="sf">EventEnd</span>(<span class="sf underline">id</span>,<span class="sf">end</span>), <span class="sf">EventVenue</span>(<span class="sf underline">id</span>,<span class="sf underline">venue</span>), <span class="sf">EventType</span>(<span class="sf underline">id</span>,<span class="sf underline">type</span>)<span style="float: right;">(2.1)</span></p>
 
 		<p>With the above schema, the organisation can now model events with \(0{-}n\) names, venues, and types, and \(0{-}1\) start dates and end dates (without needing relational nulls).</p>
 		<p>Along the way, the board has to incrementally change the schema several times in order to support new sources of data. Each such change requires a costly remodelling, reloading, and reindexing of data; here we only considered one table. The tourism board struggles with the relational model because they do not know, <em>a priori</em>, what data will need to be modelled or what sources they will use. But once they reach the latter relational schema, the board finds that they can integrate further sources without more changes: with minimal assumptions on <em>multiplicities</em> (\(1{-}1\), \(1{-}n\), etc.) this schema offers a lot of flexibility for integrating incomplete and diverse data.</p>
@@ -388,7 +399,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 		<h4 id="sssec-propgraph" class="subsection">Property graphs</h4>
 		<p>Property graphs constitute an alternative graph model that offers additional flexibility when modelling more complex relations. Consider integrating incoming data that provide further details on which companies offer fares on which flights, allowing the board to better understand available routes between cities (for example, on national airlines). In the case of directed edge-labelled graphs, we cannot directly annotate an edge like <span class="gnode">Santiago</span><img class="tip" src="images/edge-source.png" width="8" alt="arrow source"/><span class="edge">flight</span><img class="tip" src="images/edge-tip.png" width="15" alt="arrow tip rightward"/><span class="gnode">Arica</span> with the company (or companies) offering that route. But we could add a new node denoting a flight, connect it with the source, destination, companies, and mode, as shown in Figure&nbsp;<a href="#fig-fsa">2.3a</a>. Applying this modelling to all routes in Figure&nbsp;<a href="#fig-delg">2.1</a> would, however, involve significant changes.</p>
 
-		<p>The property graph model was thus proposed to offer additional flexibility when modelling data as a graph&nbsp;[<a href="#ref-Miller13">Miller, 2013</a>, <a href="#ref-AnglesABHRV17">Angles et al., 2017</a>]. A property graph allows a set of <em>property–value</em> pairs and a <em>label</em> to be associated with both nodes and edges. Figure&nbsp;<a href="#fig-pg">2.3b</a> depicts an example of a property graph with data analogous to Figure&nbsp;<a href="#fig-fsa">2.3a</a>. We use property–value pairs on edges to model the companies. The type of relation is captured by the label <code>flight</code>}. We further use node labels to indicate the types of the two nodes, and property–value pairs for their latitude and longitude.</p>
+		<p>The property graph model was thus proposed to offer additional flexibility when modelling data as a graph&nbsp;[<a href="#ref-Miller13">Miller, 2013</a>, <a href="#ref-AnglesABHRV17">Angles et al., 2017</a>]. A property graph allows a set of <em>property–value</em> pairs and a <em>label</em> to be associated with both nodes and edges. Figure&nbsp;<a href="#fig-pg">2.3b</a> depicts an example of a property graph with data analogous to Figure&nbsp;<a href="#fig-fsa">2.3a</a>. We use property–value pairs on edges to model the companies. The type of relation is captured by the label <code>flight</code>. We further use node labels to indicate the types of the two nodes, and property–value pairs for their latitude and longitude.</p>
 
 		<figure id="fig-flghts">
 			<figure id="fig-fsa">
@@ -924,8 +935,8 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 					<tr>
 						<td></td>
 						<td> \( | \) </td>
-						<td>\(\qualified{p}{\phi}{min}{max}\)</td>
-						<td>between \(min\) and \(max\) outward edges (inclusive) with label \(p\) to nodes satisfying shape \(\phi\)</td>
+						<td>\(\qualified{p}{\phi}{min}{max}\)&nbsp;</td>
+						<td>between \(min\) and \(max\) outward edges (inclusive) with label \(p\)<br/> to nodes satisfying shape \(\phi\)</td>
 					</tr>
 				</table>
 				where \(min \in \mathbb{N}_{(0)}\), \(max \in \mathbb{N}_{(0)} \cup \{ * \}\), with “\(*\)” indicating unbounded.</dd>
@@ -1030,7 +1041,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 
 			<dl class="definition" id="def-shape-target">
 				<dt>Shapes target</dt>
-				<dd>Given a directed edge-labelled graph \(G = (V,E,L)\) and a shapes schema \(\Sigma = (\Phi,S,\lambda)\), a <em>shapes target</em> \(T \subseteq V \times S\) is a set of pairs of nodes and shape labelsfrom \(G\) and \(\Sigma\), respectively.</dd>
+				<dd>Given a directed edge-labelled graph \(G = (V,E,L)\) and a shapes schema \(\Sigma = (\Phi,S,\lambda)\), a <em>shapes target</em> \(T \subseteq V \times S\) is a set of pairs of nodes and shape labels from \(G\) and \(\Sigma\), respectively.</dd>
 			</dl>
 
 			<p>The nodes that a shape targets can be selected a manual selection, based on the type(s) of the nodes, based on the results of a graph query, etc.&nbsp;[<a href="#ref-Corman2018b">Corman et al., 2018</a>, <a href="#ref-Labra-Gayo2019">Labra Gayo et al., 2019</a>].</p>
@@ -1080,30 +1091,31 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 				</dd>
 			</dl>
 
-			<p>A quotient graph can “merge” multiple nodes into one node, keeping the edges of its constituent nodes. For an input graph \(G = (V,E,L)\), there is an exponential number of possible quotient graphs based on partitions of the input nodes. On one extreme, the input graph is a quotient graph of itself (turning nodes like <span class="gnode">u</span> into singleton nodes like <span class="gnode">{u}</span>). On the other extreme, a single node <span class="gnode">\(V\)</span>, with all input nodes, and loops \((V,l,V)\) for each edge-label \(l\) used in the set of input edges \(E\), is also a quotient graph. Quotient graphs typically fall somewhere in between, where the partition \(\mathcal{V}\) of \(V\) is often defined in terms of an <em>equivalence relation</em> \(\sim\) on the set \(V\) such that \(\mathcal{V} \coloneqq {\sim}/V\); i.e., \(\mathcal{V}\) is defined as the <em>quotient set</em> of \(V\) with respect to \(\sim\); for example, we might define an equivalence relation on nodes such that \(u \sim v\) if and only if they have the same set of defined types, where \({\sim}/V\) is then a partition whose parts contain all nodes with the same types. Another way to induce a quotient graph is to define the partition in a way that preserves some of the topology (i.e., connectivity) of the input graph. One way to formally define this idea is through <em>simulation</em> and <em>bisimulation</em>.</p>
+			<p>A quotient graph can “merge” multiple nodes into one node, keeping the edges of its constituent nodes. For an input graph \(G = (V,E,L)\), there is an exponential number of possible quotient graphs based on partitions of the input nodes. On one extreme, the input graph is a quotient graph of itself (turning nodes like <span class="gnode">u</span> into singleton nodes like <span class="gnode">\(\{\)u\(\}\)</span>). On the other extreme, a single node <span class="gnode">\(V\)</span>, with all input nodes, and loops \((V,l,V)\) for each edge-label \(l\) used in the set of input edges \(E\), is also a quotient graph. Quotient graphs typically fall somewhere in between, where the partition \(\mathcal{V}\) of \(V\) is often defined in terms of an <em>equivalence relation</em> \(\sim\) on the set \(V\) such that \(\mathcal{V} \coloneqq {\sim}/V\); i.e., \(\mathcal{V}\) is defined as the <em>quotient set</em> of \(V\) with respect to \(\sim\); for example, we might define an equivalence relation on nodes such that \(u \sim v\) if and only if they have the same set of defined types, where \({\sim}/V\) is then a partition whose parts contain all nodes with the same types. Another way to induce a quotient graph is to define the partition in a way that preserves some of the topology (i.e., connectivity) of the input graph. One way to formally define this idea is through <em>simulation</em> and <em>bisimulation</em>.</p>
 
-		<dl class="definition" id="def-sim">
-			<dt>Simulation</dt>
-			<dd>Given two directed edge-labelled graph \(G = (V,E,L)\) and \(G' = (V',E',L')\), let \(R \subseteq V \times V'\) be a relation between the nodes of \(G\) and \(G'\), respectively. We call \(R\) a <em>simulation</em> on \(G\) and \(G'\) if, for all \((v,v') \in R\), the following holds:
-			<ul>
-				<li>if \((v,p,w) \in E\) then there exists \(w'\) such that \((v',p,w') \in E'\) and \((w,w') \in R\).</li>
-			</ul>
-			If a simulation exists on \(G\) and \(G'\), we say that \(G'\) <em>simulates</em> \(G\), denoted \(G \rightsquigarrow G'\).</dd>
-		</dl>
+			<dl class="definition" id="def-sim">
+				<dt>Simulation</dt>
+				<dd>Given two directed edge-labelled graph \(G = (V,E,L)\) and \(G' = (V',E',L')\), let \(R \subseteq V \times V'\) be a relation between the nodes of \(G\) and \(G'\), respectively. We call \(R\) a <em>simulation</em> on \(G\) and \(G'\) if, for all \((v,v') \in R\), the following holds:
+				<ul>
+					<li>if \((v,p,w) \in E\) then there exists \(w'\) such that \((v',p,w') \in E'\) and \((w,w') \in R\).</li>
+				</ul>
+				If a simulation exists on \(G\) and \(G'\), we say that \(G'\) <em>simulates</em> \(G\), denoted \(G \rightsquigarrow G'\).</dd>
+			</dl>
 
-		<dl class="definition" id="def-bisim">
-			<dt>Bisimulation</dt>
-			<dd>If \(R\) is a simulation on \(G\) and \(G'\), we call it a <em>bisimulation</em> if, for all \((v,v') \in R\), the following condition holds:
-			<ul>
-				<li>if \((v'p,w') \in E'\) then there exists \(w\) such that \((v,p,w) \in E\) and \((w,w') \in R\).</li>
-			</ul>
-			If a bisimulation exists on \(G\) and \(G'\), we call them <em>bisimilar</em>, denoted \(G \approx G'\).</dd>
-		</dl>
+			<dl class="definition" id="def-bisim">
+				<dt>Bisimulation</dt>
+				<dd>If \(R\) is a simulation on \(G\) and \(G'\), we call it a <em>bisimulation</em> if, for all \((v,v') \in R\), the following condition holds:
+				<ul>
+					<li>if \((v'p,w') \in E'\) then there exists \(w\) such that \((v,p,w) \in E\) and \((w,w') \in R\).</li>
+				</ul>
+				If a bisimulation exists on \(G\) and \(G'\), we call them <em>bisimilar</em>, denoted \(G \approx G'\).</dd>
+			</dl>
 
-		<p>Bisimulation (\(\approx\)) is then an equivalence relation on graphs. By defining the (bi)simulation relation \(R\) in terms of set membership \(\in\), every quotient graph simulates its input graph, but does not necessarily bisimulate its input graph. This gives rise to the notion of <em>bisimilar quotient graphs</em>.</p>
+			<p>Bisimulation (\(\approx\)) is then an equivalence relation on graphs. By defining the (bi)simulation relation \(R\) in terms of set membership \(\in\), every quotient graph simulates its input graph, but does not necessarily bisimulate its input graph. This gives rise to the notion of <em>bisimilar quotient graphs</em>.</p>
 
-		<div class="example">
-			<p>Figures&nbsp;<a href="#fig-emergentSchema">3.4</a> and&nbsp;<a href="#fig-emergentSchema2">3.5</a> exemplify quotient graphs for the graph of Figure&nbsp;<a href="#fig-delg">2.1</a>. Figure&nbsp;<a href="#fig-emergentSchema">3.4</a> simulates but is not bisimilar to the data graph. Figure&nbsp;<a href="#fig-emergentSchema2">3.5</a> is bisimilar to the data graph. Often the goal will be to compute the most concise quotient graph that satisfies a given condition; for example, the nodes without outgoing edges in Figure&nbsp;<a href="#fig-emergentSchema2">3.5</a> could be merged while preserving bisimilarity.</p>
+			<div class="example">
+				<p>Figures&nbsp;<a href="#fig-emergentSchema">3.4</a> and&nbsp;<a href="#fig-emergentSchema2">3.5</a> exemplify quotient graphs for the graph of Figure&nbsp;<a href="#fig-delg">2.1</a>. Figure&nbsp;<a href="#fig-emergentSchema">3.4</a> simulates but is not bisimilar to the data graph. Figure&nbsp;<a href="#fig-emergentSchema2">3.5</a> is bisimilar to the data graph. Often the goal will be to compute the most concise quotient graph that satisfies a given condition; for example, the nodes without outgoing edges in Figure&nbsp;<a href="#fig-emergentSchema2">3.5</a> could be merged while preserving bisimilarity.</p>
+			</div>
 		</div>
 		</section>
 
@@ -1745,7 +1757,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 					<li><code>Place</code><sup>\(I\)</sup> \(\coloneqq \{ ⚓,\,🏔 \}\);</li>
 					<li><code>nearby</code> \(\coloneqq \{ (⚓,\,🛪) \}\).</li>
 				</ul>
-				<p>Now \(I\) is a model of \(\mathsf{K}\). Note that although \(\mathsf{K}\) does not imply that <code>sells(Arica,coffee)</code> while \(I\) indicates that \(🛪\) does indeed sell \(☕\), \(I\) is still a model of \(\mathsf{K}\) since \(\mathsf{K}\) is not assumed to be a complete description, per the OWA.</p>
+				<p>Now \(I\) is a model of \(\mathsf{K}\). Note that although \(\mathsf{K}\) does not imply that <code>sells(AricaAirport,coffee)</code> while \(I\) indicates that \(🛪\) does indeed sell \(☕\), \(I\) is still a model of \(\mathsf{K}\) since \(\mathsf{K}\) is not assumed to be a complete description, per the OWA.</p>
 			</div>
 			
 			<p>Finally, the notion of a model gives rise to the notion of entailment, which tells us which knowledge bases hold as a logical consequence of which others.</p>
@@ -2271,7 +2283,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 			</dl>
 
 			<p>Intuitively speaking, the convolution operator overlays \(\mathbf{X}\) in every possible way over \(\mathbf{Y}\) such that at least one pair of elements \((\mathbf{X})_{ij},(\mathbf{Y})_{lk}\) overlaps, summing the products of pairs of overlapping elements to generate an element of the result. Elements of \(\mathbf{X}\) extending beyond \(\mathbf{Y}\) are ignored (equivalently we can consider \(\mathbf{Y}\) to be “zero-padded” outside its borders).</p>
-			<div lcass="example">
+			<div class="example">
 				<p>Given \(\mathbf{X} \in \mathbb{R}^{3,3}\) and \(\mathbf{Y} \in \mathbb{R}^{4,5}\), then \(\mathbf{X} * \mathbf{Y} \in \mathbb{R}^{6,7}\), where, for example, \((\mathbf{X} * \mathbf{Y})_{11} = (\mathbf{X})_{33}(\mathbf{Y})_{11}\) (with the bottom right corner of \(\mathbf{X}\) overlapping the top left corner of \(\mathbf{Y}\)), while \((\mathbf{X} * \mathbf{Y})_{34} = (\mathbf{X})_{11}(\mathbf{Y})_{12} + \)\( (\mathbf{X})_{12}(\mathbf{Y})_{13} + \)\( (\mathbf{X})_{13}(\mathbf{Y})_{14} + \)\( (\mathbf{X})_{21}(\mathbf{Y})_{22} + \)\( (\mathbf{X})_{22}(\mathbf{Y})_{23} + \)\( (\mathbf{X})_{23}(\mathbf{Y})_{24} + \)\( (\mathbf{X})_{31}(\mathbf{Y})_{32} + \)\( (\mathbf{X})_{32}(\mathbf{Y})_{33} + \)\( (\mathbf{X})_{33}(\mathbf{Y})_{34}\) (with \((\mathbf{X})_{22}\) – the centre of \(\mathbf{X}\) – overlapping \((\mathbf{Y})_{23}\)).<sup class="fnmark" id="fnm26"><a href="#fn26">26</a></sup><span class="footnote" id="fn26"><sup><a href="#fnm26">note 26</a></sup> Models applying convolutions may differ regarding how edge cases are handled, or on the “stride” of the convolution applied, where, for example, a stride of 3 for \((\mathbf{X} * \mathbf{Y})\) would see the kernel \(\mathbf{X}\) centred only on elements \((\mathbf{Y})_{ij}\) such that \(i\,\mathrm{mod}\,3 = 0\) and \(j\,\mathrm{mod}\,3 = 0\), reducing the number of output elements by a factor of 9. We do not consider such details here.</span></p>
 			</div>
 
@@ -2284,7 +2296,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 				<thead>
 					<tr>
 						<th><strong>Model</strong></th>
-						<th>\(\phi(\varepsilon(s),\rho(p),\varepsilon(o))\)}</th>
+						<th>\(\phi(\varepsilon(s),\rho(p),\varepsilon(o))\)</th>
 						<th><strong>Conditions</strong> (for all \(x \in V\), \(y \in L\))</th>
 					</tr>
 				</thead>
@@ -2314,7 +2326,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 					</tr>
 					<tr>
 						<td>RotatE</td>
-						<td>\(- \|\mathbf{e}_s \odot \mathbf{r}_p - \mathbf{e}_o\|_2\)}</td>
+						<td>\(- \|\mathbf{e}_s \odot \mathbf{r}_p - \mathbf{e}_o\|_2\)</td>
 						<td>\(\mathbf{e}_x \in \mathbb{C}^{d}\), \(\mathbf{r}_y \in \mathbb{C}^{d}\), \(\|\mathbf{r}_y\|_2 = 1\)</td>
 					</tr>
 					<tr>
@@ -13319,7 +13331,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 		<p>Axel Polleres heads the Institute for Data, Process and Knowledge Management of Vienna University of Economics and Business (WU Wien), which he joined in September 2013 as a Full Professor in the area of “Data and Knowledge Engineering”. He is also a faculty member of the Complexity Science Hub Vienna and was a visiting professor at Stanford University in 2018. He obtained his Ph.D. and habilitation from Vienna University of Technology. His research focuses on ontologies, query languages, logic programming, configuration technologies, Artificial Intelligence, Semantic Web, Linked Open Data, Knowledge Graphs and their applications for Knowledge Management. Moreover, he actively contributed to international standardisation efforts within the World Wide Web Consortium (W3C) where he co-chaired the W3C SPARQL working group.</p>
 
 		<h3 id="bio-rashid">Sabbir M. Rashid</h3>
-		<p>Sabbir M. Rashid is a Ph.D. candidate at Rensselaer Polytechnic Institute (RPI) working with Deborah L. McGuinness on research related to data annotation and harmonisation, ontology engineering, knowledge representation, and various forms of reasoning. Prior to RPI, Sabbir completed a double major at Worcester Polytechnic Institute, where he received B.Sc. degrees in both Physics and Electrical \& Computer Engineering. Much of his graduate studies at RPI have involved research related to data annotation and transformation using Semantic Data Dictionaries. His current work includes the application of deductive and abductive inference techniques over Linked Health Data, such as in the context of chronic diseases like diabetes.</p>
+		<p>Sabbir M. Rashid is a Ph.D. candidate at Rensselaer Polytechnic Institute (RPI) working with Deborah L. McGuinness on research related to data annotation and harmonisation, ontology engineering, knowledge representation, and various forms of reasoning. Prior to RPI, Sabbir completed a double major at Worcester Polytechnic Institute, where he received B.Sc. degrees in both Physics and Electrical &amp; Computer Engineering. Much of his graduate studies at RPI have involved research related to data annotation and transformation using Semantic Data Dictionaries. His current work includes the application of deductive and abductive inference techniques over Linked Health Data, such as in the context of chronic diseases like diabetes.</p>
 
 		<h3 id="bio-rula">Anisa Rula</h3>
 		<p>Anisa Rula is an Assistant Professor in Computer Science at the Department of Information Engineering, University of Brescia since January 2021 and a researcher at the University of Bonn in the SDA group since January 2017. She obtained her doctoral degree in Computer Science from the University of Milano-Bicocca in 2014. Her research interests are in the intersection of semantic knowledge technologies and data quality with a particular focus on data integration. She is researching new solutions to data integration with respect to the quality of data modelling and efficient solutions for large-scale data sources. Recently she has been working on data understanding for large and complex datasets, on knowledge extraction, and on semantic data enrichment and refinement.</p>
