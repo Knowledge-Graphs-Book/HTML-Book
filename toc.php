@@ -1,5 +1,5 @@
 	<nav id="toc">
-		<div><p>Table of ▼ Contents</p></div>
+		<div><p>Table of Contents</p></div>
 		<ol>
 			<li><a href="#sec-preface">Preface</a></li>
 			<li><a href="#sec-ack">Acknowledgements</a></li>

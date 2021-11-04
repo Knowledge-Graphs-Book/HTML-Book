@@ -20,7 +20,7 @@ body {
 	text-justify: inter-character;
 	padding-left: 3em;
 	border-left: solid 2px var(--m-and-c-blue);
-	margin-top: 1360px;
+	margin-top: 1300px;
 }
 
 div.cover {
@@ -331,7 +331,7 @@ table.normalTable th, table.normalTable td {
 table.normalTable th, table.condensedTable th {
 	border-top: 2px solid black;
 }
-table.normalTable td, table.condensedTable td {
+table.normalTable td/*, table.condensedTable td */ {
 	border-bottom: 1px solid black;
 	vertical-align: middle;
 	font-size: 90%;
@@ -761,14 +761,19 @@ div.example p:first-child:before {
 	left: 16em;
 	height: 100vh;
 	width: 3em;
+	background-image: url('../images/chev1-mini.png');
+	background-repeat: no-repeat;
+	background-position-x: right;
+	background-position-y: calc(50vh - 3em);
 	color: inherit;
 }
 #toc div p {
 	vertical-align: middle;
 	position: relative;
+	font-size: 120%;
 	top: 50vh;
 	width: 10em;
-	padding-top: 2.7em;
+	padding-top: 2.3em;
 	transform: rotate(-90deg);
 	transform-origin: left;
 	color: inherit;
@@ -816,7 +821,7 @@ div.example p:first-child:before {
 #toc > ol > li#aboutlink {
 	border: none;
 }
-#toc > ol > li:not(#toc-filler,#about):hover {
+#toc > ol > li:not(#toc-filler,#aboutlink):hover {
 	height: max-content;
 	width: 18.5em;
 	border-radius: 0 1em 1em 0;
@@ -824,7 +829,7 @@ div.example p:first-child:before {
 	border-left: none;
 	color: var(--m-and-c-blue);
 }
-#toc li#about a {
+#toc li#aboutlink a {
 	font-family: Hasklig;
 	font-size: 100%;
 	position: fixed;
@@ -853,10 +858,16 @@ div.example p:first-child:before {
 	border: 1px solid blue;
 }
 .formal-table .subtabhead {
-	background-color: #F5FFFF;
+	background-color: #E0F0FF;
+}
+.formal-table table {
+	width: 95%;
+}
+.formal-table table#tab-kges caption {
+	width: 95%;
 }
 .formal-table tbody tr:nth-child(odd) {
-	background-color: #FFFFF5;	
+	background-color: #F8E8BA;	
 }
 #sec-references ul li p {
 	text-indent: -2em;

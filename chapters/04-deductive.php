@@ -472,17 +472,17 @@
 				</ul>
 				<p>For \(I = (\inpdom,\inp{\cdot})\), let:</p>
 				<ul>
-					<li>\(\inpdom \coloneqq \{ ⚓,\,🏔,\,🛪 \}\);</li>
-					<li><code>Arica</code><sup>\(I\)</sup> \(\coloneqq\,⚓\), <code>Santiago</code><sup>\(I\)</sup> \(\coloneqq\,🏔\), <code>AricaAirport</code><sup>\(I\)</sup> \(\coloneqq\,🛪\);</li>
-					<li><code>City</code><sup>\(I\)</sup> \(\coloneqq \{ ⚓,\,🏔 \}\), <code>Airport</code><sup>\(I\)</sup> \(\coloneqq \{ 🛪 \}\);</li>
-					<li><code>flight</code><sup>\(I\)</sup> \(\coloneqq \{ (⚓,\,🏔) \}\), <code>connectsTo</code><sup>\(I\)</sup> \(\coloneqq \{ (⚓,\,🏔) \}\), <code>sells</code><sup>\(I\)</sup> \(\coloneqq \{ (🛪,\,☕) \}\).</li>
+					<li>\(\inpdom \coloneqq \{ ⚓,\,🏔,\,✈ \}\);</li>
+					<li><code>Arica</code><sup>\(I\)</sup> \(\coloneqq\,⚓\), <code>Santiago</code><sup>\(I\)</sup> \(\coloneqq\,🏔\), <code>AricaAirport</code><sup>\(I\)</sup> \(\coloneqq\,✈\);</li>
+					<li><code>City</code><sup>\(I\)</sup> \(\coloneqq \{ ⚓,\,🏔 \}\), <code>Airport</code><sup>\(I\)</sup> \(\coloneqq \{ ✈ \}\);</li>
+					<li><code>flight</code><sup>\(I\)</sup> \(\coloneqq \{ (⚓,\,🏔) \}\), <code>connectsTo</code><sup>\(I\)</sup> \(\coloneqq \{ (⚓,\,🏔) \}\), <code>sells</code><sup>\(I\)</sup> \(\coloneqq \{ (✈,\,☕) \}\).</li>
 				</ul>
 				<p>The interpretation \(I\) is not a model of \(\mathsf{K}\) since it does not have that \(⚓\) is <code>nearby</code> some <code>Airport</code>, nor that \(⚓\) and \(🏔\) are in the class <code>Place</code>. However, if we <em>extend</em> the interpretation \(I\) with the following:</p>
 				<ul>
 					<li><code>Place</code><sup>\(I\)</sup> \(\coloneqq \{ ⚓,\,🏔 \}\);</li>
-					<li><code>nearby</code> \(\coloneqq \{ (⚓,\,🛪) \}\).</li>
+					<li><code>nearby</code> \(\coloneqq \{ (⚓,\,✈) \}\).</li>
 				</ul>
-				<p>Now \(I\) is a model of \(\mathsf{K}\). Note that although \(\mathsf{K}\) does not imply that <code>sells(AricaAirport,coffee)</code> while \(I\) indicates that \(🛪\) does indeed sell \(☕\), \(I\) is still a model of \(\mathsf{K}\) since \(\mathsf{K}\) is not assumed to be a complete description, per the OWA.</p>
+				<p>Now \(I\) is a model of \(\mathsf{K}\). Note that although \(\mathsf{K}\) does not imply that <code>sells(AricaAirport,coffee)</code> while \(I\) indicates that \(✈\) does indeed sell \(☕\), \(I\) is still a model of \(\mathsf{K}\) since \(\mathsf{K}\) is not assumed to be a complete description, per the OWA.</p>
 			</div>
 			
 			<p>Finally, the notion of a model gives rise to the notion of entailment, which tells us which knowledge bases hold as a logical consequence of which others.</p>
