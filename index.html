@@ -88,7 +88,7 @@
     });
 	</script>
 	<div class="cover">
-		<img alt="mock cover" src="images/mock-cover.jpg"/>
+		<img alt="mock cover" src="images/cover-no-text.jpg"/>
 		<p style="position:absolute;top:300px;font-size:109px;text-shadow:5px 5px 5px black;font-weight:bold;">KNOWLEDGE<br/>GRAPHS</p>
 		<p style="position:absolute;top:700px;font-size:29px;text-shadow:3px 3px 3px black;"><a href="#bio-hogan">Aidan Hogan</a> | <a href="#bio-blomqvist">Eva Blomqvist</a> | <a href="#bio-cochez">Michael Cochez</a><br/><a href="#bio-damato">Claudia d’Amato</a> | <a href="#bio-demelo">Gerard de Melo</a> | <a href="#bio-gutierrez">Claudio Gutierrez</a><br/><a href="#bio-kirrane">Sabrina Kirrane</a> | <a href="#bio-labragayo">José Emilio Labra Gayo</a> | <a href="#bio-navigli">Roberto Navigli</a><br/><a href="#bio-neumaier">Sebastian Neumaier</a> | <a href="#bio-ngongangomo">Axel-Cyrille Ngonga Ngomo</a><br/><a href="#bio-polleres">Axel Polleres</a> | <a href="#bio-rashid">Sabbir M. Rashid</a> | <a href="#bio-rula">Anisa Rula</a><br/><a href="#bio-schmelzeisen">Lukas Schmelzeisen</a> | <a href="#bio-sequeda">Juan Sequeda</a><br/><a href="#bio-staab">Steffen Staab</a> | <a href="#bio-zimmermann">Antoine Zimmermann</a></p>
 	</div>
@@ -169,7 +169,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 	<p>knowledge graphs, graph databases, knowledge graph embeddings, graph neural networks, ontologies, knowledge graph refinement, knowledge graph quality, knowledge bases, artificial intelligence, semantic web, machine learning</p>
 
 	<nav id="toc">
-		<div><p>Table of ▼ Contents</p></div>
+		<div><p>Table of Contents</p></div>
 		<ol>
 			<li><a href="#sec-preface">Preface</a></li>
 			<li><a href="#sec-ack">Acknowledgements</a></li>
@@ -1747,17 +1747,17 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 				</ul>
 				<p>For \(I = (\inpdom,\inp{\cdot})\), let:</p>
 				<ul>
-					<li>\(\inpdom \coloneqq \{ ⚓,\,🏔,\,🛪 \}\);</li>
-					<li><code>Arica</code><sup>\(I\)</sup> \(\coloneqq\,⚓\), <code>Santiago</code><sup>\(I\)</sup> \(\coloneqq\,🏔\), <code>AricaAirport</code><sup>\(I\)</sup> \(\coloneqq\,🛪\);</li>
-					<li><code>City</code><sup>\(I\)</sup> \(\coloneqq \{ ⚓,\,🏔 \}\), <code>Airport</code><sup>\(I\)</sup> \(\coloneqq \{ 🛪 \}\);</li>
-					<li><code>flight</code><sup>\(I\)</sup> \(\coloneqq \{ (⚓,\,🏔) \}\), <code>connectsTo</code><sup>\(I\)</sup> \(\coloneqq \{ (⚓,\,🏔) \}\), <code>sells</code><sup>\(I\)</sup> \(\coloneqq \{ (🛪,\,☕) \}\).</li>
+					<li>\(\inpdom \coloneqq \{ ⚓,\,🏔,\,✈ \}\);</li>
+					<li><code>Arica</code><sup>\(I\)</sup> \(\coloneqq\,⚓\), <code>Santiago</code><sup>\(I\)</sup> \(\coloneqq\,🏔\), <code>AricaAirport</code><sup>\(I\)</sup> \(\coloneqq\,✈\);</li>
+					<li><code>City</code><sup>\(I\)</sup> \(\coloneqq \{ ⚓,\,🏔 \}\), <code>Airport</code><sup>\(I\)</sup> \(\coloneqq \{ ✈ \}\);</li>
+					<li><code>flight</code><sup>\(I\)</sup> \(\coloneqq \{ (⚓,\,🏔) \}\), <code>connectsTo</code><sup>\(I\)</sup> \(\coloneqq \{ (⚓,\,🏔) \}\), <code>sells</code><sup>\(I\)</sup> \(\coloneqq \{ (✈,\,☕) \}\).</li>
 				</ul>
 				<p>The interpretation \(I\) is not a model of \(\mathsf{K}\) since it does not have that \(⚓\) is <code>nearby</code> some <code>Airport</code>, nor that \(⚓\) and \(🏔\) are in the class <code>Place</code>. However, if we <em>extend</em> the interpretation \(I\) with the following:</p>
 				<ul>
 					<li><code>Place</code><sup>\(I\)</sup> \(\coloneqq \{ ⚓,\,🏔 \}\);</li>
-					<li><code>nearby</code> \(\coloneqq \{ (⚓,\,🛪) \}\).</li>
+					<li><code>nearby</code> \(\coloneqq \{ (⚓,\,✈) \}\).</li>
 				</ul>
-				<p>Now \(I\) is a model of \(\mathsf{K}\). Note that although \(\mathsf{K}\) does not imply that <code>sells(AricaAirport,coffee)</code> while \(I\) indicates that \(🛪\) does indeed sell \(☕\), \(I\) is still a model of \(\mathsf{K}\) since \(\mathsf{K}\) is not assumed to be a complete description, per the OWA.</p>
+				<p>Now \(I\) is a model of \(\mathsf{K}\). Note that although \(\mathsf{K}\) does not imply that <code>sells(AricaAirport,coffee)</code> while \(I\) indicates that \(✈\) does indeed sell \(☕\), \(I\) is still a model of \(\mathsf{K}\) since \(\mathsf{K}\) is not assumed to be a complete description, per the OWA.</p>
 			</div>
 			
 			<p>Finally, the notion of a model gives rise to the notion of entailment, which tells us which knowledge bases hold as a logical consequence of which others.</p>
