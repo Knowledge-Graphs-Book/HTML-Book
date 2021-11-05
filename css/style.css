@@ -1,7 +1,50 @@
 :root {
 	--m-and-c-blue: #006AB1;
-	--darker-blue: #004A91;
 	--green-bg: #C9ECE0;
+	--title: var(--m-and-c-blue);
+	--section-title: var(--m-and-c-blue);
+	--header-text: var(--m-and-c-blue);
+	--tab-fig-caption-mark: var(--m-and-c-blue);
+	--hyperlink: var(--m-and-c-blue);
+	--darker-blue: #004A91;
+	--background-color: white;
+	--default-text-color: black;
+	--chapter-bg: var(--green-bg);
+	--footnote-box: #FFFAD8;/*lightyellow;*/
+	--footnote-box-border: lightgrey;
+	--footnote-hover-border: var(--m-and-c-blue);
+	--footnote-shadow: var(--chapter-bg);
+	--gnode-border: #808080;
+	--gnode-gradient1: #FCFCFC;
+	--gnode-gradient2: #DADADA;
+	--gvar-border: var(--default-text-color);
+	--gvar-gradient1: #FDFFFD;
+	--gvar-gradient2: #DBFFDB;
+	--ginode-text: #004;
+	--ginode-border: var(--ginode-text);
+	--ginode-gradient1: #EEFFFF;
+	--ginode-gradient2: #C2E1E1;
+	--iedge-text: var(--default-text-color);
+	--shap-border: var(--default-text-color);
+	--shap-bg: var(--footnote-box);
+	--tnode-border: var(--default-text-color);
+	--tnode-bg: var(--background-color);
+	--edge-color: blue;
+	--gelab-color: var(--edge-color);
+	--gielab-color: #530;
+	--definition-bg: #E6EBF2;
+	--definition-border: #B5C4D9;
+	--definition-headline: #849CC0;
+	--webpage-bg: #EDEDED;
+	--toc-border: lightgrey;
+	--toc-text: grey;
+	--toc-hover: var(--m-and-c-blue);
+	--about-shadow: darkgrey;
+	--formal-bg: var(--green-bg);
+	--formal-table-border: var(--m-and-c-blue);
+	--subtabhead: #E0F0FF;
+	--table-odd-rows: #FFEFC1;
+	--bibref-hover: darkred;
 }
 
 
@@ -10,14 +53,14 @@ body {
 	width: 45em;
 	counter-reset: chapters sections subsections tables figures definitions examples toc-chapters appendices;
 	text-align: justify;
-	background-color: white;
-	color: black;
+	background-color: var(--background-color);
+	color: var(--default-text-color);
 	hyphens: auto;
 	font-family: "Charis", serif;
 	text-rendering: optimizeLegibility;
 	font-kerning: normal;
 	font-variant-ligatures: common-ligatures;
-	text-justify: inter-character;
+	text-justify: inter-word;
 	padding-left: 3em;
 	border-left: solid 2px var(--m-and-c-blue);
 	margin-top: 1300px;
@@ -54,7 +97,7 @@ div.cover {
 	font-family: "Quattrocento", sans-serif;
 	font-weight: 100;
 	font-size: 330%;
-	color: var(--m-and-c-blue);
+	color: var(--title);
 	letter-spacing: .2em;
 	padding-right: 5.5em;
 	line-height: 200%;
@@ -68,10 +111,10 @@ h1#title {
 h1#title .big-letter {
 	vertical-align: middle;
 	font-size: 350%;
-	color: var(--m-and-c-blue);
+	color: var(--section-title);
 }
 header {
-	color: var(--m-and-c-blue);
+	color: var(--header-text);
 }
 ul.authorlist, ul.reflist {
 	list-style-type: none;
@@ -96,19 +139,19 @@ h1, h2, h3, h4 {
 }
 h2 {
 	margin-top: 2.5em;
-	color: var(--m-and-c-blue);
+	color: var(--section-title);
 	font-size: 190%;
 }
 h2#abstract, #theend, #keywords {
 	font-weight: 100;
 	text-align: center;
 	margin: auto;
-	border-bottom: 1px solid var(--m-and-c-blue);
+	border-bottom: 1px solid var(--section-title);
 	line-height: .1em;
 	padding-top: 3em;
 }
 h2#abstract span, #theend span, #keywords span {
-	background: white;
+	background: var(--background-color);
 }
 h2#abstract span:before, #theend span:before, #keywords span:before {
 	content: " ☙ ";
@@ -117,7 +160,7 @@ h2#abstract span:after, #theend span:after, #keywords span:after {
 	content: " ❧ ";
 }
 .info {
-	color: black;
+	color: var(--default-text-color);;
 }
 /*.info dl dt {*/
 dl dt {
@@ -125,13 +168,13 @@ dl dt {
 }
 h3 {
 	margin-top: 2.1em;
-	color: var(--m-and-c-blue);
+	color: var(--section-title);
 	font-size: 150%;
 	font-variant: small-caps;
 }
 h4 {
 	margin-top: 1.7em;
-	color: var(--m-and-c-blue);
+	color: var(--section-title);
 	font-size: 120%;
 }
 h5.subsubsection {
@@ -142,7 +185,7 @@ h5.subsubsection {
 	font-weight: 900;
 	font-size: 100%;
 	font-style: normal;
-	color: var(--m-and-c-blue);
+	color: var(--section-title);
 }
 table {
 	font-size: 98%;
@@ -155,11 +198,11 @@ dl.definition dd table tr td {
 	vertical-align: top;
 }
 thead th {
-	border-bottom: 2px solid black;
+	border-bottom: 2px solid var(--default-text-color);
 }
 tfoot td {
-	border-top: 1px solid black;
-	border-bottom: 2px solid black;	
+	border-top: 1px solid var(--default-text-color);
+	border-bottom: 2px solid var(--default-text-color);	
 }
 table caption {
 	text-align: justify;
@@ -169,11 +212,11 @@ table caption {
 }
 table caption:before {
 	counter-increment: tables;
-	color:  var(--m-and-c-blue);
+	color:  var(--tab-fig-caption-mark);
 	content: "Table " counter(chapters) "." counter(tables) ": ";
 }
 section > figure {
-	width: 100%;
+	max-width: 100%;
 	margin: auto;
 	text-align: center;
 	counter-reset: subfigures;
@@ -195,7 +238,7 @@ section > figure > figcaption {
 }
 figure > figcaption:before {
 	counter-increment: figures;
-	color:  var(--m-and-c-blue);
+	color:  var(--tab-fig-caption-mark);
 	content: "Figure " counter(chapters) "." counter(figures) ": ";
 }
 figure > figure > figcaption:before {
@@ -203,8 +246,8 @@ figure > figure > figcaption:before {
 	content: "(" counter(subfigures, lower-alpha) ") ";
 }
 img.multi {
-	margin-left:3em;
-	float:left;
+	margin-left: 3em;
+	float: left;
 }
 img.inlined {
 	margin-top: .5em;
@@ -252,14 +295,14 @@ img.inside {
 	margin-top: 7em;
 	margin-left: -5em;
 	font-weight: bold;
-	background-color: var(--green-bg);
+	background-color: var(--chapter-bg);
 	text-align: center;
 }
 .prechapter > h2 {
 	margin-top: 7em;
 	margin-left: -5em;
 	font-weight: bold;
-	background-color: var(--green-bg);
+	background-color: var(--chapter-bg);
 	text-align: center;
 }
 .section {
@@ -285,9 +328,9 @@ h4.subsection:before {
 	position: absolute;
 	float: left;
 	left: calc(50vw + 24.5em);
-	border: 1px solid lightgrey;
+	border: 1px solid var(--footnote-box-border);
 	border-radius: .5em;
-	background-color: lightyellow;
+	background-color: var(--footnote-box);
 	padding: 0.5em;
 	line-height: 1.1em;
 	margin-right: 1em;
@@ -296,10 +339,11 @@ h4.subsection:before {
 	width: max-content;
 }
 .footnote:hover {
-	z-index: 100;
-	border: 1px solid orange;
+	z-index: 200;
+	border: 2px solid var(--footnote-hover-border);;
 	left: min(calc(100vw - 42em),calc(50vw + 24.5em));
 	width: 40em;
+	box-shadow: 0 0 1em var(--footnote-shadow);
 }
 
 .footnote#fn23 {
@@ -329,18 +373,20 @@ table.normalTable th, table.normalTable td {
 	padding: .41em;
 }
 table.normalTable th, table.condensedTable th {
-	border-top: 2px solid black;
+	border-top: 2px solid var(--default-text-color);
 }
-table.normalTable td/*, table.condensedTable td */ {
-	border-bottom: 1px solid black;
+table.normalTable td, table.condensedTable td {
 	vertical-align: middle;
 	font-size: 90%;
+}
+table.normalTable td {
+	border-bottom: 1px solid var(--default-text-color);
 }
 table.normalTable td:first-child {
 	font-variant: small-caps;
 }
 table.normalTable tr:last-child td, table.condensedTable tr:last-child td {
-	border-bottom: 2px solid black;
+	border-bottom: 2px solid var(--default-text-color);
 }
 table.condensedTable th, table.condensedTable td {
 	text-align: left;
@@ -351,14 +397,16 @@ table.condensedTable {
 }
 .subtabhead {
 	text-align: center;
-	border-top: 1px solid black;
+	border-top: 1px solid var(--default-text-color);
 }
+/*
 strong.id {
 	color: darkgreen;
 }
 strong.ib {
 	color: darkblue;
 }
+*/
 
 dl#outline dt {
 	float: left;
@@ -370,7 +418,7 @@ dl#outline dt:after {
 
 a {
 	text-decoration: none;
-	color: var(--m-and-c-blue);
+	color: var(--hyperlink);
 }
 .mathblock {
 	text-align: center;
@@ -398,45 +446,45 @@ a {
 	font-style: normal;
 	font-size: 80%;
 	text-align: center;
-	border: 1.5px solid #808080;
+	border: 1.5px solid var(--gnode-border);
 	border-radius: .55em;
 	padding: .2em .3em .15em .3em;
 	margin: 0;
 	display: inline-block;
-	background: linear-gradient(#FCFCFC, #DADADA);
+	background: linear-gradient(var(--gnode-gradient1), var(--gnode-gradient2));
 }
 .gvar {
 	font-style: normal;
 	display: inline-block;
 	font-family: "cmss8", sans-serif;
 	font-size: 80%;
-	border: 2px dashed #000;
+	border: 2px dashed var(--gvar-border);
 	border-radius: .7em;
 	padding: .2em .3em .15em .3em;
 	margin: 0;
-	background: linear-gradient(#FDFFFD, #DBFFDB);
+	background: linear-gradient(var(--gvar-gradient1), var(--gvar-gradient2));
 }
 .ginode {
 	font-style: normal;
 	display: inline-block;
 	font-family: "cmss8", sans-serif;
 	font-size: 80%;
-	border: 1.5px dotted #004;
-	color: #004;
+	border: 1.5px dotted var(--ginode-border);
+	color: var(--ginode-text);
 	border-radius: .7em;
 	padding: .2em;
 	margin: 0;
-	background: linear-gradient(#EEFFFF, #C2E1E1);
+	background: linear-gradient(var(--ginode-gradient1), var(--ginode-gradient2));
 }
 .iedge {
 	font-style: normal;
-	color: black;/*#520;*/
+	color: var(--iedge-text);
 	display: inline-block;
 	font-family: "cmss8", sans-serif;
 	font-size: 80%;
 	margin: 0;
-	padding-right: .1em;
-	padding-left: .1em;
+	padding-right: .15em;
+	padding-left: .15em;
 }
 .markupf {
 	font-style: normal;
@@ -452,19 +500,19 @@ a {
 	font-style: normal;
 	font-size: 80%;
 	font-variant: small-caps;
-	border: 1px solid black;
+	border: 1px solid var(--shap-border);
 	padding: .1em;
 	display: inline-block;
-	background-color: #FFFAD8;
+	background-color: var(--shap-bg);
 }
 .tnode {
 	font-style: normal;
 	font-size: 80%;
 	font-family: "cmss8", sans-serif;
-	border: 1px solid black;
+	border: 1px solid var(--tnode-border);
 	padding: .2em;
 	display: inline-block;
-	background-color: #FFF;
+	background-color: var(--tnode-bg);
 }
 .stack {
 	display: inline-block;
@@ -484,12 +532,12 @@ a {
 .edge {
 	font-style: normal;
 	display: inline-block;
-	color: #0000FF;
+	color: var(--edge-color);
 	font-family: "cmss8", sans-serif;
 	font-size: 80%;
 	margin: 0;
-	padding-right: .1em;
-	padding-left: .1em;
+	padding-right: .15em;
+	padding-left: .15em;
 }
 .uri {
 	font-style: normal;
@@ -500,30 +548,74 @@ a {
 .uris code {
 	font-size: 85%;
 }
-image.tip {
+img.tip {
 	border: none;
 	margin: 0;
 	padding: 0;
+	position: relative;
+	bottom: -.1em;
 }
+.tip {
+	display: inline-block;
+	border: none;
+	margin: 0;
+	padding: 0;
+	letter-spacing: -0.1em;
+	font-weight: bold;
+}
+.arc {
+	color: #BF0040;
+}
+.arc.left,
+.arc.right {
+	position: relative;
+	bottom: -.13em;
+}
+.arc.left {
+	transform: scale(-1,1.1);
+}
+.arc.right {
+	transform: scale(1,1.1);
+}
+
+.iarc {
+	color: #994c00;
+}
+.iarc.source {
+	transform: scale(1,2);
+	position: relative;
+	bottom: .13em;
+}
+/*
+.iarc.left,
+.iarc.right {
+	position: relative;
+	bottom: -.13em;
+	transform: scale(1,1.9);	
+}*/
+
+/*
 .arc {
 	color: #BF0040;
 	margin: 0;
 	padding: 0;
 }
+*/
 .gelab {
 	font-style: normal;
-	color: #0000FF;
+	color: var(--gelab-color);
 	font-family: "cmss8", sans-serif;
 	font-size: 90%;
 	display: inline-block;
 }
 .gielab {
 	font-style: normal;
-	color: #530;
+	color: var(--gielab-color);
 	display: inline-block;
 	font-family: "cmss8", sans-serif;
 	font-size: 90%;
 }
+/*
 .circled {
 	border: 1px solid black;
 	border-radius: 1em;
@@ -531,6 +623,7 @@ image.tip {
 	padding-right: .5em;
 	margin-right: 1em;
 }
+*/
 .nobreak {
 	display: inline-block;
 }
@@ -566,7 +659,7 @@ section#app {
 	margin-top: 7em;
 	margin-left: -5em;
 	font-weight: bold;
-	background-color: var(--green-bg);
+	background-color: var(--chapter-bg);
 	text-align: center;
 }
 .sectionapp {
@@ -612,8 +705,8 @@ dl.definition {
 	margin-top: 0.5em;
 	margin-bottom: 0.5em;
 	padding: 0.5em;
-	background-color: #E6EBF2;
-	border: 1px solid #B5C4D9;
+	background-color: var(--definition-bg);
+	border: 1px solid var(--definition-border);
 	border-radius: 0.8em;
 	page-break-inside: avoid;
 }
@@ -628,7 +721,7 @@ dl.definition dt:after {
 	font-style: normal;
 }
 dl.definition dt {
-	border-bottom: 1px solid #849CC0;
+	border-bottom: 1px solid var(--definition-headline);
 	margin-left: 0.5em;
 	margin-right: 0.5em;
 }
@@ -674,8 +767,8 @@ div.example p:first-child:before {
 /*****************/
 
 #tab-gnn tr td:first-child {
-	margin-left: 3em;
-	padding-left: 3em;
+	/*margin-left: 3em;*/
+	padding-left: 3.5em;
 }
 #tab-gnn td {
 	text-align: left;
@@ -688,7 +781,7 @@ div.example p:first-child:before {
 	font-size: 88%;
 }
 #unesco > p {
-	background-color: #ededed;
+	background-color: var(--webpage-bg);
 	margin-bottom: 0;
 	margin-right: 2.8em;
 }
@@ -698,12 +791,12 @@ div.example p:first-child:before {
 }
 #unesco > p:after {
 	content: " ×";
-	color: black;
+	color: var(--default-text-color);
 }
 #unesco > div {
 	padding: .2em;
-	background-color: #ededed;
-	border: 1px solid black;
+	background-color: var(--webpage-bg);
+	border: 1px solid var(--default-textx-color);
 }
 .html-h1 {
 	font-size: 185%;
@@ -724,10 +817,10 @@ div.example p:first-child:before {
 	margin-bottom: 0;
 }
 #fig-rdbCrime table th {
-	border-bottom: 2px solid black;
+	border-bottom: 2px solid var(--default-text-color);
 }
 #report {
-	float:left;
+	float: left;
 	width: 60%;
 }
 #report p {
@@ -746,16 +839,16 @@ div.example p:first-child:before {
 	left: -16em;
 	top: 0;
 	width: 19em;
-	border-right: 1px solid lightgrey;
+	border-right: 1px solid var(--toc-border);
 	margin: 0;
 	padding: 0;
 	transition: left 300ms ease-in-out;
-	color: grey;
-	background-color: white;
+	color: var(--toc-text);
+	background-color: var(--background-color);
 	z-index: 1010;
 }
 #toc div {
-	border-left: 1px dashed lightgrey;
+	border-left: 1px dashed var(--toc-border);
 	position: relative;
 	right: 0;
 	left: 16em;
@@ -780,7 +873,7 @@ div.example p:first-child:before {
 }
 #toc:hover {
 	left: 0;
-	color: var(--m-and-c-blue);
+	color: var(--toc-hover);
 }
 #toc > ol {
 	position: absolute;
@@ -798,8 +891,8 @@ div.example p:first-child:before {
 	padding: .5em;
 	font-size: 85%;
 	height: 1em;
-	border-bottom: 1px solid lightgrey;
-	background-color: white;
+	border-bottom: 1px solid var(--toc-border);
+	background-color: var(--background-color);
 	overflow: hidden;
 	transition: all 200ms ease-in-out;
 	color: grey;
@@ -815,7 +908,7 @@ div.example p:first-child:before {
 }
 #toc > ol > li#toc-filler {
 	border: none;
-	background-color: white;
+	background-color: var(--background-color);
 	padding-bottom: calc(100vh - 4 * 14em);
 }
 #toc > ol > li#aboutlink {
@@ -825,9 +918,9 @@ div.example p:first-child:before {
 	height: max-content;
 	width: 18.5em;
 	border-radius: 0 1em 1em 0;
-	border: 1.5px solid var(--m-and-c-blue);
+	border: 1.5px solid var(--toc-hover);
 	border-left: none;
-	color: var(--m-and-c-blue);
+	color: var(--toc-hover);
 }
 #toc li#aboutlink a {
 	font-family: Hasklig;
@@ -838,12 +931,12 @@ div.example p:first-child:before {
 	padding: .5em;
 	bottom: 0;
 	left: 0;
-	background: white;
-	box-shadow: .5em .5em .5em darkgrey;
+	background-color: var(--background-color);
+	box-shadow: .5em .5em .5em var(--about-shadow);
 	z-index: 1000;
-	border: 1px solid lightgrey;
+	border: 1px solid var(--toc-hover);
 	border-radius: .5em;
-	color: var(--m-and-c-blue);
+	color: var(--toc-hover);
 	font-weight: 100;
 }
 
@@ -851,14 +944,14 @@ div.example p:first-child:before {
 	padding: .1em 1em .1em 1em;
 	margin-top: .5em;
 	margin-bottom:  .5em;
-	background-color:  var(--green-bg);
+	background-color:  var(--formal-bg);
 }
 .formal-table {
 	font-size: 90%;
-	border: 1px solid blue;
+	border: 1px solid var(--formal-table-border);
 }
 .formal-table .subtabhead {
-	background-color: #E0F0FF;
+	background-color: var(--subtabhead);
 }
 .formal-table table {
 	width: 95%;
@@ -867,7 +960,7 @@ div.example p:first-child:before {
 	width: 95%;
 }
 .formal-table tbody tr:nth-child(odd) {
-	background-color: #F8E8BA;	
+	background-color: var(--table-odd-rows);	
 }
 #sec-references ul li p {
 	text-indent: -2em;
@@ -883,7 +976,7 @@ ul.reflist li pre {
 	display: none;
 }
 ul.reflist li:hover p {
-	color: darkred;
+	color: var(--bibref-hover);
 }
 ul.reflist li:hover pre {
 	display: block;
@@ -891,7 +984,7 @@ ul.reflist li:hover pre {
 	left: 42em;
 	top: 1em;
 	width: 45em;
-	opacity:85%;
+	opacity: 90%;
 	z-index: 1;
 	transition: all 500ms ease-in-out;
 }

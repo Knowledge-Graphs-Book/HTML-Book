@@ -830,22 +830,28 @@
 	}
 
 	function esource() {
-		return "<img class=\"tip\" src=\"images/edge-source.png\" width=\"8\" alt=\"arrow source\"/>";
+		//return "<img class=\"tip\" src=\"images/edge-source.png\" width=\"8\" alt=\"arrow source\"/>";
+		return "<span class=\"tip arc source\">–</span>";
 	}
 	function isource() {
-		return "<img class=\"tip\" src=\"images/edge-source2.png\" width=\"8\" alt=\"arrow source\"/>";
+		//return "<img class=\"tip\" src=\"images/edge-source2.png\" width=\"8\" alt=\"arrow source\"/>";
+		return "<span class=\"tip iarc source\">–</span>";
 	}
 	function etipl() {
-		return "<img class=\"tip\" src=\"images/edge-revtip.png\" width=\"15\" alt=\"arrow tip leftward\"/>";
+		//return "<img class=\"tip\" src=\"images/edge-revtip.png\" width=\"15\" alt=\"arrow tip leftward\"/>";
+		return "<span class=\"tip arc left\">➛</span>";
 	}
 	function itipl() {
-		return "<img class=\"tip\" src=\"images/edge-revtip2.png\" width=\"15\" alt=\"arrow tip lefttward\"/>";
+		return "<img class=\"tip\" src=\"images/edge-revtip2.png\" width=\"15\" alt=\"arrow tip leftward\"/>";
+		//return "<span class=\"tip iarc left\">⬅</span>";
 	}
 	function etipr() {
-		return "<img class=\"tip\" src=\"images/edge-tip.png\" width=\"15\" alt=\"arrow tip rightward\"/>";
+		//return "<img class=\"tip\" src=\"images/edge-tip.png\" width=\"15\" alt=\"arrow tip rightward\"/>";
+		return "<span class=\"tip arc right\">➛</span>";
 	}
 	function itipr() {
 		return "<img class=\"tip\" src=\"images/edge-tip2.png\" width=\"15\" alt=\"arrow tip rightward\"/>";
+		//return "<span class=\"tip iarc right\">➡</span>";
 	}
 
 	function gedge($source, $edge, $target, $option = RIGHTARROW) {
