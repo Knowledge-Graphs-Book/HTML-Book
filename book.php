@@ -32,6 +32,7 @@
 	</style>
 </head>
 <body>
+	<!-- What follows are macros if one uses MathJax instead of KaTeX -->
 	<!--<div style="display:none" id="tex-macros">
 		\(
 \newcommand{\coloneqq}{\mathrel{\vcenter{:}}=}
@@ -55,6 +56,7 @@
 		\)
 	</div>-->
 	<script>
+		// This script defines parameters and macros for KaTeX, to render math formulas
     document.addEventListener("DOMContentLoaded", function() {
         renderMathInElement(document.body, {
           // customised options
@@ -154,10 +156,10 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 			</dl>
 			<p>Copyright © 2021 by Morgan &amp; Claypool. All rights reserved.</p>
 			<!--<p><a href="bibtex.txt">Bibtex</a></p>-->
-			<h2>Access options</h2>
+			<h2 id="access">Access options</h2>
 			<dl>
 				<dt>HTML version:</dt>
-				<dd>You are currently reading the free HTML version of the book, the most recent of which is available at <a href="https://kgbook.org/">https://kgbook.org/</a></dd>
+				<dd>You are currently reading the free HTML version of the book, the most recent of which is available at <a href="https://kgbook.org/">https://kgbook.org/</a>.<sup class="fnmark" id="fnm_a"><a href="#fn_a">*</a></sup><span class="footnote" id="fn_a"><sup><a href="#fnm_a">note *</a></sup> You can see the scripts that generate this page on our <a href="https://github.com/Knowledge-Graphs-Book/HTML-Book/">Github repository</a> and <a href="https://github.com/Knowledge-Graphs-Book/HTML-Book/issues">leave comments</a> as new issues. You can also address your feedback on the book by email to <code>kg-tutorial [at] googlegroups [dot] com</code>. <a href="https://github.com/Knowledge-Graphs-Book/examples">Example code and associated resources</a> can be found on Github as well.</span></dd>
 				<dt>PDF Version:</dt>
 				<dd>You can download or buy the book from <a href="http://www.morganclaypool.com/">Morgan &amp; Claypool</a>. Academic and Corporate licences are available.</dd>
 				<dt>Hard copy:</dt>
