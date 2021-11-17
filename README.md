@@ -1,6 +1,6 @@
 # KG Book in HTML
 
-This is the repository where we put the sources for the [HTML version of the book *Knowledge Graphs*](https://kgbook.org/) by Hogan et al.
+This is the repository where we put the sources for the [HTML version](https://kgbook.org/) of the book [*Knowledge Graphs*](https://www.morganclaypool.com/doi/abs/10.2200/S01125ED1V01Y202109DSK022) by Hogan et al., published by Morgan & Claypool.
 The book is itself an extended version of [the technical report](https://arxiv.org/abs/2003.02320) with the same title and authors.
 There is also an [HTML version of the technical report](https://www.emse.fr/~zimmermann/KG).
 
