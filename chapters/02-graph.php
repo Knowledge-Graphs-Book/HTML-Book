@@ -199,7 +199,7 @@
 			<figcaption>basic directed edge-labelled graph pattern (left) with mappings generated over the directed edge-labelled graph of Figure&nbsp;<? echo ref("fig:delg"); ?> (right)</figcaption>
 		</figure>
 
-		<p>As we will see in later examples (particularly Figure&nbsp;<? echo ref("fig:cgp"); ?>, basic graph patterns may also form cycles (be they directed or undirected), and may replace edge labels with variables. Basic graph patterns in the context of other models – such as property graphs – can be defined analogously by allowing variables to replace constants in any position of the model.</p>
+		<p>As we will see in later examples (particularly Figure&nbsp;<? echo ref("fig:cgp"); ?>), basic graph patterns may also form cycles (be they directed or undirected), and may replace edge labels with variables. Basic graph patterns in the context of other models – such as property graphs – can be defined analogously by allowing variables to replace constants in any position of the model.</p>
 
 		<div class="formal">
 			<p>We formalise basic graph patterns first for directed edge-labelled graphs, and subsequently for property graphs&nbsp;<? echo $references->cite("AnglesABHRV17"); ?>. For these definitions, we introduce a countably infinite set of <em>variables</em> \(\var\) ranging over (but disjoint from: \(\con \cap \var = \emptyset\)) the set of constants. We refer generically to constants and variables as <em>terms</em>, denoted and defined as \(\term = \con \cup \var\). We define a basic graph pattern for a model by simply replacing constants with terms (that may be variables). Though we focus on directed edge-labelled graphs and property graphs, basic graph patterns for other graph models can be defined analogously.</p> 
