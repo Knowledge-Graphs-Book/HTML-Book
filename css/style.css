@@ -331,7 +331,7 @@ h4.subsection:before {
 	border: 1px solid var(--footnote-box-border);
 	border-radius: .5em;
 	background-color: var(--footnote-box);
-	padding: 0.5em;
+	padding: .5em;
 	line-height: 1.1em;
 	margin-right: 1em;
 	transition: all 500ms ease-in-out;
@@ -340,7 +340,7 @@ h4.subsection:before {
 }
 .footnote:hover {
 	z-index: 200;
-	border: 2px solid var(--footnote-hover-border);;
+	border: 2px solid var(--footnote-hover-border);
 	left: min(calc(100vw - 42em),calc(50vw + 24.5em));
 	width: 40em;
 	box-shadow: 0 0 1em var(--footnote-shadow);
@@ -925,18 +925,15 @@ div.example p:first-child:before {
 	background-color: var(--background-color);
 	padding-bottom: calc(100vh - 4 * 14em);
 }
-#toc > ol > li#aboutlink {
-	border: none;
-}
-#toc > ol > li:not(#toc-filler,#aboutlink):hover {
+#toc > ol > li:not(#toc-filler):hover {
 	font-weight: bold;
 	color: var(--toc-hover);
 }
-#toc > ol > li:not(#toc-filler,#aboutlink):hover > ol,
-#toc > ol > li:not(#toc-filler,#aboutlink):hover > ol > li:hover > ol {
+#toc > ol > li:not(#toc-filler):hover > ol,
+#toc > ol > li:not(#toc-filler):hover > ol > li:hover > ol {
 	display: block;
 }
-#toc > ol > li:not(#toc-filler,#aboutlink):hover > ol {
+#toc > ol > li:not(#toc-filler):hover > ol {
 	left: 3em;
 	top: -1.3em;
 	height: max-content;
@@ -959,24 +956,51 @@ div.example p:first-child:before {
 	border: 1.5px solid var(--toc-hover);
 	box-shadow: 0 0 1em var(--footnote-shadow);
 }
-#toc li#aboutlink a {
+div#aboutlink {
 	font-family: Hasklig;
+	font-weight: bold;
 	font-size: 100%;
 	position: fixed;
 	text-align: center;
 	margin: .5em;
 	padding: .5em;
 	bottom: 0;
-	left: 0;
+	right: 0;
 	background-color: var(--background-color);
 	box-shadow: .5em .5em .5em var(--about-shadow);
 	z-index: 1000;
-	border: 1px solid var(--toc-hover);
+	border: 1px solid var(--footnote-box);
 	border-radius: .5em;
 	color: var(--toc-hover);
-	font-weight: 100;
 }
-
+div#aboutlink div {
+	position: fixed;
+	text-align: justify;
+	color: var(--default-text-color);
+	hyphens: auto;
+	font-family: "Charis", serif;
+	text-rendering: optimizeLegibility;
+	font-kerning: normal;
+	font-variant-ligatures: common-ligatures;
+	text-justify: inter-word;
+	bottom: 3em;
+	right: 0;
+	overflow: hidden;
+	border-radius: .5em;
+	background-color: var(--footnote-box);
+	height: 0;
+	width: 25em;
+	font-weight: normal;
+	transition: all 500ms ease-in-out;
+}
+div#aboutlink:hover div {
+	display: block;
+	height: 7em;
+	z-index: 250;
+	padding: .5em;
+	border: 2px solid var(--footnote-hover-border);
+	box-shadow: 0 0 1em var(--footnote-shadow);
+}
 .formal {
 	padding: .1em 1em .1em 1em;
 	margin-top: .5em;

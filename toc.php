@@ -215,6 +215,5 @@
 			</ol></li>
 			<li><a href="#sec-bio">Authors’ Biography</a></li>
 			<li id="toc-filler">&nbsp;</li>
-			<li id="aboutlink"><a href="#access">Give us feedback!</a></li>
 		</ol>
 	</nav>
