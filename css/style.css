@@ -640,7 +640,8 @@ img.todo {
 /*  Style for appendices  */
 /*                        */
 /**************************/
-section#app {
+/*section#app {*/
+section#chap-defs {
 	counter-reset: chapters;
 }
 .appendix {
@@ -806,6 +807,15 @@ div.example p:first-child:before {
 	font-size: 145%;
 	font-weight: bold;
 }
+#html-table {
+	border-collapse: collapse;
+}
+#html-table td,
+#html-table th {
+	padding: .1em;
+	margin 0;
+	border: 1px solid var(--default-text-color);
+}
 #fig-rdbCrime div {
 	font-family: Hasklig;
 	font-size: 90%;
@@ -893,15 +903,19 @@ div.example p:first-child:before {
 	height: 1em;
 	border-bottom: 1px solid var(--toc-border);
 	background-color: var(--background-color);
-	overflow: hidden;
+	/*overflow: hidden;*/
 	transition: all 200ms ease-in-out;
 	color: grey;
+}
+#toc > ol > li > ol > li {
+	height: 1.5em;
 }
 #toc > ol ol {
 	margin-top: 1em;
 	padding-left: 0;
 	margin-left: 0;
 	list-style-type: none;
+	display: none;
 }
 #toc a {
 	color: inherit;
@@ -915,12 +929,35 @@ div.example p:first-child:before {
 	border: none;
 }
 #toc > ol > li:not(#toc-filler,#aboutlink):hover {
-	height: max-content;
-	width: 18.5em;
-	border-radius: 0 1em 1em 0;
-	border: 1.5px solid var(--toc-hover);
-	border-left: none;
+	font-weight: bold;
 	color: var(--toc-hover);
+}
+#toc > ol > li:not(#toc-filler,#aboutlink):hover > ol,
+#toc > ol > li:not(#toc-filler,#aboutlink):hover > ol > li:hover > ol {
+	display: block;
+}
+#toc > ol > li:not(#toc-filler,#aboutlink):hover > ol {
+	left: 3em;
+	top: -1.3em;
+	height: max-content;
+	width: 20em;
+	position: relative;
+	padding: .5em;
+	border-radius: 0 0 1em 1em;
+	border: 1.5px solid var(--toc-hover);
+	background-color: var(--background-color);
+}
+#toc ol ol ol {
+	position: relative;
+	height: max-content;
+	width: max-content;
+	padding: .5em;
+	top: -1.5em;
+	left: 5em;
+	background-color: var(--background-color);
+	border-radius: 0 1em 1em 1em;
+	border: 1.5px solid var(--toc-hover);
+	box-shadow: 0 0 1em var(--footnote-shadow);
 }
 #toc li#aboutlink a {
 	font-family: Hasklig;

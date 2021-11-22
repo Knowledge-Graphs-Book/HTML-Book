@@ -61,14 +61,14 @@
 	&lt;/table&gt;
   &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-			<div style="height:2em;">&nbsp;</div>
+			<div style="height:3em;">&nbsp;</div>
 			<div id="unesco">
 				<p>UNESCO World Heritage Sites</p>
 				<div>
 					<div class="html-h1">World Heritage Sites</div>
 					<div class="html-h2">Chile</div>
 					<p>Chile has 6 UNESCO World Heritage Sites.</p>
-					<table border="1">
+					<table id="html-table">
 						<tr><th>Place</th><th>Year</th><th>Criteria</th></tr>
 						<tr><td>Rapa Nui</td><td>1995</td>
 							<td rowspan="6">Cultural</td></tr>
@@ -80,7 +80,7 @@
 					</table>
 				</div>
 			</div>
-			<div style="height:3.5em;">&nbsp;</div>
+			<div style="height:3.6em;">&nbsp;</div>
 			<figcaption>Example markup document (HTML) with source-code (left) and formatted document (right)</figcaption>
 		</figure>
 

@@ -99,7 +99,7 @@
     });
 	</script>
 	<div class="cover">
-		<img alt="mock cover" src="images/cover-no-text.jpg"/>
+		<img alt="book cover" src="images/cover-no-text.jpg"/>
 		<p style="position:absolute;top:300px;font-size:109px;text-shadow:5px 5px 5px black;font-weight:bold;">KNOWLEDGE<br/>GRAPHS</p>
 		<p style="position:absolute;top:700px;font-size:29px;text-shadow:3px 3px 3px black;"><a href="#bio-hogan">Aidan Hogan</a> | <a href="#bio-blomqvist">Eva Blomqvist</a> | <a href="#bio-cochez">Michael Cochez</a><br/><a href="#bio-damato">Claudia d’Amato</a> | <a href="#bio-demelo">Gerard de Melo</a> | <a href="#bio-gutierrez">Claudio Gutierrez</a><br/><a href="#bio-kirrane">Sabrina Kirrane</a> | <a href="#bio-labragayo">José Emilio Labra Gayo</a> | <a href="#bio-navigli">Roberto Navigli</a><br/><a href="#bio-neumaier">Sebastian Neumaier</a> | <a href="#bio-ngongangomo">Axel-Cyrille Ngonga Ngomo</a><br/><a href="#bio-polleres">Axel Polleres</a> | <a href="#bio-rashid">Sabbir M. Rashid</a> | <a href="#bio-rula">Anisa Rula</a><br/><a href="#bio-schmelzeisen">Lukas Schmelzeisen</a> | <a href="#bio-sequeda">Juan Sequeda</a><br/><a href="#bio-staab">Steffen Staab</a> | <a href="#bio-zimmermann">Antoine Zimmermann</a></p>
 	</div>
