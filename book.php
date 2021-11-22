@@ -17,6 +17,10 @@
 	<link rel="stylesheet" href="css/prism.css"/>
 	<link rel="stylesheet" href="css/fonts.css"/>
 	<link rel="stylesheet" href="css/print.css" media="print"/>
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Knowledge Graphs">
+	<meta name="twitter:description" content="Knowledge Graphs: This open access HTML book provides a comprehensive and accessible introduction to knowledge graphs.">
+	<meta name="twitter:image" content="https://www.emse.fr/~zimmermann/KGBook/HTML-Book/images/small-cover.jpg">
 	<script src="js/prism.js"></script>
 	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>-->
 	<script src="https://saswatpadhi.github.io/prismjs-bibtex/prism-bibtex.min.js"></script>
