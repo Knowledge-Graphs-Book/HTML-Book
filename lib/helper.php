@@ -523,7 +523,7 @@
 			"kasten2013towards" => "Kasten et al., 2013",
 			"Kazemi018" => "Kazemi and Poole, 2018",
 			"KazemiGJKSFP19" => "Kazemi et al., 2019",
-			"keet2016test" => "Keet, 2016",
+			"keet2016test" => "Keet and Ławrynowicz, 2016",
 			"onteng" => "Keet, 2018",
 			"KejriwalKS2021" => "Kejriwal et al., 2021",
 			"kendall2019ontology" => "Kendall and McGuinness, 2019",
