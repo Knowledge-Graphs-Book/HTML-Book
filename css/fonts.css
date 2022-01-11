@@ -23,42 +23,6 @@
 	src: url("../fonts/CharisSIL/CharisSIL-BI.woff");
 }
 @font-face {
-	font-family: CooperHewitt;
-	font-weight: normal;
-	font-style: normal;
-	src: url("../fonts/CooperHewitt-WebFonts-public/CooperHewitt-Medium.woff");
-}
-@font-face {
-	font-family: CooperHewitt;
-	font-weight: 300;
-	font-style: normal;
-	src: url("../fonts/CooperHewitt-WebFonts-public/CooperHewitt-Light.woff");
-}
-@font-face {
-	font-family: CooperHewitt;
-	font-weight: 100 200;
-	font-style: normal;
-	src: url("../fonts/CooperHewitt-WebFonts-public/CooperHewitt-Thin.woff");
-}
-@font-face {
-	font-family: CooperHewitt;
-	font-weight: normal;
-	font-style: italic;
-	src: url("../fonts/CooperHewitt-WebFonts-public/CooperHewitt-MediumItalic.woff");
-}
-@font-face {
-	font-family: CooperHewitt;
-	font-weight: bold;
-	font-style: normal;
-	src: url("../fonts/CooperHewitt-WebFonts-public/CooperHewitt-Bold.woff");
-}
-@font-face {
-	font-family: CooperHewitt;
-	font-weight: bold;
-	font-style: italic;
-	src: url("../fonts/CooperHewitt-WebFonts-public/CooperHewitt-BoldItalic.woff");
-}
-@font-face {
 	font-family: Hasklig;
 	font-weight: 100 200;
 	font-style: italic;

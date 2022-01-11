@@ -1,0 +1,170 @@
+:root {
+	--m-and-c-blue: #006AB1;
+	--green-bg: #C9ECE0;
+	--title: var(--m-and-c-blue);
+	--section-title: var(--m-and-c-blue);
+	--header-text: var(--m-and-c-blue);
+	--tab-fig-caption-mark: var(--m-and-c-blue);
+	--hyperlink: var(--m-and-c-blue);
+	--darker-blue: #004A91;
+	--background-color: white;
+	--default-text-color: black;
+	--chapter-bg: var(--green-bg);
+	--footnote-box: #FFFAD8;/*lightyellow;*/
+	--footnote-box-border: lightgrey;
+	--footnote-hover-border: var(--m-and-c-blue);
+	--footnote-shadow: var(--chapter-bg);
+	--gnode-border: #808080;
+	--gnode-gradient1: #FCFCFC;
+	--gnode-gradient2: #DADADA;
+	--gvar-border: var(--default-text-color);
+	--gvar-gradient1: #FDFFFD;
+	--gvar-gradient2: #DBFFDB;
+	--ginode-text: #004;
+	--ginode-border: var(--ginode-text);
+	--ginode-gradient1: #EEFFFF;
+	--ginode-gradient2: #C2E1E1;
+	--iedge-text: var(--default-text-color);
+	--shap-border: var(--default-text-color);
+	--shap-bg: var(--footnote-box);
+	--tnode-border: var(--default-text-color);
+	--tnode-bg: var(--background-color);
+	--edge-color: blue;
+	--gelab-color: var(--edge-color);
+	--gielab-color: #530;
+	--definition-bg: #E6EBF2;
+	--definition-border: #B5C4D9;
+	--definition-headline: #849CC0;
+	--webpage-bg: #EDEDED;
+	--toc-border: lightgrey;
+	--toc-text: grey;
+	--toc-hover: var(--m-and-c-blue);
+	--about-shadow: darkgrey;
+	--formal-bg: var(--green-bg);
+	--formal-table-border: var(--m-and-c-blue);
+	--subtabhead: #E0F0FF;
+	--table-odd-rows: #FFEFC1;
+	--bibref-hover: darkred;
+}
+
+
+body {
+	margin: auto;
+	/*width: 45em;
+	counter-reset: chapters sections subsections tables figures definitions examples toc-chapters appendices;*/
+	text-align: justify;
+	background-color: var(--background-color);
+	color: var(--default-text-color);
+	hyphens: auto;
+	font-family: "Charis", serif;
+	text-rendering: optimizeLegibility;
+	font-kerning: normal;
+	font-variant-ligatures: common-ligatures;
+	text-justify: inter-word;
+	padding-left: 3em;
+	/*border-left: solid 2px var(--m-and-c-blue);
+	margin-top: 1360px;*/
+}
+
+/**
+ *  Chapter titles, (sub)section titles
+ **/
+h1, h2, h3, h4 {
+	font-family: "Quattrocento", serif;
+}
+h2 {
+	margin-top: 2.5em;
+	color: var(--section-title);
+	font-size: 190%;
+}
+h3 {
+	margin-top: 2.1em;
+	color: var(--section-title);
+	font-size: 150%;
+	font-variant: small-caps;
+}
+h4 {
+	margin-top: 1.7em;
+	color: var(--section-title);
+	font-size: 120%;
+}
+
+dl dt {
+	font-weight: bold;
+}
+
+table {
+	font-size: 98%;
+	border-collapse: collapse;
+	margin: auto;
+	align-content: center;
+	justify-content: center;
+}
+thead th {
+	border-bottom: 2px solid var(--default-text-color);
+}
+tfoot td {
+	border-top: 1px solid var(--default-text-color);
+	border-bottom: 2px solid var(--default-text-color);	
+}
+table caption {
+	text-align: justify;
+	max-width: 95%;
+	width: max-content;
+	margin: auto;
+}
+table caption:before {
+	counter-increment: tables;
+	color:  var(--tab-fig-caption-mark);
+	content: "Table " counter(chapters) "." counter(tables) ": ";
+}
+section > figure {
+	max-width: 100%;
+	margin: auto;
+	text-align: center;
+	counter-reset: subfigures;
+}
+figure > img {
+	margin-top: 3em;
+	margin-bottom: 3em;
+	transform: scale(1.3);
+}
+figcaption {
+	font-size: 90%;
+}
+section > figure > figcaption {
+	/*text-align: left;*/
+	max-width: 95%;
+	text-align: justify;
+	width: max-content;
+	margin: auto;
+}
+figure > figcaption:before {
+	counter-increment: figures;
+	color:  var(--tab-fig-caption-mark);
+	content: "Figure " counter(chapters) "." counter(figures) ": ";
+}
+figure > figure > figcaption:before {
+	counter-increment: subfigures;
+	content: "(" counter(subfigures, lower-alpha) ") ";
+}
+figure dl dt {
+	float: left;
+	width: 5em;
+	margin-left: 1em;
+	text-align: right;
+}
+figure dl dd {
+	margin-left: 7em;
+	text-align: left;
+}
+
+a {
+	text-decoration: none;
+	color: var(--hyperlink);
+}
+
+code {
+	font-family: "Hasklig", monospace;
+	font-style: normal;
+}

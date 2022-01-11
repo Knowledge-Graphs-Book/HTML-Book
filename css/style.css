@@ -94,7 +94,7 @@ div.cover {
 	padding-top: 2.1em;
 	padding-bottom: 2.5em;
 	font-variant: small-caps;
-	font-family: "Quattrocento", sans-serif;
+	font-family: "Quattrocento", serif;
 	font-weight: 100;
 	font-size: 330%;
 	color: var(--title);
@@ -399,14 +399,6 @@ table.condensedTable {
 	text-align: center;
 	border-top: 1px solid var(--default-text-color);
 }
-/*
-strong.id {
-	color: darkgreen;
-}
-strong.ib {
-	color: darkblue;
-}
-*/
 
 dl#outline dt {
 	float: left;
@@ -586,21 +578,7 @@ img.tip {
 	position: relative;
 	bottom: .13em;
 }
-/*
-.iarc.left,
-.iarc.right {
-	position: relative;
-	bottom: -.13em;
-	transform: scale(1,1.9);	
-}*/
 
-/*
-.arc {
-	color: #BF0040;
-	margin: 0;
-	padding: 0;
-}
-*/
 .gelab {
 	font-style: normal;
 	color: var(--gelab-color);
@@ -615,15 +593,7 @@ img.tip {
 	font-family: "cmss8", sans-serif;
 	font-size: 90%;
 }
-/*
-.circled {
-	border: 1px solid black;
-	border-radius: 1em;
-	padding-left: .5em;
-	padding-right: .5em;
-	margin-right: 1em;
-}
-*/
+
 .nobreak {
 	display: inline-block;
 }
@@ -787,7 +757,7 @@ div.example p:first-child:before {
 	margin-right: 2.8em;
 }
 #unesco > p:before {
-	content: "🌎 ";
+	content: "? ";
 	color: black;
 }
 #unesco > p:after {
