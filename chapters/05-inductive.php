@@ -154,7 +154,7 @@
 				<figcaption>Relation embeddings</figcaption>
 			</figure>
 			<figure id="fig-transEE" style="display:inline-block;margin-right:0;margin-left:2em;">
-				<img src="images/fig-transEE.svg" alt="Link prediction"/>
+				<img src="images/fig-transEE.svg" alt="Entity embeddings"/>
 				<figcaption>Entity embeddings</figcaption>
 			</figure>
 			<figcaption>Toy example of two-dimensional relation and entity embeddings learnt by TransE; the entity embeddings use abbreviations and include an example of vector addition to predict what is west of Antofagasta</figcaption>

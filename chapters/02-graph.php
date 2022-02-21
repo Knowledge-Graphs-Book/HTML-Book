@@ -22,7 +22,7 @@
 		
 		<figure id="fig-delg">
 			<img src="images/fig-delg.svg" alt="Directed edge-labelled graph describing events and their venues" />
-			<figcaption>Directed edge-labelled graph describing events and their venues</figcaption>
+			<figcaption>Directed edge-labelled graph describing events and their venues <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/tree/main/Chapter_2_Data_Graphs/2_1_1_Directed_edge_labelled_graphs/figure_2_1.ttl"></a></figcaption>
 		</figure>
 
 		<p>Modelling data as a graph in this way offers more flexibility for integrating new sources of data, compared to the standard relational model, where a schema must be defined upfront and followed at each step. While other structured data models such as trees (XML, JSON, etc.) would offer similar flexibility, graphs do not require organising the data hierarchically (should <code>venue</code> be a parent, child, or sibling of <code>type</code> for example?). They also allow cycles to be represented and queried (e.g., note the directed cycle in the routes between Santiago, Arica, and Viña del Mar).</p>
@@ -41,20 +41,20 @@
 			</div>
 			
 			<p>Definition&nbsp;<? echo ref("def:delg"); ?> does not state that \(V\) and \(L\) are disjoint: though not present in the example, a node can also serve as an edge-label. The definition also permits that nodes and edge labels can be present without any associated edge. Either restriction could be explicitly stated – if necessary – in a particular application while still conforming to a directed edge-labelled graph.</p>
-			<p>For ease of presentation presentation, we may treat a set of (directed labelled) edges \(E \subseteq V \times L \times V\) as a directed edge-labelled graph \((V,E,L)\), in which case we refer to the graph induced by \(E\) assuming that \(V\) and \(L\) contain all and only those nodes and edge labels, respectively, used in \(E\). We may similarly apply set operators on directed edge-labelled graphs, which should be interpreted as applying to their sets of edges; for example, given \(G_1 = (V_1,E_1,L_1)\) and \(G_2 = (V_2,E_2,L_2)\), by \(G_1 \cup G_2\) we refer to the directed edge-labelled graph induced by \(E_1 \cup E_2\).</p>
+			<p>For ease of presentation, we may treat a set of (directed labelled) edges \(E \subseteq V \times L \times V\) as a directed edge-labelled graph \((V,E,L)\), in which case we refer to the graph induced by \(E\) assuming that \(V\) and \(L\) contain all and only those nodes and edge labels, respectively, used in \(E\). We may similarly apply set operators on directed edge-labelled graphs, which should be interpreted as applying to their sets of edges; for example, given \(G_1 = (V_1,E_1,L_1)\) and \(G_2 = (V_2,E_2,L_2)\), by \(G_1 \cup G_2\) we refer to the directed edge-labelled graph induced by \(E_1 \cup E_2\).</p>
 		</div>
 
 		<h4 id="subsub-heterograph" class="subsection">Heterogeneous graphs</h4>
-		<p>A heterogeneous graph&nbsp;<? echo $references->cite("HusseinYC18,WangJSWYCY19,YangXJWHW20"); ?> (or <em>heterogeneous information network</em>&nbsp;<? echo $references->cite("sun2011pathsim,2012Sun"); ?>) is a directed graph where each node and edge is assigned one type. Heterogeneous graphs are thus akin to directed edge-labelled graphs – with edge labels corresponding to edge types – but where the type of node forms part of the graph model itself, rather than being expressed with a relation (as seen in Figure&nbsp;<? echo ref("fig:capital"); ?>). An edge is called <em>homogeneous</em> if it is between two nodes of the same type (e.g., <span class="gelab">borders</span> in Figure&nbsp;<? echo ref("fig:capital"); ?>); otherwise it is called <em>heterogeneous</em> (e.g., <span class="gelab">capital</span> in Figure&nbsp;<? echo ref("fig:capital"); ?>). Heterogeneous graphs allow for partitioning nodes according to their type, for example, for the purposes of machine learning tasks&nbsp;<? echo $references->cite("HusseinYC18,WangJSWYCY19,YangXJWHW20"); ?>. Conversely, such graphs typically only support a one-to-one relation between nodes and types, which is not the case for directed edge-labelled graphs (see, for example, the node <span class="gnode">Santiago</span> with zero types and <span class="gnode">EID15</span> with multiple types in Figure&nbsp;<? echo ref("fig:delg"); ?>.</p>
+		<p>A heterogeneous graph&nbsp;<? echo $references->cite("HusseinYC18,WangJSWYCY19,YangXJWHW20"); ?> (or <em>heterogeneous information network</em>&nbsp;<? echo $references->cite("sun2011pathsim,2012Sun"); ?>) is a directed graph where each node and edge is assigned one type. Heterogeneous graphs are thus akin to directed edge-labelled graphs – with edge labels corresponding to edge types – but where the type of node forms part of the graph model itself, rather than being expressed with a relation (as seen in Figure&nbsp;<? echo ref("fig:capital"); ?>). An edge is called <em>homogeneous</em> if it is between two nodes of the same type (e.g., <span class="gelab">borders</span> in Figure&nbsp;<? echo ref("fig:capital"); ?>); otherwise it is called <em>heterogeneous</em> (e.g., <span class="gelab">capital</span> in Figure&nbsp;<? echo ref("fig:capital"); ?>). Heterogeneous graphs allow for partitioning nodes according to their type, for example, for the purposes of machine learning tasks&nbsp;<? echo $references->cite("HusseinYC18,WangJSWYCY19,YangXJWHW20"); ?>. Conversely, such graphs typically only support a one-to-one relation between nodes and types, which is not the case for directed edge-labelled graphs (see, for example, the node <span class="gnode">Santiago</span> with zero types and <span class="gnode">EID15</span> with multiple types in Figure&nbsp;<? echo ref("fig:delg"); ?>).</p>
 		
 		<figure id="fig-capital">
 			<figure id="fig-cap">
 				<img src="images/fig-cap.svg" alt="Del graph"/>
-				<figcaption>Directed edge-labelled graph</figcaption>
+				<figcaption>Directed edge-labelled graph <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_2_Data_Graphs/2_1_2_Heterogeneous_graphs/figure_2_2_a.ttl"></a></figcaption>
 			</figure>
 			<figure id="fig-hg">
 				<img src="images/fig-hg.svg" alt="Heterogenous graph"/>
-				<figcaption>Heterogenous graph</figcaption>
+				<figcaption>Heterogenous graph <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_2_Data_Graphs/2_1_2_Heterogeneous_graphs/figure_2_3_b.cypher"></a></figcaption>
 			</figure>
 			<figcaption>Comparing directed edge-labelled graphs and heterogeneous graphs</figcaption>
 		</figure>
@@ -82,11 +82,11 @@
 		<figure id="fig-flghts">
 			<figure id="fig-fsa">
 				<img src="images/fig-fsa.svg" alt="Directed edge-labelled graph"/>
-				<figcaption>Directed edge-labelled graph</figcaption>
+				<figcaption>Directed edge-labelled graph <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_2_Data_Graphs/2_1_3_Property_graphs/figure_2_3_a.ttl"></a></figcaption>
 			</figure>
 			<figure id="fig-pg">
 				<img src="images/fig-pg.svg" alt="Property graph"/>
-				<figcaption>Property graph</figcaption>
+				<figcaption>Property graph <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_2_Data_Graphs/2_1_3_Property_graphs/figure_2_3_b.cypher"></a></figcaption>
 			</figure>
 			<figcaption>Comparing directed edge-labelled graphs and property graphs</figcaption>
 		</figure>
@@ -123,7 +123,7 @@
 
 		<figure id="fig-gd">
 			<img src="images/fig-gd.svg" alt="Graph dataset with two named graphs and a default graph describing events and routes"/>
-			<figcaption>Graph dataset based on directed edge-labelled graphs with two named graphs and a default graph describing events and routes</figcaption>
+			<figcaption>Graph dataset based on directed edge-labelled graphs with two named graphs and a default graph describing events and routes <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_2_Data_Graphs/2_1_4_Graph_dataset/figure_2_4.trig"></a></figcaption>
 		</figure>
 
 		<p>An RDF dataset is a graph dataset model standardised by the W3C&nbsp;<? echo $references->cite("rdf11"); ?> where each graph is an RDF graph, and graph names can be blank nodes or IRIs. A prominent use-case for RDF datasets is to manage and query <em>Linked Data</em> composed of interlinked documents of RDF graphs spanning the Web. When dealing with Web data, tracking the source of data becomes of key importance&nbsp;<? echo $references->cite("Dividino09,BonattiHPS11,zimm-etal-2012-JWS"); ?>. We will discuss Linked Data later in Section&nbsp;<? echo ref("sec:identity"); ?> and further discuss provenance in Section&nbsp;<? echo ref("ssec:knowledgeContext"); ?>.</p>
@@ -196,7 +196,7 @@
 				</tbody>
 			</table>
 			<div style="height:.5em;">&nbsp;</div>
-			<figcaption>basic directed edge-labelled graph pattern (left) with mappings generated over the directed edge-labelled graph of Figure&nbsp;<? echo ref("fig:delg"); ?> (right)</figcaption>
+			<figcaption>basic directed edge-labelled graph pattern (left <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_2_Data_Graphs/2_2_1_Graph_patterns/figure_2_5.sparql"></a>) with mappings generated over the directed edge-labelled graph of Figure&nbsp;<? echo ref("fig:delg"); ?> (right)</figcaption>
 		</figure>
 
 		<p>As we will see in later examples (particularly Figure&nbsp;<? echo ref("fig:cgp"); ?>), basic graph patterns may also form cycles (be they directed or undirected), and may replace edge labels with variables. Basic graph patterns in the context of other models – such as property graphs – can be defined analogously by allowing variables to replace constants in any position of the model.</p>
@@ -303,7 +303,7 @@
 					</tr>
 				</tbody>
 			</table>
-			<figcaption>Complex graph pattern (left) with mappings generated over the graph of Figure&nbsp;<? echo ref("fig:delg"); ?> (right)</figcaption>
+			<figcaption>Complex graph pattern (left <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_2_Data_Graphs/2_2_2_Complex_graph_patterns/figure_2_6.sparql"></a>) with mappings generated over the graph of Figure&nbsp;<? echo ref("fig:delg"); ?> (right)</figcaption>
 		</figure>
 
 		<p>Complex graph patterns can give rise to duplicate results; for example, the first result in Figure&nbsp;<? echo ref("fig:cq"); ?> appears twice since <code>?city1</code> matches <code>Arica</code> and <code>?city2</code> matches <code>Viña del Mar</code> in one result, and vice-versa in the other. Query languages then offer two semantics: <em>bag semantics</em> preserves duplicates according to the multiplicity of the underlying mappings, while <em>set semantics</em> (typically invoked with a <code>DISTINCT</code> keyword) removes duplicates from the results.</p>
@@ -315,7 +315,7 @@
 			<img class="inlined" src="images/fig-cgp4.svg" alt="Complex graph pattern 4"/>
 			<img class="inlined" src="images/fig-cgp5.svg" alt="Complex graph pattern 5"/>
 			<div><div style="display:inline;">\(Q := ((((Q_1 \cup Q_2) \rhd Q_3)\) <? echo LeftJoin() ?> \(Q_4 )\) <? echo LeftJoin() ?> \(Q_5),\qquad Q(G) =\) <table class="condensedTable" style="position:relative;top:.6em;display:inline-block;vertical-align:middle;"><thead><tr><th>?event</th><th>?start</th><th>?name</th></tr></thead><tbody><tr><td><code>EID16</code></td><td></td><td><code>Food Truck</code></td></tr></tbody></table></div></div>
-			<figcaption>Complex graph pattern (\(Q\)) with mappings generated (\(Q(G)\)) over the graph of Figure&nbsp;<? echo ref("fig:delg"); ?> (\(G\))</figcaption>
+			<figcaption>Complex graph pattern (\(Q\)) with mappings generated (\(Q(G)\)) over the graph of Figure&nbsp;<? echo ref("fig:delg"); ?> (\(G\)) <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_2_Data_Graphs/2_2_2_Complex_graph_patterns/figure_2_7.sparql"></a></figcaption>
 		</figure>
 
 		<div class="formal">
@@ -465,7 +465,7 @@
 				</tbody>
 			</table>
 			<div style="height:1em;">&nbsp;</div>
-			<figcaption>Navigational graph pattern (left) with mappings generated over the graph of Figure&nbsp;<? echo ref("fig:delg"); ?> (right)</figcaption>
+			<figcaption>Navigational graph pattern (left <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_2_Data_Graphs/2_2_3_Navigational_graph_patterns/figure_2_9.sparql"></a>) with mappings generated over the graph of Figure&nbsp;<? echo ref("fig:delg"); ?> (right)</figcaption>
 		</figure>
 
 		<h4 id="app-qother" class="subsection">Other features</h4>

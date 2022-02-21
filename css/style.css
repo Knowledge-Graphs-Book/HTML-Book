@@ -277,6 +277,20 @@ img.inside {
 	margin: .5em;
 	vertical-align: middle;
 }
+figure a.git {
+	opacity: 30%;
+	display: inline-block;
+	position: relative;
+	bottom: -.3em;
+	background-image: url('../images/github.svg');
+	background-size: 1.4em;
+	width: 1.4em;
+	height: 1.4em;
+	transition: all 200ms ease-in-out;
+}
+figure a.git:hover {
+	opacity: 100%;
+}
 .chapter {
 	counter-reset: sections subsections figures tables definitions examples;
 }

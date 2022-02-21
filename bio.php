@@ -1,5 +1,5 @@
 	<section id="sec-bio" class="prechapter">
-		<h2 id="bio">Authors’ Biography</h2>
+		<h2 id="bio">Authors’ Biographies</h2>
 		<h3 id="bio-hogan">Aidan Hogan</h3>
 		<p>Aidan Hogan is an Associate Professor at the Department of Computer Science, Universidad de Chile, where he also holds the position of Associate Researcher in the Millennium Institute for Foundational Research on Data (IMFD). He received a B.Eng. and Ph.D. from the National University of Ireland, Galway, in 2006 and 2011, respectively. His primary research interests centre on the Semantic Web and Knowledge Graphs. He is the author of over one hundred research publications on these topics, including two other books: “Reasoning Techniques for the Web of Data” and “The Web of Data”.</p>
 

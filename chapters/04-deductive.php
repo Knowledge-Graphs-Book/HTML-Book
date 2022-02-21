@@ -222,7 +222,7 @@
 					<td>Equivalence</td>
 					<td><? echo gedge("\\(c\\)","equiv.&nbsp;c.","\\(d\\)"); ?></td>
 					<td><? echo giedge("\\(x\\)","type","\\(c\\)"); ?> iff <? echo giedge("\\(x\\)","type","\\(d\\)"); ?></td>
-					<td><? echo gedge("Human","suc.&nbsp;of","Person"); ?></td>
+					<td><? echo gedge("Human","equiv.&nbsp;of","Person"); ?></td>
 				</tr>
 				<tr>
 					<td>Disjoint</td>
@@ -234,7 +234,7 @@
 					<td>Complement</td>
 					<td><? echo gedge("\\(c\\)","comp.","\\(d\\)"); ?></td>
 					<td><? echo giedge("\\(x\\)","type","\\(c\\)"); ?> iff not <? echo giedge("\\(x\\)","type","\\(d\\)"); ?></td>
-					<td><? echo gedge("Dead","com.","Alive"); ?></td>
+					<td><? echo gedge("Dead","comp.","Alive"); ?></td>
 				</tr>
 				<tr>
 					<td>Union</td>
