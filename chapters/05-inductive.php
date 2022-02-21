@@ -16,7 +16,7 @@
 
 		<figure id="fig-chileTransport">
 			<img src="images/fig-chileTransport.svg" alt="Data graph representing transport routes in Chile"/>
-			<figcaption>Data graph representing transport routes in Chile</figcaption>
+			<figcaption>Data graph representing transport routes in Chile <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_5_Inductive_Knowledge/5_1Graph_Analytics/figure_5_2.ttl"></a></figcaption>
 		</figure>
 
 		<h4 id="sssec-graph-analytics-tasks" class="subsection">Techniques</h4>
@@ -39,7 +39,7 @@
 
 		<figure id="fig-pagerank">
 			<img src="images/fig-pagerank.svg" alt="Example of a systolic iteration of PageRank for a sample sub-graph of Figure&nbsp;24"/>
-			<figcaption>Example of a systolic iteration of PageRank on a sub-graph of Figure&nbsp;<? echo ref("fig:chileTransport"); ?></figcaption>
+			<figcaption>Example of a systolic iteration of PageRank on a sub-graph of Figure&nbsp;<? echo ref("fig:chileTransport"); ?> <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_5_Inductive_Knowledge/5_1_2_Frameworks/figure_5_3.ttl"></a></figcaption>
 		</figure>
 
 		<p>While the given example is for PageRank, the systolic abstraction is general enough to support a wide variety of graph analytics, including those previously mentioned. An algorithm in this framework consists of the functions to compute message values in the <em>message phase</em> (<span class="sc">Msg</span>), and to accumulate the messages in the aggregation phase (<span class="sc">Agg</span>). The framework will take care of distribution, message passing, fault tolerance, etc. However, such frameworks – based on message passing between neighbours – have limitations: not all types of analytics can be expressed in such frameworks&nbsp;<? echo $references->cite("XuHLJ19"); ?>.<? echo footnote("Formally, ". $references->citet("XuHLJ19") ." have shown that such frameworks are as powerful as the (incomplete) Weisfeiler–Lehman (WL) graph isomorphism test for distinguishing graphs. This test involves nodes recursively hashing together hashes of local information received from neighbours, and passing these hashes to neighbours."); ?> Hence frameworks may allow additional features, such as a <em>global step</em> that performs a global computation on all nodes, making the result available to each node&nbsp;<? echo $references->cite("MalewiczABDHLC10"); ?>; or a <em>mutation step</em> that allows for adding or removing nodes and edges during processing&nbsp;<? echo $references->cite("MalewiczABDHLC10"); ?>.</p>
@@ -107,15 +107,15 @@
 		<figure id="fig-transform">
 			<figure id="fig-transform1" style="display:inline-block;margin-right:2.5em;margin-left:0;">
 				<img src="images/fig-transform1.svg" alt="Original graph"/>
-				<figcaption>Original graph</figcaption>
+				<figcaption>Original graph <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_5_Inductive_Knowledge/5_1_3_Analytics_on_data_graphs/figure_5_4_a.ttl"></a></figcaption>
 			</figure>
 			<figure id="fig-transform2" style="display:inline-block;">
 				<img src="images/fig-transform2.svg" alt="Lossy transformation"/>
-				<figcaption>Lossy transformation</figcaption>
+				<figcaption>Lossy transformation <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_5_Inductive_Knowledge/5_1_3_Analytics_on_data_graphs/figure_5_4_b.ttl"></a></figcaption>
 			</figure>
 			<figure id="fig-transform3" style="display:inline-block;margin-right:0;margin-left:2em;">
 				<img src="images/fig-transform3.svg" alt="Lossless transformation"/>
-				<figcaption>Lossless transformation</figcaption>
+				<figcaption>Lossless transformation <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_5_Inductive_Knowledge/5_1_3_Analytics_on_data_graphs/figure_5_4_c.ttl"></a></figcaption>
 			</figure>
 			<figcaption>Transformations from a directed edge-labelled graph to a directed graph</figcaption>
 		</figure>
@@ -147,7 +147,7 @@
 		<figure id="fig-TransE">
 			<figure id="fig-distEg" style="display:inline-block;margin-right:2.5em;margin-left:0;">
 				<img src="images/fig-distEg.svg" alt="Original graph"/>
-				<figcaption>Original graph</figcaption>
+				<figcaption>Original graph <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_5_Inductive_Knowledge/5_2_1_Tensor-based_models/figure_5_5_a.ttl"></a></figcaption>
 			</figure>
 			<figure id="fig-transER" style="display:inline-block;">
 				<img src="images/fig-transER.svg" alt="Relation embeddings"/>
@@ -457,7 +457,7 @@
 				</tr>
 			</table>
 			<div style="height:2.5em;">&nbsp;</div>
-			<figcaption>On the left a sub-graph of Figure&nbsp;<? echo ref("fig:chileTransport"); ?> highlighting the neighbourhood of Punta Arenas, where nodes are annotated with feature vectors (\(\mathbf{n}_x\)) and hidden states at step \(t\) (\(\mathbf{h}_x^{(t)}\)), and edges are annotated with feature vectors (\(\mathbf{a}_{xy}\)); on the right, the GNN transition and output functions proposed by <? echo $references->citet("ScarselliGTHM09"); ?> and an example for Punta Arenas (\(x = 1\)), where \(\mathrm{N}(x)\) denotes the neighbouring nodes of \(x\), \(f_{\mathbf{w}}(\cdot)\) denotes the transition function with parameters \(\mathbf{w}\) and \(g_{\mathbf{w}'}(\cdot)\) denotes the output function with parameters \(\mathbf{w'}\)</figcaption>
+			<figcaption>On the left a sub-graph of Figure&nbsp;<? echo ref("fig:chileTransport"); ?> <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_5_Inductive_Knowledge/5_3_1_Recursive_graph_neural_networks/figure_5_7.ttl"></a> highlighting the neighbourhood of Punta Arenas, where nodes are annotated with feature vectors (\(\mathbf{n}_x\)) and hidden states at step \(t\) (\(\mathbf{h}_x^{(t)}\)), and edges are annotated with feature vectors (\(\mathbf{a}_{xy}\)); on the right, the GNN transition and output functions proposed by <? echo $references->citet("ScarselliGTHM09"); ?> and an example for Punta Arenas (\(x = 1\)), where \(\mathrm{N}(x)\) denotes the neighbouring nodes of \(x\), \(f_{\mathbf{w}}(\cdot)\) denotes the transition function with parameters \(\mathbf{w}\) and \(g_{\mathbf{w}'}(\cdot)\) denotes the output function with parameters \(\mathbf{w'}\)</figcaption>
 		</figure>
 
 		<div class="formal">
@@ -516,7 +516,7 @@
 
 		<figure id="fig-airports">
 			<img src="images/fig-airports.svg" alt="An incomplete directed edge-labelled graph describing flights between airports"/>
-			<figcaption>A directed edge-labelled graph describing flights between airports</figcaption>
+			<figcaption>A directed edge-labelled graph describing flights between airports <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_5_Inductive_Knowledge/5_4_Symbolic_Learning/figure_5_8.ttl"></a></figcaption>
 		</figure>
 
 		<p>An alternative (sometimes complementary) approach is to adopt <em>symbolic learning</em> in order to learn <em>hypotheses</em> in a symbolic (logical) language that “explain” a given set of positive and negative edges. These edges are typically generated from the knowledge graph in an automatic manner (similar to the case of knowledge graph embeddings). The hypotheses then serve as interpretable models that can be used for further deductive reasoning. Given the graph of Figure&nbsp;<? echo ref("fig:airports"); ?>, we may, for example, learn the rule <? echo sedge("?x","flight",NULL,"?y","gvar"); ?> \(\Rightarrow\) <? echo sedge("?y","flight",NULL,"?x","gvar"); ?> from observing that <span class="gelab">flight</span> routes tend to be return routes. Alternatively, rather than learn rules, we might learn a DL axiom from the graph stating that airports are either domestic, international, or both: <code>Airport</code> \(\sqsubseteq\) <code>DomesticAirport</code> \(\sqcup\) <code>InternationalAirport</code>. Such rules and axioms can then be used for deductive reasoning, and offer an interpretable model for new knowledge that is entailed/predicted; for example, from the aforementioned rule for return flights, one can interpret why a novel edge <? echo gedge("SCL","flight","ARI"); ?> is predicted. This further offers domain experts the opportunity to verify the models – e.g., the rules and axioms – derived by such processes. Finally, rules/axioms are quantified (<em>all</em> flights have a return flight, <em>all</em> airports are domestic or international, etc.), so they can be applied to unseen examples (e.g., with the aforementioned rule, we can derive <? echo gedge("CDG","flight","SCL"); ?> from a new edge <? echo gedge("SCL","flight","CDG"); ?> with the unseen node <span class="gnode">CDG</span>).</p>

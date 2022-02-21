@@ -11,7 +11,7 @@
 
 		<figure id="fig-classhier">
 			<img src="images/fig-classhier.svg" alt="Example class hierarchy for Event"/>
-			<figcaption>Example class hierarchy for <code>Event</code></figcaption>
+			<figcaption>Example class hierarchy for <code>Event</code> <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_3_Schema_Identity_Context/3_1_1_Semantic_schema/figure_3_1.ttl"></a></figcaption>
 		</figure>
 
 		<p>Aside from classes, we may also wish to define the semantics of edge labels, aka <em>properties</em>. Returning to Figure&nbsp;<? echo ref("fig:delg"); ?>, we may consider that the properties <span class="gelab">city</span> and <span class="gelab">venue</span> are <em>sub-properties</em> of a more general property <span class="gelab">location</span>, such that given an edge <? echo gedge("Santa&nbsp;Lucía","city","Santiago"); ?>, for example, we may also infer that <? echo gedge("Santa&nbsp;Lucía","location","Santiago"); ?> must hold as an edge in the graph. We may also consider, for example, that <span class="gelab">bus</span> and <span class="gelab">flight</span> are both sub-properties of a more general property <span class="gelab">connects&nbsp;to</span>. Along these lines, properties may also form a hierarchy similar to what we saw for classes. We may further define the <em>domain</em> of properties, indicating the class(es) of entities for nodes from which edges with that property extend; for example, we may define that the domain of <span class="gelab">connects&nbsp;to</span> is a class <code>Place</code>, such that given the previous sub-property relations, we infer <? echo gedge("Arica","type","Place"); ?>. Conversely, we may define the <em>range</em> of properties, indicating the class(es) of entities for nodes to which edges with that property extend; for example, we may define that the range of <span class="gelab">city</span> is a class <code>City</code>, inferring that <? echo gedge("Arica","type","City"); ?>.</p>
@@ -56,7 +56,7 @@
 		</table>
 		<figure id="fig-sg">
 			<img src="images/fig-sg.svg" alt="Example schema graph describing sub-classes, sub-properties, domains, and ranges"/>
-			<figcaption>Example schema with sub-classes, sub-properties, domains, and ranges</figcaption>
+			<figcaption>Example schema with sub-classes, sub-properties, domains, and ranges <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_3_Schema_Identity_Context/3_1_1_Semantic_schema/figure_3_2.ttl"></a></figcaption>
 		</figure>
 
 		<p>Semantic schemata are typically defined for incomplete graph data, where the absence of an edge between two nodes, such as <? echo gedge("Viña&nbsp;del&nbsp;Mar","flight","Arica"); ?>, does not mean that the relation does not hold in the real world. Therefore, from the graph of Figure&nbsp;<? echo ref("fig:delg"); ?>, we cannot assume that there is no flight between Viña del Mar and Arica. In contrast, if the <em>Closed World Assumption</em> (<em>CWA</em>) were adopted – as is the case in many classical database systems – it would be assumed that the data graph is a complete description of the world, thus allowing to assert with certainty that no flight exists between the two cities. Systems that do not adopt the CWA are said to adopt the <em>Open World Assumption</em> (<em>OWA</em>). Considering our running example, it would be unreasonable to assume that the tourism organisation has complete knowledge of everything describable in its knowledge graph, and hence adopting the OWA appears more appropriate. However, it can be inconvenient if a system is unable to definitely answer “<em>yes</em>” or “<em>no</em>” to questions such as “<em>is there a flight between Arica and Viña del Mar?</em>”, especially when the organisation is certain that it has complete knowledge of the flights. A compromise between OWA and CWA is the <em>Local Closed World Assumption</em> (<em>LCWA</em>), where portions of the data graph are assumed to be complete.</p>
@@ -68,7 +68,7 @@
 
 		<figure id="fig-shapeExample">
 			<img src="images/fig-shapeExample.svg" alt="Example shapes graph depicted as a UML-like diagram"/>
-			<figcaption>Example shapes graph depicted as a UML-like diagram</figcaption>
+			<figcaption>Example shapes graph depicted as a UML-like diagram <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_3_Schema_Identity_Context/3_1_2_Validating_schema/"></a></figcaption>
 		</figure>
 
 		<p>Given a shape and a targeted node, it is possible to check if the node conforms to that shape or not, which may require checking conformance of other nodes; for example, the node <span class="gnode">EID15</span> conforms to the <span class="shap">Event</span> shape not only based on its local properties, but also based on conformance of <span class="gnode">Santa&nbsp;Lucía</span> to <span class="shap">Venue</span> and <span class="gnode">Santiago</span> to <span class="shap">City</span>. Conformance dependencies may also be recursive, where the conformance of <span class="gnode">Santiago</span> to <span class="shap">City</span> requires that it conforms to <span class="shap">Place</span>, which requires that <span class="gnode">Viña&nbsp;del&nbsp;Mar</span> and <span class="gnode">Arica</span> conform to <span class="shap">Place</span>, and so on. Conversely, <span class="gnode">EID16</span> does not conform to <span class="gnode">Event</span>, as it does not have the <span class="gelab">start</span> and <span class="gelab">end</span> properties required by the example shapes graph.</p>
@@ -253,14 +253,14 @@
 
 		<figure id="fig-emergentSchema">
 			<img src="images/fig-emergentSchema.svg" alt="Example quotient graph simulating the data graph in Figure&nbsp;1"/>
-			<figcaption>Example quotient graph simulating the data graph in Figure&nbsp;<? echo ref("fig:delg"); ?></figcaption>
+			<figcaption>Example quotient graph simulating the data graph in Figure&nbsp;<? echo ref("fig:delg"); ?> <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_3_Schema_Identity_Context/3_1_3_Emergent_schema/figure_3_4.ttl"></a></figcaption>
 		</figure>
 
 		<p>There are many ways in which quotient graphs may be defined, depending not only on how nodes are partitioned, but also how the edges are defined. Different quotient graphs may provide different guarantees with respect to the structure they preserve. Formally, we can say that every quotient graph <em>simulates</em> its input graph (based on the <em>simulation relation</em> of set membership between data nodes and quotient nodes), meaning that for all \(x \in X\) with \(x\) an input node and \(X\) a quotient node, if <? echo gedge("\\(x\\)","\\(y\\)","\\(z\\)"); ?> is an edge in the data graph, then there must exist an edge <? echo gedge("\\(X\\)","\\(y\\)","\\(Z\\)"); ?> in the quotient graph such that \(z \in Z\); for example, the quotient graph of Figure&nbsp;<? echo ref("fig:emergentSchema"); ?> simulates the data graph of Figure&nbsp;<? echo ref("fig:delg"); ?>. However, this quotient graph seems to suggest (for instance) that <span class="gnode">EID16</span> would have a start and end date in the data graph when this is not the case. A stronger notion of structural preservation is given by <em>bisimilarity</em>, which in this case would further require that if <? echo gedge("\\(X\\)","\\(y\\)","\\(Z\\)"); ?> is an edge in the quotient graph, then for all \(x \in X\), there must exist a \(z \in Z\) such that <? echo gedge("\\(x\\)","\\(y\\)","\\(z\\)"); ?> is in the data graph; this is not satisfied by <span class="gnode">EID16</span> in the quotient graph of Figure&nbsp;<? echo ref("fig:emergentSchema"); ?>, which does not have an outgoing edge labelled <span class="gelab">start</span> or <span class="gelab">end</span> in the original data graph. Figure&nbsp;<? echo ref("fig:emergentSchema2"); ?> illustrates a bisimilar version of the quotient graph, splitting the <em>event</em> partition into two nodes reflecting their different outgoing edges. An interesting property of bisimilarity is that it preserves forward-directed paths: given a path expression \(r\) without inverses and two bisimilar graphs, \(r\) will match a path in one graph if and only if it matches a corresponding path in the other bisimilar graph. One can verify, for example, that a path matches <? echo gedge("\\(x\\)","city\\(\cdot\\)(flight|bus)*","\\(z\\)"); ?> in Figure&nbsp;<? echo ref("fig:delg"); ?> if and only if there is a path matching <? echo gedge("\\(X\\)","city\\(\cdot\\)(flight|bus)*","\\(Z\\)"); ?> in Figure&nbsp;<? echo ref("fig:emergentSchema2"); ?> such that \(x \in X\) and \(z \in Z\).</p>
 
 		<figure id="fig-emergentSchema2">
 			<img src="images/fig-emergentSchema2.svg" alt="Example quotient graph bisimilar with the data graph in Figure&nbsp;1"/>
-			<figcaption>Example quotient graph bisimilar with the data graph in Figure&nbsp;<? echo ref("fig:delg"); ?></figcaption>
+			<figcaption>Example quotient graph bisimilar with the data graph in Figure&nbsp;<? echo ref("fig:delg"); ?> <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_3_Schema_Identity_Context/3_1_3_Emergent_schema/figure_3_5.ttl"></a></figcaption>
 		</figure>
 
 		<p>There are many ways in which quotient graphs may be defined, depending on the equivalence relation that partitions nodes. Furthermore, there are many ways in which other similar or bisimilar graphs can be defined, depending on the (bi)simulation relation that preserves the data graph’s structure&nbsp;<? echo $references->cite("CebiricGKKMTZ19"); ?>. Such techniques aim to <em>summarise</em> the data graph into a higher-level topology. In order to reduce the memory overhead of the quotient graph, in practice, nodes may rather be labelled with the cardinality of the partition and/or a high-level label (e.g., <em>event</em>, <em>city</em>) for the partition rather than storing the labels of all nodes in the partition.</p>
@@ -316,7 +316,7 @@
 
 		<figure id="fig-globalIds">
 			<img src="images/fig-globalIds.svg" alt="Result of merging two graphs with ambiguous local identifiers"/>
-			<figcaption>Result of merging two graphs with ambiguous local identifiers</figcaption>
+			<figcaption>Result of merging two graphs with ambiguous local identifiers <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_3_Schema_Identity_Context/3_2_1_Persistent_identifiers/"></a></figcaption>
 		</figure>
 
 		<p>In the context of the Semantic Web, the RDF data model goes one step further and recommends that global Web identifiers be used for nodes and edge labels. However, rather than adopt the <em>Uniform Resource Locators (URLs)</em> used to identify the location of <em>information resources</em> such as webpages, RDF&nbsp;1.1 proposes to use <em>Internationalised Resource Identifiers (IRIs)</em> to identify <em>non-information resources</em> such as cities or events.<? echo footnote("Uniform Resource Identifiers (URIs) can be Uniform Resource Locators (URLs), used to locate information resources, and Uniform Resource Names (URNs), used to name resources. Internationalised Resource Identifiers (IRIs) are URIs that allow Unicode (e.g., <code>http://example.com/Ñam</code>)."); ?> Hence, for example, in the RDF representation of the Wikidata&nbsp;<? echo $references->cite("VrandecicK14"); ?> – a knowledge graph proposed to complement Wikipedia, discussed in more detail in Chapter&nbsp;<? echo ref("chap:kgs"); ?> – while the URL <span class="gnode"><a class="uri" href="https://www.wikidata.org/wiki/Q2887">https://www.wikidata.org/wiki/Q2887</a></span> refers to a webpage that can be loaded in a browser providing human-readable metadata about Santiago, the IRI <span class="gnode"><a class="uri" href="http://www.wikidata.org/entity/Q2887">http://www.wikidata.org/entity/Q2887</a></span> refers to the city itself. Distinguishing the identifiers for the webpage and the city itself avoids naming clashes; for example, if we use the URL to identify both the webpage and the city, we may end up with an edge in our graph, such as (with readable labels below the edge):</p>
@@ -354,7 +354,7 @@
 
 		<figure id="fig-list">
 			<img src="images/fig-list.svg" alt="RDF list representing the three largest peaks of Chile, in order"/>
-			<figcaption>RDF list representing the three largest peaks of Chile, in order</figcaption>
+			<figcaption>RDF list representing the three largest peaks of Chile, in order <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_3_Schema_Identity_Context/3_2_5_Existential_nodes/"></a></figcaption>
 		</figure>
 		</section>
 
@@ -372,15 +372,15 @@
 		<figure id="fig-temporal">
 			<figure id="fig-reif" style="display:inline-block;margin-right:2.5em;margin-left:0;">
 				<img src="images/fig-reif.svg" alt="RDF Reification"/>
-				<figcaption>RDF Reification</figcaption>
+				<figcaption>RDF Reification <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_3_Schema_Identity_Context/3_3_2_Reification/figure_3_8_a.ttl"></a></figcaption>
 			</figure>
 			<figure id="fig-nary" style="display:inline-block;">
 				<img src="images/fig-nary.svg" alt="n-ary Relations"/>
-				<figcaption>\(n\)-ary Relations</figcaption>
+				<figcaption>\(n\)-ary Relations <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_3_Schema_Identity_Context/3_3_2_Reification/figure_3_8_b.ttl"></a></figcaption>
 			</figure>
 			<figure id="fig-singprop" style="display:inline-block;margin-right:0;margin-left:2em;">
 				<img src="images/fig-singprop.svg" alt="Singleton properties"/>
-				<figcaption>Singleton properties</figcaption>
+				<figcaption>Singleton properties <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_3_Schema_Identity_Context/3_3_2_Reification/figure_3_8_c.ttl"></a></figcaption>
 			</figure>
 			<figcaption>Three representations of temporal context on a directed labelled edge</figcaption>
 		</figure>
@@ -391,15 +391,15 @@
 		<figure id="fig-temporal2">
 			<figure id="fig-ngraph" style="display:inline-block;margin-right:2.5em;margin-left:0;">
 				<img src="images/fig-ngraph.svg" alt="Named graph"/>
-				<figcaption>Named graph</figcaption>
+				<figcaption>Named graph <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_3_Schema_Identity_Context/3_3_3_Higher_arity_representation/figure_3_9_a.trig"></a></figcaption>
 			</figure>
 			<figure id="fig-pgc" style="display:inline-block;">
 				<img src="images/fig-pgc.svg" alt="Property graph"/>
-				<figcaption>Property graph</figcaption>
+				<figcaption>Property graph <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_3_Schema_Identity_Context/3_3_3_Higher_arity_representation/figure_3_9_b.cypher"></a></figcaption>
 			</figure>
 			<figure id="fig-rdfstar" style="display:inline-block;margin-right:0;margin-left:2em;">
 				<img src="images/fig-rdfstar.svg" alt="RDF*"/>
-				<figcaption>RDF*</figcaption>
+				<figcaption>RDF* <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_3_Schema_Identity_Context/3_3_3_Higher_arity_representation/figure_3_9_c.rdfstar"></a></figcaption>
 			</figure>
 			<figcaption>Three higher-arity representations of temporal context on an edge</figcaption>
 		</figure>
@@ -413,7 +413,7 @@
 			<img src="images/fig-time1.svg" alt="Temporally annotated graph" class="multi"/>
 			<img src="images/fig-time2.svg" alt="Example query"/>
 			<div><div style="display:inline;">\(Q(G) :\) <table class="condensedTable" style="position:relative;top:.6em;display:inline-block;vertical-align:middle;"><thead><tr><th>?city</th><th>context</th></tr></thead><tbody><tr><td><code>Arica</code></td><td>\(\color{blue}\{[123,125],[276,279]\}\)</td></tr></tbody></table></div></div>
-			<figcaption>Example query on a temporally annotated graph</figcaption>
+			<figcaption>Example query on a temporally annotated graph <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_3_Schema_Identity_Context/3_3_4_Annotations/"></a></figcaption>
 		</figure>
 
 		<div class="formal">

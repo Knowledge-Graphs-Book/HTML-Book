@@ -54,7 +54,7 @@
 
 		<figure id="fig-ld">
 			<img src="images/fig-ld.svg" alt="Two example Linked Data documents from two websites, each containing an RDF graph, where wd:Q142701 refers to Pearl Jam in Wikidata while wdd:Q142701 refers to the RDF graph about Pearl Jam, and where wd:Q221535 refers to Eddie Vedder while wdd:Q221535 refers to the RDF graph about Eddie Vedder; the edge-label wdt:571 refers to “inception” in Wikidata, while wdt:527 refers to “has part”"/>
-			<figcaption>Two example Linked Data documents from two websites, each containing an RDF graph, where <code>wd:Q142701</code> refers to Pearl Jam in Wikidata while <code>wdd:Q142701</code> refers to the RDF graph about Pearl Jam, and where <code>wd:Q221535</code> refers to Eddie Vedder while <code>wdd:Q221535</code> refers to the RDF graph about Eddie Vedder; the edge-label <span class="gelab">wdt:571</span> refers to “inception” in Wikidata, while <span class="gelab">wdt:527</span> refers to “has part”</figcaption>
+			<figcaption>Two example Linked Data documents from two websites, each containing an RDF graph, where <code>wd:Q142701</code> refers to Pearl Jam in Wikidata while <code>wdd:Q142701</code> refers to the RDF graph about Pearl Jam, and where <code>wd:Q221535</code> refers to Eddie Vedder while <code>wdd:Q221535</code> refers to the RDF graph about Eddie Vedder; the edge-label <span class="gelab">wdt:571</span> refers to “inception” in Wikidata, while <span class="gelab">wdt:527</span> refers to “has part” <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_9_Publication/9_1_2_Linked_Data_Principles/figure_9_1.ttl"></a></figcaption>
 		</figure>
 
 		<p>A key challenge is posed by the fourth principle – include links to related entities – as illustrated in Figure&nbsp;<? echo ref("fig:ld"); ?>, where <span class="gnode">wd:Q221535</span> in the leftmost graph constitutes a link to related content about Pearl Jam in an external knowledge graph. Specifically, the <em>link discovery</em> task considers adding such links from one knowledge graph to another, which may involve inclusion of IRIs that dereference to external graphs (per Figure&nbsp;<? echo ref("fig:ld"); ?>), or links with special semantics such as identity links. In comparison with the link prediction task discussed in Section&nbsp;<? echo ref("ssec:completion"); ?>, which is used to complete links within a knowledge graph, link discovery aims to discover links across knowledge graphs, which involves unique aspects: first, link discovery typically considers disjoint sets of source (local) nodes and target (remote) nodes; second, the knowledge graphs may often use different vocabularies; third, while in link prediction there already exist local examples of the links to predict, in link discovery, there are often no existing links between knowledge graphs to learn from. A common technique is to define manually-crafted linkage rules (aka link specifications) that apply heuristics for defining links that potentially incorporate similarity measures&nbsp;<? echo $references->cite("NgomoA11,silk"); ?>. Link discovery is greatly expedited by the provision of standard identifier schemes within knowledge graphs, such as ISBNs for books, alpha-2 and alpha-3 codes for countries (e.g., <span class="sc">cl</span>, <span class="sc">clp</span>), or even links to common knowledge graphs such as DBpedia&nbsp;<? echo $references->cite("LehmannIJJKMHMK15"); ?> or Wikidata&nbsp;<? echo $references->cite("VrandecicK14"); ?> (that themselves include standard identifiers). We refer to the survey on link discovery by <? echo $references->citet("nentwig2017survey"); ?> for more details.</p>
@@ -102,7 +102,7 @@
 
 		<figure id="fig-license">
 			<img src="images/fig-license.svg" alt="A license for event data, along with permissions, actions, and obligations"/>
-			<figcaption>A license for event data, along with permissions, actions, and obligations</figcaption>
+			<figcaption>A license for event data, along with permissions, actions, and obligations <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_9_Publication/9_3_1_Licensing/figure_9_3.ttl"></a></figcaption>
 		</figure>
 
 		<h4 id="sssec-usage-policies" class="subsection">Usage policies</h4>
@@ -111,7 +111,7 @@
 
 		<figure id="fig-usage">
 			<img src="images/fig-usage.svg" alt="A policy for usage of a sub-graph of location data in the knowledge graph"/>
-			<figcaption>A policy for usage of a sub-graph of location data in the knowledge graph</figcaption>
+			<figcaption>A policy for usage of a sub-graph of location data in the knowledge graph <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_9_Publication/9_3_2_Usage_policies/figure_9_4.ttl"></a></figcaption>
 		</figure>
 
 		<h4 id="sssec-encryption" class="subsection">Encryption</h4>
@@ -119,7 +119,7 @@
 
 		<figure id="fig-crypto">
 			<img src="images/fig-crypto.svg" alt="Directed edge-labelled graph with the name of the claimant encrypted; plaintext elements are dashed and may be omitted from published data (possibly along with encryption details)"/>
-			<figcaption>Directed edge-labelled graph with the name of the claimant encrypted; plaintext elements are dashed and may be omitted from published data (possibly along with encryption details)</figcaption>
+			<figcaption>Directed edge-labelled graph with the name of the claimant encrypted; plaintext elements are dashed and may be omitted from published data (possibly along with encryption details) <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_9_Publication/9_3_3_Encryption/figure_9_5.ttl"></a></figcaption>
 		</figure>
 
 		<h4 id="sssec-anonymisation" class="subsection">Anonymisation</h4>
@@ -128,7 +128,7 @@
 
 		<figure id="fig-anonymised">
 			<img src="images/fig-anonymised.svg" alt="Anonymised sample of a directed edge-labelled graph describing a passenger (dashed) of a flight"/>
-			<figcaption>Anonymised sample of a directed edge-labelled graph describing a passenger (dashed) of a flight</figcaption>
+			<figcaption>Anonymised sample of a directed edge-labelled graph describing a passenger (dashed) of a flight <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_9_Publication/9_3_4_Anonymisation/figure_9_6.ttl"></a></figcaption>
 		</figure>
 
 		<p>More complex neighbourhood attacks may rely on more abstract graph patterns, observing that individuals can be deanonymised purely from knowledge of the graph structure, even if all nodes and edge labels are left blank; for example, if we know that a team of \(k-1\) players take flights together for a particular number of away games, we could use this information for a neighbourhood attack that reveals the set of players in the graph. Hence a number of guarantees specific to graphs have been proposed, including \(k\)-degree anonymity&nbsp;<? echo $references->cite("LiuT08"); ?>, which ensures that individuals cannot be deanonymised by attackers with knowledge of the degree of particular individuals. The approach is based on minimally modifying the graph to ensure that each node has at least \(k-1\) other nodes with the same degree. A stronger guarantee, called \(k\)-isomorphic neighbour anonymity&nbsp;<? echo $references->cite("ZhouP08"); ?>, avoids neighbourhood attacks where an attacker knows how an individual is connected to nodes in their neighbourhood; this is done by modifying the graph to ensure that for each node, there exist at least \(k-1\) nodes with isomorphic (i.e., identically structured) neighbourhoods elsewhere in the graph. Both approaches only protect against attackers with knowledge of bounded neighbourhoods. An even stronger notion is that of \(k\)-automorphism&nbsp;<? echo $references->cite("ZouCO09a"); ?>, which ensures that for every node, it is structurally indistinguishable from \(k-1\) other nodes, thus avoiding any attack based on structural information (as a trivial example, a \(k\)-clique or a \(k\)-cycle satisfy \(k\)-automorphism). Many of these techniques for anonymisation of graph data were motivated by social networks&nbsp;<? echo $references->cite("NarayananS09"); ?>, though they can also be applied to knowledge graphs, per the work of <? echo $references->citet("LinT17"); ?>, who adapt \(k\)-automorphism for directed edge-labelled graphs (specifically RDF graphs).</p>

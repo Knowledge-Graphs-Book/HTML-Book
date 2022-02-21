@@ -4,7 +4,7 @@
 
 		<figure id="fig-bad">
 			<img src="images/fig-bad.svg" alt="A newly created knowledge graph about events and their venues"/>
-			<figcaption>A newly created knowledge graph about events and their venues</figcaption>
+			<figcaption>A newly created knowledge graph about events and their venues <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_7_Quality_Assessment/figure_7_1.ttl"></a></figcaption>
 		</figure>
 
 		<p>This chapter discusses (sometimes overlapping) <em>quality dimensions</em> that capture qualitative aspects of the multifaceted notion of data quality; some of these dimensions apply more generally to databases&nbsp;<? echo $references->cite("BatiniRSV15"); ?>, while others are more specific to knowledge graphs&nbsp;<? echo $references->cite("ZaveriRMPLA16"); ?>. We further discuss <em>quality metrics</em> that provide ways to measure quantitative aspects of these dimensions. We group dimensions and metrics in a manner inspired by <? echo $references->citet("BatiniS16"); ?>.</p>
@@ -40,7 +40,7 @@
 
 		<figure id="fig-badOnt">
 			<img src="images/fig-badOnt.svg" alt="An ontology for the knowledge graph of Figure&nbsp;7.1"/>
-			<figcaption>An ontology for the knowledge graph of Figure&nbsp;<? echo ref("fig:bad"); ?></figcaption>
+			<figcaption>An ontology for the knowledge graph of Figure&nbsp;<? echo ref("fig:bad"); ?> <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_7_Quality_Assessment/7_3_Coherency/figure_7_2.ttl"></a></figcaption>
 		</figure>
 
 		<h4 id="sssec-consistency" class="subsection">Consistency</h4>
