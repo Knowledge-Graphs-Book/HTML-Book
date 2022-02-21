@@ -390,7 +390,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 				<li><a href="#app-pre2012">A.2. “Knowledge Graphs”: Pre 2012</a></li>
 				<li><a href="#app-post2012">A.3. “Knowledge Graphs”: 2012 Onwards</a></li>
 			</ol></li>
-			<li><a href="#sec-bio">Authors’ Biography</a></li>
+			<li><a href="#sec-bio">Authors’ Biographies</a></li>
 			<li id="toc-filler">&nbsp;</li>
 		</ol>
 	</nav>
@@ -495,7 +495,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 		
 		<figure id="fig-delg">
 			<img src="images/fig-delg.svg" alt="Directed edge-labelled graph describing events and their venues" />
-			<figcaption>Directed edge-labelled graph describing events and their venues</figcaption>
+			<figcaption>Directed edge-labelled graph describing events and their venues <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/tree/main/Chapter_2_Data_Graphs/2_1_1_Directed_edge_labelled_graphs/figure_2_1.ttl"></a></figcaption>
 		</figure>
 
 		<p>Modelling data as a graph in this way offers more flexibility for integrating new sources of data, compared to the standard relational model, where a schema must be defined upfront and followed at each step. While other structured data models such as trees (XML, JSON, etc.) would offer similar flexibility, graphs do not require organising the data hierarchically (should <code>venue</code> be a parent, child, or sibling of <code>type</code> for example?). They also allow cycles to be represented and queried (e.g., note the directed cycle in the routes between Santiago, Arica, and Viña del Mar).</p>
@@ -514,20 +514,20 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 			</div>
 			
 			<p>Definition&nbsp;<a href="#def-delg">2.1</a> does not state that \(V\) and \(L\) are disjoint: though not present in the example, a node can also serve as an edge-label. The definition also permits that nodes and edge labels can be present without any associated edge. Either restriction could be explicitly stated – if necessary – in a particular application while still conforming to a directed edge-labelled graph.</p>
-			<p>For ease of presentation presentation, we may treat a set of (directed labelled) edges \(E \subseteq V \times L \times V\) as a directed edge-labelled graph \((V,E,L)\), in which case we refer to the graph induced by \(E\) assuming that \(V\) and \(L\) contain all and only those nodes and edge labels, respectively, used in \(E\). We may similarly apply set operators on directed edge-labelled graphs, which should be interpreted as applying to their sets of edges; for example, given \(G_1 = (V_1,E_1,L_1)\) and \(G_2 = (V_2,E_2,L_2)\), by \(G_1 \cup G_2\) we refer to the directed edge-labelled graph induced by \(E_1 \cup E_2\).</p>
+			<p>For ease of presentation, we may treat a set of (directed labelled) edges \(E \subseteq V \times L \times V\) as a directed edge-labelled graph \((V,E,L)\), in which case we refer to the graph induced by \(E\) assuming that \(V\) and \(L\) contain all and only those nodes and edge labels, respectively, used in \(E\). We may similarly apply set operators on directed edge-labelled graphs, which should be interpreted as applying to their sets of edges; for example, given \(G_1 = (V_1,E_1,L_1)\) and \(G_2 = (V_2,E_2,L_2)\), by \(G_1 \cup G_2\) we refer to the directed edge-labelled graph induced by \(E_1 \cup E_2\).</p>
 		</div>
 
 		<h4 id="subsub-heterograph" class="subsection">Heterogeneous graphs</h4>
-		<p>A heterogeneous graph&nbsp;[<a href="#ref-HusseinYC18">Hussein et al., 2018</a>, <a href="#ref-WangJSWYCY19">Wang et al., 2019</a>, <a href="#ref-YangXJWHW20">Yang et al., 2020</a>] (or <em>heterogeneous information network</em>&nbsp;[<a href="#ref-sun2011pathsim">Sun et al., 2011</a>, <a href="#ref-2012Sun">Sun and Han, 2012</a>]) is a directed graph where each node and edge is assigned one type. Heterogeneous graphs are thus akin to directed edge-labelled graphs – with edge labels corresponding to edge types – but where the type of node forms part of the graph model itself, rather than being expressed with a relation (as seen in Figure&nbsp;<a href="#fig-capital">2.2</a>). An edge is called <em>homogeneous</em> if it is between two nodes of the same type (e.g., <span class="gelab">borders</span> in Figure&nbsp;<a href="#fig-capital">2.2</a>); otherwise it is called <em>heterogeneous</em> (e.g., <span class="gelab">capital</span> in Figure&nbsp;<a href="#fig-capital">2.2</a>). Heterogeneous graphs allow for partitioning nodes according to their type, for example, for the purposes of machine learning tasks&nbsp;[<a href="#ref-HusseinYC18">Hussein et al., 2018</a>, <a href="#ref-WangJSWYCY19">Wang et al., 2019</a>, <a href="#ref-YangXJWHW20">Yang et al., 2020</a>]. Conversely, such graphs typically only support a one-to-one relation between nodes and types, which is not the case for directed edge-labelled graphs (see, for example, the node <span class="gnode">Santiago</span> with zero types and <span class="gnode">EID15</span> with multiple types in Figure&nbsp;<a href="#fig-delg">2.1</a>.</p>
+		<p>A heterogeneous graph&nbsp;[<a href="#ref-HusseinYC18">Hussein et al., 2018</a>, <a href="#ref-WangJSWYCY19">Wang et al., 2019</a>, <a href="#ref-YangXJWHW20">Yang et al., 2020</a>] (or <em>heterogeneous information network</em>&nbsp;[<a href="#ref-sun2011pathsim">Sun et al., 2011</a>, <a href="#ref-2012Sun">Sun and Han, 2012</a>]) is a directed graph where each node and edge is assigned one type. Heterogeneous graphs are thus akin to directed edge-labelled graphs – with edge labels corresponding to edge types – but where the type of node forms part of the graph model itself, rather than being expressed with a relation (as seen in Figure&nbsp;<a href="#fig-capital">2.2</a>). An edge is called <em>homogeneous</em> if it is between two nodes of the same type (e.g., <span class="gelab">borders</span> in Figure&nbsp;<a href="#fig-capital">2.2</a>); otherwise it is called <em>heterogeneous</em> (e.g., <span class="gelab">capital</span> in Figure&nbsp;<a href="#fig-capital">2.2</a>). Heterogeneous graphs allow for partitioning nodes according to their type, for example, for the purposes of machine learning tasks&nbsp;[<a href="#ref-HusseinYC18">Hussein et al., 2018</a>, <a href="#ref-WangJSWYCY19">Wang et al., 2019</a>, <a href="#ref-YangXJWHW20">Yang et al., 2020</a>]. Conversely, such graphs typically only support a one-to-one relation between nodes and types, which is not the case for directed edge-labelled graphs (see, for example, the node <span class="gnode">Santiago</span> with zero types and <span class="gnode">EID15</span> with multiple types in Figure&nbsp;<a href="#fig-delg">2.1</a>).</p>
 		
 		<figure id="fig-capital">
 			<figure id="fig-cap">
 				<img src="images/fig-cap.svg" alt="Del graph"/>
-				<figcaption>Directed edge-labelled graph</figcaption>
+				<figcaption>Directed edge-labelled graph <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_2_Data_Graphs/2_1_2_Heterogeneous_graphs/figure_2_2_a.ttl"></a></figcaption>
 			</figure>
 			<figure id="fig-hg">
 				<img src="images/fig-hg.svg" alt="Heterogenous graph"/>
-				<figcaption>Heterogenous graph</figcaption>
+				<figcaption>Heterogenous graph <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_2_Data_Graphs/2_1_2_Heterogeneous_graphs/figure_2_3_b.cypher"></a></figcaption>
 			</figure>
 			<figcaption>Comparing directed edge-labelled graphs and heterogeneous graphs</figcaption>
 		</figure>
@@ -555,11 +555,11 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 		<figure id="fig-flghts">
 			<figure id="fig-fsa">
 				<img src="images/fig-fsa.svg" alt="Directed edge-labelled graph"/>
-				<figcaption>Directed edge-labelled graph</figcaption>
+				<figcaption>Directed edge-labelled graph <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_2_Data_Graphs/2_1_3_Property_graphs/figure_2_3_a.ttl"></a></figcaption>
 			</figure>
 			<figure id="fig-pg">
 				<img src="images/fig-pg.svg" alt="Property graph"/>
-				<figcaption>Property graph</figcaption>
+				<figcaption>Property graph <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_2_Data_Graphs/2_1_3_Property_graphs/figure_2_3_b.cypher"></a></figcaption>
 			</figure>
 			<figcaption>Comparing directed edge-labelled graphs and property graphs</figcaption>
 		</figure>
@@ -596,7 +596,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 
 		<figure id="fig-gd">
 			<img src="images/fig-gd.svg" alt="Graph dataset with two named graphs and a default graph describing events and routes"/>
-			<figcaption>Graph dataset based on directed edge-labelled graphs with two named graphs and a default graph describing events and routes</figcaption>
+			<figcaption>Graph dataset based on directed edge-labelled graphs with two named graphs and a default graph describing events and routes <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_2_Data_Graphs/2_1_4_Graph_dataset/figure_2_4.trig"></a></figcaption>
 		</figure>
 
 		<p>An RDF dataset is a graph dataset model standardised by the W3C&nbsp;[<a href="#ref-rdf11">Cyganiak et al., 2014</a>] where each graph is an RDF graph, and graph names can be blank nodes or IRIs. A prominent use-case for RDF datasets is to manage and query <em>Linked Data</em> composed of interlinked documents of RDF graphs spanning the Web. When dealing with Web data, tracking the source of data becomes of key importance&nbsp;[<a href="#ref-Dividino09">Dividino et al., 2009</a>, <a href="#ref-BonattiHPS11">Bonatti et al., 2011</a>, <a href="#ref-zimm-etal-2012-JWS">Zimmermann et al., 2012</a>]. We will discuss Linked Data later in Section&nbsp;<a href="#sec-identity">3.2</a> and further discuss provenance in Section&nbsp;<a href="#ssec-knowledgeContext">3.3</a>.</p>
@@ -669,7 +669,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 				</tbody>
 			</table>
 			<div style="height:.5em;">&nbsp;</div>
-			<figcaption>basic directed edge-labelled graph pattern (left) with mappings generated over the directed edge-labelled graph of Figure&nbsp;<a href="#fig-delg">2.1</a> (right)</figcaption>
+			<figcaption>basic directed edge-labelled graph pattern (left <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_2_Data_Graphs/2_2_1_Graph_patterns/figure_2_5.sparql"></a>) with mappings generated over the directed edge-labelled graph of Figure&nbsp;<a href="#fig-delg">2.1</a> (right)</figcaption>
 		</figure>
 
 		<p>As we will see in later examples (particularly Figure&nbsp;<a href="#fig-cgp">2.7</a>), basic graph patterns may also form cycles (be they directed or undirected), and may replace edge labels with variables. Basic graph patterns in the context of other models – such as property graphs – can be defined analogously by allowing variables to replace constants in any position of the model.</p>
@@ -776,7 +776,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 					</tr>
 				</tbody>
 			</table>
-			<figcaption>Complex graph pattern (left) with mappings generated over the graph of Figure&nbsp;<a href="#fig-delg">2.1</a> (right)</figcaption>
+			<figcaption>Complex graph pattern (left <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_2_Data_Graphs/2_2_2_Complex_graph_patterns/figure_2_6.sparql"></a>) with mappings generated over the graph of Figure&nbsp;<a href="#fig-delg">2.1</a> (right)</figcaption>
 		</figure>
 
 		<p>Complex graph patterns can give rise to duplicate results; for example, the first result in Figure&nbsp;<a href="#fig-cq">2.6</a> appears twice since <code>?city1</code> matches <code>Arica</code> and <code>?city2</code> matches <code>Viña del Mar</code> in one result, and vice-versa in the other. Query languages then offer two semantics: <em>bag semantics</em> preserves duplicates according to the multiplicity of the underlying mappings, while <em>set semantics</em> (typically invoked with a <code>DISTINCT</code> keyword) removes duplicates from the results.</p>
@@ -788,7 +788,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 			<img class="inlined" src="images/fig-cgp4.svg" alt="Complex graph pattern 4"/>
 			<img class="inlined" src="images/fig-cgp5.svg" alt="Complex graph pattern 5"/>
 			<div><div style="display:inline;">\(Q := ((((Q_1 \cup Q_2) \rhd Q_3)\) ⟕ \(Q_4 )\) ⟕ \(Q_5),\qquad Q(G) =\) <table class="condensedTable" style="position:relative;top:.6em;display:inline-block;vertical-align:middle;"><thead><tr><th>?event</th><th>?start</th><th>?name</th></tr></thead><tbody><tr><td><code>EID16</code></td><td></td><td><code>Food Truck</code></td></tr></tbody></table></div></div>
-			<figcaption>Complex graph pattern (\(Q\)) with mappings generated (\(Q(G)\)) over the graph of Figure&nbsp;<a href="#fig-delg">2.1</a> (\(G\))</figcaption>
+			<figcaption>Complex graph pattern (\(Q\)) with mappings generated (\(Q(G)\)) over the graph of Figure&nbsp;<a href="#fig-delg">2.1</a> (\(G\)) <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_2_Data_Graphs/2_2_2_Complex_graph_patterns/figure_2_7.sparql"></a></figcaption>
 		</figure>
 
 		<div class="formal">
@@ -938,7 +938,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 				</tbody>
 			</table>
 			<div style="height:1em;">&nbsp;</div>
-			<figcaption>Navigational graph pattern (left) with mappings generated over the graph of Figure&nbsp;<a href="#fig-delg">2.1</a> (right)</figcaption>
+			<figcaption>Navigational graph pattern (left <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_2_Data_Graphs/2_2_3_Navigational_graph_patterns/figure_2_9.sparql"></a>) with mappings generated over the graph of Figure&nbsp;<a href="#fig-delg">2.1</a> (right)</figcaption>
 		</figure>
 
 		<h4 id="app-qother" class="subsection">Other features</h4>
@@ -974,7 +974,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 
 		<figure id="fig-classhier">
 			<img src="images/fig-classhier.svg" alt="Example class hierarchy for Event"/>
-			<figcaption>Example class hierarchy for <code>Event</code></figcaption>
+			<figcaption>Example class hierarchy for <code>Event</code> <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_3_Schema_Identity_Context/3_1_1_Semantic_schema/figure_3_1.ttl"></a></figcaption>
 		</figure>
 
 		<p>Aside from classes, we may also wish to define the semantics of edge labels, aka <em>properties</em>. Returning to Figure&nbsp;<a href="#fig-delg">2.1</a>, we may consider that the properties <span class="gelab">city</span> and <span class="gelab">venue</span> are <em>sub-properties</em> of a more general property <span class="gelab">location</span>, such that given an edge <span class="gnode">Santa&nbsp;Lucía</span><span class="tip arc source">–</span><span class="edge">city</span><span class="tip arc right">➛</span><span class="gnode">Santiago</span>, for example, we may also infer that <span class="gnode">Santa&nbsp;Lucía</span><span class="tip arc source">–</span><span class="edge">location</span><span class="tip arc right">➛</span><span class="gnode">Santiago</span> must hold as an edge in the graph. We may also consider, for example, that <span class="gelab">bus</span> and <span class="gelab">flight</span> are both sub-properties of a more general property <span class="gelab">connects&nbsp;to</span>. Along these lines, properties may also form a hierarchy similar to what we saw for classes. We may further define the <em>domain</em> of properties, indicating the class(es) of entities for nodes from which edges with that property extend; for example, we may define that the domain of <span class="gelab">connects&nbsp;to</span> is a class <code>Place</code>, such that given the previous sub-property relations, we infer <span class="gnode">Arica</span><span class="tip arc source">–</span><span class="edge">type</span><span class="tip arc right">➛</span><span class="gnode">Place</span>. Conversely, we may define the <em>range</em> of properties, indicating the class(es) of entities for nodes to which edges with that property extend; for example, we may define that the range of <span class="gelab">city</span> is a class <code>City</code>, inferring that <span class="gnode">Arica</span><span class="tip arc source">–</span><span class="edge">type</span><span class="tip arc right">➛</span><span class="gnode">City</span>.</p>
@@ -1019,7 +1019,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 		</table>
 		<figure id="fig-sg">
 			<img src="images/fig-sg.svg" alt="Example schema graph describing sub-classes, sub-properties, domains, and ranges"/>
-			<figcaption>Example schema with sub-classes, sub-properties, domains, and ranges</figcaption>
+			<figcaption>Example schema with sub-classes, sub-properties, domains, and ranges <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_3_Schema_Identity_Context/3_1_1_Semantic_schema/figure_3_2.ttl"></a></figcaption>
 		</figure>
 
 		<p>Semantic schemata are typically defined for incomplete graph data, where the absence of an edge between two nodes, such as <span class="gnode">Viña&nbsp;del&nbsp;Mar</span><span class="tip arc source">–</span><span class="edge">flight</span><span class="tip arc right">➛</span><span class="gnode">Arica</span>, does not mean that the relation does not hold in the real world. Therefore, from the graph of Figure&nbsp;<a href="#fig-delg">2.1</a>, we cannot assume that there is no flight between Viña del Mar and Arica. In contrast, if the <em>Closed World Assumption</em> (<em>CWA</em>) were adopted – as is the case in many classical database systems – it would be assumed that the data graph is a complete description of the world, thus allowing to assert with certainty that no flight exists between the two cities. Systems that do not adopt the CWA are said to adopt the <em>Open World Assumption</em> (<em>OWA</em>). Considering our running example, it would be unreasonable to assume that the tourism organisation has complete knowledge of everything describable in its knowledge graph, and hence adopting the OWA appears more appropriate. However, it can be inconvenient if a system is unable to definitely answer “<em>yes</em>” or “<em>no</em>” to questions such as “<em>is there a flight between Arica and Viña del Mar?</em>”, especially when the organisation is certain that it has complete knowledge of the flights. A compromise between OWA and CWA is the <em>Local Closed World Assumption</em> (<em>LCWA</em>), where portions of the data graph are assumed to be complete.</p>
@@ -1031,7 +1031,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 
 		<figure id="fig-shapeExample">
 			<img src="images/fig-shapeExample.svg" alt="Example shapes graph depicted as a UML-like diagram"/>
-			<figcaption>Example shapes graph depicted as a UML-like diagram</figcaption>
+			<figcaption>Example shapes graph depicted as a UML-like diagram <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_3_Schema_Identity_Context/3_1_2_Validating_schema/"></a></figcaption>
 		</figure>
 
 		<p>Given a shape and a targeted node, it is possible to check if the node conforms to that shape or not, which may require checking conformance of other nodes; for example, the node <span class="gnode">EID15</span> conforms to the <span class="shap">Event</span> shape not only based on its local properties, but also based on conformance of <span class="gnode">Santa&nbsp;Lucía</span> to <span class="shap">Venue</span> and <span class="gnode">Santiago</span> to <span class="shap">City</span>. Conformance dependencies may also be recursive, where the conformance of <span class="gnode">Santiago</span> to <span class="shap">City</span> requires that it conforms to <span class="shap">Place</span>, which requires that <span class="gnode">Viña&nbsp;del&nbsp;Mar</span> and <span class="gnode">Arica</span> conform to <span class="shap">Place</span>, and so on. Conversely, <span class="gnode">EID16</span> does not conform to <span class="gnode">Event</span>, as it does not have the <span class="gelab">start</span> and <span class="gelab">end</span> properties required by the example shapes graph.</p>
@@ -1216,14 +1216,14 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 
 		<figure id="fig-emergentSchema">
 			<img src="images/fig-emergentSchema.svg" alt="Example quotient graph simulating the data graph in Figure&nbsp;1"/>
-			<figcaption>Example quotient graph simulating the data graph in Figure&nbsp;<a href="#fig-delg">2.1</a></figcaption>
+			<figcaption>Example quotient graph simulating the data graph in Figure&nbsp;<a href="#fig-delg">2.1</a> <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_3_Schema_Identity_Context/3_1_3_Emergent_schema/figure_3_4.ttl"></a></figcaption>
 		</figure>
 
 		<p>There are many ways in which quotient graphs may be defined, depending not only on how nodes are partitioned, but also how the edges are defined. Different quotient graphs may provide different guarantees with respect to the structure they preserve. Formally, we can say that every quotient graph <em>simulates</em> its input graph (based on the <em>simulation relation</em> of set membership between data nodes and quotient nodes), meaning that for all \(x \in X\) with \(x\) an input node and \(X\) a quotient node, if <span class="gnode">\(x\)</span><span class="tip arc source">–</span><span class="edge">\(y\)</span><span class="tip arc right">➛</span><span class="gnode">\(z\)</span> is an edge in the data graph, then there must exist an edge <span class="gnode">\(X\)</span><span class="tip arc source">–</span><span class="edge">\(y\)</span><span class="tip arc right">➛</span><span class="gnode">\(Z\)</span> in the quotient graph such that \(z \in Z\); for example, the quotient graph of Figure&nbsp;<a href="#fig-emergentSchema">3.4</a> simulates the data graph of Figure&nbsp;<a href="#fig-delg">2.1</a>. However, this quotient graph seems to suggest (for instance) that <span class="gnode">EID16</span> would have a start and end date in the data graph when this is not the case. A stronger notion of structural preservation is given by <em>bisimilarity</em>, which in this case would further require that if <span class="gnode">\(X\)</span><span class="tip arc source">–</span><span class="edge">\(y\)</span><span class="tip arc right">➛</span><span class="gnode">\(Z\)</span> is an edge in the quotient graph, then for all \(x \in X\), there must exist a \(z \in Z\) such that <span class="gnode">\(x\)</span><span class="tip arc source">–</span><span class="edge">\(y\)</span><span class="tip arc right">➛</span><span class="gnode">\(z\)</span> is in the data graph; this is not satisfied by <span class="gnode">EID16</span> in the quotient graph of Figure&nbsp;<a href="#fig-emergentSchema">3.4</a>, which does not have an outgoing edge labelled <span class="gelab">start</span> or <span class="gelab">end</span> in the original data graph. Figure&nbsp;<a href="#fig-emergentSchema2">3.5</a> illustrates a bisimilar version of the quotient graph, splitting the <em>event</em> partition into two nodes reflecting their different outgoing edges. An interesting property of bisimilarity is that it preserves forward-directed paths: given a path expression \(r\) without inverses and two bisimilar graphs, \(r\) will match a path in one graph if and only if it matches a corresponding path in the other bisimilar graph. One can verify, for example, that a path matches <span class="gnode">\(x\)</span><span class="tip arc source">–</span><span class="edge">city\(\cdot\)(flight|bus)*</span><span class="tip arc right">➛</span><span class="gnode">\(z\)</span> in Figure&nbsp;<a href="#fig-delg">2.1</a> if and only if there is a path matching <span class="gnode">\(X\)</span><span class="tip arc source">–</span><span class="edge">city\(\cdot\)(flight|bus)*</span><span class="tip arc right">➛</span><span class="gnode">\(Z\)</span> in Figure&nbsp;<a href="#fig-emergentSchema2">3.5</a> such that \(x \in X\) and \(z \in Z\).</p>
 
 		<figure id="fig-emergentSchema2">
 			<img src="images/fig-emergentSchema2.svg" alt="Example quotient graph bisimilar with the data graph in Figure&nbsp;1"/>
-			<figcaption>Example quotient graph bisimilar with the data graph in Figure&nbsp;<a href="#fig-delg">2.1</a></figcaption>
+			<figcaption>Example quotient graph bisimilar with the data graph in Figure&nbsp;<a href="#fig-delg">2.1</a> <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_3_Schema_Identity_Context/3_1_3_Emergent_schema/figure_3_5.ttl"></a></figcaption>
 		</figure>
 
 		<p>There are many ways in which quotient graphs may be defined, depending on the equivalence relation that partitions nodes. Furthermore, there are many ways in which other similar or bisimilar graphs can be defined, depending on the (bi)simulation relation that preserves the data graph’s structure&nbsp;[<a href="#ref-CebiricGKKMTZ19">Čebirić et al., 2019</a>]. Such techniques aim to <em>summarise</em> the data graph into a higher-level topology. In order to reduce the memory overhead of the quotient graph, in practice, nodes may rather be labelled with the cardinality of the partition and/or a high-level label (e.g., <em>event</em>, <em>city</em>) for the partition rather than storing the labels of all nodes in the partition.</p>
@@ -1279,7 +1279,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 
 		<figure id="fig-globalIds">
 			<img src="images/fig-globalIds.svg" alt="Result of merging two graphs with ambiguous local identifiers"/>
-			<figcaption>Result of merging two graphs with ambiguous local identifiers</figcaption>
+			<figcaption>Result of merging two graphs with ambiguous local identifiers <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_3_Schema_Identity_Context/3_2_1_Persistent_identifiers/"></a></figcaption>
 		</figure>
 
 		<p>In the context of the Semantic Web, the RDF data model goes one step further and recommends that global Web identifiers be used for nodes and edge labels. However, rather than adopt the <em>Uniform Resource Locators (URLs)</em> used to identify the location of <em>information resources</em> such as webpages, RDF&nbsp;1.1 proposes to use <em>Internationalised Resource Identifiers (IRIs)</em> to identify <em>non-information resources</em> such as cities or events.<sup class="fnmark" id="fnm6"><a href="#fn6">6</a></sup><span class="footnote" id="fn6"><sup><a href="#fnm6">note 6</a></sup> Uniform Resource Identifiers (URIs) can be Uniform Resource Locators (URLs), used to locate information resources, and Uniform Resource Names (URNs), used to name resources. Internationalised Resource Identifiers (IRIs) are URIs that allow Unicode (e.g., <code>http://example.com/Ñam</code>).</span> Hence, for example, in the RDF representation of the Wikidata&nbsp;[<a href="#ref-VrandecicK14">Vrandečić and Krötzsch, 2014</a>] – a knowledge graph proposed to complement Wikipedia, discussed in more detail in Chapter&nbsp;<a href="#chap-kgs">10</a> – while the URL <span class="gnode"><a class="uri" href="https://www.wikidata.org/wiki/Q2887">https://www.wikidata.org/wiki/Q2887</a></span> refers to a webpage that can be loaded in a browser providing human-readable metadata about Santiago, the IRI <span class="gnode"><a class="uri" href="http://www.wikidata.org/entity/Q2887">http://www.wikidata.org/entity/Q2887</a></span> refers to the city itself. Distinguishing the identifiers for the webpage and the city itself avoids naming clashes; for example, if we use the URL to identify both the webpage and the city, we may end up with an edge in our graph, such as (with readable labels below the edge):</p>
@@ -1317,7 +1317,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 
 		<figure id="fig-list">
 			<img src="images/fig-list.svg" alt="RDF list representing the three largest peaks of Chile, in order"/>
-			<figcaption>RDF list representing the three largest peaks of Chile, in order</figcaption>
+			<figcaption>RDF list representing the three largest peaks of Chile, in order <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_3_Schema_Identity_Context/3_2_5_Existential_nodes/"></a></figcaption>
 		</figure>
 		</section>
 
@@ -1335,15 +1335,15 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 		<figure id="fig-temporal">
 			<figure id="fig-reif" style="display:inline-block;margin-right:2.5em;margin-left:0;">
 				<img src="images/fig-reif.svg" alt="RDF Reification"/>
-				<figcaption>RDF Reification</figcaption>
+				<figcaption>RDF Reification <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_3_Schema_Identity_Context/3_3_2_Reification/figure_3_8_a.ttl"></a></figcaption>
 			</figure>
 			<figure id="fig-nary" style="display:inline-block;">
 				<img src="images/fig-nary.svg" alt="n-ary Relations"/>
-				<figcaption>\(n\)-ary Relations</figcaption>
+				<figcaption>\(n\)-ary Relations <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_3_Schema_Identity_Context/3_3_2_Reification/figure_3_8_b.ttl"></a></figcaption>
 			</figure>
 			<figure id="fig-singprop" style="display:inline-block;margin-right:0;margin-left:2em;">
 				<img src="images/fig-singprop.svg" alt="Singleton properties"/>
-				<figcaption>Singleton properties</figcaption>
+				<figcaption>Singleton properties <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_3_Schema_Identity_Context/3_3_2_Reification/figure_3_8_c.ttl"></a></figcaption>
 			</figure>
 			<figcaption>Three representations of temporal context on a directed labelled edge</figcaption>
 		</figure>
@@ -1354,15 +1354,15 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 		<figure id="fig-temporal2">
 			<figure id="fig-ngraph" style="display:inline-block;margin-right:2.5em;margin-left:0;">
 				<img src="images/fig-ngraph.svg" alt="Named graph"/>
-				<figcaption>Named graph</figcaption>
+				<figcaption>Named graph <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_3_Schema_Identity_Context/3_3_3_Higher_arity_representation/figure_3_9_a.trig"></a></figcaption>
 			</figure>
 			<figure id="fig-pgc" style="display:inline-block;">
 				<img src="images/fig-pgc.svg" alt="Property graph"/>
-				<figcaption>Property graph</figcaption>
+				<figcaption>Property graph <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_3_Schema_Identity_Context/3_3_3_Higher_arity_representation/figure_3_9_b.cypher"></a></figcaption>
 			</figure>
 			<figure id="fig-rdfstar" style="display:inline-block;margin-right:0;margin-left:2em;">
 				<img src="images/fig-rdfstar.svg" alt="RDF*"/>
-				<figcaption>RDF*</figcaption>
+				<figcaption>RDF* <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_3_Schema_Identity_Context/3_3_3_Higher_arity_representation/figure_3_9_c.rdfstar"></a></figcaption>
 			</figure>
 			<figcaption>Three higher-arity representations of temporal context on an edge</figcaption>
 		</figure>
@@ -1376,7 +1376,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 			<img src="images/fig-time1.svg" alt="Temporally annotated graph" class="multi"/>
 			<img src="images/fig-time2.svg" alt="Example query"/>
 			<div><div style="display:inline;">\(Q(G) :\) <table class="condensedTable" style="position:relative;top:.6em;display:inline-block;vertical-align:middle;"><thead><tr><th>?city</th><th>context</th></tr></thead><tbody><tr><td><code>Arica</code></td><td>\(\color{blue}\{[123,125],[276,279]\}\)</td></tr></tbody></table></div></div>
-			<figcaption>Example query on a temporally annotated graph</figcaption>
+			<figcaption>Example query on a temporally annotated graph <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_3_Schema_Identity_Context/3_3_4_Annotations/"></a></figcaption>
 		</figure>
 
 		<div class="formal">
@@ -1431,7 +1431,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 
 		<figure id="fig-bgpFS">
 			<img src="images/fig-bgpFS.svg" alt="Graph pattern querying for names of festivals in Santiago"/>
-			<figcaption>Graph pattern querying for names of festivals in Santiago</figcaption>
+			<figcaption>Graph pattern querying for names of festivals in Santiago <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_4_Deductive_Knowledge/figure_4_1.sparql"></a></figcaption>
 		</figure>
 
 		<p>In this chapter, we discuss ways in which more complex entailments can be expressed and automated. Though we could leverage a number of logical frameworks for these purposes – such as First-Order Logic, Datalog, Prolog, Answer Set Programming, etc. – we focus on <em>ontologies</em>, which constitute a formal representation of knowledge that, importantly for us, can be represented as a graph. We then discuss how these ontologies can be formally defined, how they relate to existing logical frameworks, and how reasoning can be conducted with respect to such ontologies.</p>
@@ -1480,7 +1480,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 		<p>In Table&nbsp;<a href="#tab-ontEqIneq">4.1</a>, we list the main features supported by OWL for describing <em>individuals</em> (e.g., <span class="sf">Santiago</span>, <span class="sf">EID16</span>), sometimes distinguished from classes and properties. First, we can <em>assert</em> (binary) relations between individuals using edges such as <span class="gnode">Santa&nbsp;Lucía</span><span class="tip arc source">–</span><span class="edge">city</span><span class="tip arc right">➛</span><span class="gnode">Santiago</span>. In the condition column, when we write <span class="ginode">\(x\)</span><span class="tip iarc source">–</span><span class="iedge">\(y\)</span><img class="tip" src="images/edge-tip2.png" width="15" alt="arrow tip rightward"/><span class="ginode">\(z\)</span>, for example, we refer to the condition that the relation is given in the domain graph of the interpretation; if so, the interpretation satisfies the axiom. OWL further allows for defining relations to explicitly state that two terms refer to the <em>same</em> entity, where, e.g., <span class="gnode">Región&nbsp;V</span><span class="tip arc source">–</span><span class="edge">same&nbsp;as</span><span class="tip arc right">➛</span><span class="gnode">Región de Valparaíso</span> states that both refer to the same region (per Section&nbsp;<a href="#sec-identity">3.2</a>); or that two terms refer to <em>different</em> entities, where, e.g., <span class="gnode">Valparaíso</span><span class="tip arc source">–</span><span class="edge">diff.&nbsp;from</span><span class="tip arc right">➛</span><span class="gnode">Región&nbsp;de&nbsp;Valparaíso</span> distinguishes the city from the region of the same name. We may also state that a relation does not hold using <em>negation</em>, which can be serialised as a graph using a form of reification (see Figure&nbsp;<a href="#fig-reif">3.8a</a>).</p>
 
 		<table class="normalTable" id="tab-ontEqIneq">
-			<caption>Ontology features for individuals</caption>
+			<caption>Ontology features for individuals <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_4_Deductive_Knowledge/4_1_2_Ontology_features/table_4_1.ttl"></a></caption>
 			<thead>
 				<tr>
 					<th>Feature</th>
@@ -1521,7 +1521,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 		<p>In Section&nbsp;<a href="#sec-semSchema">3.1.1</a>, we already discussed how <em>sub-properties</em>, <em>domains</em> and <em>ranges</em> may be defined for properties. OWL allows such definitions, and further includes other features, as listed in Table&nbsp;<a href="#tab-ontProp">4.2</a>. We may define a pair of properties to be <em>equivalent</em>, <em>inverses</em>, or <em>disjoint</em>. We can further define a particular property to denote a <em>transitive</em>, <em>symmetric</em>, <em>asymmetric</em>, <em>reflexive</em>, or <em>irreflexive</em> relation. We can also define the multiplicity of the relation denoted by properties, based on being <em>functional</em> (many-to-one) or <em>inverse-functional</em> (one-to-many). We may further define a <em>key</em> for a class, denoting the set of properties whose values uniquely identify the entities of that class. Without adopting a Unique Name Assumption (UNA), from these latter three features we may conclude that two or more terms refer to the same entity. Finally, we can relate a property to a <em>chain</em> (a path expression only allowing concatenation of properties) such that pairs of entities related by the chain are also related by the given property. Note that for the latter two features in Table&nbsp;<a href="#tab-ontProp">4.2</a> we require representing a list, denoted with a vertical notation <span class="gnode">⋮</span>; while such a list may be serialised as a graph in a number of concrete ways, OWL uses RDF lists (see Figure&nbsp;<a href="#fig-list">3.7</a>).</p>
 
 		<table class="normalTable" id="tab-ontProp">
-			<caption>Ontology features for property axioms</caption>
+			<caption>Ontology features for property axioms <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_4_Deductive_Knowledge/4_1_2_Ontology_features/table_4_2.ttl"></a></caption>
 			<thead>
 				<tr>
 					<th>Feature</th>
@@ -1628,7 +1628,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 		<p>In Section&nbsp;<a href="#sec-semSchema">3.1.1</a>, we discussed how class hierarchies can be modelled using a <em>sub-class</em> relation. OWL supports sub-classes, and many additional features, for defining and making claims about classes; these additional features are summarised in Table&nbsp;<a href="#tab-ontClass">4.3</a>. Given a pair of classes, OWL allows for defining that they are <em>equivalent</em>, or <em>disjoint</em>. Thereafter, OWL provides a variety of features for defining novel classes by applying set operators on other classes, or based on conditions that the properties of its instances satisfy. First, using set operators, one can define a novel class as the <em>complement</em> of another class, the <em>union</em> or <em>intersection</em> of a list (of arbitrary length) of other classes, or as an <em>enumeration</em> of all of its instances. Second, by placing restrictions on a particular property \(p\), one can define classes whose instances are all of the entities that have: <em>some value</em> from a given class on \(p\); <em>all values</em> from a given class on \(p\);<sup class="fnmark" id="fnm11"><a href="#fn11">11</a></sup><span class="footnote" id="fn11"><sup><a href="#fnm11">note 11</a></sup> While something like <span class="gnode">flight</span><span class="tip arc left">➛</span><span class="edge">prop</span><span class="tip arc source">–</span><span class="gnode">DomesticAirport</span><span class="tip arc source">–</span><span class="edge">all</span><span class="tip arc right">➛</span><span class="gnode">NationalFlight</span> might appear to be a more natural example for <span class="sc">All Values</span>, this would be problematic as the corresponding <em>for all</em> condition is satisfied when no such node exists, so we would infer anything known not to have any flights to be a domestic airport. (We could, however, define the intersection of such a definition and airport as being a domestic airport.)</span> have a specific individual as a value on \(p\) (<em>has value</em>); have themselves as a reflexive value on \(p\) (<em>has self</em>); have at least, at most or exactly some number of values on \(p\) (<em>cardinality</em>); and have at least, at most or exactly some number of values on \(p\) from a given class (<em>qualified cardinality</em>). For the latter two cases, in Table&nbsp;<a href="#tab-ontClass">4.3</a>, we use the notation “\(\#\{\)<span class="ginode">a</span>\(\mid \phi \}\)” to count distinct entities satisfying \(\phi\) in the interpretation. These features can then be combined to create more complex classes, where combining the examples for <span class="sc">Intersection</span> and <span class="sc">Has Self</span> in Table&nbsp;<a href="#tab-ontClass">4.3</a> gives the definition: <em>self-driving taxis are taxis having themselves as a driver</em>.</p>
 
 		<table class="normalTable" id="tab-ontClass">
-			<caption>Ontology features for class axioms and definitions</caption>
+			<caption>Ontology features for class axioms and definitions <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_4_Deductive_Knowledge/4_1_2_Ontology_features/table_4_3.ttl"></a></caption>
 			<thead>
 				<tr>
 					<th>Feature</th>
@@ -1648,7 +1648,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 					<td>Equivalence</td>
 					<td><span class="gnode">\(c\)</span><span class="tip arc source">–</span><span class="edge">equiv.&nbsp;c.</span><span class="tip arc right">➛</span><span class="gnode">\(d\)</span></td>
 					<td><span class="ginode">\(x\)</span><span class="tip iarc source">–</span><span class="iedge">type</span><img class="tip" src="images/edge-tip2.png" width="15" alt="arrow tip rightward"/><span class="ginode">\(c\)</span> iff <span class="ginode">\(x\)</span><span class="tip iarc source">–</span><span class="iedge">type</span><img class="tip" src="images/edge-tip2.png" width="15" alt="arrow tip rightward"/><span class="ginode">\(d\)</span></td>
-					<td><span class="gnode">Human</span><span class="tip arc source">–</span><span class="edge">suc.&nbsp;of</span><span class="tip arc right">➛</span><span class="gnode">Person</span></td>
+					<td><span class="gnode">Human</span><span class="tip arc source">–</span><span class="edge">equiv.&nbsp;of</span><span class="tip arc right">➛</span><span class="gnode">Person</span></td>
 				</tr>
 				<tr>
 					<td>Disjoint</td>
@@ -1660,7 +1660,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 					<td>Complement</td>
 					<td><span class="gnode">\(c\)</span><span class="tip arc source">–</span><span class="edge">comp.</span><span class="tip arc right">➛</span><span class="gnode">\(d\)</span></td>
 					<td><span class="ginode">\(x\)</span><span class="tip iarc source">–</span><span class="iedge">type</span><img class="tip" src="images/edge-tip2.png" width="15" alt="arrow tip rightward"/><span class="ginode">\(c\)</span> iff not <span class="ginode">\(x\)</span><span class="tip iarc source">–</span><span class="iedge">type</span><img class="tip" src="images/edge-tip2.png" width="15" alt="arrow tip rightward"/><span class="ginode">\(d\)</span></td>
-					<td><span class="gnode">Dead</span><span class="tip arc source">–</span><span class="edge">com.</span><span class="tip arc right">➛</span><span class="gnode">Alive</span></td>
+					<td><span class="gnode">Dead</span><span class="tip arc source">–</span><span class="edge">comp.</span><span class="tip arc right">➛</span><span class="gnode">Alive</span></td>
 				</tr>
 				<tr>
 					<td>Union</td>
@@ -1766,7 +1766,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 		<p>Rules can capture entailments under ontological conditions. In Table&nbsp;<a href="#tab-rulesRdfs">4.4</a>, we list some example rules for sub-class, sub-property, domain and range features&nbsp;[<a href="#ref-MunozPG09">Muñoz et al., 2009</a>]; these rules may be considered incomplete, not capturing, for example, that every class is a sub-class of itself, that every property is a sub-property of itself, etc. A more comprehensive set of rules for the OWL features of Tables&nbsp;<a href="#tab-ontEqIneq">4.1</a>–<a href="#tab-ontClass">4.3</a> have been defined as OWL 2 RL/RDF&nbsp;[<a href="#ref-key:owl2profiles">Motik et al., 2012</a>]; these rules are likewise incomplete as such rules cannot fully capture negation (e.g., <span class="sc">Complement</span>), existentials (e.g., <span class="sc">Some Values</span>), universals (e.g., <span class="sc">All Values</span>), or counting (e.g., <span class="sc">Cardinality</span> and <span class="sc">Qualified Cardinality</span>). Other rule languages have, however, been proposed to support additional such features, including existentials (see, e.g., Datalog\(^\pm\)&nbsp;[<a href="#ref-BellomariniSG18">Bellomarini et al., 2018</a>]), disjunction (see, e.g., Disjunctive Datalog&nbsp;[<a href="#ref-RudolphKH08">Rudolph et al., 2008</a>]), etc.</p>
 
 		<table class="normalTable" id="tab-rulesRdfs">
-			<caption>Example rules for sub-class, sub-property, domain, and range features</caption>
+			<caption>Example rules for sub-class, sub-property, domain, and range features <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_4_Deductive_Knowledge/4_2_1_Rules/table_4_4.rif"></a></caption>
 			<thead>
 				<tr>
 					<th>Feature</th>
@@ -1830,12 +1830,12 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 				<dd>\(\Join (\)<img class="inlined" src="images/fig-qrew5.svg" alt="location Santiago"/> \(\cup\) <img class="inlined" src="images/fig-qrew6.svg" alt="venue city Santiago"/>\()\)</dd>
 				<dd>\(\Join \) &nbsp;<img class="inlined" src="images/fig-qrew7.svg" alt="name"/></dd>
 			</dl>
-			<figcaption>Query rewriting example for the query \(Q\) of Figure&nbsp;<a href="#fig-bgpFS">4.1</a></figcaption>
+			<figcaption>Query rewriting example for the query \(Q\) of Figure&nbsp;<a href="#fig-bgpFS">4.1</a> <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_4_Deductive_Knowledge/4_2_1_Rules/"></a></figcaption>
 		</figure>
 
 		<p>While rules can be used to (partially) capture ontological entailments, they can also be defined independently of an ontology language, capturing entailments for a given domain. In fact, some rules – such as the following – cannot be captured by the ontology features previously seen, as they do not support ways to infer relations from cyclical graph patterns (for computability reasons):</p>
 		
-		<p class="mathblock"><img class="inside" src="images/fig-inline-rule.svg" alt="dom flight rule premise" style="margin-right:2em;vertical-align:middle;position:relative;"/> \(\Rightarrow\) <span class="gvar">?x</span><span class="tip arc source">–</span><span class="edge">domestic&nbsp;flight</span><span class="tip arc right">➛</span><span class="gvar">?y</span></p>
+		<p class="mathblock"><img class="inside" src="images/fig-inline-rule.svg" alt="dom flight rule premise" style="margin-right:2em;vertical-align:middle;position:relative;"/> \(\Rightarrow\) <span class="gvar">?x</span><span class="tip arc source">–</span><span class="edge">domestic&nbsp;flight</span><span class="tip arc right">➛</span><span class="gvar">?y</span> <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_4_Deductive_Knowledge/4_2_1_Rules/flight-rule.rif"></a></p>
 
 		<p>Various languages allow for expressing rules over graphs – independently or alongside of an ontology language – including: Notation3 (N3)&nbsp;[<a href="#ref-n3">Berners-Lee and Connolly, 2011</a>], Rule Interchange Format (RIF)&nbsp;[<a href="#ref-rif">Kifer and Boley, 2013</a>], Semantic Web Rule Language (SWRL)&nbsp;[<a href="#ref-swrl">Horrocks et al., 2004</a>], and SPARQL Inferencing Notation (SPIN)&nbsp;[<a href="#ref-spin">Knublauch et al., 2011</a>], amongst others.</p>
 
@@ -2165,7 +2165,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 
 		<figure id="fig-chileTransport">
 			<img src="images/fig-chileTransport.svg" alt="Data graph representing transport routes in Chile"/>
-			<figcaption>Data graph representing transport routes in Chile</figcaption>
+			<figcaption>Data graph representing transport routes in Chile <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_5_Inductive_Knowledge/5_1Graph_Analytics/figure_5_2.ttl"></a></figcaption>
 		</figure>
 
 		<h4 id="sssec-graph-analytics-tasks" class="subsection">Techniques</h4>
@@ -2188,7 +2188,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 
 		<figure id="fig-pagerank">
 			<img src="images/fig-pagerank.svg" alt="Example of a systolic iteration of PageRank for a sample sub-graph of Figure&nbsp;24"/>
-			<figcaption>Example of a systolic iteration of PageRank on a sub-graph of Figure&nbsp;<a href="#fig-chileTransport">5.2</a></figcaption>
+			<figcaption>Example of a systolic iteration of PageRank on a sub-graph of Figure&nbsp;<a href="#fig-chileTransport">5.2</a> <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_5_Inductive_Knowledge/5_1_2_Frameworks/figure_5_3.ttl"></a></figcaption>
 		</figure>
 
 		<p>While the given example is for PageRank, the systolic abstraction is general enough to support a wide variety of graph analytics, including those previously mentioned. An algorithm in this framework consists of the functions to compute message values in the <em>message phase</em> (<span class="sc">Msg</span>), and to accumulate the messages in the aggregation phase (<span class="sc">Agg</span>). The framework will take care of distribution, message passing, fault tolerance, etc. However, such frameworks – based on message passing between neighbours – have limitations: not all types of analytics can be expressed in such frameworks&nbsp;[<a href="#ref-XuHLJ19">Xu et al., 2019</a>].<sup class="fnmark" id="fnm18"><a href="#fn18">18</a></sup><span class="footnote" id="fn18"><sup><a href="#fnm18">note 18</a></sup> Formally, <a href="#ref-XuHLJ19">Xu et al. [2019]</a> have shown that such frameworks are as powerful as the (incomplete) Weisfeiler–Lehman (WL) graph isomorphism test for distinguishing graphs. This test involves nodes recursively hashing together hashes of local information received from neighbours, and passing these hashes to neighbours.</span> Hence frameworks may allow additional features, such as a <em>global step</em> that performs a global computation on all nodes, making the result available to each node&nbsp;[<a href="#ref-MalewiczABDHLC10">Malewicz et al., 2010</a>]; or a <em>mutation step</em> that allows for adding or removing nodes and edges during processing&nbsp;[<a href="#ref-MalewiczABDHLC10">Malewicz et al., 2010</a>].</p>
@@ -2256,15 +2256,15 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 		<figure id="fig-transform">
 			<figure id="fig-transform1" style="display:inline-block;margin-right:2.5em;margin-left:0;">
 				<img src="images/fig-transform1.svg" alt="Original graph"/>
-				<figcaption>Original graph</figcaption>
+				<figcaption>Original graph <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_5_Inductive_Knowledge/5_1_3_Analytics_on_data_graphs/figure_5_4_a.ttl"></a></figcaption>
 			</figure>
 			<figure id="fig-transform2" style="display:inline-block;">
 				<img src="images/fig-transform2.svg" alt="Lossy transformation"/>
-				<figcaption>Lossy transformation</figcaption>
+				<figcaption>Lossy transformation <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_5_Inductive_Knowledge/5_1_3_Analytics_on_data_graphs/figure_5_4_b.ttl"></a></figcaption>
 			</figure>
 			<figure id="fig-transform3" style="display:inline-block;margin-right:0;margin-left:2em;">
 				<img src="images/fig-transform3.svg" alt="Lossless transformation"/>
-				<figcaption>Lossless transformation</figcaption>
+				<figcaption>Lossless transformation <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_5_Inductive_Knowledge/5_1_3_Analytics_on_data_graphs/figure_5_4_c.ttl"></a></figcaption>
 			</figure>
 			<figcaption>Transformations from a directed edge-labelled graph to a directed graph</figcaption>
 		</figure>
@@ -2296,14 +2296,14 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 		<figure id="fig-TransE">
 			<figure id="fig-distEg" style="display:inline-block;margin-right:2.5em;margin-left:0;">
 				<img src="images/fig-distEg.svg" alt="Original graph"/>
-				<figcaption>Original graph</figcaption>
+				<figcaption>Original graph <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_5_Inductive_Knowledge/5_2_1_Tensor-based_models/figure_5_5_a.ttl"></a></figcaption>
 			</figure>
 			<figure id="fig-transER" style="display:inline-block;">
 				<img src="images/fig-transER.svg" alt="Relation embeddings"/>
 				<figcaption>Relation embeddings</figcaption>
 			</figure>
 			<figure id="fig-transEE" style="display:inline-block;margin-right:0;margin-left:2em;">
-				<img src="images/fig-transEE.svg" alt="Link prediction"/>
+				<img src="images/fig-transEE.svg" alt="Entity embeddings"/>
 				<figcaption>Entity embeddings</figcaption>
 			</figure>
 			<figcaption>Toy example of two-dimensional relation and entity embeddings learnt by TransE; the entity embeddings use abbreviations and include an example of vector addition to predict what is west of Antofagasta</figcaption>
@@ -2606,7 +2606,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 				</tr>
 			</table>
 			<div style="height:2.5em;">&nbsp;</div>
-			<figcaption>On the left a sub-graph of Figure&nbsp;<a href="#fig-chileTransport">5.2</a> highlighting the neighbourhood of Punta Arenas, where nodes are annotated with feature vectors (\(\mathbf{n}_x\)) and hidden states at step \(t\) (\(\mathbf{h}_x^{(t)}\)), and edges are annotated with feature vectors (\(\mathbf{a}_{xy}\)); on the right, the GNN transition and output functions proposed by <a href="#ref-ScarselliGTHM09">Scarselli et al. [2009]</a> and an example for Punta Arenas (\(x = 1\)), where \(\mathrm{N}(x)\) denotes the neighbouring nodes of \(x\), \(f_{\mathbf{w}}(\cdot)\) denotes the transition function with parameters \(\mathbf{w}\) and \(g_{\mathbf{w}'}(\cdot)\) denotes the output function with parameters \(\mathbf{w'}\)</figcaption>
+			<figcaption>On the left a sub-graph of Figure&nbsp;<a href="#fig-chileTransport">5.2</a> <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_5_Inductive_Knowledge/5_3_1_Recursive_graph_neural_networks/figure_5_7.ttl"></a> highlighting the neighbourhood of Punta Arenas, where nodes are annotated with feature vectors (\(\mathbf{n}_x\)) and hidden states at step \(t\) (\(\mathbf{h}_x^{(t)}\)), and edges are annotated with feature vectors (\(\mathbf{a}_{xy}\)); on the right, the GNN transition and output functions proposed by <a href="#ref-ScarselliGTHM09">Scarselli et al. [2009]</a> and an example for Punta Arenas (\(x = 1\)), where \(\mathrm{N}(x)\) denotes the neighbouring nodes of \(x\), \(f_{\mathbf{w}}(\cdot)\) denotes the transition function with parameters \(\mathbf{w}\) and \(g_{\mathbf{w}'}(\cdot)\) denotes the output function with parameters \(\mathbf{w'}\)</figcaption>
 		</figure>
 
 		<div class="formal">
@@ -2665,7 +2665,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 
 		<figure id="fig-airports">
 			<img src="images/fig-airports.svg" alt="An incomplete directed edge-labelled graph describing flights between airports"/>
-			<figcaption>A directed edge-labelled graph describing flights between airports</figcaption>
+			<figcaption>A directed edge-labelled graph describing flights between airports <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_5_Inductive_Knowledge/5_4_Symbolic_Learning/figure_5_8.ttl"></a></figcaption>
 		</figure>
 
 		<p>An alternative (sometimes complementary) approach is to adopt <em>symbolic learning</em> in order to learn <em>hypotheses</em> in a symbolic (logical) language that “explain” a given set of positive and negative edges. These edges are typically generated from the knowledge graph in an automatic manner (similar to the case of knowledge graph embeddings). The hypotheses then serve as interpretable models that can be used for further deductive reasoning. Given the graph of Figure&nbsp;<a href="#fig-airports">5.8</a>, we may, for example, learn the rule <span class="gvar">?x</span><span class="tip arc source">–</span><span class="edge">flight</span><span class="tip arc right">➛</span><span class="gvar">?y</span> \(\Rightarrow\) <span class="gvar">?y</span><span class="tip arc source">–</span><span class="edge">flight</span><span class="tip arc right">➛</span><span class="gvar">?x</span> from observing that <span class="gelab">flight</span> routes tend to be return routes. Alternatively, rather than learn rules, we might learn a DL axiom from the graph stating that airports are either domestic, international, or both: <code>Airport</code> \(\sqsubseteq\) <code>DomesticAirport</code> \(\sqcup\) <code>InternationalAirport</code>. Such rules and axioms can then be used for deductive reasoning, and offer an interpretable model for new knowledge that is entailed/predicted; for example, from the aforementioned rule for return flights, one can interpret why a novel edge <span class="gnode">SCL</span><span class="tip arc source">–</span><span class="edge">flight</span><span class="tip arc right">➛</span><span class="gnode">ARI</span> is predicted. This further offers domain experts the opportunity to verify the models – e.g., the rules and axioms – derived by such processes. Finally, rules/axioms are quantified (<em>all</em> flights have a return flight, <em>all</em> airports are domestic or international, etc.), so they can be applied to unseen examples (e.g., with the aforementioned rule, we can derive <span class="gnode">CDG</span><span class="tip arc source">–</span><span class="edge">flight</span><span class="tip arc right">➛</span><span class="gnode">SCL</span> from a new edge <span class="gnode">SCL</span><span class="tip arc source">–</span><span class="edge">flight</span><span class="tip arc right">➛</span><span class="gnode">CDG</span> with the unseen node <span class="gnode">CDG</span>).</p>
@@ -2762,7 +2762,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 
 		<figure id="fig-textExtract">
 			<img src="images/fig-textExtract.svg" alt="Text extraction example; dashed nodes are new to the knowledge graph"/>
-			<figcaption>Text extraction example; dashed nodes are new to the knowledge graph</figcaption>
+			<figcaption>Text extraction example; dashed nodes are new to the knowledge graph <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_6_Creation_and_Enrichment/6_2_Text_Sources/figure_6_1.ttl"></a></figcaption>
 		</figure>
 
 		<h4 id="sssec-pre-processing" class="subsection">Pre-processing</h4>
@@ -2917,7 +2917,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 		</figure>
 		<figure id="fig-direct">
 			<img src="images/fig-direct.svg" alt="Direct mapping result for the first rows of both tables in Figure&nbsp;33"/>
-			<figcaption>Direct mapping result for the first rows of both tables in Figure&nbsp;<a href="#fig-rdbCrime">6.3</a></figcaption>
+			<figcaption>Direct mapping result for the first rows of both tables in Figure&nbsp;<a href="#fig-rdbCrime">6.3</a> <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_6_Creation_and_Enrichment/6_4_1_Mapping_from_tables/figure_6_4.ttl"></a></figcaption>
 		</figure>
 
 		<p>A direct mapping automatically generates a graph from a table. We present in Figure&nbsp;<a href="#fig-direct">6.4</a> the result of a standard direct mapping&nbsp;[<a href="#ref-dm">Arenas et al., 2012</a>], which creates an edge <span class="gnode">x</span><span class="tip arc source">–</span><span class="edge">y</span><span class="tip arc right">➛</span><span class="gnode">z</span> for each (non-header, non-empty, non-<span class="sc">null</span>) cell of the table, such that <span class="gnode">x</span> represents the row of the cell, <span class="gelab">y</span> the column name of the cell, and <span class="gnode">z</span> the value of the cell. In particular, <span class="gnode">x</span> typically encodes the values of the primary key for a row (e.g., <strong><code>Claimant</code></strong>.<strong class="underline"><code>id</code></strong>); otherwise, if no primary key is defined (e.g., per the <strong><code>Report</code></strong> table), <span class="gnode">x</span> can be an anonymous node or a node based on the row number. The node <span class="gnode">x</span> and edge label <span class="gelab">y</span> further encode the name of the table to avoid clashes across tables that have the same column names used with different meanings. For each row <span class="gnode">x</span>, we may add a type edge based on the name of its table. The value <span class="gnode">z</span> may be mapped to datatype values in the corresponding graph model based on the source domain (e.g., a value in an SQL column of type <code>Date</code> can be mapped to <code>xsd:date</code> in the RDF data model). If the value is <span class="sc">null</span> (or empty), typically the corresponding edge will be omitted.<sup class="fnmark" id="fnm30"><a href="#fn30">30</a></sup><span class="footnote" id="fn30"><sup><a href="#fnm30">note 30</a></sup> One might consider representing <span class="sc">null</span>s with anonymous/blank nodes. However, <span class="sc">null</span>s in SQL can be used to mean that there is no such value, which conflicts with the existential semantics of such nodes (e.g., in RDF).</span> With respect to Figure&nbsp;<a href="#fig-direct">6.4</a>, we highlight the difference between the nodes <span class="gnode">Claimant-XY12SDA</span> and <span class="gnode">XY12SDA</span>, where the former denotes the row (or entity) identified by the latter primary key value. In case of a foreign key between two tables – such as <strong>Report.claimant</strong> referencing <strong>Claimant.<span class="underline">id</span></strong> – we can link, for example, to <span class="gnode">Claimant-XY12SDA</span> rather than <span class="gnode">XY12SDA</span>, where the former node also has the name and country of the claimant. A direct mapping along these lines has been standardised for mapping relational databases to RDF&nbsp;[<a href="#ref-dm">Arenas et al., 2012</a>], where <a href="#ref-StoicaFS19">Stoica et al. [2019]</a> have recently proposed an analogous direct mapping for property graphs. Another direct mapping has been defined for CSV and other tabular data&nbsp;[<a href="#ref-csvweb">Tandy et al., 2015</a>] that further allows for specifying column names, primary/foreign keys, and data types – which are often missing in such data formats – as part of the mapping itself.</p>
@@ -2951,7 +2951,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 
 		<figure id="fig-bad">
 			<img src="images/fig-bad.svg" alt="A newly created knowledge graph about events and their venues"/>
-			<figcaption>A newly created knowledge graph about events and their venues</figcaption>
+			<figcaption>A newly created knowledge graph about events and their venues <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_7_Quality_Assessment/figure_7_1.ttl"></a></figcaption>
 		</figure>
 
 		<p>This chapter discusses (sometimes overlapping) <em>quality dimensions</em> that capture qualitative aspects of the multifaceted notion of data quality; some of these dimensions apply more generally to databases&nbsp;[<a href="#ref-BatiniRSV15">Batini et al., 2015</a>], while others are more specific to knowledge graphs&nbsp;[<a href="#ref-ZaveriRMPLA16">Zaveri et al., 2016</a>]. We further discuss <em>quality metrics</em> that provide ways to measure quantitative aspects of these dimensions. We group dimensions and metrics in a manner inspired by <a href="#ref-BatiniS16">Batini and Scannapieco [2016]</a>.</p>
@@ -2987,7 +2987,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 
 		<figure id="fig-badOnt">
 			<img src="images/fig-badOnt.svg" alt="An ontology for the knowledge graph of Figure&nbsp;7.1"/>
-			<figcaption>An ontology for the knowledge graph of Figure&nbsp;<a href="#fig-bad">7.1</a></figcaption>
+			<figcaption>An ontology for the knowledge graph of Figure&nbsp;<a href="#fig-bad">7.1</a> <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_7_Quality_Assessment/7_3_Coherency/figure_7_2.ttl"></a></figcaption>
 		</figure>
 
 		<h4 id="sssec-consistency" class="subsection">Consistency</h4>
@@ -3035,7 +3035,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 
 		<figure id="fig-identity">
 			<img src="images/fig-identity.svg" alt="Identity linking example: Easter Island and Rapa Nui denote the same place"/>
-			<figcaption>Identity linking example: <span class="gnode">Easter&nbsp;Island</span> and <span class="gnode">Rapa&nbsp;Nui</span> denote the same place</figcaption>
+			<figcaption>Identity linking example: <span class="gnode">Easter&nbsp;Island</span> and <span class="gnode">Rapa&nbsp;Nui</span> denote the same place <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_8_Refinement/8_1_3_Identity-link_prediction/figure_8_1.ttl"></a></figcaption>
 		</figure>
 
 		<p>A major challenge in this setting is efficiency, where a pairwise matching would require \(O(n^2)\) comparisons for \(n\) the number of nodes. To address this issue, <em>blocking</em> can be used to group similar entities into (possibly overlapping, possibly disjoint) “blocks” based on similarity-preserving keys, with matching performed within each block&nbsp;[<a href="#ref-isele2011efficient">Isele et al., 2011</a>, <a href="#ref-KopckeR10">Köpcke and Rahm, 2010</a>, <a href="#ref-DraisbachN11">Draisbach and Naumann, 2011</a>]; for example, if matching places based on latitude/longitude, blocks may represent geographic regions. An alternative to discrete blocking is to use <em>windowing</em> over entities in a similarity-preserving ordering&nbsp;[<a href="#ref-DraisbachN11">Draisbach and Naumann, 2011</a>], or to consider searching for similar entities within <em>multi-dimensional spaces</em> (e.g., spacetime&nbsp;[<a href="#ref-santipantakis2019stld">Santipantakis et al., 2019</a>], spaces with Minkowski distances&nbsp;[<a href="#ref-minkowski">Ngonga Ngomo, 2012</a>], orthodromic spaces&nbsp;[<a href="#ref-orchid">Ngonga Ngomo, 2013</a>], etc.&nbsp;[<a href="#ref-SherifN18">Sherif and Ngonga Ngomo, 2018</a>]). The results can either be pairs of nodes with a computed confidence of them referring to the same entity, or crisp identity links extracted based on a fixed threshold, or binary classification&nbsp;[<a href="#ref-KopckeR10">Köpcke and Rahm, 2010</a>]. For confident identity links, the nodes’ edges may then be <em>consolidated</em>&nbsp;[<a href="#ref-HoganZUPD12">Hogan et al., 2012b</a>]; for example, we may select <span class="gnode">Easter Island</span> as the canonical node and merge the edges of <span class="gnode">Rapa&nbsp;Nui</span> onto it, enabling us to find, e.g., <em>World Heritage Sites in the Pacific Ocean</em> from Figure&nbsp;<a href="#fig-identity">8.1</a> based on the (consolidated) sub-graph <span class="gnode">World Heritage Site</span><span class="tip arc left">➛</span><span class="edge">named</span><span class="tip arc source">–</span><span class="gnode">Easter Island</span><span class="tip arc source">–</span><span class="edge">ocean</span><span class="tip arc right">➛</span><span class="gnode">Pacific</span>.</p>
@@ -3121,7 +3121,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 
 		<figure id="fig-ld">
 			<img src="images/fig-ld.svg" alt="Two example Linked Data documents from two websites, each containing an RDF graph, where wd:Q142701 refers to Pearl Jam in Wikidata while wdd:Q142701 refers to the RDF graph about Pearl Jam, and where wd:Q221535 refers to Eddie Vedder while wdd:Q221535 refers to the RDF graph about Eddie Vedder; the edge-label wdt:571 refers to “inception” in Wikidata, while wdt:527 refers to “has part”"/>
-			<figcaption>Two example Linked Data documents from two websites, each containing an RDF graph, where <code>wd:Q142701</code> refers to Pearl Jam in Wikidata while <code>wdd:Q142701</code> refers to the RDF graph about Pearl Jam, and where <code>wd:Q221535</code> refers to Eddie Vedder while <code>wdd:Q221535</code> refers to the RDF graph about Eddie Vedder; the edge-label <span class="gelab">wdt:571</span> refers to “inception” in Wikidata, while <span class="gelab">wdt:527</span> refers to “has part”</figcaption>
+			<figcaption>Two example Linked Data documents from two websites, each containing an RDF graph, where <code>wd:Q142701</code> refers to Pearl Jam in Wikidata while <code>wdd:Q142701</code> refers to the RDF graph about Pearl Jam, and where <code>wd:Q221535</code> refers to Eddie Vedder while <code>wdd:Q221535</code> refers to the RDF graph about Eddie Vedder; the edge-label <span class="gelab">wdt:571</span> refers to “inception” in Wikidata, while <span class="gelab">wdt:527</span> refers to “has part” <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_9_Publication/9_1_2_Linked_Data_Principles/figure_9_1.ttl"></a></figcaption>
 		</figure>
 
 		<p>A key challenge is posed by the fourth principle – include links to related entities – as illustrated in Figure&nbsp;<a href="#fig-ld">9.1</a>, where <span class="gnode">wd:Q221535</span> in the leftmost graph constitutes a link to related content about Pearl Jam in an external knowledge graph. Specifically, the <em>link discovery</em> task considers adding such links from one knowledge graph to another, which may involve inclusion of IRIs that dereference to external graphs (per Figure&nbsp;<a href="#fig-ld">9.1</a>), or links with special semantics such as identity links. In comparison with the link prediction task discussed in Section&nbsp;<a href="#ssec-completion">8.1</a>, which is used to complete links within a knowledge graph, link discovery aims to discover links across knowledge graphs, which involves unique aspects: first, link discovery typically considers disjoint sets of source (local) nodes and target (remote) nodes; second, the knowledge graphs may often use different vocabularies; third, while in link prediction there already exist local examples of the links to predict, in link discovery, there are often no existing links between knowledge graphs to learn from. A common technique is to define manually-crafted linkage rules (aka link specifications) that apply heuristics for defining links that potentially incorporate similarity measures&nbsp;[<a href="#ref-NgomoA11">Ngonga Ngomo and Auer, 2011</a>, <a href="#ref-silk">Volz et al., 2009</a>]. Link discovery is greatly expedited by the provision of standard identifier schemes within knowledge graphs, such as ISBNs for books, alpha-2 and alpha-3 codes for countries (e.g., <span class="sc">cl</span>, <span class="sc">clp</span>), or even links to common knowledge graphs such as DBpedia&nbsp;[<a href="#ref-LehmannIJJKMHMK15">Lehmann et al., 2015</a>] or Wikidata&nbsp;[<a href="#ref-VrandecicK14">Vrandečić and Krötzsch, 2014</a>] (that themselves include standard identifiers). We refer to the survey on link discovery by <a href="#ref-nentwig2017survey">Nentwig et al. [2017]</a> for more details.</p>
@@ -3169,7 +3169,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 
 		<figure id="fig-license">
 			<img src="images/fig-license.svg" alt="A license for event data, along with permissions, actions, and obligations"/>
-			<figcaption>A license for event data, along with permissions, actions, and obligations</figcaption>
+			<figcaption>A license for event data, along with permissions, actions, and obligations <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_9_Publication/9_3_1_Licensing/figure_9_3.ttl"></a></figcaption>
 		</figure>
 
 		<h4 id="sssec-usage-policies" class="subsection">Usage policies</h4>
@@ -3178,7 +3178,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 
 		<figure id="fig-usage">
 			<img src="images/fig-usage.svg" alt="A policy for usage of a sub-graph of location data in the knowledge graph"/>
-			<figcaption>A policy for usage of a sub-graph of location data in the knowledge graph</figcaption>
+			<figcaption>A policy for usage of a sub-graph of location data in the knowledge graph <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_9_Publication/9_3_2_Usage_policies/figure_9_4.ttl"></a></figcaption>
 		</figure>
 
 		<h4 id="sssec-encryption" class="subsection">Encryption</h4>
@@ -3186,7 +3186,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 
 		<figure id="fig-crypto">
 			<img src="images/fig-crypto.svg" alt="Directed edge-labelled graph with the name of the claimant encrypted; plaintext elements are dashed and may be omitted from published data (possibly along with encryption details)"/>
-			<figcaption>Directed edge-labelled graph with the name of the claimant encrypted; plaintext elements are dashed and may be omitted from published data (possibly along with encryption details)</figcaption>
+			<figcaption>Directed edge-labelled graph with the name of the claimant encrypted; plaintext elements are dashed and may be omitted from published data (possibly along with encryption details) <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_9_Publication/9_3_3_Encryption/figure_9_5.ttl"></a></figcaption>
 		</figure>
 
 		<h4 id="sssec-anonymisation" class="subsection">Anonymisation</h4>
@@ -3195,7 +3195,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 
 		<figure id="fig-anonymised">
 			<img src="images/fig-anonymised.svg" alt="Anonymised sample of a directed edge-labelled graph describing a passenger (dashed) of a flight"/>
-			<figcaption>Anonymised sample of a directed edge-labelled graph describing a passenger (dashed) of a flight</figcaption>
+			<figcaption>Anonymised sample of a directed edge-labelled graph describing a passenger (dashed) of a flight <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_9_Publication/9_3_4_Anonymisation/figure_9_6.ttl"></a></figcaption>
 		</figure>
 
 		<p>More complex neighbourhood attacks may rely on more abstract graph patterns, observing that individuals can be deanonymised purely from knowledge of the graph structure, even if all nodes and edge labels are left blank; for example, if we know that a team of \(k-1\) players take flights together for a particular number of away games, we could use this information for a neighbourhood attack that reveals the set of players in the graph. Hence a number of guarantees specific to graphs have been proposed, including \(k\)-degree anonymity&nbsp;[<a href="#ref-LiuT08">Liu and Terzi, 2008</a>], which ensures that individuals cannot be deanonymised by attackers with knowledge of the degree of particular individuals. The approach is based on minimally modifying the graph to ensure that each node has at least \(k-1\) other nodes with the same degree. A stronger guarantee, called \(k\)-isomorphic neighbour anonymity&nbsp;[<a href="#ref-ZhouP08">Zhou and Pei, 2008</a>], avoids neighbourhood attacks where an attacker knows how an individual is connected to nodes in their neighbourhood; this is done by modifying the graph to ensure that for each node, there exist at least \(k-1\) nodes with isomorphic (i.e., identically structured) neighbourhoods elsewhere in the graph. Both approaches only protect against attackers with knowledge of bounded neighbourhoods. An even stronger notion is that of \(k\)-automorphism&nbsp;[<a href="#ref-ZouCO09a">Zou et al., 2009</a>], which ensures that for every node, it is structurally indistinguishable from \(k-1\) other nodes, thus avoiding any attack based on structural information (as a trivial example, a \(k\)-clique or a \(k\)-cycle satisfy \(k\)-automorphism). Many of these techniques for anonymisation of graph data were motivated by social networks&nbsp;[<a href="#ref-NarayananS09">Narayanan and Shmatikov, 2009</a>], though they can also be applied to knowledge graphs, per the work of <a href="#ref-LinT17">Lin and Tripunitara [2017]</a>, who adapt \(k\)-automorphism for directed edge-labelled graphs (specifically RDF graphs).</p>
@@ -13444,7 +13444,7 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 	</section>
 <!--	</section>-->
 	<section id="sec-bio" class="prechapter">
-		<h2 id="bio">Authors’ Biography</h2>
+		<h2 id="bio">Authors’ Biographies</h2>
 		<h3 id="bio-hogan">Aidan Hogan</h3>
 		<p>Aidan Hogan is an Associate Professor at the Department of Computer Science, Universidad de Chile, where he also holds the position of Associate Researcher in the Millennium Institute for Foundational Research on Data (IMFD). He received a B.Eng. and Ph.D. from the National University of Ireland, Galway, in 2006 and 2011, respectively. His primary research interests centre on the Semantic Web and Knowledge Graphs. He is the author of over one hundred research publications on these topics, including two other books: “Reasoning Techniques for the Web of Data” and “The Web of Data”.</p>
 
