@@ -54,7 +54,7 @@
 			</figure>
 			<figure id="fig-hg">
 				<img src="images/fig-hg.svg" alt="Heterogenous graph"/>
-				<figcaption>Heterogenous graph <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_2_Data_Graphs/2_1_2_Heterogeneous_graphs/figure_2_3_b.cypher"></a></figcaption>
+				<figcaption>Heterogenous graph <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_2_Data_Graphs/2_1_2_Heterogeneous_graphs/figure_2_2_b.cypher"></a></figcaption>
 			</figure>
 			<figcaption>Comparing directed edge-labelled graphs and heterogeneous graphs</figcaption>
 		</figure>

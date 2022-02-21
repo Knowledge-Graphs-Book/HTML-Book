@@ -16,7 +16,7 @@
 
 		<figure id="fig-chileTransport">
 			<img src="images/fig-chileTransport.svg" alt="Data graph representing transport routes in Chile"/>
-			<figcaption>Data graph representing transport routes in Chile <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_5_Inductive_Knowledge/5_1Graph_Analytics/figure_5_2.ttl"></a></figcaption>
+			<figcaption>Data graph representing transport routes in Chile <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_5_Inductive_Knowledge/5_1_Graph_Analytics/figure_5_2.ttl"></a></figcaption>
 		</figure>
 
 		<h4 id="sssec-graph-analytics-tasks" class="subsection">Techniques</h4>
