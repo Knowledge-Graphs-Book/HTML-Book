@@ -348,7 +348,7 @@
 				\end{align*}</dd>
 			</dl>
 
-			<p>Based on these operators, we can define some additional syntactic operators, such as the <em>left-join</em> <? echo LeftJoin(); ?>, aka <em>optional</em>):</p>
+			<p>Based on these operators, we can define some additional syntactic operators, such as the <em>left-join</em> (<? echo LeftJoin(); ?>, aka <em>optional</em>):</p>
 			<p>
 			\begin{align*}
 			 Q_1 <? echo LeftJoin(false); ?> Q_2(G) = & \,(Q_1(G) \Join Q_2(G)) \cup (Q_1(G) \rhd Q_2(G))
