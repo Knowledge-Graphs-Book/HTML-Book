@@ -1088,12 +1088,14 @@ function latex2html($line, $do_clean_extra_bracket=true) {
   // handling \textsubscript{....} FAILS if there still are nested {}
   $line = preg_replace('/\\\\textsubscript\{(.*)\}/U','<sub>\\1</sub>', $line);
 
-
   // AZ: my additions
   $line = str_replace('\\v{z}','ž',$line);
   $line = str_replace('\\textregistered','®',$line);
   $line = preg_replace('/\\\\emph\{(.*)\}/U','<em>\\1</em>', $line);
 
+  // AH: my additions
+  $line = str_replace('\\c{C}','&Ccedil;',$line);
+  $line = str_replace('\\c{c}','&ccedil;',$line);
 
   if ($do_clean_extra_bracket) {
     // clean extra tex curly brackets, usually used for preserving capitals
