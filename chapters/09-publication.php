@@ -32,9 +32,9 @@
 			</ul></li>
 			<li><em>Reusability</em> refers to the ease with which the dataset can be re-used in conjunction with other datasets. One goal is defined (with three sub-goals):<ul>
 				<li>R1: meta(data) are richly described with accurate and relevant attributes.<ul>
-					<li>R1.1. (meta)data are released with a clear and accessible license.</li>
-					<li>R1.2. (meta)data are associated with detailed provenance.</li>
-					<li>R1.3. (meta)data meet domain-relevant community standards.</li>
+					<li>R1.1: (meta)data are released with a clear and accessible license.</li>
+					<li>R1.2: (meta)data are associated with detailed provenance.</li>
+					<li>R1.3: (meta)data meet domain-relevant community standards.</li>
 				</ul></li>
 			</ul></li>
 		</ul>
