@@ -5,7 +5,7 @@
 
 		<section id="ssec-principles" class="section">
 		<h3>Best Practices</h3>
-		<p>We now discuss two key sets of publishing principles: the FAIR Principles&nbsp;<? echo $references->citet("wilkinson2016fair"); ?>, and the Linked Data Principles&nbsp;<? echo $references->cite("ldprinciples"); ?>.</p>
+		<p>We now discuss two key sets of publishing principles: the FAIR Principles&nbsp;<? echo $references->cite("wilkinson2016fair"); ?>, and the Linked Data Principles&nbsp;<? echo $references->cite("ldprinciples"); ?>.</p>
 
 		<h4 id="ssec-fair" class="subsection">FAIR Principles</h4>
 		<p>The FAIR Principles were originally proposed in the context of publishing scientific data&nbsp;<? echo $references->cite("wilkinson2016fair"); ?> – particularly motivated by maximising the impact of publicly-funded research – but the principles generally apply to other situations where data are to be published in a manner that facilitates their re-use by external agents, with particular emphasis on machine-readability.</p>
