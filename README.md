@@ -1,8 +1,8 @@
 # KG Book in HTML
 
-This is the repository where we put the sources for the [HTML version](https://kgbook.org/) of the book [*Knowledge Graphs*](https://www.morganclaypool.com/doi/abs/10.2200/S01125ED1V01Y202109DSK022) by Hogan et al., published by Morgan & Claypool.
+This is the repository where we put the sources for the [HTML version](https://kgbook.org/) of the book [*Knowledge Graphs*](https://link.springer.com/book/10.1007/978-3-031-01918-0) by Hogan et al., published by Springer (previously Morgan & Claypool).
 The book is itself an extended version of [the technical report](https://arxiv.org/abs/2003.02320) with the same title and authors.
-There is also an [HTML version of the technical report](https://www.emse.fr/~zimmermann/KG).
+There is also an [HTML version of the technical report](https://kgbook.org/).
 
 The HTML version was generated from PHP scripts, regex search replace, and a lot of perspiration. The bibliography is partly generated using [bibtexbrowser](https://www.monperrus.net/martin/bibtexbrowser/), a PHP library by Martin Monperrus available under the GNU General Public License. The math formulas are generated from LaTeX code using [KaTeX](https://katex.org/), a JavaScript libray available under the MIT License. The syntax highlight for HTML in [Figure&nbsp;6.2](https://kgbook.org/#fig-html) and the BibTeX code in the bibliography and the preamble are rendered using [Prism](https://prismjs.com/), a JavaScript library under the MIT License. The BibTeX file used for the bibliography was made by the authors. Most figures are in Scalable Vector Graphic, generated from [Ti*k*Z](https://pgf-tikz.github.io/) figures used in the LaTeX version of the technical report. All other PHP scripts, CSS, HTML files were created by [Antoine Zimmermann](https://w3id.org/people/az/cv). The picture at the top of the HTML page uses the background image of the book cover from Morgan & Claypool (used with authorisation) on which is added text in HTML with hyperlinks to the [authors' biographies](https://kgbook.org/#sec-bio).
 
