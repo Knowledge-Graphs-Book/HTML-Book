@@ -194,6 +194,7 @@ table {
 	align-content: center;
 	justify-content: center;
 	margin-bottom: 25px;
+	margin-bottom: 20px;
 }
 dl.definition dd table tr td {
 	vertical-align: top;
@@ -222,6 +223,7 @@ section > figure {
 	text-align: center;
 	counter-reset: subfigures;
 	margin-bottom: 25px;
+	margin-bottom: 20px;
 }
 figure > img {
 	margin-top: 3em;
