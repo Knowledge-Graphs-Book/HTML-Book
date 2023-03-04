@@ -848,6 +848,39 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 
 		<p>Regular path queries can then be used in basic graph patterns to express <em>navigational graph patterns</em>&nbsp;[<a href="#ref-AnglesABHRV17">Angles et al., 2017</a>], as shown in Figure&nbsp;<a href="#fig-ngp">2.9</a>, which illustrates a query searching for food festivals in cities reachable (recursively) from Arica by bus or flight. Furthermore, when regular path queries and graph patterns are combined with operators such as projection, selection, union, difference, and optional, the result is known as <em>complex navigational graph patterns</em>&nbsp;[<a href="#ref-AnglesABHRV17">Angles et al., 2017</a>].</p>
 
+		<figure id="fig-ngp">
+			<img src="images/fig-ngp.svg" alt="Navigational graph pattern" class="multi" />
+			<div style="height:2em;">&nbsp;</div>
+			<table class="condensedTable">
+				<thead>
+					<tr>
+						<th><span class="sf">?event</span></th>
+						<th><span class="sf">?name</span></th>
+						<th><span class="sf">?city</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><code>EID15</code></td>
+						<td><code>Ñam</code></td>
+						<td><code>Santiago</code></td>
+					</tr>
+					<tr>
+						<td><code>EID16</code></td>
+						<td><code>Food Truck</code></td>
+						<td><code>Arica</code></td>
+					</tr>
+					<tr>
+						<td><code>EID16</code></td>
+						<td><code>Food Truck</code></td>
+						<td><code>Viña del Mar</code></td>
+					</tr>
+				</tbody>
+			</table>
+			<div style="height:1em;">&nbsp;</div>
+			<figcaption>Navigational graph pattern (left <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_2_Data_Graphs/2_2_3_Navigational_graph_patterns/figure_2_9.sparql"></a>) with mappings generated over the graph of Figure&nbsp;<a href="#fig-delg">2.1</a> (right)</figcaption>
+		</figure>
+
 		<div class="formal">
 			<p>We first define path expressions and regular path queries.</p>
 
@@ -906,39 +939,6 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 
 			<p>The definition of the evaluation of a navigational graph pattern then follows from the previous definition of a join and the definition of the evaluation of a regular path query (for a directed edge-labelled graph or a property graph, respectively). Likewise, <em>complex navigational graph patterns</em> – and their evaluation – are defined by extending this definition in the natural way with the same operators from Definition&nbsp;<a href="#def-cgp">2.8</a> following the same semantics seen in Definition&nbsp;<a href="#def-evalcgp">2.9</a>.</p>
 		</div>
-
-		<figure id="fig-ngp">
-			<img src="images/fig-ngp.svg" alt="Navigational graph pattern" class="multi" />
-			<div style="height:2em;">&nbsp;</div>
-			<table class="condensedTable">
-				<thead>
-					<tr>
-						<th><span class="sf">?event</span></th>
-						<th><span class="sf">?name</span></th>
-						<th><span class="sf">?city</span></th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td><code>EID15</code></td>
-						<td><code>Ñam</code></td>
-						<td><code>Santiago</code></td>
-					</tr>
-					<tr>
-						<td><code>EID16</code></td>
-						<td><code>Food Truck</code></td>
-						<td><code>Arica</code></td>
-					</tr>
-					<tr>
-						<td><code>EID16</code></td>
-						<td><code>Food Truck</code></td>
-						<td><code>Viña del Mar</code></td>
-					</tr>
-				</tbody>
-			</table>
-			<div style="height:1em;">&nbsp;</div>
-			<figcaption>Navigational graph pattern (left <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_2_Data_Graphs/2_2_3_Navigational_graph_patterns/figure_2_9.sparql"></a>) with mappings generated over the graph of Figure&nbsp;<a href="#fig-delg">2.1</a> (right)</figcaption>
-		</figure>
 
 		<h4 id="app-qother" class="subsection">Other features</h4>
 		<p>Thus far, we have discussed features that form the practical and theoretical foundation of any query language for graphs&nbsp;[<a href="#ref-AnglesABHRV17">Angles et al., 2017</a>]. However, specific query languages for graphs may support other features, such as aggregation (<code>GROUP BY</code>, <code>COUNT</code>, etc.), more complex filters and datatype operators (e.g., range queries on years extracted from a date), federation for querying remotely hosted graphs over the Web, languages for updating graphs, support for entailment, etc. For more information, we refer to the documentation of the respective query languages (e.g.,&nbsp;[<a href="#ref-sparql11">Harris et al., 2013</a>, <a href="#ref-AnglesABBFGLPPS18">Angles et al., 2018</a>]) and to the survey by&nbsp;<a href="#ref-AnglesABHRV17">Angles et al. [2017]</a>.</p>

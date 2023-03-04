@@ -376,6 +376,39 @@
 
 		<p>Regular path queries can then be used in basic graph patterns to express <em>navigational graph patterns</em>&nbsp;<? echo $references->cite("AnglesABHRV17"); ?>, as shown in Figure&nbsp;<? echo ref("fig:ngp"); ?>, which illustrates a query searching for food festivals in cities reachable (recursively) from Arica by bus or flight. Furthermore, when regular path queries and graph patterns are combined with operators such as projection, selection, union, difference, and optional, the result is known as <em>complex navigational graph patterns</em>&nbsp;<? echo $references->cite("AnglesABHRV17"); ?>.</p>
 
+		<figure id="fig-ngp">
+			<img src="images/fig-ngp.svg" alt="Navigational graph pattern" class="multi" />
+			<div style="height:2em;">&nbsp;</div>
+			<table class="condensedTable">
+				<thead>
+					<tr>
+						<th><span class="sf">?event</span></th>
+						<th><span class="sf">?name</span></th>
+						<th><span class="sf">?city</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><code>EID15</code></td>
+						<td><code>Ñam</code></td>
+						<td><code>Santiago</code></td>
+					</tr>
+					<tr>
+						<td><code>EID16</code></td>
+						<td><code>Food Truck</code></td>
+						<td><code>Arica</code></td>
+					</tr>
+					<tr>
+						<td><code>EID16</code></td>
+						<td><code>Food Truck</code></td>
+						<td><code>Viña del Mar</code></td>
+					</tr>
+				</tbody>
+			</table>
+			<div style="height:1em;">&nbsp;</div>
+			<figcaption>Navigational graph pattern (left <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_2_Data_Graphs/2_2_3_Navigational_graph_patterns/figure_2_9.sparql"></a>) with mappings generated over the graph of Figure&nbsp;<? echo ref("fig:delg"); ?> (right)</figcaption>
+		</figure>
+
 		<div class="formal">
 			<p>We first define path expressions and regular path queries.</p>
 
@@ -434,39 +467,6 @@
 
 			<p>The definition of the evaluation of a navigational graph pattern then follows from the previous definition of a join and the definition of the evaluation of a regular path query (for a directed edge-labelled graph or a property graph, respectively). Likewise, <em>complex navigational graph patterns</em> – and their evaluation – are defined by extending this definition in the natural way with the same operators from Definition&nbsp;<? echo ref("def:cgp"); ?> following the same semantics seen in Definition&nbsp;<? echo ref("def:evalcgp"); ?>.</p>
 		</div>
-
-		<figure id="fig-ngp">
-			<img src="images/fig-ngp.svg" alt="Navigational graph pattern" class="multi" />
-			<div style="height:2em;">&nbsp;</div>
-			<table class="condensedTable">
-				<thead>
-					<tr>
-						<th><span class="sf">?event</span></th>
-						<th><span class="sf">?name</span></th>
-						<th><span class="sf">?city</span></th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td><code>EID15</code></td>
-						<td><code>Ñam</code></td>
-						<td><code>Santiago</code></td>
-					</tr>
-					<tr>
-						<td><code>EID16</code></td>
-						<td><code>Food Truck</code></td>
-						<td><code>Arica</code></td>
-					</tr>
-					<tr>
-						<td><code>EID16</code></td>
-						<td><code>Food Truck</code></td>
-						<td><code>Viña del Mar</code></td>
-					</tr>
-				</tbody>
-			</table>
-			<div style="height:1em;">&nbsp;</div>
-			<figcaption>Navigational graph pattern (left <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_2_Data_Graphs/2_2_3_Navigational_graph_patterns/figure_2_9.sparql"></a>) with mappings generated over the graph of Figure&nbsp;<? echo ref("fig:delg"); ?> (right)</figcaption>
-		</figure>
 
 		<h4 id="app-qother" class="subsection">Other features</h4>
 		<p>Thus far, we have discussed features that form the practical and theoretical foundation of any query language for graphs&nbsp;<? echo $references->cite("AnglesABHRV17"); ?>. However, specific query languages for graphs may support other features, such as aggregation (<code>GROUP BY</code>, <code>COUNT</code>, etc.), more complex filters and datatype operators (e.g., range queries on years extracted from a date), federation for querying remotely hosted graphs over the Web, languages for updating graphs, support for entailment, etc. For more information, we refer to the documentation of the respective query languages (e.g.,&nbsp;<? echo $references->cite("sparql11,AnglesABBFGLPPS18"); ?>) and to the survey by&nbsp;<? echo $references->citet("AnglesABHRV17"); ?>.</p>
