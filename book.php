@@ -127,9 +127,9 @@
 		</ul>
 		<div id="about" class="info">
 			<h2>About the book</h2>
-			<p>The book is published by <a href="http://www.morganclaypool.com/">Morgan &amp; Claypool</a> in the series <a href="http://www.morganclaypool.com/toc/wbe.1/7/1">Synthesis Lectures on the Data, Semantics, and Knowledge</a> edited by <a href="http://info.slis.indiana.edu/~dingying/">Ying Ding</a> and Paul Groth. Please, cite the book as:</p>
+			<p>The book is <a href="https://doi.org/10.2200/S01125ED1V01Y202109DSK022">published by Springer</a> in the series <a href="https://www.springer.com/series/16928">Synthesis Lectures on Data, Semantics, and Knowledge</a> edited by <a href="http://info.slis.indiana.edu/~dingying/">Ying Ding</a> and <a href="https://pgroth.com/">Paul Groth</a>. The book and series was previously published by <a href="http://www.morganclaypool.com/">Morgan &amp; Claypool</a>. Please cite the book as:</p>
 			<blockquote class="quote">
-				 Aidan Hogan, Eva Blomqvist, Michael Cochez, Claudia d’Amato, Gerard de Melo, Claudio Gutierrez, Sabrina Kirrane, José Emilio Labra Gayo, Roberto Navigli, Sebastian Neumaier, Axel-Cyrille Ngonga Ngomo, Axel Polleres, Sabbir M. Rashid, Anisa Rula, Lukas Schmelzeisen, Juan Sequeda, Steffen Staab, Antoine Zimmermann (2021) <em>Knowledge Graphs</em>, Synthesis Lectures on Data, Semantics, and Knowledge, No. 22, 1–237, DOI: 10.2200/S01125ED1V01Y202109DSK022, Morgan &amp; Claypool
+				 Aidan Hogan, Eva Blomqvist, Michael Cochez, Claudia d’Amato, Gerard de Melo, Claudio Gutierrez, Sabrina Kirrane, José Emilio Labra Gayo, Roberto Navigli, Sebastian Neumaier, Axel-Cyrille Ngonga Ngomo, Axel Polleres, Sabbir M. Rashid, Anisa Rula, Lukas Schmelzeisen, Juan Sequeda, Steffen Staab, Antoine Zimmermann (2021) <em>Knowledge Graphs</em>, Synthesis Lectures on Data, Semantics, and Knowledge, No. 22, 1–237, DOI: 10.2200/S01125ED1V01Y202109DSK022, Springer.
 			</blockquote>
 			<p>BibTeX entry of this book:</p>
 			<pre><code class="language-bib">@book{kg-book,
@@ -140,11 +140,11 @@ Neumaier, Sebastian and Ngonga Ngomo, Axel-Cyrille and Polleres, Axel and
 Rashid, Sabbir M. and Rula, Anisa and Schmelzeisen, Lukas and
 Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
   doi = {10.2200/S01125ED1V01Y202109DSK022},
-  isbn = {9781636392363},
+  isbn = {9783031007903},
   language = {English},
   number = {22},
   numpages = {237},
-  publisher = {Morgan \& Claypool},
+  publisher = {Springer},
   series = {Synthesis Lectures on Data, Semantics, and Knowledge},
   title = {{K}nowledge {G}raphs},
   url = {https://kgbook.org/},
@@ -152,22 +152,20 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 }</code></pre>
 			<dl>
 				<dt>ISBN paperback:</dt>
-				<dd>9781636392356</dd>
+				<dd>9783031007903</dd>
 				<dt>ISBN ebook:</dt>
-				<dd>9781636392363</dd>
-				<dt>ISBN hardcover:</dt>
-				<dd>9781636392370</dd>
+				<dd>9783031019180</dd>
 			</dl>
-			<p>Copyright © 2021 by Morgan &amp; Claypool. All rights reserved.</p>
+			<p>Copyright © 2021 by Springer. All rights reserved.</p>
 			<!--<p><a href="bibtex.txt">Bibtex</a></p>-->
 			<h2 id="access">Access options</h2>
 			<dl>
 				<dt>HTML version:</dt>
 				<dd>You are currently reading the free HTML version of the book, the most recent of which is available at <a href="https://kgbook.org/">https://kgbook.org/</a>.<sup class="fnmark" id="fnm_a"><a href="#fn_a">*</a></sup><span class="footnote" id="fn_a"><sup><a href="#fnm_a">note *</a></sup> You can see the scripts that generate this page on our <a href="https://github.com/Knowledge-Graphs-Book/HTML-Book/">Github repository</a> and <a href="https://github.com/Knowledge-Graphs-Book/HTML-Book/issues">leave comments</a> as new issues. You can also address your feedback on the book by email to <code>kg-tutorial [at] googlegroups [dot] com</code>. <a href="https://github.com/Knowledge-Graphs-Book/examples">Example code and associated resources</a> can be found on Github as well.</span></dd>
 				<dt>PDF Version:</dt>
-				<dd>You can download or buy the book from <a href="http://www.morganclaypoolpublishers.com/catalog_Orig/product_info.php?products_id=1683">Morgan &amp; Claypool</a>. Academic and Corporate licences are available.</dd>
+				<dd>You can download or buy the book from <a href="https://doi.org/10.2200/S01125ED1V01Y202109DSK022">Springer</a> (the book was previously published by Morgan &amp; Claypool). Academic and Corporate licences are available.</dd>
 				<dt>Hard copy:</dt>
-				<dd>You can order from <a href="http://www.morganclaypoolpublishers.com/catalog_Orig/product_info.php?products_id=1683">Morgan &amp; Claypool</a> or <a href="https://www.amazon.com/Knowledge-Graphs-Synthesis-Lectures-Semantics/dp/1636392350/ref=sr_1_11?keywords=Knowledge+Graphs&qid=1637308294&sr=8-11">Amazon</a>.</dd>
+				<dd>You can order from <a href="https://doi.org/10.2200/S01125ED1V01Y202109DSK022">Springer</a> or <a href="https://www.amazon.com/Knowledge-Graphs-Synthesis-Lectures-Semantics/dp/1636392350/ref=sr_1_11?keywords=Knowledge+Graphs&qid=1637308294&sr=8-11">Amazon</a>.</dd>
 			</dl>
 		</div>
 		<p><em>SYNTHESIS LECTURES ON ON DATA, SEMANTICS, AND KNOWLEDGE #22</em></p>
