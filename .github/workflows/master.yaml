@@ -27,10 +27,10 @@ jobs:
           mkdir _site
       - name: compile webpage
         run: |
-          cp index.html _site/index.html
+          php book.php > _site/index.html
+        #  cp index.html _site/index.html
         #  echo "<?php phpinfo(); ?>" > myfile.php
         #  php myfile.php > _site/index.html
-        # php book.php > _site/index.html
       - name: copy resources
         run: |
           cp -r css fonts images js bib _site/
