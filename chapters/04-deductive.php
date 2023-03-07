@@ -68,7 +68,7 @@
 					<td>Assertion</td>
 					<td><? echo gedge("\\(x\\)","\\(y\\)","\\(z\\)"); ?></td>
 					<td><? echo giedge("\\(x\\)","\\(y\\)","\\(z\\)"); ?></td>
-					<td><? echo gedge("City","capital","Santiago"); ?></td>
+					<td><? echo gedge("Chile","capital","Santiago"); ?></td>
 				</tr>
 				<tr>
 					<td>Negation</td>

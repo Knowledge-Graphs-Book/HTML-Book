@@ -153,7 +153,7 @@
 					</tr>
 					<tr>
 						<td>AB9123N</td>
-						<td>Joan Dubois</td>
+						<td>Jeanne Dubois</td>
 						<td>France</td>
 					</tr>
 					<tr>

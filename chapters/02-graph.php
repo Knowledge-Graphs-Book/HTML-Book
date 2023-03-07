@@ -45,7 +45,7 @@
 		</div>
 
 		<h4 id="subsub-heterograph" class="subsection">Heterogeneous graphs</h4>
-		<p>A heterogeneous graph&nbsp;<? echo $references->cite("HusseinYC18,WangJSWYCY19,YangXJWHW20"); ?> (or <em>heterogeneous information network</em>&nbsp;<? echo $references->cite("sun2011pathsim,2012Sun"); ?>) is a directed graph where each node and edge is assigned one type. Heterogeneous graphs are thus akin to directed edge-labelled graphs – with edge labels corresponding to edge types – but where the type of node forms part of the graph model itself, rather than being expressed with a relation (as seen in Figure&nbsp;<? echo ref("fig:capital"); ?>). An edge is called <em>homogeneous</em> if it is between two nodes of the same type (e.g., <span class="gelab">borders</span> in Figure&nbsp;<? echo ref("fig:capital"); ?>); otherwise it is called <em>heterogeneous</em> (e.g., <span class="gelab">capital</span> in Figure&nbsp;<? echo ref("fig:capital"); ?>). Heterogeneous graphs allow for partitioning nodes according to their type, for example, for the purposes of machine learning tasks&nbsp;<? echo $references->cite("HusseinYC18,WangJSWYCY19,YangXJWHW20"); ?>. Conversely, such graphs typically only support a one-to-one relation between nodes and types, which is not the case for directed edge-labelled graphs (see, for example, the node <span class="gnode">Santiago</span> with zero types and <span class="gnode">EID15</span> with multiple types in Figure&nbsp;<? echo ref("fig:delg"); ?>).</p>
+		<p>A heterogeneous graph&nbsp;<? echo $references->cite("HusseinYC18,WangJSWYCY19,YangXJWHW20"); ?> (or <em>heterogeneous information network</em>&nbsp;<? echo $references->cite("sun2011pathsim,2012Sun"); ?>) is a directed graph where each node and edge is assigned one type. Heterogeneous graphs are thus akin to directed edge-labelled graphs – with edge labels corresponding to edge types – but where the type of node forms part of the graph model itself, rather than being expressed with a relation (as seen in Figure&nbsp;<? echo ref("fig:capital"); ?>). An edge is called <em>homogeneous</em> if it is between two nodes of the same type (e.g., <span class="gelab">borders</span> in Figure&nbsp;<? echo ref("fig:capital"); ?>); otherwise it is called <em>heterogeneous</em> (e.g., <span class="gelab">capital</span> in Figure&nbsp;<? echo ref("fig:capital"); ?>). Heterogeneous graphs allow for partitioning nodes according to their type, for example, for the purposes of machine learning tasks&nbsp;<? echo $references->cite("HusseinYC18,WangJSWYCY19,YangXJWHW20"); ?>. Conversely, such graphs typically only support a many-to-one relation between nodes and types, which is not the case for directed edge-labelled graphs (see, for example, the node <span class="gnode">Santiago</span> with zero types and <span class="gnode">EID15</span> with multiple types in Figure&nbsp;<? echo ref("fig:delg"); ?>).</p>
 		
 		<figure id="fig-capital">
 			<figure id="fig-cap">
@@ -142,7 +142,7 @@
 		</div>
 
 		<h4 id="sssec-othergraphs" class="subsection">Other graph data models</h4>
-		<p>The previous models are popular examples of graph representations. Other graph data models exist with <em>complex nodes</em> that may contain individual edges&nbsp;<? echo $references->cite("AnglesG08,Hartig14"); ?> or nested graphs&nbsp;<? echo $references->cite("AnglesG08,n3"); ?> (sometimes called <em>hypernodes</em>&nbsp;<? echo $references->cite("LeveneP89"); ?>. Likewise the mathematical notion of a <em>hypergraph</em> defines <em>complex edges</em> that connect sets rather than pairs of nodes. In our view, a knowledge graph can adopt any such graph data model based on nodes and edges: often data can be converted from one model to another (see Figure&nbsp;<? echo ref("fig:fsa"); ?> vs.&nbsp;Figure&nbsp;<? echo ref("fig:pg"); ?>). In the rest of the paper, we prefer discussing directed edge-labelled graphs given their relative succinctness, but most discussion extends naturally to other models.</p>
+		<p>The previous models are popular examples of graph representations. Other graph data models exist with <em>complex nodes</em> that may contain individual edges&nbsp;<? echo $references->cite("AnglesG08,Hartig14"); ?> or nested graphs&nbsp;<? echo $references->cite("AnglesG08,n3"); ?> (sometimes called <em>hypernodes</em>&nbsp;<? echo $references->cite("LeveneP89"); ?>). Likewise the mathematical notion of a <em>hypergraph</em> defines <em>complex edges</em> that connect sets rather than pairs of nodes. In our view, a knowledge graph can adopt any such graph data model based on nodes and edges: often data can be converted from one model to another (see Figure&nbsp;<? echo ref("fig:fsa"); ?> vs.&nbsp;Figure&nbsp;<? echo ref("fig:pg"); ?>). In the rest of the book, we prefer discussing directed edge-labelled graphs given their relative succinctness, but most discussion extends naturally to other models.</p>
 
 		<h4 id="sssec-graphstore" class="subsection">Graph stores</h4>
 		<p>A variety of techniques have been proposed for storing and indexing graphs, facilitating the efficient evaluation of queries (as discussed next). Directed edge-labelled graphs can be stored in relational databases either as a single relation of arity three (<em>triple table</em>), as a binary relation for each property (<em>vertical partitioning</em>), or as \(n\)-ary relations for entities of a given type (<em>property tables</em>)&nbsp;<? echo $references->cite("WylotHCS18"); ?>. Custom (so-called <em>native</em>) storage techniques have also been developed for a variety of graph models, providing efficient access for finding nodes, edges and their adjacent elements&nbsp;<? echo $references->cite("AnglesG08,Miller13,WylotHCS18"); ?>. A number of systems further allow for distributing graphs over multiple machines based on popular NoSQL stores or custom partitioning schemes&nbsp;<? echo $references->cite("WylotHCS18,JankeS18"); ?>. For further details we refer to the book chapter by <? echo $references->citet("JankeS18"); ?> and the survey by <? echo $references->citet("WylotHCS18"); ?> dedicated to this topic.</p>
@@ -154,7 +154,7 @@
 
 		<h4 id="sssec-graphpatterns" class="subsection">Basic graph patterns</h4>
 		<p>At the core of every structured query language for graphs lie <em>basic graph patterns</em>&nbsp;<? echo $references->cite("ConsensM90,AnglesABHRV17"); ?>, which follow the same model as the data graph being queried (see Section&nbsp;<? echo ref("ssec:graphModels"); ?>), additionally allowing variables as terms.<? echo footnote("The terms of a directed edge-labelled graph are its nodes and edge-labels. The terms of a property graph are its ids, labels, properties, and values (as used on either edges or nodes)."); ?> Terms in basic graph patterns are thus divided into constants, such as <span class="gnode">Arica</span> or <span class="gelab">venue</span>, and variables, which we prefix with question marks, such as <span class="gvar">?event</span> or <span class="gelab" style="color: black">?rel</span>. A basic graph pattern is then evaluated against the data graph by generating mappings from the variables of the graph pattern to constants in the data graph such that the image of the graph pattern under the mapping (replacing variables with the assigned constants) is contained within the data graph.</p>
-		<p>Figure&nbsp;<? echo ref("fig:gp"); ?> provide an example of a basic graph pattern looking for the venues of Food Festivals, along with the possible mappings generated by the graph pattern against the data graph of Figure&nbsp;<? echo ref("fig:delg"); ?>. In some of the presented mappings (the last two listed), multiple variables are mapped to the same term, which may or may not be desirable depending on the application. Hence a number of semantics have been proposed for evaluating basic graph patterns&nbsp;<? echo $references->cite("AnglesABHRV17"); ?>, amongst which the most important are: <em>homomorphism-based semantics</em>, which allows multiple variables to be mapped to the same term such that all mappings shown in Figure&nbsp;<? echo ref("fig:gp"); ?> would be considered results; and <em>isomorphism-based semantics</em>, which requires variables on nodes and/or edges to be mapped to unique terms, thus excluding the latter three mappings of Figure&nbsp;<? echo ref("fig:gp"); ?> from the results. Different languages may adopt different semantics for evaluating basic graph patterns; for example, SPARQL adopts a homomorphism-based semantics, while Cypher adopts an isomorphism-based semantics specifically on edges (while allowing multiple variables to map to one node).</p>
+		<p>Figure&nbsp;<? echo ref("fig:gp"); ?> provides an example of a basic graph pattern looking for the venues of Food Festivals, along with the possible mappings generated by the graph pattern against the data graph of Figure&nbsp;<? echo ref("fig:delg"); ?>. In some of the presented mappings (the last two listed), multiple variables are mapped to the same term, which may or may not be desirable depending on the application. Hence a number of semantics have been proposed for evaluating basic graph patterns&nbsp;<? echo $references->cite("AnglesABHRV17"); ?>, amongst which the most important are: <em>homomorphism-based semantics</em>, which allows multiple variables to be mapped to the same term such that all mappings shown in Figure&nbsp;<? echo ref("fig:gp"); ?> would be considered results; and <em>isomorphism-based semantics</em>, which requires variables on nodes and/or edges to be mapped to unique terms, thus excluding the latter three mappings of Figure&nbsp;<? echo ref("fig:gp"); ?> from the results. Different languages may adopt different semantics for evaluating basic graph patterns; for example, SPARQL adopts a homomorphism-based semantics, while Cypher adopts an isomorphism-based semantics specifically on edges (while allowing multiple variables to map to one node).</p>
 
 		<figure id="fig-gp">
 			<img src="images/fig-gp.svg" alt="Graph pattern" class="multi" />
@@ -196,13 +196,13 @@
 				</tbody>
 			</table>
 			<div style="height:.5em;">&nbsp;</div>
-			<figcaption>Basic directed edge-labelled graph pattern (left <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_2_Data_Graphs/2_2_1_Graph_patterns/figure_2_5.sparql"></a>) with mappings generated over the directed edge-labelled graph of Figure&nbsp;<? echo ref("fig:delg"); ?> (right)</figcaption>
+			<figcaption>Basic graph pattern (left <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_2_Data_Graphs/2_2_1_Graph_patterns/figure_2_5.sparql"></a>) with mappings generated over the directed edge-labelled graph of Figure&nbsp;<? echo ref("fig:delg"); ?> (right)</figcaption>
 		</figure>
 
 		<p>As we will see in later examples (particularly Figure&nbsp;<? echo ref("fig:cgp"); ?>), basic graph patterns may also form cycles (be they directed or undirected), and may replace edge labels with variables. Basic graph patterns in the context of other models – such as property graphs – can be defined analogously by allowing variables to replace constants in any position of the model.</p>
 
 		<div class="formal">
-			<p>We formalise basic graph patterns first for directed edge-labelled graphs, and subsequently for property graphs&nbsp;<? echo $references->cite("AnglesABHRV17"); ?>. For these definitions, we introduce a countably infinite set of <em>variables</em> \(\var\) ranging over (but disjoint from: \(\con \cap \var = \emptyset\)) the set of constants. We refer generically to constants and variables as <em>terms</em>, denoted and defined as \(\term = \con \cup \var\). We define a basic graph pattern for a model by simply replacing constants with terms (that may be variables). Though we focus on directed edge-labelled graphs and property graphs, basic graph patterns for other graph models can be defined analogously.</p> 
+			<p>We formalise basic graph patterns first for directed edge-labelled graphs, and subsequently for property graphs&nbsp;<? echo $references->cite("AnglesABHRV17"); ?>. For these definitions, we introduce a countably infinite set of <em>variables</em> \(\var\) ranging over (but disjoint from: \(\con \cap \var = \emptyset\)) the set of constants. We refer generically to constants and variables as <em>terms</em>, denoted and defined as \(\term = \con \cup \var\). We define a basic graph pattern for a particular graph data model by simply replacing constants with terms (that may be variables). Though we focus on directed edge-labelled graphs and property graphs, basic graph patterns for other graph models can be defined analogously.</p> 
 
 			<dl class="definition" id="def-delgp">
 				<dt>Basic directed edge-labelled graph pattern</dt>
@@ -212,8 +212,8 @@
 			<div class="example">
 				<p>Returning to the example of Figure&nbsp;<? echo ref("fig:gp"); ?>:</p>
 				<ul>
-					<li>the set \(V\) contains the constant <code>Food Festival</code> and variables <code>?event</code>, <code>?ven1</code> and <code>?ven2</code>;</li>
-					<li>the set \(E\) contains four edges, including \((\)<code>?event</code>, <code>type</code>, <code>Food Festival</code>\()\);</li>
+					<li>the set \(V\) contains the constant <code>Food Festival</code> and variables <code>?ev</code>, <code>?vn1</code> and <code>?vn2</code>;</li>
+					<li>the set \(E\) contains four edges, including \((\)<code>?ev</code>, <code>type</code>, <code>Food Festival</code>\()\);</li>
 					<li>the set \(L\) contains the constants <code>type</code> and <code>venue</code>.</li>
 				</ul>
 			</div>
@@ -226,7 +226,7 @@
 			</dl>
 
 			<p>Towards defining the results of evaluating a basic graph pattern over a data graph (following the same model), we first define a partial mapping \(\mu : \var \rightarrow \con\) from variables to constants, whose <em>domain</em> (the set of variables for which it is defined) is denoted by \(\dom(\mu)\). Given a basic graph pattern \(Q\), let \(\var(Q)\) denote the set of all variables appearing in (some recursively nested element of) \(Q\). We further denote by \(\mu(Q)\) the image of \(Q\) under \(\mu\), meaning that any variable \(v \in \var(Q) \cap \dom(\mu)\) is replaced in \(Q\) by \(\mu(v)\). Observe that when \(\var(Q) \subseteq \dom(\mu)\), then \(\mu(Q)\) is a data graph (in the corresponding model of \(Q\)).</p>
-			<p>Next, we define the notion of containment between data graphs. For two directed edge-labelled graphs \(G_1 = (V_1,E_1,L_1)\) and \(G_2 = (V_2,E_2,L_2)\), we say that \(G_1\) is a <em>sub-graph</em> of \(G_2\), denoted \(G_1 \subseteq G_2\), if and only if \(V_1 \subseteq V_2\), \(E_1 \subseteq E_2\), and \(L_1 \subseteq L_2\).<? echo footnote("Given, for example, \\(G_1 = (\\{a\\},\\{(a,b,a)\\},\\{b,c\\})\\) and \\(G_2 = (\\{a,c\\},\\{(a,b,a)\\},\\{b\\})\\), we remark that \\(G_1 \\not\subseteq G_2\\) and \\(G_2 \\not\\subseteq G_1\\): the former has a label not used on an edge while the latter has a node without an incident edge. In concrete data models like RDF where such cases of nodes or labels without edges cannot occur, the sub-graph relation \\(G_1 \\subseteq G_2\\) holds if and only if \\(E_1 \\subseteq E_2\\) holds."); ?> Conversely, in property graphs, nodes can often be defined without edges. For two property graphs \(G_1 = (V_1,E_1,L_1,P_1,U_1,e_1,l_1,p_1)\) and \(G_2 = (V_2,E_2,L_2,P_2,U_2,e_2,l_2,p_2)\), we say that \(G_1\) is a <em>sub-graph</em> of \(G_2\), denoted \(G_1 \subseteq G_2\), if and only if \(V_1 \subseteq V_2\), \(E_1 \subseteq E_2\), \(L_1 \subseteq L_2\), \(P_1 \subseteq P_2\), \(U_1 \subseteq U_2\), for all \(x \in E_1\) it holds that \(e_1(x) = e_2(x)\), and for all \(y \in E_1 \cup V_1\) it holds that \(l_1(y) \subseteq l_2(y)\) and \(p_1(y) \subseteq p_2(y)\).</p>
+			<p>Next, we define the notion of containment between data graphs. For two directed edge-labelled graphs \(G_1 = (V_1,E_1,L_1)\) and \(G_2 = (V_2,E_2,L_2)\), we say that \(G_1\) is a <em>sub-graph</em> of \(G_2\), denoted \(G_1 \subseteq G_2\), if and only if \(V_1 \subseteq V_2\), \(E_1 \subseteq E_2\), and \(L_1 \subseteq L_2\).<? echo footnote("Given, for example, \\(G_1 = (\\{a\\},\\{(a,b,a)\\},\\{b,c\\})\\) and \\(G_2 = (\\{a,c\\},\\{(a,b,a)\\},\\{b\\})\\), we remark that \\(G_1 \\not\subseteq G_2\\) and \\(G_2 \\not\\subseteq G_1\\): the former has a label not used on an edge while the latter has a node without an incident edge. In concrete data models like RDF where such cases of nodes or labels without edges cannot occur, the sub-graph relation \\(G_1 \\subseteq G_2\\) holds if and only if \\(E_1 \\subseteq E_2\\) holds. Conversely, in property graphs, nodes can often be defined without edges."); ?> For two property graphs \(G_1 = (V_1,E_1,L_1,P_1,U_1,e_1,l_1,p_1)\) and \(G_2 = (V_2,E_2,L_2,P_2,U_2,e_2,l_2,p_2)\), we say that \(G_1\) is a <em>sub-graph</em> of \(G_2\), denoted \(G_1 \subseteq G_2\), if and only if \(V_1 \subseteq V_2\), \(E_1 \subseteq E_2\), \(L_1 \subseteq L_2\), \(P_1 \subseteq P_2\), \(U_1 \subseteq U_2\), for all \(x \in E_1\) it holds that \(e_1(x) = e_2(x)\), and for all \(y \in E_1 \cup V_1\) it holds that \(l_1(y) \subseteq l_2(y)\) and \(p_1(y) \subseteq p_2(y)\).</p>
 			<p>We are now ready to define the evaluation of a basic graph pattern.</p>
 
 			<dl class="definition" id="def-evgp">
@@ -327,7 +327,7 @@
 					<ul>
 						<li>If \(Q\) is a basic graph pattern, then \(Q\) is a <em>complex graph pattern</em>.</li>
 						<li>If \(Q\) is a complex graph pattern, and \(\mathcal{V} \subseteq \var(Q)\), then \(\pi_\mathcal{V}(Q)\) is a <em>complex graph pattern</em>.</li>
-						<li>If \(Q\) is a complex graph pattern, and \(R\) is a selection condition with Boolean and equality connectives (\(\wedge\), \(\vee\), \(\neg\), \(=\)) , then \(\sigma_R(Q)\) is a <em>complex graph pattern</em>.</li>
+						<li>If \(Q\) is a complex graph pattern, and \(R\) is a selection condition with Boolean and equality connectives (\(\wedge\), \(\vee\), \(\neg\), \(=\)), then \(\sigma_R(Q)\) is a <em>complex graph pattern</em>.</li>
 						<li>If both \(Q_1\) and \(Q_2\) are complex graph patterns, then \(Q_1 \Join Q_2\), \(Q_1 \cup Q_2\), \(Q_1 - Q_2\) and \(Q_1 \rhd Q_2\) are also <em>complex graph patterns</em>.</li>
 					</ul>
 				</dd>
@@ -348,7 +348,7 @@
 				\end{align*}</dd>
 			</dl>
 
-			<p>Based on these operators, we can define some additional syntactic operators, such as the <em>left-join</em> <? echo LeftJoin(); ?>, aka <em>optional</em>):</p>
+			<p>Based on these operators, we can define some additional syntactic operators, such as the <em>left-join</em> (<? echo LeftJoin(); ?>, aka <em>optional</em>):</p>
 			<p>
 			\begin{align*}
 			 Q_1 <? echo LeftJoin(false); ?> Q_2(G) = & \,(Q_1(G) \Join Q_2(G)) \cup (Q_1(G) \rhd Q_2(G))
@@ -375,6 +375,39 @@
 		</figure>
 
 		<p>Regular path queries can then be used in basic graph patterns to express <em>navigational graph patterns</em>&nbsp;<? echo $references->cite("AnglesABHRV17"); ?>, as shown in Figure&nbsp;<? echo ref("fig:ngp"); ?>, which illustrates a query searching for food festivals in cities reachable (recursively) from Arica by bus or flight. Furthermore, when regular path queries and graph patterns are combined with operators such as projection, selection, union, difference, and optional, the result is known as <em>complex navigational graph patterns</em>&nbsp;<? echo $references->cite("AnglesABHRV17"); ?>.</p>
+
+		<figure id="fig-ngp">
+			<img src="images/fig-ngp.svg" alt="Navigational graph pattern" class="multi" />
+			<div style="height:2em;">&nbsp;</div>
+			<table class="condensedTable">
+				<thead>
+					<tr>
+						<th><span class="sf">?event</span></th>
+						<th><span class="sf">?name</span></th>
+						<th><span class="sf">?city</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><code>EID15</code></td>
+						<td><code>Ñam</code></td>
+						<td><code>Santiago</code></td>
+					</tr>
+					<tr>
+						<td><code>EID16</code></td>
+						<td><code>Food Truck</code></td>
+						<td><code>Arica</code></td>
+					</tr>
+					<tr>
+						<td><code>EID16</code></td>
+						<td><code>Food Truck</code></td>
+						<td><code>Viña del Mar</code></td>
+					</tr>
+				</tbody>
+			</table>
+			<div style="height:1em;">&nbsp;</div>
+			<figcaption>Navigational graph pattern (left <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_2_Data_Graphs/2_2_3_Navigational_graph_patterns/figure_2_9.sparql"></a>) with mappings generated over the graph of Figure&nbsp;<? echo ref("fig:delg"); ?> (right)</figcaption>
+		</figure>
 
 		<div class="formal">
 			<p>We first define path expressions and regular path queries.</p>
@@ -434,39 +467,6 @@
 
 			<p>The definition of the evaluation of a navigational graph pattern then follows from the previous definition of a join and the definition of the evaluation of a regular path query (for a directed edge-labelled graph or a property graph, respectively). Likewise, <em>complex navigational graph patterns</em> – and their evaluation – are defined by extending this definition in the natural way with the same operators from Definition&nbsp;<? echo ref("def:cgp"); ?> following the same semantics seen in Definition&nbsp;<? echo ref("def:evalcgp"); ?>.</p>
 		</div>
-
-		<figure id="fig-ngp">
-			<img src="images/fig-ngp.svg" alt="Navigational graph pattern" class="multi" />
-			<div style="height:2em;">&nbsp;</div>
-			<table class="condensedTable">
-				<thead>
-					<tr>
-						<th><span class="sf">?event</span></th>
-						<th><span class="sf">?name</span></th>
-						<th><span class="sf">?city</span></th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td><code>EID15</code></td>
-						<td><code>Ñam</code></td>
-						<td><code>Santiago</code></td>
-					</tr>
-					<tr>
-						<td><code>EID16</code></td>
-						<td><code>Food Truck</code></td>
-						<td><code>Arica</code></td>
-					</tr>
-					<tr>
-						<td><code>EID16</code></td>
-						<td><code>Food Truck</code></td>
-						<td><code>Viña del Mar</code></td>
-					</tr>
-				</tbody>
-			</table>
-			<div style="height:1em;">&nbsp;</div>
-			<figcaption>Navigational graph pattern (left <a class="git" title="Consult the code for this example on Github" href="https://github.com/Knowledge-Graphs-Book/examples/blob/main/Chapter_2_Data_Graphs/2_2_3_Navigational_graph_patterns/figure_2_9.sparql"></a>) with mappings generated over the graph of Figure&nbsp;<? echo ref("fig:delg"); ?> (right)</figcaption>
-		</figure>
 
 		<h4 id="app-qother" class="subsection">Other features</h4>
 		<p>Thus far, we have discussed features that form the practical and theoretical foundation of any query language for graphs&nbsp;<? echo $references->cite("AnglesABHRV17"); ?>. However, specific query languages for graphs may support other features, such as aggregation (<code>GROUP BY</code>, <code>COUNT</code>, etc.), more complex filters and datatype operators (e.g., range queries on years extracted from a date), federation for querying remotely hosted graphs over the Web, languages for updating graphs, support for entailment, etc. For more information, we refer to the documentation of the respective query languages (e.g.,&nbsp;<? echo $references->cite("sparql11,AnglesABBFGLPPS18"); ?>) and to the survey by&nbsp;<? echo $references->citet("AnglesABHRV17"); ?>.</p>

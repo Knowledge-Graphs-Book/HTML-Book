@@ -1,11 +1,11 @@
 	<section id="chap-publish" class="chapter">
 		<h2>Publication</h2>
-		<p>While it may not always be desirable to publish knowledge graphs (for example, those that offer a competitive advantage to a company&nbsp;<? echo $references->cite("NoyGJNPT19"); ?>, it may be desirable or even required to publish other knowledge graphs, such as those produced by volunteers&nbsp;<? echo $references->cite("VrandecicK14,MahdisoltaniBS15,LehmannIJJKMHMK15"); ?>, by publicly-funded research&nbsp;<? echo $references->cite("CallahanCAD13,GrothLGGHP14,uniprot2014"); ?>, by governmental organisations&nbsp;<? echo $references->cite("HendlerHMT12,ShadboltO13"); ?>. Publishing refers to making the knowledge graph (or part thereof) accessible to the public, often on the Web. Knowledge graphs published as open data are called open knowledge graphs (discussed in Section&nbsp;<? echo ref("sec:openkgs"); ?>).</p>
+		<p>While it may not always be desirable to publish knowledge graphs (for example, those that offer a competitive advantage to a company&nbsp;<? echo $references->cite("NoyGJNPT19"); ?>), it may be desirable or even required to publish other knowledge graphs, such as those produced by volunteers&nbsp;<? echo $references->cite("VrandecicK14,MahdisoltaniBS15,LehmannIJJKMHMK15"); ?>, by publicly-funded research&nbsp;<? echo $references->cite("CallahanCAD13,GrothLGGHP14,uniprot2014"); ?>, by governmental organisations&nbsp;<? echo $references->cite("HendlerHMT12,ShadboltO13"); ?>. Publishing refers to making the knowledge graph (or part thereof) accessible to the public, often on the Web. Knowledge graphs published as open data are called open knowledge graphs (discussed in Section&nbsp;<? echo ref("sec:openkgs"); ?>).</p>
 		<p>In the following, we first discuss two sets of principles that have been proposed to guide the publication of data on the Web. We next discuss access protocols by which the public can interact with the content of a knowledge graph. Finally, we consider techniques to restrict the access or usage of (parts of) a knowledge graph.</p>
 
 		<section id="ssec-principles" class="section">
 		<h3>Best Practices</h3>
-		<p>We now discuss two key sets of publishing principles: the FAIR Principles&nbsp;<? echo $references->citet("wilkinson2016fair"); ?>, and the Linked Data Principles&nbsp;<? echo $references->cite("ldprinciples"); ?>.</p>
+		<p>We now discuss two key sets of publishing principles: the FAIR Principles&nbsp;<? echo $references->cite("wilkinson2016fair"); ?>, and the Linked Data Principles&nbsp;<? echo $references->cite("ldprinciples"); ?>.</p>
 
 		<h4 id="ssec-fair" class="subsection">FAIR Principles</h4>
 		<p>The FAIR Principles were originally proposed in the context of publishing scientific data&nbsp;<? echo $references->cite("wilkinson2016fair"); ?> – particularly motivated by maximising the impact of publicly-funded research – but the principles generally apply to other situations where data are to be published in a manner that facilitates their re-use by external agents, with particular emphasis on machine-readability.</p>
@@ -32,9 +32,9 @@
 			</ul></li>
 			<li><em>Reusability</em> refers to the ease with which the dataset can be re-used in conjunction with other datasets. One goal is defined (with three sub-goals):<ul>
 				<li>R1: meta(data) are richly described with accurate and relevant attributes.<ul>
-					<li>R1.1. (meta)data are released with a clear and accessible license.</li>
-					<li>R1.2. (meta)data are associated with detailed provenance.</li>
-					<li>R1.3. (meta)data meet domain-relevant community standards.</li>
+					<li>R1.1: (meta)data are released with a clear and accessible license.</li>
+					<li>R1.2: (meta)data are associated with detailed provenance.</li>
+					<li>R1.3: (meta)data meet domain-relevant community standards.</li>
 				</ul></li>
 			</ul></li>
 		</ul>
