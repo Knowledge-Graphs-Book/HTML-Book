@@ -20,17 +20,12 @@ jobs:
           php-version: "7.4"
           extensions: mbstring, intl
           ini-values: post_max_size=256M, max_execution_time=180
-          # coverage: xdebug
-          # tools: php-cs-fixer, phpunit
       - name: make output dir
         run: |
           mkdir _site
       - name: compile webpage
         run: |
           php book.php > _site/index.html
-        #  cp index.html _site/index.html
-        #  echo "<?php phpinfo(); ?>" > myfile.php
-        #  php myfile.php > _site/index.html
       - name: copy resources
         run: |
           cp -r css fonts images js bib _site/
@@ -59,15 +54,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
-
-    # - name: Deploy
-    #   needs: build
-    #   uses: actions/deploy-pages@v1
-    #   with:
-    #     emit_telemetry: false
-    #     token: ***
-    #     timeout: 600000
-    #     error_count: 10
-    #     reporting_interval: 5000
-    #     artifact_name: github-pages
-    #     preview: false
