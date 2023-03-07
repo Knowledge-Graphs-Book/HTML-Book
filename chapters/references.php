@@ -62,7 +62,7 @@
 		return $_result . ".";
 	}
 	function writeInCollection($entry) {
-		$_result .= $entry->getFormattedAuthorsString() . ". " . $entry->getYear() . ". ";
+		$_result = $entry->getFormattedAuthorsString() . ". " . $entry->getYear() . ". ";
 		$_beforeTitle = "";
 		$_afterTitle = "";
 		if($entry->hasField("url")) {
@@ -100,7 +100,7 @@
 		return $_result . ".";
 	}
 	function writeInProceedings($entry) {
-		$_result .= $entry->getFormattedAuthorsString() . ". " . $entry->getYear() . ". ";
+		$_result = $entry->getFormattedAuthorsString() . ". " . $entry->getYear() . ". ";
 		$_beforeTitle = "";
 		$_afterTitle = "";
 		if($entry->hasField("url")) {
@@ -146,8 +146,8 @@
 			$_afterTitle = "</a>";
 		}
 		$_result .= $_beforeTitle . $entry->getTitle() . $_afterTitle;
-		if($entry->hasField(HOWPUBLISHED)) {
-			$_result .= ". " . $entry->getField(HOWPUBLISHED);
+		if($entry->hasField("howpublished")) {
+			$_result .= ". " . $entry->getField("howpublished");
 		}
 		if($entry->hasField("month")) {
 			$_result .= ". " . $entry->getField("month") . ", " . $entry->getYear();
@@ -166,8 +166,8 @@
 			$_afterTitle = "</a>";
 		}
 		$_result .= $_beforeTitle . $entry->getTitle() . $_afterTitle;
-		if($entry->hasField(HOWPUBLISHED)) {
-			$_result .= ". " . $entry->getField(HOWPUBLISHED);
+		if($entry->hasField("howpublished")) {
+			$_result .= ". " . $entry->getField("howpublished");
 		}
 		if($entry->hasField("month")) {
 			$_result .= ". " . $entry->getField("month") . ", " . $entry->getYear();
