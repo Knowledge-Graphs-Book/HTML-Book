@@ -1,0 +1,48 @@
+name: Build beta website
+
+on:
+  push:
+    branches:
+      - "**"
+      - "!main"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "7.4"
+          extensions: mbstring, intl
+          ini-values: post_max_size=256M, max_execution_time=180
+      - name: checkout
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+          path: "."
+      - name: checkout staging repo
+        run: |
+          git clone https://github.com/miselico/HTML-Book-staging _staging
+      - name: make output dir
+        run: |
+          rm -rf _staging/${{ github.ref_name }}
+          mkdir _staging/${{ github.ref_name }}
+      - name: compile webpage
+        run: |
+          php book.php > _staging/${{ github.ref_name }}/index.html
+      - name: copy resources
+        run: |
+          cp -r css fonts images js bib _staging/${{ github.ref_name }}/
+      - name: Pushes to another repository
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
+        with:
+          source-directory: "_staging"
+          destination-github-username: "miselico"
+          destination-repository-name: "HTML-Book-staging"
+          user-email: ${{ github.ref_name }}@kgbook.org
+          user-name: Github action on HTML Book branch ${{ github.ref_name }} for ${{ github.event.head_commit.author.name}}
+          target-branch: main
