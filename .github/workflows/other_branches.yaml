@@ -42,9 +42,9 @@ jobs:
       - name: copy resources
         run: |
           cp -r css fonts images js bib _staging/${{ github.ref_name }}/
-      - name: commit to the satging repo
+      - name: commit to the staging repo
         run: |
-          cd staging/
+          cd _staging/
           git add .
           git config --global user.name 'Github action on HTML Book branch ${{ github.ref_name }} for ${{ github.event.head_commit.author.name}}" '
           git config --global user.email '${{ github.ref_name }}@kgbook.org'
