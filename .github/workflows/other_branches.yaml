@@ -1,0 +1,52 @@
+name: Build beta website
+
+on:
+  push:
+    branches:
+      - "**"
+      - "!main"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: checkout staging repo
+        uses: actions/checkout@v3
+        with:
+          # Repository name with owner. For example, actions/checkout
+          # Default: ${{ github.repository }}
+          repository: "miselico/HTML-Book-staging"
+          # The branch, tag or SHA to checkout. When checking out the repository that
+          # triggered a workflow, this defaults to the reference or SHA for that event.
+          # Otherwise, uses the default branch.
+          ref: "main"
+          path: "staging"
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "7.4"
+          extensions: mbstring, intl
+          ini-values: post_max_size=256M, max_execution_time=180
+          # coverage: xdebug
+          # tools: php-cs-fixer, phpunit
+      - name: make output dir
+        run: |
+          rm -rf staging/${{ github.ref_name }}
+          mkdir staging/${{ github.ref_name }}
+      - name: compile webpage
+        run: |
+          php book.php > staging/${{ github.ref_name }}/index.html>
+      - name: copy resources
+        run: |
+          cp -r css fonts images js bib staging/${{ github.ref_name }}/
+      - name: commit to the satging repo
+        run: |
+          cd staging/
+          git add .
+          git config --global user.name 'Github action on HTML Book branch ${{ github.ref_name }} for ${{ github.event.head_commit.author.name}}" '
+          git config --global user.email '${{ github.ref_name }}@kgbook.org'
+          git commit -m "(Automated webpage build) for ${{ github.event.head_commit.message }}"
+          git push
