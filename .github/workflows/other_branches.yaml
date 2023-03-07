@@ -22,8 +22,8 @@ jobs:
           # The branch, tag or SHA to checkout. When checking out the repository that
           # triggered a workflow, this defaults to the reference or SHA for that event.
           # Otherwise, uses the default branch.
-          ref: "main"
-          path: "staging"
+          # ref: "main"
+          path: "_staging"
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
@@ -34,14 +34,14 @@ jobs:
           # tools: php-cs-fixer, phpunit
       - name: make output dir
         run: |
-          rm -rf staging/${{ github.ref_name }}
-          mkdir staging/${{ github.ref_name }}
+          rm -rf _staging/${{ github.ref_name }}
+          mkdir _staging/${{ github.ref_name }}
       - name: compile webpage
         run: |
-          php book.php > staging/${{ github.ref_name }}/index.html>
+          php book.php > _staging/${{ github.ref_name }}/index.html>
       - name: copy resources
         run: |
-          cp -r css fonts images js bib staging/${{ github.ref_name }}/
+          cp -r css fonts images js bib _staging/${{ github.ref_name }}/
       - name: commit to the satging repo
         run: |
           cd staging/
