@@ -38,7 +38,7 @@ jobs:
           mkdir _staging/${{ github.ref_name }}
       - name: compile webpage
         run: |
-          php book.php > _staging/${{ github.ref_name }}/index.html>
+          php book.php > _staging/${{ github.ref_name }}/index.html
       - name: copy resources
         run: |
           cp -r css fonts images js bib _staging/${{ github.ref_name }}/
