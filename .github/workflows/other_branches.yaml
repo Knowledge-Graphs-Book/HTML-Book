@@ -17,29 +17,11 @@ jobs:
           php-version: "7.4"
           extensions: mbstring, intl
           ini-values: post_max_size=256M, max_execution_time=180
-          # coverage: xdebug
-          # tools: php-cs-fixer, phpunit
       - name: checkout
         uses: actions/checkout@v3
         with:
           persist-credentials: false
           path: "."
-      # - name: remove extra auth header
-      #   run: |
-      #     git config --unset-all http.https://github.com/.extraheader
-      #     # from https://stackoverflow.com/a/69979203
-      # - name: checkout staging repo
-      #   uses: actions/checkout@v3
-      #   with:
-      #     # Repository name with owner. For example, actions/checkout
-      #     # Default: ${{ github.repository }}
-      #     repository: "miselico/HTML-Book-staging"
-      #     # The branch, tag or SHA to checkout. When checking out the repository that
-      #     # triggered a workflow, this defaults to the reference or SHA for that event.
-      #     # Otherwise, uses the default branch.
-      #     # ref: "main"
-      #     path: "_staging"
-      #     fetch-depth: 0
       - name: checkout staging repo
         run: |
           git clone https://github.com/miselico/HTML-Book-staging _staging
@@ -64,20 +46,3 @@ jobs:
           user-email: ${{ github.ref_name }}@kgbook.org
           user-name: Github action on HTML Book branch ${{ github.ref_name }} for ${{ github.event.head_commit.author.name}}
           target-branch: main
-
-      # - name: commit to the staging repo
-      #   run: |
-
-      #     pwd
-      #     cd _staging/
-      #     pwd
-      #     ls
-      #     git remote -v
-      #     echo "testing echo"
-      #     git config --global user.name 'Github action on HTML Book branch ${{ github.ref_name }} for ${{ github.event.head_commit.author.name}}" '
-      #     git config --global user.email '${{ github.ref_name }}@kgbook.org'
-      #     git config --list
-      #     git add .
-      #     git status
-      #     git commit -m "(Automated webpage build) for ${{ github.event.head_commit.message }}"
-      #     git push https://token:$token@github.com/miselico/HTML-Book-staging.git
