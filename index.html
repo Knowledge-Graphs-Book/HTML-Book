@@ -902,11 +902,11 @@ Sequeda, Juan F. and Staab, Steffen and Zimmermann, Antoine},
 				r^-[G] = &\, \{ (u,v) \mid (v,u) \in r[G] \} \\
 				r_1 \mid r_2[G] = &\, r_1[G] \cup r_2[G] \\
 				r_1 \cdot r_2[G] = &\, \{ (u,v) \mid \exists w \in V : (u,w) \in r_1[G]\text{ and }(w,v) \in r_2[G]\}\\
-				r^*[G] = &\, V \cup \bigcup_{n \in \mathbb{N^+}} r^n[G]
+				r^*[G] = &\, \{ (u,u) \mid u \in V \} \cup \bigcup_{n \in \mathbb{N^+}} r^n[G]
 				\end{align*}
 				where by \(r^n\) we denote the \(n\)<sup>th</sup>-concatenation of \(r\) (e.g., \(r^3 = r \cdot r \cdot r\)).</dd>
 			</dl>
-
+			<p>The inclusion of the reflexive pairs \((u,u)\) in the definition of \(r^*[G]\) captures zero-length paths. For example, in the query \((\)<code>Arica</code>, <code>bus*</code>, <code>?city</code>\()\), the reflexive pair \((\)<code>Arica</code>, <code>Arica</code>\()\) ensures that the variable <code>?city</code> will also match <code>Arica</code> via the zero-length path.</p>
 			<p>The evaluation of a path expression on a property graph \(G = (V,E,L,P,U,e,l,p)\) can be defined analogously by adapting the first definition (in the case that \(r \in \con\)) as follows:</p>
 			<p>\[ r[G] = \{(u,v) \mid \exists x \in E : e(x) = (u,v)\text{ and }l(e) = r \} \,.\]</p>
 			<p>The rest of the definitions then remain unchanged.</p>
