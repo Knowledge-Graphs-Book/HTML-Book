@@ -435,7 +435,7 @@
 			"GlorotBWB13" => "Glorot et al., 2013",
 			"GoldenS16" => "Golden and Shaw, 2016",
 			"gomez2006ontological" => "Gómez-Pérez et al., 2006",
-			"PinterestKG" => "Gon\c{c}alves et al., 2019",
+			"PinterestKG" => "Gonçalves et al., 2019",
 			"GonzalezH18" => "González and Hogan, 2018",
 			"gottschalk2018eventkg" => "Gottschalk and Demidova, 2018",
 			"guido_heuristics_2013" => "Governatori et al., 2013",

@@ -98,14 +98,14 @@
         });
     });
 	</script>
+	<h1 id="booktitle">Knowledge Graphs</h1>
 	<div class="cover">
 		<img alt="book cover" src="images/cover-no-text.jpg"/>
-		<p style="position:absolute;top:300px;font-size:109px;text-shadow:5px 5px 5px black;font-weight:bold;">KNOWLEDGE<br/>GRAPHS</p>
 		<p style="position:absolute;top:700px;font-size:29px;text-shadow:3px 3px 3px black;"><a href="#bio-hogan">Aidan Hogan</a> | <a href="#bio-blomqvist">Eva Blomqvist</a> | <a href="#bio-cochez">Michael Cochez</a><br/><a href="#bio-damato">Claudia d’Amato</a> | <a href="#bio-demelo">Gerard de Melo</a> | <a href="#bio-gutierrez">Claudio Gutierrez</a><br/><a href="#bio-kirrane">Sabrina Kirrane</a> | <a href="#bio-labragayo">José Emilio Labra Gayo</a> | <a href="#bio-navigli">Roberto Navigli</a><br/><a href="#bio-neumaier">Sebastian Neumaier</a> | <a href="#bio-ngongangomo">Axel-Cyrille Ngonga Ngomo</a><br/><a href="#bio-polleres">Axel Polleres</a> | <a href="#bio-rashid">Sabbir M. Rashid</a> | <a href="#bio-rula">Anisa Rula</a><br/><a href="#bio-schmelzeisen">Lukas Schmelzeisen</a> | <a href="#bio-sequeda">Juan Sequeda</a><br/><a href="#bio-staab">Steffen Staab</a> | <a href="#bio-zimmermann">Antoine Zimmermann</a></p>
 	</div>
 	<div id="aboutlink">Give us feedback!<div>You can <a href="https://github.com/Knowledge-Graphs-Book/HTML-Book/issues">leave comments</a> on the HTML book as issues to our <a href="https://github.com/Knowledge-Graphs-Book/HTML-Book/">Github repository</a>. You can also address your feedback on the book by email to:<br /> <code>kg-tutorial [at] googlegroups [dot] com</code></div></div>
 	<header>
-		<h1 id="title"><span class="big-letter">K</span>nowledge <span class="big-letter">G</span>raphs</h1>
+		<div id="title"><div>Knowledge</div> <div>Graphs</div></div>
 		<ul class="authorlist">
 			<li><span class="author"><a href="https://orcid.org/0000-0001-9482-1982">Aidan Hogan</a></span> <span class="affiliation">IMFD, DCC, Universidad de Chile <span class="country">Chile</span></span></li>
 			<li><span class="author"><a href="https://orcid.org/0000-0003-0036-6662">Eva Blomqvist</a></span> <span class="affiliation">Linköping University <span class="country">Sweden</span></span></li>

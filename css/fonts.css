@@ -122,4 +122,7 @@
 	font-family: lmss8;
 	src: url("../fonts/lmsans10-regular-webfont.ttf");
 }
-
+@font-face {
+	font-family: cmss8;
+	src: url("../fonts/ufonts.com_cmss8.ttf");
+}

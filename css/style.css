@@ -66,6 +66,21 @@ body {
 	margin-top: 1300px;
 }
 
+h1#booktitle {
+	position: absolute;
+	top: 300px;
+	left: calc(50vw - 523px);
+	font-size: 109px;
+	text-shadow: 5px 5px 5px black;
+	font-weight: bold;
+	font-family: sans-serif;
+	color: white;
+	width: 1047px;
+	text-align: center;
+	margin: auto;
+	text-transform: uppercase;
+	z-index: 10;
+}
 div.cover {
 	position: absolute;
 	top: 0px;
@@ -101,14 +116,12 @@ div.cover {
 	letter-spacing: .2em;
 	padding-right: 5.5em;
 	line-height: 200%;
-}
-h1#title {
 	text-align: right;
 	vertical-align: middle;
 	margin: -1em;
 	padding: -1em;
 }
-h1#title .big-letter {
+#title div::first-letter {
 	vertical-align: middle;
 	font-size: 350%;
 	color: var(--section-title);
