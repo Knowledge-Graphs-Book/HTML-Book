@@ -23,7 +23,7 @@
 	<meta name="twitter:image" content="https://www.emse.fr/~zimmermann/KGBook/HTML-Book/images/small-cover.jpg">
 	<script src="js/prism.js"></script>
 	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>-->
-	<script src="https://cdn.jsdelivr.net/npm/prismjs-bibtex@2.1.0/prism-bibtex.js"
+	<script src="https://cdn.jsdelivr.net/npm/prismjs-bibtex@2.1.0/prism-bibtex.min.js"
 	        integrity="sha256-A5GMUmGHpY8mVpfcaRLQFeHtmdjZLumKBOMpf81FXX0="
 	        crossorigin="anonymous" referrerpolicy="no-referrer">
 	</script>
