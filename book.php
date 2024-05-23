@@ -20,7 +20,7 @@
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="Knowledge Graphs">
 	<meta name="twitter:description" content="Knowledge Graphs: This open access HTML book provides a comprehensive and accessible introduction to knowledge graphs.">
-	<meta name="twitter:image" content="https://www.emse.fr/~zimmermann/KGBook/HTML-Book/images/small-cover.jpg">
+	<meta name="twitter:image" content="https://kgbook.org/images/small-cover.jpg">
 	<script src="js/prism.js"></script>
 	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>-->
 	<script src="https://cdn.jsdelivr.net/npm/prismjs-bibtex@2.1.0/prism-bibtex.min.js"
