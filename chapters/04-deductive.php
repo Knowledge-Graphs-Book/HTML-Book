@@ -358,9 +358,9 @@
 				</tr>
 				<tr>
 					<td>Sub-class (II)</td>
-					<td><?php echo sedge("?d","subc.&nbsp;of",NULL,"?d","gvar"); ?><?php echo esource(); ?><span class="edge">subc.&nbsp;of</span><?php echo etipr(); ?><span class="gvar">?e</span></td>
+					<td><?php echo sedge("?c","subc.&nbsp;of",NULL,"?d","gvar"); ?><?php echo esource(); ?><span class="edge">subc.&nbsp;of</span><?php echo etipr(); ?><span class="gvar">?e</span></td>
 					<td>\(\Rightarrow\)</td>
-					<td><?php echo sedge("?d","subc.&nbsp;of",NULL,"?e","gvar"); ?></td>
+					<td><?php echo sedge("?c","subc.&nbsp;of",NULL,"?e","gvar"); ?></td>
 				</tr>
 				<tr>
 					<td>Sub-property (I)</td>
