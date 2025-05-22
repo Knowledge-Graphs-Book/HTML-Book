@@ -430,7 +430,7 @@
 				<li>\((a_1 \oplus a_2) \oplus a_3 = a_1 \oplus (a_2 \oplus a_3)\)</li>
 				<li>\((\bot \oplus a) = (a \oplus \bot) = a\)</li>
 				<li>\((a_1 \oplus a_2) = (a_2 \oplus a_1)\)</li>
-				<li>\((a_1 \oplus a_2) = (a_2 \oplus a_1)\)</li>
+				<li>\((a_1 \otimes a_2) = (a_2 \otimes a_1)\)</li>
 				<li>\((a_1 \otimes a_2) \otimes a_3 = a_1 \otimes (a_2 \otimes a_3)\)</li>
 				<li>\((\top \otimes a) = (a \otimes \top) = a\)</li>
 				<li>\(a_1 \otimes (a_2 \oplus a_3) = (a_1 \otimes a_2) \oplus (a_1 \otimes a_3)\)</li>
